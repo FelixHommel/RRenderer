@@ -1,8 +1,8 @@
-name: Auto format coed
+name: Auto format code
 
 on:
   push:
-    branches: ["main", "dev"]
+    branches: [main, dev]
   workflow_dispatch:
 
 jobs:
