@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.30)
 project(
-    Template
-    DESCRIPTION "Basic C++ template"
+    RRenderer
+    DESCRIPTION "A Renderer using Vulkan written in C++"
     LANGUAGES CXX
 )
 
@@ -14,7 +14,8 @@ add_library(project_warnings INTERFACE)
 include(cmake/CompilerWarnings.cmake)
 set_project_warnings(project_warnings)
 
-enable_testing()
+include(cmake/CompileShaders.cmake)
 
+enable_testing()
 add_subdirectory(deps)
 add_subdirectory(src)
