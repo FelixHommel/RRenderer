@@ -63,7 +63,6 @@ Checks: >
   cppcoreguidelines-narrowing-conversions,
   cppcoreguidelines-no-malloc,
   cppcoreguidelines-prefer-member-initializer,
-  cppcoreguidelines-pro-bounds-array-to-pointer-decay,
   cppcoreguidelines-pro-bounds-constant-array-index,
   cppcoreguidelines-pro-bounds-pointer-arithmetic,
   cppcoreguidelines-pro-type-cstyle-cast,
@@ -150,6 +149,7 @@ Checks: >
   readability-string-compare,
 CheckOptions:
   - { key: bugprone-misplaced-widening-cast.CheckImplicitCasts, value: true }
+  - { key: misc-non-private-member-variables-in-classes.IgnoreClassesWithAllMemberVariablesBeingPublic, value: true }
   - { key: readability-identifier-naming.ClassCase, value: CamelBack }
   - { key: readability-identifier-naming.FunctionCase, value: camelBack }
   - { key: readability-identifier-naming.VariableCase, value: camelBack }
