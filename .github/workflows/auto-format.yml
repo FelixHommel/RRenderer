@@ -1,0 +1,35 @@
+name: Auto format coed
+
+on:
+  push:
+    branches: ["main", "dev"]
+  workflow_dispatch:
+
+jobs:
+  clang-format:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Install dependenices
+      run: |
+        sudo apt update
+        sudo apt install -y clang-format
+
+    - name: Run clang-format
+      run: |
+          find src/ -regex '.*\.\(cpp\|hpp\)' \
+          -exec clang-format -i {} \;
+
+    - name: Create pull request with changes
+      uses: peter-evans/create-pull-request@v6
+      with:
+          commit-message: "CI: auto-format code with clang-format"
+          title: "clang-format"
+          body: |
+            This PR applies automatic formatting using `clang-format`.
+          branch: ci/auto-clang-format
+          delete-branch: true
