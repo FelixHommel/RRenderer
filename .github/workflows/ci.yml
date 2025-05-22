@@ -4,23 +4,23 @@ on:
   push:
     branches: [main]
   pull_request:
-    branches: ["main", "dev"]
+    branches: [main, dev]
 
 jobs:
   lint:
     name: Linting phase
     runs-on: ubuntu-latest
-
+  
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Install dependenices
-      run: |
-        sudo apt update
-        sudo apt install -y clang-tidy
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y clang-tidy
 
-    - name: clang-tidy
-      run: clang-tidy --quiet -p build --warnings-as-errors=* $(find src/ -name '*.cpp' -or -name '*.hpp")
+      - name: clang-tidy
+        run: clang-tidy --quiet -p build --warnings-as-errors=* $(find src/ -name '*.cpp' -or -name '*.hpp')
 
   build-and-test:
     name: Build phase
@@ -29,19 +29,19 @@ jobs:
     strategy:
       fail-fast: false
 
-    setps:
-    - uses: actions/checkout@v4
+    steps:
+      - uses: actions/checkout@v4
 
-    - name: Install dependenices
-      run: |
-        sudo apt update
-        sudo apt install -y cmake g++ ninja-build vulkan-tools libvulkan-dev
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y cmake g++ ninja-build vulkan-tools libvulkan-dev
 
-    - name: Configure CMake
-      run: cmake --preset release
+      - name: Configure CMake
+        run: cmake --preset release
 
-    - name: Build
-      run: cmake --build --preset release
+      - name: Build
+        run: cmake --build --preset release
 
-    - name: Test
-      run: ctest --test-dir build/test/ --rerun-failed --output-on-failure
+      - name: Test
+        run: ctest --test-dir build/test/ --rerun-failed --output-on-failure
