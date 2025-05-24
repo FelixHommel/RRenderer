@@ -5,7 +5,12 @@ project(
     LANGUAGES CXX
 )
 
-set(CMAKE_CXX_STANDARD 20)
+option(RRDEBUG "Use Debug and validation layers" ON)
+if(RRDEBUG)
+    add_definitions(-DRRDEBUG)
+endif()
+
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(cmake/DefaultProjectSettings.cmake)
@@ -15,6 +20,8 @@ include(cmake/CompilerWarnings.cmake)
 set_project_warnings(project_warnings)
 
 include(cmake/CompileShaders.cmake)
+
+find_package(Vulkan REQUIRED)
 
 enable_testing()
 add_subdirectory(deps)
