@@ -5,6 +5,8 @@
 #include "core/VulkanDebugMessenger.hpp"
 #include "core/VulkanDevice.hpp"
 #include "core/VulkanInstance.hpp"
+#include "core/VulkanPipeline.hpp"
+#include "core/VulkanPipelineLayout.hpp"
 #include "core/VulkanSurface.hpp"
 #include "core/VulkanSwapchain.hpp"
 #include "window/Window.hpp"
@@ -43,9 +45,12 @@ private:
     std::unique_ptr<VulkanSurface> m_surface;
     std::unique_ptr<VulkanDevice> m_device;
     std::unique_ptr<VulkanSwapchain> m_swapchain;
-    // pipeline
+    std::unique_ptr<VulkanPipelineLayout> m_pipelineLayout;
+    std::unique_ptr<VulkanPipeline> m_pipeline;
     // commandPool
     // commandBuffer
+    
+    std::unique_ptr<VulkanPipeline> createPipeline();
 };
 
 } // !rr
