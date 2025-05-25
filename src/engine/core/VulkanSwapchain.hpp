@@ -34,6 +34,9 @@ public:
     void present() override;
 
     [[nodiscard]] std::size_t imageCount() const { return m_swapchainImages.size(); }
+    [[nodiscard]] VkExtent2D getExtent() const { return m_swapchainImageExtent; }
+
+    [[nodiscard]] VkRenderPass getRenderPassHandle() const { return m_renderPass; }
 
 private:
     /** External objects */
