@@ -6,6 +6,7 @@
 #include "core/VulkanDebugMessenger.hpp"
 #include "core/VulkanDevice.hpp"
 #include "core/VulkanInstance.hpp"
+#include "core/VulkanSurface.hpp"
 #include "window/Window.hpp"
 
 #include <memory>
@@ -39,9 +40,9 @@ private:
     //NOTE: Order here matters in orer for the right order of dstructions to work and not interfere with vulkan objects
     std::unique_ptr<VulkanInstance> m_instance;
     std::unique_ptr<VulkanDebugMessenger> m_debugMessenger;
-    // surface
-    std::unique_ptr<VulkanDevice> m_device;
-    std::unique_ptr<Swapchain> m_swapchain;
+    std::unique_ptr<VulkanSurface> m_surface;
+    /*std::unique_ptr<VulkanDevice> m_device;*/
+    /*std::unique_ptr<Swapchain> m_swapchain;*/
     // commandPool
     // commandBuffer
 };
