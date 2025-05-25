@@ -2,6 +2,7 @@
 #define RRENDERER_ENGINE_CORE_VULKAN_SURFACE_HPP
 
 #include "window/Window.hpp"
+
 #include <vulkan/vulkan_core.h>
 
 namespace rr
@@ -24,8 +25,11 @@ public:
     VulkanSurface& operator=(const VulkanSurface&) = delete;
     VulkanSurface& operator=(VulkanSurface&&) = delete;
 
+    [[nodiscard]] VkSurfaceKHR getHandle() const { return m_surface; }
+
 private:
     VkInstance instance;
+
     VkSurfaceKHR m_surface;
 };
 

@@ -2,6 +2,7 @@
 
 #include "spdlog/spdlog.h"
 #include "window/Window.hpp"
+
 #include <vulkan/vulkan_core.h>
 
 namespace rr
