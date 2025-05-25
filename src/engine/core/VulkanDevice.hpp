@@ -5,6 +5,7 @@
 
 #include <vulkan/vulkan_core.h>
 
+#include <array>
 #include <cstdint>
 #include <optional>
 #include <set>
@@ -26,8 +27,10 @@ struct QueueFamilyIndices
     std::optional<std::uint32_t> presentFamily;
 
     [[nodiscard]] constexpr bool isComplete() const noexcept { return graphicsFamily.has_value() && presentFamily.has_value(); }
+    [[nodiscard]] constexpr bool areSameQueue() const noexcept { return graphicsFamily.value() == presentFamily.value(); }
 
     [[nodiscard]] constexpr std::set<std::uint32_t> getUniqueFamilies() const noexcept { return { graphicsFamily.value_or(0), presentFamily.value_or(0) }; }
+    [[nodiscard]] constexpr std::array<std::uint32_t, 2> toAray() const noexcept { return { graphicsFamily.value(), presentFamily.value() }; }
 };
 
 /*
@@ -52,6 +55,13 @@ public:
     void destroyBuffer() override;
     void waitIdle() override;
 
+    [[nodiscard]] VkDevice getHandle() const { return m_device; }
+    [[nodiscard]] SwapchainSupportDetails getSwapchainSupport() const { return querySwapchainSupport(m_physicalDevice); }
+    [[nodiscard]] QueueFamilyIndices findPhysicalQueueFamilies() const { return findQueueFamilies(m_physicalDevice); }
+    [[nodiscard]] VkFormat findSupportedFormat(const std::vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features);
+
+    void createImageWithInfo(const VkImageCreateInfo& createInfo, VkMemoryPropertyFlags properties, VkImage& image, VkDeviceMemory& imageMemory);
+
 private:
     VkInstance instance;
     VkSurfaceKHR surface;
@@ -68,9 +78,10 @@ private:
     void createLogicalDevice();
 
     bool isDeviceSuitable(VkPhysicalDevice device);
-    QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device);
+    QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device) const;
     bool checkDeviceExtensionsSupported(VkPhysicalDevice device);
-    SwapchainSupportDetails querySwapchainSupport(VkPhysicalDevice device);
+    SwapchainSupportDetails querySwapchainSupport(VkPhysicalDevice device) const;
+    std::uint32_t findMemoryType(std::uint32_t typeFilter, VkMemoryPropertyFlags properties);
 };
 
 } // !rr

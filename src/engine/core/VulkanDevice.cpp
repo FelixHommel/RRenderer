@@ -43,6 +43,53 @@ void VulkanDevice::destroyBuffer()
 void VulkanDevice::waitIdle()
 {}
 
+VkFormat VulkanDevice::findSupportedFormat(const std::vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features)
+{
+    for(const auto format : candidates)
+    {
+        VkFormatProperties properties;
+        vkGetPhysicalDeviceFormatProperties(m_physicalDevice, format, &properties);
+
+        if(tiling == VK_IMAGE_TILING_LINEAR && (properties.linearTilingFeatures & features) == features)
+            return format;
+        else if(tiling == VK_IMAGE_TILING_OPTIMAL && (properties.optimalTilingFeatures & features) == features)
+            return format;
+    }
+
+    spdlog::critical("Failure while searching for supported format");
+    throw std::runtime_error("Failed to find a supported format");
+}
+
+void VulkanDevice::createImageWithInfo(const VkImageCreateInfo& createInfo, VkMemoryPropertyFlags properties, VkImage& image, VkDeviceMemory& imageMemory)
+{
+    if(vkCreateImage(m_device, &createInfo, nullptr, &image) != VK_SUCCESS)
+    {
+        spdlog::critical("Failed to create an image");
+        throw std::runtime_error("Failed to create an image");
+    }
+
+    VkMemoryRequirements memRequirements;
+    vkGetImageMemoryRequirements(m_device, image, &memRequirements);
+
+    VkMemoryAllocateInfo allocInfo{
+        .sType = VK_STRUCTURE_TYPE_MEMORY_ALLOCATE_INFO,
+        .allocationSize = memRequirements.size,
+        .memoryTypeIndex = findMemoryType(memRequirements.memoryTypeBits, properties)
+    };
+
+    if(vkAllocateMemory(m_device, &allocInfo, nullptr, &imageMemory) != VK_SUCCESS)
+    {
+        spdlog::critical("Failure while trying to allocate image memory");
+        throw std::runtime_error("Failed to allocate image memory");
+    }
+
+    if(vkBindImageMemory(m_device, image, imageMemory, 0) != VK_SUCCESS)
+    {
+        spdlog::critical("Failure while trying to bind image memory");
+        throw std::runtime_error("Failed to allocate image memory");
+    }
+}
+
 void VulkanDevice::pickPhyscialDevice()
 {
     std::uint32_t deviceCount{0};
@@ -153,7 +200,7 @@ bool VulkanDevice::isDeviceSuitable(VkPhysicalDevice device)
     return indices.isComplete() && extensionsSupported && swapchainSuitable && static_cast<bool>(supportedFeatures.samplerAnisotropy);
 }
 
-QueueFamilyIndices VulkanDevice::findQueueFamilies(VkPhysicalDevice device)
+QueueFamilyIndices VulkanDevice::findQueueFamilies(VkPhysicalDevice device) const
 {
     QueueFamilyIndices indices;
 
@@ -199,7 +246,7 @@ bool VulkanDevice::checkDeviceExtensionsSupported(VkPhysicalDevice device)
     return requiredExtensions.empty();
 }
 
-SwapchainSupportDetails VulkanDevice::querySwapchainSupport(VkPhysicalDevice device)
+SwapchainSupportDetails VulkanDevice::querySwapchainSupport(VkPhysicalDevice device) const
 {
     SwapchainSupportDetails details;
     vkGetPhysicalDeviceSurfaceCapabilitiesKHR(device, surface, &details.capabilities);
@@ -223,6 +270,21 @@ SwapchainSupportDetails VulkanDevice::querySwapchainSupport(VkPhysicalDevice dev
     }
 
     return details;
+}
+
+std::uint32_t VulkanDevice::findMemoryType(std::uint32_t typeFilter, VkMemoryPropertyFlags properties)
+{
+    VkPhysicalDeviceMemoryProperties memProperties;
+    vkGetPhysicalDeviceMemoryProperties(m_physicalDevice, &memProperties);
+
+    for(std::uint32_t i{0}; i < memProperties.memoryTypeCount; ++i)
+    {
+        if(static_cast<bool>((typeFilter & (1 << i))) && (memProperties.memoryTypes[i].propertyFlags & properties) == properties) //NOLINT
+            return i;
+    }
+
+    spdlog::critical("Failed to find a suitable memory type");
+    throw std::runtime_error("Failed to find a suitable memory type");
 }
 
 }
