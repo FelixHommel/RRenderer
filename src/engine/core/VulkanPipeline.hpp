@@ -1,0 +1,62 @@
+#ifndef RRENDERER_ENGINE_CORE_VULKAN_PIPELINE_HPP
+#define RRENDERER_ENGINE_CORE_VULKAN_PIPELINE_HPP
+
+#include "core/interfaces/IPipeline.hpp"
+
+#include <vulkan/vulkan_core.h>
+
+#include <cstdint>
+#include <filesystem>
+#include <string>
+#include <vector>
+
+namespace rr
+{
+
+struct PipelineConfigInfo
+{
+    VkViewport viewport{};
+    VkRect2D scissor{};
+    VkPipelineInputAssemblyStateCreateInfo inputAssemblyInfo{};
+    VkPipelineRasterizationStateCreateInfo rasterizationInfo{};
+    VkPipelineMultisampleStateCreateInfo multisampleInfo{};
+    VkPipelineColorBlendAttachmentState colorBlendAttachment{};
+    VkPipelineColorBlendStateCreateInfo colorBlendInfo{};
+    VkPipelineDepthStencilStateCreateInfo depthStencilInfo{};
+    VkPipelineLayout pipelineLayout{ nullptr };
+    VkRenderPass renderPass{ nullptr };
+    std::uint32_t subpass{ 0 };
+};
+
+class VulkanPipeline : public IPipeline
+{
+public:
+    VulkanPipeline(VkDevice device, const PipelineConfigInfo& configInfo, const std::filesystem::path& vertFilepath, const std::filesystem::path& fragFilepath);
+    ~VulkanPipeline() override;
+
+    VulkanPipeline(const VulkanPipeline&) = delete;
+    VulkanPipeline(VulkanPipeline&&) = delete;
+    VulkanPipeline& operator=(const VulkanPipeline&) = delete;
+    VulkanPipeline& operator=(VulkanPipeline&&) = delete;
+
+    static PipelineConfigInfo defaultPipelineConfigInfo(VkExtent2D extent);
+    static PipelineConfigInfo defaultPipelineConfigInfo(std::uint32_t width, std::uint32_t height);
+
+    void bind(CommandBuffer& cmdBuffer) override;
+
+private:
+    VkDevice device;
+
+    VkPipeline m_pipeline;
+    VkShaderModule m_vertShaderModule;
+    VkShaderModule m_fragShaderModule;
+
+    void createShaderModule(const std::vector<char>& code, VkShaderModule* shaderModule);
+
+    // TODO: move to dedicated file io class
+    static std::vector<char> readFile(const std::filesystem::path& filepath);
+};
+
+} // !rr
+
+#endif // !RRENDERER_ENGINE_CORE_VULKAN_PIPELINE_HPP
