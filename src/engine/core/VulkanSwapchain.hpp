@@ -1,5 +1,5 @@
-#ifndef RRENDERER_ENGINE_GPU_SWAPCHAIN_HPP
-#define RRENDERER_ENGINE_GPU_SWAPCHAIN_HPP
+#ifndef RRENDERER_ENGINE_CORE_SWAPCHAIN_HPP
+#define RRENDERER_ENGINE_CORE_SWAPCHAIN_HPP
 
 #include "core/VulkanDevice.hpp"
 #include "interfaces/ISwapchain.hpp"
@@ -83,4 +83,4 @@ private:
 
 } // !rr
 
-#endif // !RRENDERER_ENGINE_GPU_SWAPCHAIN_HPP
+#endif // !RRENDERER_ENGINE_CORE_SWAPCHAIN_HPP
