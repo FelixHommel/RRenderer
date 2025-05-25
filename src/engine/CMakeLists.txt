@@ -22,6 +22,11 @@ add_library(${NAME}
     core/interfaces/ISwapchain.hpp
     core/VulkanSwapchain.cpp
     core/VulkanSwapchain.hpp
+    core/VulkanPipelineLayout.cpp
+    core/VulkanPipelineLayout.hpp
+    core/interfaces/IPipeline.hpp
+    core/VulkanPipeline.cpp
+    core/VulkanPipeline.hpp
     core/CommandBuffer.cpp
     core/CommandBuffer.hpp
 )
