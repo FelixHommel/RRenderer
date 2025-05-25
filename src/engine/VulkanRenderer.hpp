@@ -2,7 +2,6 @@
 #define RRENDERER_ENGINE_VULKAN_RENDERER_HPP
 
 #include "Renderer.hpp"
-#include "core/Swapchain.hpp"
 #include "core/VulkanDebugMessenger.hpp"
 #include "core/VulkanDevice.hpp"
 #include "core/VulkanInstance.hpp"
@@ -41,7 +40,7 @@ private:
     std::unique_ptr<VulkanInstance> m_instance;
     std::unique_ptr<VulkanDebugMessenger> m_debugMessenger;
     std::unique_ptr<VulkanSurface> m_surface;
-    /*std::unique_ptr<VulkanDevice> m_device;*/
+    std::unique_ptr<VulkanDevice> m_device;
     /*std::unique_ptr<Swapchain> m_swapchain;*/
     // commandPool
     // commandBuffer
