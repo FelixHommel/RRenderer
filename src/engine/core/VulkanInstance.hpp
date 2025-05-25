@@ -23,10 +23,6 @@ public:
 private:
     VkInstance m_instance;
 
-    const std::vector<const char*> validationLayers{
-        "VK_LAYER_KHRONOS_validation"
-    };
-
     bool checkValidationLayerSupport();
 
     static std::vector<const char*> getRequiredExtensions(bool useValidationLayers);
