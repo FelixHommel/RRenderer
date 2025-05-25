@@ -14,6 +14,7 @@ VulkanRenderer::VulkanRenderer(Window& window)
     , m_debugMessenger(std::make_unique<VulkanDebugMessenger>(m_instance->getHandle()))
     , m_surface(std::make_unique<VulkanSurface>(m_instance->getHandle(), window))
     , m_device(std::make_unique<VulkanDevice>(m_instance->getHandle(), m_surface->getHandle()))
+    , m_swapchain(std::make_unique<VulkanSwapchain>(*m_device, m_surface->getHandle(), window.getExtent()))
 {}
 
 VulkanRenderer::~VulkanRenderer() = default;
