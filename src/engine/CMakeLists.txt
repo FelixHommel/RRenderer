@@ -14,6 +14,8 @@ add_library(${NAME}
     core/VulkanInstance.hpp
     core/VulkanDebugMessenger.cpp
     core/VulkanDebugMessenger.hpp
+    core/VulkanSurface.cpp
+    core/VulkanSurface.hpp
     core/interfaces/IDevice.hpp
     core/VulkanDevice.cpp
     core/VulkanDevice.hpp
