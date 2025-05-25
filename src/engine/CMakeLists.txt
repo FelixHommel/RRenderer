@@ -19,8 +19,9 @@ add_library(${NAME}
     core/interfaces/IDevice.hpp
     core/VulkanDevice.cpp
     core/VulkanDevice.hpp
-    core/Swapchain.cpp
-    core/Swapchain.hpp
+    core/interfaces/ISwapchain.hpp
+    core/VulkanSwapchain.cpp
+    core/VulkanSwapchain.hpp
     core/CommandBuffer.cpp
     core/CommandBuffer.hpp
 )
