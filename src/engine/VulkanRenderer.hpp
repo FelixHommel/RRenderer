@@ -2,6 +2,8 @@
 #define RRENDERER_ENGINE_VULKAN_RENDERER_HPP
 
 #include "Renderer.hpp"
+#include "core/VulkanCommandBuffer.hpp"
+#include "core/VulkanCommandPool.hpp"
 #include "core/VulkanDebugMessenger.hpp"
 #include "core/VulkanDevice.hpp"
 #include "core/VulkanInstance.hpp"
@@ -26,7 +28,7 @@ class VulkanRenderer : public Renderer
 {
 public:
     VulkanRenderer(Window& window);
-    ~VulkanRenderer() override;
+    ~VulkanRenderer() override = default;
 
     VulkanRenderer(const VulkanRenderer&) = delete;
     VulkanRenderer(VulkanRenderer&&) = delete;
@@ -47,10 +49,11 @@ private:
     std::unique_ptr<VulkanSwapchain> m_swapchain;
     std::unique_ptr<VulkanPipelineLayout> m_pipelineLayout;
     std::unique_ptr<VulkanPipeline> m_pipeline;
-    // commandPool
-    // commandBuffer
+    std::unique_ptr<VulkanCommandPool> m_commandPool;
+    std::vector<std::unique_ptr<VulkanCommandBuffer>> m_commandBuffers;
     
     std::unique_ptr<VulkanPipeline> createPipeline();
+    void recordCommandBuffers();
 };
 
 } // !rr
