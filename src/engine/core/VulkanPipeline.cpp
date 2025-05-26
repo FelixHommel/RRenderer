@@ -174,8 +174,10 @@ PipelineConfigInfo VulkanPipeline::defaultPipelineConfigInfo(std::uint32_t width
     return configInfo;
 }
 
-void VulkanPipeline::bind(CommandBuffer& cmdBuffer)
-{}
+void VulkanPipeline::bind(VkCommandBuffer cmdBuffer)
+{
+    vkCmdBindPipeline(cmdBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, m_pipeline);
+}
 
 void VulkanPipeline::createShaderModule(const std::vector<char>& code, VkShaderModule* shaderModule)
 {

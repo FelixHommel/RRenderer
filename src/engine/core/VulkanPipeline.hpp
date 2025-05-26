@@ -42,7 +42,7 @@ public:
     static PipelineConfigInfo defaultPipelineConfigInfo(VkExtent2D extent);
     static PipelineConfigInfo defaultPipelineConfigInfo(std::uint32_t width, std::uint32_t height);
 
-    void bind(CommandBuffer& cmdBuffer) override;
+    void bind(VkCommandBuffer cmdBuffer);
 
 private:
     VkDevice device;
