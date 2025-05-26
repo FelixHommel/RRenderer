@@ -27,8 +27,12 @@ add_library(${NAME}
     core/interfaces/IPipeline.hpp
     core/VulkanPipeline.cpp
     core/VulkanPipeline.hpp
-    core/CommandBuffer.cpp
-    core/CommandBuffer.hpp
+    core/interfaces/ICommandPool.hpp
+    core/VulkanCommandPool.cpp
+    core/VulkanCommandPool.hpp
+    core/interfaces/ICommandBuffer.hpp
+    core/VulkanCommandBuffer.cpp
+    core/VulkanCommandBuffer.hpp
 )
 
 target_include_directories(${NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
