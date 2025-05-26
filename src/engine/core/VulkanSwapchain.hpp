@@ -37,6 +37,7 @@ public:
     [[nodiscard]] VkExtent2D getExtent() const { return m_swapchainImageExtent; }
 
     [[nodiscard]] VkRenderPass getRenderPassHandle() const { return m_renderPass; }
+    [[nodiscard]] VkFramebuffer getFramebufferHandle(std::size_t index) const;
 
 private:
     /** External objects */

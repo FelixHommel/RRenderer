@@ -70,6 +70,14 @@ void VulkanSwapchain::resize(std::uint32_t width, std::uint32_t height)
 void VulkanSwapchain::present()
 {}
 
+VkFramebuffer VulkanSwapchain::getFramebufferHandle(std::size_t index) const
+{
+    if(index >= m_swapchainFramebuffers.size())
+        throw std::out_of_range("The element that was tried to access does not exist");
+
+    return m_swapchainFramebuffers[index];
+}
+
 /**
  *  Set up the swapchain with format, extent and used queues.
 */
