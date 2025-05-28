@@ -1,6 +1,8 @@
 #include "VulkanRenderer.hpp"
 #include "window/Window.hpp"
 
+#include <iostream>
+#include <memory>
 #include <string>
 
 static constexpr int WINDOW_WIDTH{700};
@@ -9,13 +11,19 @@ static constexpr std::string WINDOW_TITLE{"title"};
 
 int main()
 {
-    rr::Window w{WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE};
-    rr::VulkanRenderer r{w};
+    std::unique_ptr<rr::Window> w{ std::make_unique<rr::Window>(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE) };
+    std::unique_ptr<rr::VulkanRenderer> r{ std::make_unique<rr::VulkanRenderer>(*w) };
 
-    while(w.shouldClose() == 0)
+    while(w->shouldClose() == 0)
     {
         glfwPollEvents();
+        r->render();
     }
+    r->shutdown();
+    r.reset();
+
+    w.reset();
+    glfwTerminate();
 
     return 0;
 }
