@@ -1,8 +1,6 @@
 #ifndef RRENDERER_ENGINE_CORE_VULKAN_COMMAND_BUFFER_HPP
 #define RRENDERER_ENGINE_CORE_VULKAN_COMMAND_BUFFER_HPP
 
-#include "core/interfaces/ICommandBuffer.hpp"
-
 #include <vulkan/vulkan_core.h>
 
 #include <memory>
@@ -17,12 +15,12 @@ namespace rr
  *  @author Felix Hommel
  *  @date 5/26/2025
 */
-class VulkanCommandBuffer : public ICommandBuffer
+class VulkanCommandBuffer
 {
 public:
     VulkanCommandBuffer(VkDevice device, VkCommandPool commandPool, VkCommandBufferLevel = VK_COMMAND_BUFFER_LEVEL_PRIMARY);
     VulkanCommandBuffer(VkCommandBuffer commandBuffer);
-    ~VulkanCommandBuffer() override = default;
+    ~VulkanCommandBuffer() = default;
 
     VulkanCommandBuffer(const VulkanCommandBuffer&) = delete;
     VulkanCommandBuffer(VulkanCommandBuffer&&) = delete;
@@ -32,6 +30,7 @@ public:
     static std::vector<std::unique_ptr<VulkanCommandBuffer>> create(VkDevice device, VkCommandPool commandPool, std::uint32_t count, VkCommandBufferLevel level = VK_COMMAND_BUFFER_LEVEL_PRIMARY);
 
     [[nodiscard]] VkCommandBuffer getHandle() const { return m_commandBuffer; }
+    [[nodiscard]] VkCommandBuffer& getHandle() { return m_commandBuffer; }
     
 private:
     VkCommandBuffer m_commandBuffer;

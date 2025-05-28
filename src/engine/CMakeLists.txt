@@ -16,21 +16,16 @@ add_library(${NAME}
     core/VulkanDebugMessenger.hpp
     core/VulkanSurface.cpp
     core/VulkanSurface.hpp
-    core/interfaces/IDevice.hpp
     core/VulkanDevice.cpp
     core/VulkanDevice.hpp
-    core/interfaces/ISwapchain.hpp
     core/VulkanSwapchain.cpp
     core/VulkanSwapchain.hpp
     core/VulkanPipelineLayout.cpp
     core/VulkanPipelineLayout.hpp
-    core/interfaces/IPipeline.hpp
     core/VulkanPipeline.cpp
     core/VulkanPipeline.hpp
-    core/interfaces/ICommandPool.hpp
     core/VulkanCommandPool.cpp
     core/VulkanCommandPool.hpp
-    core/interfaces/ICommandBuffer.hpp
     core/VulkanCommandBuffer.cpp
     core/VulkanCommandBuffer.hpp
 )

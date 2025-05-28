@@ -9,7 +9,6 @@
 #include <cstring>
 #include <set>
 #include <stdexcept>
-#include <string>
 
 namespace rr
 {
@@ -31,17 +30,6 @@ VulkanDevice::~VulkanDevice()
 {
     vkDestroyDevice(m_device, nullptr);
 }
-
-int VulkanDevice::createBuffer(std::size_t size, int usage)
-{
-    return 0;
-}
-
-void VulkanDevice::destroyBuffer()
-{}
-
-void VulkanDevice::waitIdle()
-{}
 
 VkFormat VulkanDevice::findSupportedFormat(const std::vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features)
 {

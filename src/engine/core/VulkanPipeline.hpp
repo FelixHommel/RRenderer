@@ -1,13 +1,10 @@
 #ifndef RRENDERER_ENGINE_CORE_VULKAN_PIPELINE_HPP
 #define RRENDERER_ENGINE_CORE_VULKAN_PIPELINE_HPP
 
-#include "core/interfaces/IPipeline.hpp"
-
 #include <vulkan/vulkan_core.h>
 
 #include <cstdint>
 #include <filesystem>
-#include <string>
 #include <vector>
 
 namespace rr
@@ -28,11 +25,11 @@ struct PipelineConfigInfo
     std::uint32_t subpass{ 0 };
 };
 
-class VulkanPipeline : public IPipeline
+class VulkanPipeline
 {
 public:
     VulkanPipeline(VkDevice device, const PipelineConfigInfo& configInfo, const std::filesystem::path& vertFilepath, const std::filesystem::path& fragFilepath);
-    ~VulkanPipeline() override;
+    ~VulkanPipeline();
 
     VulkanPipeline(const VulkanPipeline&) = delete;
     VulkanPipeline(VulkanPipeline&&) = delete;

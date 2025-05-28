@@ -1,8 +1,6 @@
 #ifndef RRENDERER_ENGINE_CORE_VULKAN_DEVICE_HPP
 #define RRENDERER_ENGINE_CORE_VULKAN_DEVICE_HPP
 
-#include "interfaces/IDevice.hpp"
-
 #include <vulkan/vulkan_core.h>
 
 #include <array>
@@ -40,22 +38,21 @@ struct QueueFamilyIndices
  *  @author Felix Hommel
  *  @date 5/26/2025
 */ 
-class VulkanDevice : public IDevice
+class VulkanDevice
 {
 public:
     VulkanDevice(VkInstance instance, VkSurfaceKHR surface);
-    ~VulkanDevice() override;
+    ~VulkanDevice();
 
     VulkanDevice(const VulkanDevice&) = delete;
     VulkanDevice(VulkanDevice&&) = delete;
     VulkanDevice& operator=(const VulkanDevice&) = delete;
     VulkanDevice& operator=(VulkanDevice&&) = delete;
 
-    int createBuffer(std::size_t size, int usage) override;
-    void destroyBuffer() override;
-    void waitIdle() override;
-
     [[nodiscard]] VkDevice getHandle() const { return m_device; }
+    [[nodiscard]] VkQueue getGraphicsQueueHandle() const { return m_graphicsQueue; }
+    [[nodiscard]] VkQueue getPresentQueueHandle() const { return m_presentQueue; }
+
     [[nodiscard]] SwapchainSupportDetails getSwapchainSupport() const { return querySwapchainSupport(m_physicalDevice); }
     [[nodiscard]] QueueFamilyIndices findPhysicalQueueFamilies() const { return findQueueFamilies(m_physicalDevice); }
     [[nodiscard]] VkFormat findSupportedFormat(const std::vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features);

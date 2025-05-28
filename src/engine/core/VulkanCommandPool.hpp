@@ -3,7 +3,6 @@
 
 #include "core/VulkanCommandBuffer.hpp"
 #include "core/VulkanDevice.hpp"
-#include "core/interfaces/ICommandPool.hpp"
 
 #include <cstdint>
 #include <vulkan/vulkan_core.h>
@@ -13,11 +12,11 @@
 namespace rr
 {
 
-class VulkanCommandPool : public ICommandPool
+class VulkanCommandPool
 {
 public:
     VulkanCommandPool(VulkanDevice& device);
-    ~VulkanCommandPool() override;
+    ~VulkanCommandPool();
 
     VulkanCommandPool(const VulkanCommandPool&) = delete;
     VulkanCommandPool(VulkanCommandPool&&) = delete;

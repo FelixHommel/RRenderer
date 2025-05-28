@@ -1,6 +1,5 @@
 #include "VulkanCommandBuffer.hpp"
 
-#include "core/interfaces/ICommandBuffer.hpp"
 #include "spdlog/spdlog.h"
 #include <vulkan/vulkan_core.h>
 
