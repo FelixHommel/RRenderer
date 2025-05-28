@@ -7,7 +7,6 @@ add_library(${NAME}
     Renderer.hpp
     VulkanRenderer.cpp
     VulkanRenderer.hpp
-    Shader.hpp
     window/Window.cpp
     window/Window.hpp
     core/VulkanInstance.cpp
