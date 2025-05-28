@@ -36,6 +36,8 @@ public:
     [[nodiscard]] int shouldClose() const { return glfwWindowShouldClose(m_window); }
     [[nodiscard]] VkExtent2D getExtent() const { return { static_cast<std::uint32_t>(m_width), static_cast<std::uint32_t>(m_height) }; }
 
+    [[nodiscard]] GLFWwindow* getWindowHandle() const { return m_window; }
+
     void createWindowSurface(VkInstance& instance, VkSurfaceKHR* surface);
 
 private:

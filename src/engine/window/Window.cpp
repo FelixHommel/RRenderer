@@ -34,7 +34,6 @@ Window::~Window()
 {
     spdlog::info("Shutting down...");
     glfwDestroyWindow(m_window);
-    glfwTerminate();
 }
 
 void Window::createWindowSurface(VkInstance& instance, VkSurfaceKHR* surface)
