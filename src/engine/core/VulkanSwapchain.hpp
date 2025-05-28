@@ -2,7 +2,6 @@
 #define RRENDERER_ENGINE_CORE_SWAPCHAIN_HPP
 
 #include "core/VulkanDevice.hpp"
-#include "interfaces/ISwapchain.hpp"
 
 #include <vulkan/vulkan_core.h>
 
@@ -19,23 +18,27 @@ namespace rr
  *  @author Felix Hommel
  *  @date 5/26/2025
 */
-class VulkanSwapchain : public ISwapchain
+class VulkanSwapchain
 {
 public:
     VulkanSwapchain(VulkanDevice& device, VkSurfaceKHR surface, VkExtent2D windowExtent);
-    ~VulkanSwapchain() override;
+    ~VulkanSwapchain();
 
     VulkanSwapchain(const VulkanSwapchain&) = delete;
     VulkanSwapchain(VulkanSwapchain&&) = delete;
     VulkanSwapchain& operator=(const VulkanSwapchain&) = delete;
     VulkanSwapchain& operator=(VulkanSwapchain&&) = delete;
 
-    void resize(std::uint32_t width, std::uint32_t height) override;
-    void present() override;
+    static constexpr std::uint32_t MAX_FRAMES_IN_FLIGHT{ 2 };
 
     [[nodiscard]] std::size_t imageCount() const { return m_swapchainImages.size(); }
     [[nodiscard]] VkExtent2D getExtent() const { return m_swapchainImageExtent; }
 
+    /** Presentation utility */
+    [[nodiscard]] VkResult acquireNextImage(std::uint32_t* imageIndex);
+    [[nodiscard]] VkResult submitCommandBuffer(const VkCommandBuffer* commandBuffer, std::uint32_t* imageIndex);
+
+    /** Raw handle access */
     [[nodiscard]] VkRenderPass getRenderPassHandle() const { return m_renderPass; }
     [[nodiscard]] VkFramebuffer getFramebufferHandle(std::size_t index) const;
 
@@ -58,15 +61,14 @@ private:
     std::vector<VkImage> m_depthImages;
     std::vector<VkDeviceMemory> m_depthImagesMemory;
     std::vector<VkImageView> m_depthImageViews;
+    std::size_t m_currentFrame{ 0 };
+    std::uint32_t m_lastImageIndex{};
 
     /** Sync */
     std::vector<VkSemaphore> m_imageAvailableSemaphores;
     std::vector<VkSemaphore> m_renderFinishedSemaphores;
     std::vector<VkFence> m_inFlightFences;
     std::vector<VkFence> m_imagesInFlight;
-
-    /** local constants */
-    static constexpr std::uint32_t MAX_FRAMES_IN_FLIGHT{ 2 };
 
     /** Setup functions */
     void createSwapchain();

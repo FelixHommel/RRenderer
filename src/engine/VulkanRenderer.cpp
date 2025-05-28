@@ -27,17 +27,35 @@ VulkanRenderer::VulkanRenderer(Window& window)
     , m_commandPool(std::make_unique<VulkanCommandPool>(*m_device))
     , m_commandBuffers(m_commandPool->allocateCommandBuffer(m_swapchain->imageCount()))
 {
+    spdlog::info("allocated {} command buffers", m_commandBuffers.size());
     recordCommandBuffers();
 }
 
-void VulkanRenderer::init()
-{}
+void VulkanRenderer::render()
+{
+    std::uint32_t imageIndex{};
+    auto result{ m_swapchain->acquireNextImage(&imageIndex) };
 
-void VulkanRenderer::drawFrame()
-{}
+    if(result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR)
+    {
+        spdlog::critical("Failure while acquiring next swapchain image");
+        throw std::runtime_error("Failed to acquire the next swapchain image");
+    }
+
+    result = m_swapchain->submitCommandBuffer(&m_commandBuffers[imageIndex]->getHandle(), &imageIndex);
+
+    if(result != VK_SUCCESS)
+    {
+        spdlog::critical("Failure while submitting command buffer");
+        throw std::runtime_error("Failed to submit command buffer");
+    }
+}
 
 void VulkanRenderer::shutdown()
-{}
+{
+    if(m_device)
+        vkDeviceWaitIdle(m_device->getHandle());
+}
 
 std::unique_ptr<VulkanPipeline> VulkanRenderer::createPipeline()
 {

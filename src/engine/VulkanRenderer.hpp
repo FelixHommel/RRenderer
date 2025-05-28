@@ -35,9 +35,7 @@ public:
     VulkanRenderer& operator=(const VulkanRenderer&) = delete;
     VulkanRenderer& operator=(VulkanRenderer&&) = delete;
 
-    // NOTE: probably remove init()
-    void init() override;
-    void drawFrame() override;
+    void render() override;
     void shutdown() override;
 
 private:
