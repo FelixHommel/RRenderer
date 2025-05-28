@@ -23,8 +23,7 @@ public:
 private:
     VkInstance m_instance;
 
-    bool checkValidationLayerSupport();
-
+    static bool checkValidationLayerSupport();
     static std::vector<const char*> getRequiredExtensions(bool useValidationLayers);
     static void hasGLFWRequiredInstanceExtensions(bool useValidationLayers);
 };

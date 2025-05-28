@@ -36,7 +36,7 @@ public:
 
     /** Presentation utility */
     [[nodiscard]] VkResult acquireNextImage(std::uint32_t* imageIndex);
-    [[nodiscard]] VkResult submitCommandBuffer(const VkCommandBuffer* commandBuffer, std::uint32_t* imageIndex);
+    [[nodiscard]] VkResult submitCommandBuffer(const VkCommandBuffer* commandBuffer, const std::uint32_t* imageIndex);
 
     /** Raw handle access */
     [[nodiscard]] VkRenderPass getRenderPassHandle() const { return m_renderPass; }

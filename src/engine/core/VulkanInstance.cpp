@@ -1,11 +1,19 @@
 #include "VulkanInstance.hpp"
 
-#include "GLFW/glfw3.h"
 #include "constants.hpp"
+
+#include "GLFW/glfw3.h"
 #include "spdlog/spdlog.h"
+#include <vulkan/vk_platform.h>
 #include <vulkan/vulkan_core.h>
 
+#include <cstdint>
+#include <cstring>
+#include <span>
+#include <stdexcept>
+#include <string>
 #include <unordered_set>
+#include <vector>
 
 namespace rr
 {
@@ -153,7 +161,7 @@ std::vector<const char*> VulkanInstance::getRequiredExtensions(bool useValidatio
  */
 void VulkanInstance::hasGLFWRequiredInstanceExtensions(bool useValidationLayers)
 {
-    uint32_t extensionCount{0};
+    std::uint32_t extensionCount{0};
     vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, nullptr);
 
     std::vector<VkExtensionProperties> extensions(extensionCount);

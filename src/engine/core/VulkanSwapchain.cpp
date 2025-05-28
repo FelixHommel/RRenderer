@@ -3,10 +3,13 @@
 #include "core/VulkanDevice.hpp"
 
 #include "spdlog/spdlog.h"
-#include <array>
 #include <vulkan/vulkan_core.h>
 
+#include <algorithm>
+#include <array>
+#include <cstddef>
 #include <cstdint>
+#include <limits>
 #include <stdexcept>
 #include <vector>
 
@@ -75,7 +78,7 @@ VkResult VulkanSwapchain::acquireNextImage(std::uint32_t* imageIndex)
     return vkAcquireNextImageKHR(device.getHandle(), m_swapchain, std::numeric_limits<std::uint64_t>::max(), m_imageAvailableSemaphores[m_currentFrame], VK_NULL_HANDLE, imageIndex);
 }
 
-VkResult VulkanSwapchain::submitCommandBuffer(const VkCommandBuffer* commandBuffer, std::uint32_t* imageIndex)
+VkResult VulkanSwapchain::submitCommandBuffer(const VkCommandBuffer* commandBuffer, const std::uint32_t* imageIndex)
 {
     if(m_imagesInFlight[*imageIndex] != VK_NULL_HANDLE)
         vkWaitForFences(device.getHandle(), 1, &m_imagesInFlight[*imageIndex], VK_TRUE, std::numeric_limits<std::uint64_t>::max());

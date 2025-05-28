@@ -1,14 +1,16 @@
 #include "VulkanDevice.hpp"
 
 #include "constants.hpp"
+
 #include "spdlog/spdlog.h"
-#include <vulkan/vk_platform.h>
 #include <vulkan/vulkan_core.h>
 
 #include <cstdint>
 #include <cstring>
 #include <set>
 #include <stdexcept>
+#include <string>
+#include <vector>
 
 namespace rr
 {
@@ -38,10 +40,11 @@ VkFormat VulkanDevice::findSupportedFormat(const std::vector<VkFormat>& candidat
         VkFormatProperties properties;
         vkGetPhysicalDeviceFormatProperties(m_physicalDevice, format, &properties);
 
-        if(tiling == VK_IMAGE_TILING_LINEAR && (properties.linearTilingFeatures & features) == features)
+        if(tiling == VK_IMAGE_TILING_LINEAR && (properties.linearTilingFeatures & features) == features ||
+            tiling == VK_IMAGE_TILING_OPTIMAL && (properties.optimalTilingFeatures & features) == features)
+        {
             return format;
-        else if(tiling == VK_IMAGE_TILING_OPTIMAL && (properties.optimalTilingFeatures & features) == features)
-            return format;
+        }
     }
 
     spdlog::critical("Failure while searching for supported format");
@@ -164,8 +167,15 @@ void VulkanDevice::createLogicalDevice()
         throw std::runtime_error("Failed to create logical device");
     }
 
-    vkGetDeviceQueue(m_device, indices.graphicsFamily.value(), 0, &m_graphicsQueue);
-    vkGetDeviceQueue(m_device, indices.presentFamily.value(), 0, &m_presentQueue);
+    if(indices.graphicsFamily.has_value() && indices.presentFamily.has_value())
+    {
+        vkGetDeviceQueue(m_device, indices.graphicsFamily.value(), 0, &m_graphicsQueue);
+        vkGetDeviceQueue(m_device, indices.presentFamily.value(), 0, &m_presentQueue);
+    } else
+    {
+        spdlog::critical("Failure with queue creation. One or both queues have no value");
+        throw std::runtime_error("Failure with queue creation. One or both queues have no value");
+    }
 
     spdlog::info("Logical device created successfully...");
 }

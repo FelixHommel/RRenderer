@@ -1,11 +1,16 @@
 #include "VulkanPipeline.hpp"
-#include "spdlog/spdlog.h"
 
+#include "spdlog/spdlog.h"
+#include <vulkan/vulkan_core.h>
+
+#include <array>
 #include <cassert>
+#include <cstdint>
 #include <filesystem>
 #include <fstream>
 #include <ios>
 #include <stdexcept>
+#include <vector>
 
 namespace rr
 {

@@ -14,6 +14,7 @@
 #include "window/Window.hpp"
 
 #include <memory>
+#include <vulkan/vulkan_core.h>
 
 namespace rr
 {
@@ -49,6 +50,8 @@ private:
     std::unique_ptr<VulkanPipeline> m_pipeline;
     std::unique_ptr<VulkanCommandPool> m_commandPool;
     std::vector<std::unique_ptr<VulkanCommandBuffer>> m_commandBuffers;
+
+    static constexpr VkClearColorValue m_clearColor{ 0.1f, 0.1f, 0.1f, 1.f };
     
     std::unique_ptr<VulkanPipeline> createPipeline();
     void recordCommandBuffers();

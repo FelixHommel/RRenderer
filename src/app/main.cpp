@@ -1,7 +1,8 @@
 #include "VulkanRenderer.hpp"
 #include "window/Window.hpp"
 
-#include <iostream>
+#include "GLFW/glfw3.h"
+
 #include <memory>
 #include <string>
 

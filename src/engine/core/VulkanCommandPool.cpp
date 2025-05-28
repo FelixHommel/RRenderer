@@ -4,10 +4,12 @@
 #include "core/VulkanDevice.hpp"
 
 #include "spdlog/spdlog.h"
+#include <vulkan/vulkan_core.h>
 
 #include <cstdint>
 #include <memory>
 #include <stdexcept>
+#include <vector>
 
 namespace rr
 {
@@ -17,6 +19,11 @@ VulkanCommandPool::VulkanCommandPool(VulkanDevice& device)
     , m_commandPool(VK_NULL_HANDLE)
 {
     QueueFamilyIndices indices{ device.findPhysicalQueueFamilies() };
+    if(!indices.graphicsFamily.has_value())
+    {
+        spdlog::critical("graphics queue has no value");
+        throw std::runtime_error("The graphics queue had no value that could be used");
+    }
 
     VkCommandPoolCreateInfo createInfo{
         .sType = VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO,

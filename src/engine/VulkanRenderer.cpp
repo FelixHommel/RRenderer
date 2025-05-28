@@ -4,14 +4,20 @@
 #include "core/VulkanDebugMessenger.hpp"
 #include "core/VulkanDevice.hpp"
 #include "core/VulkanInstance.hpp"
+#include "core/VulkanPipeline.hpp"
 #include "core/VulkanPipelineLayout.hpp"
 #include "core/VulkanSurface.hpp"
+#include "core/VulkanSwapchain.hpp"
 #include "window/Window.hpp"
 
 #include "spdlog/spdlog.h"
+#include <vulkan/vulkan_core.h>
 
 #include <array>
+#include <cstddef>
+#include <cstdint>
 #include <memory>
+#include <stdexcept>
 
 namespace rr
 {
@@ -80,7 +86,7 @@ void VulkanRenderer::recordCommandBuffers()
         }
 
         std::array<VkClearValue, 2> clearValues{
-            VkClearValue{ .color = { 0.1f, 0.1f, 0.1f, 1.f } },
+            VkClearValue{ .color = m_clearColor },
             VkClearValue{ .depthStencil = { 1.f, 0 } }
         };
         VkRenderPassBeginInfo renderPassBeginInfo{
