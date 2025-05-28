@@ -22,8 +22,7 @@ public:
     Renderer& operator=(const Renderer&) = delete;
     Renderer& operator=(Renderer&&) noexcept = delete;
 
-    virtual void init() = 0;
-    virtual void drawFrame() = 0;
+    virtual void render() = 0;
     virtual void shutdown() = 0;
 };
 
