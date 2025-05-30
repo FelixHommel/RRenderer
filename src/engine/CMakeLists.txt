@@ -12,6 +12,7 @@ add_library(${NAME}
     window/Window.hpp
     exception/EngineException.hpp
     exception/VulkanException.hpp
+    exception/FileIOException.hpp
     core/VulkanInstance.cpp
     core/VulkanInstance.hpp
     core/VulkanDebugMessenger.cpp
