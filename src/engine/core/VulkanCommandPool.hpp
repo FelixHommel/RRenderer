@@ -15,7 +15,7 @@ namespace rr
 class VulkanCommandPool
 {
 public:
-    VulkanCommandPool(VulkanDevice& device);
+    explicit VulkanCommandPool(VulkanDevice& device);
     ~VulkanCommandPool();
 
     VulkanCommandPool(const VulkanCommandPool&) = delete;
