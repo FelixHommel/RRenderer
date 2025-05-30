@@ -3,7 +3,12 @@
 #include "constants.hpp"
 
 #include "GLFW/glfw3.h"
+#include "exception/EngineException.hpp"
+#include "exception/VulkanException.hpp"
 #include "spdlog/spdlog.h"
+#include "utility/StringHash.hpp"
+#include <source_location>
+#include <unordered_set>
 #include <vulkan/vk_platform.h>
 #include <vulkan/vulkan_core.h>
 
@@ -11,8 +16,6 @@
 #include <cstring>
 #include <span>
 #include <stdexcept>
-#include <string>
-#include <unordered_set>
 #include <vector>
 
 namespace rr
@@ -64,7 +67,7 @@ VulkanInstance::VulkanInstance()
         .apiVersion = VK_API_VERSION_1_0
     };
 
-    auto extensions{ getRequiredExtensions(useValidationLayers) };
+    auto extensions{ getRequiredExtensions() };
     VkInstanceCreateInfo createInfo{
         .sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO,
         .pApplicationInfo = &appInfo,
@@ -91,12 +94,9 @@ VulkanInstance::VulkanInstance()
     }
 
     if(vkCreateInstance(&createInfo, nullptr, &m_instance) != VK_SUCCESS)
-    {
-        spdlog::critical("Failed to create vulkan instance");
-        throw std::runtime_error("Failure while creating vulkan instance");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_INSTANCE);
 
-    hasGLFWRequiredInstanceExtensions(useValidationLayers);
+    hasGLFWRequiredInstanceExtensions();
     spdlog::info("Instance created successfully...");
 }
 
@@ -142,7 +142,7 @@ bool VulkanInstance::checkValidationLayerSupport()
  *
  *  @return std::vector of required extension name strings
 */
-std::vector<const char*> VulkanInstance::getRequiredExtensions(bool useValidationLayers)
+std::vector<const char*> VulkanInstance::getRequiredExtensions()
 {
     std::uint32_t glfwExtensionCount{ 0 };
     auto* glfwExtensions{ glfwGetRequiredInstanceExtensions(&glfwExtensionCount) };
@@ -158,7 +158,7 @@ std::vector<const char*> VulkanInstance::getRequiredExtensions(bool useValidatio
 /**
  *  Check if the instance supports all the extensions that are requried by GLFW.
  */
-void VulkanInstance::hasGLFWRequiredInstanceExtensions(bool useValidationLayers)
+void VulkanInstance::hasGLFWRequiredInstanceExtensions()
 {
     std::uint32_t extensionCount{0};
     vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, nullptr);
@@ -167,21 +167,21 @@ void VulkanInstance::hasGLFWRequiredInstanceExtensions(bool useValidationLayers)
     vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, extensions.data());
 
     spdlog::info("available extensions: {}", extensionCount);
-    std::unordered_set<std::string> available;
+    std::unordered_set<std::string, StringHash, std::equal_to<>> available;
     for(const auto& extension : extensions)
     {
         spdlog::info("\t{}", extension.extensionName);
-        available.insert(extension.extensionName);
+        available.emplace(extension.extensionName);
     }
 
     spdlog::info("required extensions:");
-    auto requiredExtensions{ getRequiredExtensions(useValidationLayers) };
+    auto requiredExtensions{ getRequiredExtensions() };
     for(const auto& required : requiredExtensions)
     {
         spdlog::info("\t{}", required);
 
         if(!available.contains(required))
-            throw std::runtime_error("missing required GLFW extension");
+            throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::GLFW_EXTENSIONS_MISSING);
     }
 }
 
