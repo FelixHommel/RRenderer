@@ -2,7 +2,10 @@
 
 #include "constants.hpp"
 
+#include "exception/EngineException.hpp"
+#include "exception/VulkanException.hpp"
 #include "spdlog/spdlog.h"
+#include <source_location>
 #include <vulkan/vulkan_core.h>
 
 #include <cstdint>
@@ -42,17 +45,13 @@ VkFormat VulkanDevice::findSupportedFormat(const std::vector<VkFormat>& candidat
         }
     }
 
-    spdlog::critical("Failure while searching for supported format");
-    throw std::runtime_error("Failed to find a supported format");
+    throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::FIND_SUPPORTED_FORMAT);
 }
 
 void VulkanDevice::createImageWithInfo(const VkImageCreateInfo& createInfo, VkMemoryPropertyFlags properties, VkImage& image, VkDeviceMemory& imageMemory)
 {
     if(vkCreateImage(m_device, &createInfo, nullptr, &image) != VK_SUCCESS)
-    {
-        spdlog::critical("Failed to create an image");
-        throw std::runtime_error("Failed to create an image");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_IMAGE);
 
     VkMemoryRequirements memRequirements;
     vkGetImageMemoryRequirements(m_device, image, &memRequirements);
@@ -64,16 +63,10 @@ void VulkanDevice::createImageWithInfo(const VkImageCreateInfo& createInfo, VkMe
     };
 
     if(vkAllocateMemory(m_device, &allocInfo, nullptr, &imageMemory) != VK_SUCCESS)
-    {
-        spdlog::critical("Failure while trying to allocate image memory");
-        throw std::runtime_error("Failed to allocate image memory");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::ALLOCATE_MEMORY);
 
     if(vkBindImageMemory(m_device, image, imageMemory, 0) != VK_SUCCESS)
-    {
-        spdlog::critical("Failure while trying to bind image memory");
-        throw std::runtime_error("Failed to allocate image memory");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::BIND_IMAGE_MEMORY);
 }
 
 void VulkanDevice::pickPhyscialDevice()
@@ -82,10 +75,7 @@ void VulkanDevice::pickPhyscialDevice()
     vkEnumeratePhysicalDevices(instance, &deviceCount, nullptr);
 
     if(deviceCount == 0)
-    {
-        spdlog::critical("No vulkan compatible devices are detected");
-        throw std::runtime_error("Failed to find a vulkan compatible device");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::NO_PHYSICAL_DEVICE_FOUND);
 
     spdlog::info("Found {} vulkan compatible device(s)", deviceCount);
 
@@ -102,10 +92,7 @@ void VulkanDevice::pickPhyscialDevice()
     }
 
     if(m_physicalDevice == VK_NULL_HANDLE)
-    {
-        spdlog::critical("No suitable vulkan device could be found");
-        throw std::runtime_error("Failed to pick a suitable vulkan device");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::NO_SUITABLE_DEVICE_FOUND);
 
     vkGetPhysicalDeviceProperties(m_physicalDevice, &m_physicalDeviceProperties);
     spdlog::info("physical device: {}\n\tID: {}\n\tvendorID: {}\n\tdeviceType: {}",
@@ -157,20 +144,14 @@ void VulkanDevice::createLogicalDevice()
     }
 
     if(vkCreateDevice(m_physicalDevice, &createInfo, nullptr, &m_device) != VK_SUCCESS)
-    {
-        spdlog::critical("Failure while craeting logical device");
-        throw std::runtime_error("Failed to create logical device");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_DEVICE);
 
     if(indices.graphicsFamily.has_value() && indices.presentFamily.has_value())
     {
         vkGetDeviceQueue(m_device, indices.graphicsFamily.value(), 0, &m_graphicsQueue);
         vkGetDeviceQueue(m_device, indices.presentFamily.value(), 0, &m_presentQueue);
     } else
-    {
-        spdlog::critical("Failure with queue creation. One or both queues have no value");
-        throw std::runtime_error("Failure with queue creation. One or both queues have no value");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::QUEUE_FAMILY_INDEX_IS_EMPTY);
 
     spdlog::info("Logical device created successfully...");
 }
@@ -276,8 +257,7 @@ std::uint32_t VulkanDevice::findMemoryType(std::uint32_t typeFilter, VkMemoryPro
             return i;
     }
 
-    spdlog::critical("Failed to find a suitable memory type");
-    throw std::runtime_error("Failed to find a suitable memory type");
+    throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::NO_SUITABLE_MEMORY_TYPE_FOUND);
 }
 
 }
