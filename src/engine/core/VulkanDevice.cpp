@@ -211,7 +211,7 @@ bool VulkanDevice::checkDeviceExtensionsSupported(VkPhysicalDevice device) const
     std::vector<VkExtensionProperties> availableExtensions(extensionCount);
     vkEnumerateDeviceExtensionProperties(device, nullptr, &extensionCount, availableExtensions.data());
 
-    std::set<std::string> requiredExtensions(deviceExtensions.begin(), deviceExtensions.end());
+    std::set<std::string, std::less<>> requiredExtensions(deviceExtensions.begin(), deviceExtensions.end());
 
     for(const auto& extension : availableExtensions)
         requiredExtensions.erase(extension.extensionName);
