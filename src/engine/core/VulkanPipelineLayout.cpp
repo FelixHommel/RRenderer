@@ -8,7 +8,6 @@ namespace rr
 
 VulkanPipelineLayout::VulkanPipelineLayout(VkDevice device)
     : device(device)
-    , m_pipelineLayout(VK_NULL_HANDLE)
 {
     VkPipelineLayoutCreateInfo createInfo{
         .sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO,

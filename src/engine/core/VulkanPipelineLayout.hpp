@@ -22,7 +22,7 @@ public:
 private:
     VkDevice device;
 
-    VkPipelineLayout m_pipelineLayout;
+    VkPipelineLayout m_pipelineLayout{ VK_NULL_HANDLE };
 };
 
 } // !rr
