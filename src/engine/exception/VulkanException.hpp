@@ -18,7 +18,8 @@ enum class VulkanExceptionCause
     END_RECORD_COMMAND_BUFFER,
     ALLOCATE_COMMAND_BUFFERS,
     QUEUE_FAMILY_INDEX_IS_EMPTY,
-    CREATE_COMMAND_POOL
+    CREATE_COMMAND_POOL,
+    CREATE_DEBUG_MESSENGER
 };
 
 class VulkanException : public EngineException
@@ -51,6 +52,7 @@ private:
             case VulkanExceptionCause::ALLOCATE_COMMAND_BUFFERS: return "allocating command buffers";
             case VulkanExceptionCause::QUEUE_FAMILY_INDEX_IS_EMPTY: return "trying to get the index of a non-existing queue";
             case VulkanExceptionCause::CREATE_COMMAND_POOL: return "creation of a command pool";
+            case VulkanExceptionCause::CREATE_DEBUG_MESSENGER: return "creation of the debug messenger";
             default: return "unknown events";
         }
     }

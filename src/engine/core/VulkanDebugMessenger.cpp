@@ -2,7 +2,10 @@
 
 #include "constants.hpp"
 
+#include "exception/EngineException.hpp"
+#include "exception/VulkanException.hpp"
 #include "spdlog/spdlog.h"
+#include <source_location>
 #include <vulkan/vk_platform.h>
 #include <vulkan/vulkan_core.h>
 
@@ -68,7 +71,6 @@ void DestroyDebugUtilsMessengerEXT(
 
 VulkanDebugMessenger::VulkanDebugMessenger(VkInstance instance)
     : instance(instance)
-    , m_debugMessenger(VK_NULL_HANDLE)
 {
     if(!useValidationLayers)
         return;
@@ -82,10 +84,7 @@ VulkanDebugMessenger::VulkanDebugMessenger(VkInstance instance)
     };
 
     if(CreateDebugUtilsMessengerEXT(instance, &createInfo, nullptr, &m_debugMessenger) != VK_SUCCESS)
-    {
-        spdlog::info("Failure while creating debug messenger");
-        throw std::runtime_error("Failure while creating debug messenger");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_DEBUG_MESSENGER);
 
     spdlog::info("Debug messenger created successfully...");
 }
