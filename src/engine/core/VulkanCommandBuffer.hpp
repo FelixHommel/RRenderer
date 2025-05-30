@@ -19,7 +19,7 @@ class VulkanCommandBuffer
 {
 public:
     VulkanCommandBuffer(VkDevice device, VkCommandPool commandPool, VkCommandBufferLevel = VK_COMMAND_BUFFER_LEVEL_PRIMARY);
-    VulkanCommandBuffer(VkCommandBuffer commandBuffer);
+    explicit VulkanCommandBuffer(VkCommandBuffer commandBuffer);
     ~VulkanCommandBuffer() = default;
 
     VulkanCommandBuffer(const VulkanCommandBuffer&) = delete;
