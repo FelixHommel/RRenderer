@@ -41,7 +41,7 @@ public:
 
 private:
     //NOTE: Order here matters in orer for the right order of dstructions to work and not interfere with vulkan objects
-    std::unique_ptr<VulkanInstance> m_instance;
+    std::unique_ptr<VulkanInstance> m_instance{ std::make_unique<VulkanInstance>() };
     std::unique_ptr<VulkanDebugMessenger> m_debugMessenger;
     std::unique_ptr<VulkanSurface> m_surface;
     std::unique_ptr<VulkanDevice> m_device;
