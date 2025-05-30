@@ -1,6 +1,10 @@
 #include "VulkanPipeline.hpp"
 
+#include "exception/EngineException.hpp"
+#include "exception/FileIOException.hpp"
+#include "exception/VulkanException.hpp"
 #include "spdlog/spdlog.h"
+#include <source_location>
 #include <vulkan/vulkan_core.h>
 
 #include <array>
@@ -9,7 +13,6 @@
 #include <filesystem>
 #include <fstream>
 #include <ios>
-#include <stdexcept>
 #include <vector>
 
 namespace rr
@@ -79,10 +82,7 @@ VulkanPipeline::VulkanPipeline(VkDevice device, const PipelineConfigInfo& config
     };
 
     if(vkCreateGraphicsPipelines(device, VK_NULL_HANDLE, 1, &pipelineInfo, nullptr, &m_pipeline) != VK_SUCCESS)
-    {
-        spdlog::critical("Failure while creating graphics pipeline");
-        throw std::runtime_error("Failed to create graphics pipeline");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_GRAPHICS_PIPELINE);
 
     spdlog::info("Created graphics pipeline successfully...");
 }
@@ -190,10 +190,7 @@ void VulkanPipeline::createShaderModule(const std::vector<char>& code, VkShaderM
     };
 
     if(vkCreateShaderModule(device, &createInfo, nullptr, shaderModule) != VK_SUCCESS)
-    {
-        spdlog::critical("Failure while creating shader module");
-        throw std::runtime_error("Failed to create shader module");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_SHADER_MODULE);
 }
 
 std::vector<char> VulkanPipeline::readFile(const std::filesystem::path& filepath)
@@ -201,10 +198,7 @@ std::vector<char> VulkanPipeline::readFile(const std::filesystem::path& filepath
     std::ifstream file(filepath, std::ios::ate | std::ios::binary);
 
     if(!file.is_open())
-    {
-        spdlog::critical("Couldn't open file at: {}", filepath.c_str());
-        throw std::runtime_error("Failed to read shader file");
-    }
+        throwWithLog<FileIOException>(std::source_location::current(), filepath);
 
     std::streamsize fileSize{ file.tellg() };
     std::vector<char> buffer(fileSize);
