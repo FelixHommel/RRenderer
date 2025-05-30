@@ -20,10 +20,6 @@ VulkanSwapchain::VulkanSwapchain(VulkanDevice& device, VkSurfaceKHR surface, VkE
     : device(device)
     , surface(surface)
     , windowExtent(windowExtent)
-    , m_swapchain(VK_NULL_HANDLE)
-    , m_renderPass(VK_NULL_HANDLE)
-    , m_swapchainImageFormat()
-    , m_swapchainImageExtent()
 {
     createSwapchain();
     createImageViews();

@@ -49,13 +49,13 @@ private:
     VkExtent2D windowExtent;
 
     /** Core */
-    VkSwapchainKHR m_swapchain;
-    std::vector<VkFramebuffer> m_swapchainFramebuffers;
-    VkRenderPass m_renderPass;
+    VkSwapchainKHR m_swapchain{ VK_NULL_HANDLE };
+    std::vector<VkFramebuffer> m_swapchainFramebuffers{ VK_NULL_HANDLE };
+    VkRenderPass m_renderPass{ VK_NULL_HANDLE };
 
     /** Images */
-    VkFormat m_swapchainImageFormat;
-    VkExtent2D m_swapchainImageExtent;
+    VkFormat m_swapchainImageFormat{};
+    VkExtent2D m_swapchainImageExtent{};
     std::vector<VkImage> m_swapchainImages;
     std::vector<VkImageView> m_swapchainImageViews;
     std::vector<VkImage> m_depthImages;
