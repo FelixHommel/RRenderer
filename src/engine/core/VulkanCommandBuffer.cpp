@@ -2,13 +2,11 @@
 
 #include "exception/EngineException.hpp"
 #include "exception/VulkanException.hpp"
-#include "spdlog/spdlog.h"
 #include <source_location>
 #include <vulkan/vulkan_core.h>
 
 #include <cstdint>
 #include <memory>
-#include <stdexcept>
 #include <vector>
 
 namespace rr

@@ -1,6 +1,12 @@
 #include "exception/FileIOException.hpp"
+#include "exception/EngineException.hpp"
+
 #include "gtest/gtest.h"
+
 #include <filesystem>
+#include <source_location>
+#include <stdexcept>
+#include <string>
 
 TEST(FileIOException, constructor)
 {

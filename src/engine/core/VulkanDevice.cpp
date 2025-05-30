@@ -10,6 +10,7 @@
 
 #include <cstdint>
 #include <cstring>
+#include <functional>
 #include <set>
 #include <string>
 #include <vector>
