@@ -39,11 +39,20 @@ std::string toString(VulkanExceptionCause cause, std::size_t index)
 class VulkanException : public EngineException
 {
 public:
-    VulkanException(VulkanExceptionCause cause) : EngineException("Vulkan error occurd during " + toString(cause))
+    VulkanException(VulkanExceptionCause cause)
+        : EngineException("Vulkan error occurd during " + toString(cause))
+        , m_cause(cause)
     {}
 
-    VulkanException(VulkanExceptionCause cause, std::size_t index) : EngineException("Vulkan error occurd during " + toString(cause, index))
+    VulkanException(VulkanExceptionCause cause, std::size_t index)
+        : EngineException("Vulkan error occurd during " + toString(cause, index))
+        , m_cause(cause)
     {}
+
+    [[nodiscard]] VulkanExceptionCause cause() const { return m_cause; }
+
+private:
+    VulkanExceptionCause m_cause;
 };
 
 } // !rr
