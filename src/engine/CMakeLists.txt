@@ -9,6 +9,8 @@ add_library(${NAME}
     VulkanRenderer.hpp
     window/Window.cpp
     window/Window.hpp
+    exception/EngineException.hpp
+    exception/VulkanException.hpp
     core/VulkanInstance.cpp
     core/VulkanInstance.hpp
     core/VulkanDebugMessenger.cpp
