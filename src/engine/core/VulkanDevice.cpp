@@ -11,7 +11,6 @@
 #include <cstdint>
 #include <cstring>
 #include <set>
-#include <stdexcept>
 #include <string>
 #include <vector>
 
@@ -204,7 +203,7 @@ QueueFamilyIndices VulkanDevice::findQueueFamilies(VkPhysicalDevice device) cons
     return indices;
 }
 
-bool VulkanDevice::checkDeviceExtensionsSupported(VkPhysicalDevice device)
+bool VulkanDevice::checkDeviceExtensionsSupported(VkPhysicalDevice device) const
 {
     std::uint32_t extensionCount{0};
     vkEnumerateDeviceExtensionProperties(device, nullptr, &extensionCount, nullptr);

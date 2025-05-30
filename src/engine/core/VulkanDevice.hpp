@@ -76,7 +76,7 @@ private:
 
     bool isDeviceSuitable(VkPhysicalDevice device);
     QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device) const;
-    bool checkDeviceExtensionsSupported(VkPhysicalDevice device);
+    bool checkDeviceExtensionsSupported(VkPhysicalDevice device) const;
     SwapchainSupportDetails querySwapchainSupport(VkPhysicalDevice device) const;
     std::uint32_t findMemoryType(std::uint32_t typeFilter, VkMemoryPropertyFlags properties);
 };
