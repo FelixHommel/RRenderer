@@ -17,9 +17,6 @@ namespace rr
 
 VulkanPipeline::VulkanPipeline(VkDevice device, const PipelineConfigInfo& configInfo, const std::filesystem::path& vertFilepath, const std::filesystem::path& fragFilepath)
     : device(device)
-    , m_pipeline(VK_NULL_HANDLE)
-    , m_vertShaderModule(VK_NULL_HANDLE)
-    , m_fragShaderModule(VK_NULL_HANDLE)
 {
     assert(configInfo.pipelineLayout != VK_NULL_HANDLE && "Cannot create graphics pipeline: no pipeline layout provided");
     assert(configInfo.renderPass != VK_NULL_HANDLE && "Cannot create graphics pipeline: no renderPass provided");

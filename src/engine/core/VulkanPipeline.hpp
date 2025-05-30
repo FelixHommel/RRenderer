@@ -44,9 +44,9 @@ public:
 private:
     VkDevice device;
 
-    VkPipeline m_pipeline;
-    VkShaderModule m_vertShaderModule;
-    VkShaderModule m_fragShaderModule;
+    VkPipeline m_pipeline{ VK_NULL_HANDLE };
+    VkShaderModule m_vertShaderModule{ VK_NULL_HANDLE };
+    VkShaderModule m_fragShaderModule{ VK_NULL_HANDLE };
 
     void createShaderModule(const std::vector<char>& code, VkShaderModule* shaderModule);
 
