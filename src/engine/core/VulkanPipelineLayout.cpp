@@ -1,6 +1,8 @@
 #include "VulkanPipelineLayout.hpp"
+#include "exception/EngineException.hpp"
+#include "exception/VulkanException.hpp"
 #include "spdlog/spdlog.h"
-#include <stdexcept>
+#include <source_location>
 #include <vulkan/vulkan_core.h>
 
 namespace rr
@@ -18,10 +20,7 @@ VulkanPipelineLayout::VulkanPipelineLayout(VkDevice device)
     };
 
     if(vkCreatePipelineLayout(device, &createInfo, nullptr, &m_pipelineLayout) != VK_SUCCESS)
-    {
-        spdlog::critical("Failure while creaing pipeline layout");
-        throw std::runtime_error("Failed to create pipeline layout");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_PIPELINE_LAYOUT);
 
     spdlog::info("Created pipeline layout successfully...");
 }
