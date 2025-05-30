@@ -28,7 +28,7 @@ namespace rr
 class VulkanRenderer : public Renderer
 {
 public:
-    VulkanRenderer(Window& window);
+    explicit VulkanRenderer(Window& window);
     ~VulkanRenderer() override = default;
 
     VulkanRenderer(const VulkanRenderer&) = delete;
