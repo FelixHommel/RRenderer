@@ -7,6 +7,7 @@ add_library(${NAME}
     Renderer.hpp
     VulkanRenderer.cpp
     VulkanRenderer.hpp
+    utility/StringHash.hpp
     window/Window.cpp
     window/Window.hpp
     exception/EngineException.hpp
