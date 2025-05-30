@@ -8,6 +8,8 @@
 #include "core/VulkanPipelineLayout.hpp"
 #include "core/VulkanSurface.hpp"
 #include "core/VulkanSwapchain.hpp"
+#include "exception/EngineException.hpp"
+#include "exception/VulkanException.hpp"
 #include "window/Window.hpp"
 
 #include "spdlog/spdlog.h"
@@ -17,7 +19,6 @@
 #include <cstddef>
 #include <cstdint>
 #include <memory>
-#include <stdexcept>
 
 namespace rr
 {
@@ -42,18 +43,12 @@ void VulkanRenderer::render()
     auto result{ m_swapchain->acquireNextImage(&imageIndex) };
 
     if(result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR)
-    {
-        spdlog::critical("Failure while acquiring next swapchain image");
-        throw std::runtime_error("Failed to acquire the next swapchain image");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::IMAGE_ACQUISITION);
 
     result = m_swapchain->submitCommandBuffer(&m_commandBuffers[imageIndex]->getHandle(), &imageIndex);
 
     if(result != VK_SUCCESS)
-    {
-        spdlog::critical("Failure while submitting command buffer");
-        throw std::runtime_error("Failed to submit command buffer");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::SUBMIT_COMMAND_BUFFER);
 }
 
 void VulkanRenderer::shutdown()
@@ -72,17 +67,14 @@ std::unique_ptr<VulkanPipeline> VulkanRenderer::createPipeline()
 
 void VulkanRenderer::recordCommandBuffers()
 {
+    VkCommandBufferBeginInfo beginInfo{
+        .sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO
+    };
+
     for(std::size_t i{0}; i < m_commandBuffers.size(); ++i)
     {
-        VkCommandBufferBeginInfo beginInfo{
-            .sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO
-        };
-
         if(vkBeginCommandBuffer(m_commandBuffers.at(i)->getHandle(), &beginInfo) != VK_SUCCESS)
-        {
-            spdlog::critical("Failure while beginning recording of command buffer #{}", i);
-            throw std::runtime_error("Failed to begin recording of command m_commandBuffers");
-        }
+            throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::BEGIN_RECORD_COMMAND_BUFFER, i);
 
         std::array<VkClearValue, 2> clearValues{
             VkClearValue{ .color = m_clearColor },
@@ -108,10 +100,7 @@ void VulkanRenderer::recordCommandBuffers()
         vkCmdEndRenderPass(m_commandBuffers[i]->getHandle());
 
         if(vkEndCommandBuffer(m_commandBuffers[i]->getHandle()) != VK_SUCCESS)
-        {
-            spdlog::critical("Failure while recording command buffer #{}", i);
-            throw std::runtime_error("Failed to record command m_commandBuffers");
-        }
+            throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::END_RECORD_COMMAND_BUFFER, i);
     }
 
     spdlog::info("Command buffers recorded successfully");
