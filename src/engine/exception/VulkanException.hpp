@@ -28,6 +28,17 @@ enum class VulkanExceptionCause
     NO_SUITABLE_DEVICE_FOUND,
     CREATE_DEVICE,
     NO_SUITABLE_MEMORY_TYPE_FOUND,
+    GLFW_EXTENSIONS_MISSING,
+    CREATE_GRAPHICS_PIPELINE,
+    CREATE_SHADER_MODULE,
+    CREATE_PIPELINE_LAYOUT,
+    QUEUE_SUBMIT_GRAPHICS,
+    CREATE_SWAPCHAIN_KHR,
+    CREATE_IMAGE_VIEW,
+    CREATE_RENDER_PASS,
+    CREATE_FRAMEBUFFER,
+    CREATE_SEMAPHORE,
+    CREATE_IN_FLIGHT_SYNC_OBJECT,
 };
 
 class VulkanException : public EngineException
@@ -69,6 +80,17 @@ private:
             case VulkanExceptionCause::NO_SUITABLE_DEVICE_FOUND: return "search for suitable VkPhysicalDevice";
             case VulkanExceptionCause::CREATE_DEVICE: return "creation of a VkDevice";
             case VulkanExceptionCause::NO_SUITABLE_MEMORY_TYPE_FOUND: return "search for a suitable memory type";
+            case VulkanExceptionCause::GLFW_EXTENSIONS_MISSING: return "verifying availability of extensions required by GLFW";
+            case VulkanExceptionCause::CREATE_GRAPHICS_PIPELINE: return "creation of VkPipeline";
+            case VulkanExceptionCause::CREATE_SHADER_MODULE: return "creation of VkShaderModule";
+            case VulkanExceptionCause::CREATE_PIPELINE_LAYOUT: return "creation of VkPipelineLayout";
+            case VulkanExceptionCause::QUEUE_SUBMIT_GRAPHICS: return "submiting graphics queue";
+            case VulkanExceptionCause::CREATE_SWAPCHAIN_KHR: return "creation of VkSwapchain";
+            case VulkanExceptionCause::CREATE_IMAGE_VIEW: return "creation of VkImageView #";
+            case VulkanExceptionCause::CREATE_RENDER_PASS: return "creation of VkRenderPass";
+            case VulkanExceptionCause::CREATE_FRAMEBUFFER: return "creation of framebuffer #";
+            case VulkanExceptionCause::CREATE_SEMAPHORE: return "creation of VkSemaphore #";
+            case VulkanExceptionCause::CREATE_IN_FLIGHT_SYNC_OBJECT: return "creation of in flight VkFence or VkSemaphore #";
             default: return "unknown events";
         }
     }
