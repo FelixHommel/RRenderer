@@ -9,7 +9,7 @@ namespace rr
 class VulkanPipelineLayout
 {
 public:
-    VulkanPipelineLayout(VkDevice device);
+    explicit VulkanPipelineLayout(VkDevice device);
     ~VulkanPipelineLayout();
 
     VulkanPipelineLayout(const VulkanPipelineLayout&) = delete;
