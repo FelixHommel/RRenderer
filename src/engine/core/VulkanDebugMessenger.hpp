@@ -16,7 +16,7 @@ namespace rr
 class VulkanDebugMessenger
 {
 public:
-    VulkanDebugMessenger(VkInstance instance);
+    explicit VulkanDebugMessenger(VkInstance instance);
     ~VulkanDebugMessenger();
 
     VulkanDebugMessenger(const VulkanDebugMessenger&) = delete;
@@ -26,7 +26,7 @@ public:
 
 private:
     VkInstance instance;
-    VkDebugUtilsMessengerEXT m_debugMessenger;
+    VkDebugUtilsMessengerEXT m_debugMessenger{ VK_NULL_HANDLE };
 };
 
 } // !rr
