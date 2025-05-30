@@ -18,11 +18,6 @@ namespace rr
 VulkanDevice::VulkanDevice(VkInstance instance, VkSurfaceKHR surface)
     : instance(instance)
     , surface(surface)
-    , m_physicalDevice(VK_NULL_HANDLE)
-    , m_physicalDeviceProperties(0)
-    , m_device(VK_NULL_HANDLE)
-    , m_graphicsQueue(VK_NULL_HANDLE)
-    , m_presentQueue(VK_NULL_HANDLE)
 {
     pickPhyscialDevice();
     createLogicalDevice();

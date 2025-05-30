@@ -63,11 +63,11 @@ private:
     VkInstance instance;
     VkSurfaceKHR surface;
 
-    VkPhysicalDevice m_physicalDevice;
-    VkPhysicalDeviceProperties m_physicalDeviceProperties;
-    VkDevice m_device;
-    VkQueue m_graphicsQueue;
-    VkQueue m_presentQueue;
+    VkPhysicalDevice m_physicalDevice{ VK_NULL_HANDLE };
+    VkPhysicalDeviceProperties m_physicalDeviceProperties{};
+    VkDevice m_device{ VK_NULL_HANDLE };
+    VkQueue m_graphicsQueue{ VK_NULL_HANDLE };
+    VkQueue m_presentQueue{ VK_NULL_HANDLE };
 
     const std::vector<const char*> deviceExtensions{ VK_KHR_SWAPCHAIN_EXTENSION_NAME };
 
