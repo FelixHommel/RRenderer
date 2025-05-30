@@ -49,7 +49,6 @@ VKAPI_ATTR VkBool32 VKAPI_CALL debugCallback(
 }
 
 VulkanInstance::VulkanInstance()
-    : m_instance(VK_NULL_HANDLE)
 {
     if(useValidationLayers && !checkValidationLayerSupport())
     {

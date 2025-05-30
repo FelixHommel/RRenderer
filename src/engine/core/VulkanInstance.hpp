@@ -21,7 +21,7 @@ public:
     [[nodiscard]] VkInstance getHandle() const { return m_instance; }
 
 private:
-    VkInstance m_instance;
+    VkInstance m_instance{ VK_NULL_HANDLE };
 
     static bool checkValidationLayerSupport();
     static std::vector<const char*> getRequiredExtensions(bool useValidationLayers);
