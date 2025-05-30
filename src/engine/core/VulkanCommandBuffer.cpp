@@ -1,6 +1,9 @@
 #include "VulkanCommandBuffer.hpp"
 
+#include "exception/EngineException.hpp"
+#include "exception/VulkanException.hpp"
 #include "spdlog/spdlog.h"
+#include <source_location>
 #include <vulkan/vulkan_core.h>
 
 #include <cstdint>
@@ -25,10 +28,7 @@ VulkanCommandBuffer::VulkanCommandBuffer(VkDevice device, VkCommandPool commandP
     };
 
     if(vkAllocateCommandBuffers(device, &allocInfo, &m_commandBuffer) != VK_SUCCESS)
-    {
-        spdlog::critical("Failure while creating command buffers");
-        throw std::runtime_error("Failed to create command buffers");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::ALLOCATE_COMMAND_BUFFERS);
 }
 
 /**
@@ -59,10 +59,7 @@ std::vector<std::unique_ptr<VulkanCommandBuffer>> VulkanCommandBuffer::create(Vk
     };
 
     if(vkAllocateCommandBuffers(device, &allocInfo, rawBuffers.data()) != VK_SUCCESS)
-    {
-        spdlog::critical("Failure while creating command buffers");
-        throw std::runtime_error("Failed to create command buffers");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::ALLOCATE_COMMAND_BUFFERS);
 
     std::vector<std::unique_ptr<VulkanCommandBuffer>> wrapped;
     for(const auto& buffer : rawBuffers)

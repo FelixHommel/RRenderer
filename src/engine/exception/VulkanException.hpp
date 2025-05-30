@@ -15,7 +15,8 @@ enum class VulkanExceptionCause
     IMAGE_ACQUISITION,
     SUBMIT_COMMAND_BUFFER,
     BEGIN_RECORD_COMMAND_BUFFER,
-    END_RECORD_COMMAND_BUFFER
+    END_RECORD_COMMAND_BUFFER,
+    ALLOCATE_COMMAND_BUFFERS
 };
 
 std::string toString(VulkanExceptionCause cause)
@@ -25,8 +26,9 @@ std::string toString(VulkanExceptionCause cause)
         case VulkanExceptionCause::CREATE_INSTANCE: return "instance creation";
         case VulkanExceptionCause::SUBMIT_COMMAND_BUFFER: return "command buffer submission";
         case VulkanExceptionCause::IMAGE_ACQUISITION: return "the acquisition of the next image";
-        case VulkanExceptionCause::BEGIN_RECORD_COMMAND_BUFFER: return "begin recording command buffer #";
-        case VulkanExceptionCause::END_RECORD_COMMAND_BUFFER: return "end recording command buffer #";
+        case VulkanExceptionCause::BEGIN_RECORD_COMMAND_BUFFER: return "begin recording of command buffer #";
+        case VulkanExceptionCause::END_RECORD_COMMAND_BUFFER: return "ending of recording command buffer #";
+        case VulkanExceptionCause::ALLOCATE_COMMAND_BUFFERS: return " allocating command buffers";
         default: return " unknown events";
     }
 }
