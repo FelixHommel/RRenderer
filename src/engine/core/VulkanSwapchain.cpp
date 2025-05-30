@@ -436,7 +436,7 @@ VkExtent2D VulkanSwapchain::chooseSwapExtent(const VkSurfaceCapabilitiesKHR& cap
  *
  *  @returns VkFormat - which is going to be used by the depth resources
 */
-VkFormat VulkanSwapchain::findDepthFormat()
+VkFormat VulkanSwapchain::findDepthFormat() const
 {
     return device.findSupportedFormat(
         {VK_FORMAT_D32_SFLOAT, VK_FORMAT_D32_SFLOAT_S8_UINT, VK_FORMAT_D24_UNORM_S8_UINT},

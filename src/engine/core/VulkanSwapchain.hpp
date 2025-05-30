@@ -80,7 +80,7 @@ private:
 
     /** Supporting methods */
     VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities);
-    VkFormat findDepthFormat();
+    [[nodiscard]] VkFormat findDepthFormat() const;
 
     /** Supporting functions */
     static VkSurfaceFormatKHR chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& availableFormats);
