@@ -10,7 +10,6 @@ namespace rr
 
 VulkanSurface::VulkanSurface(VkInstance instance, Window& window)
     : instance(instance)
-    , m_surface(VK_NULL_HANDLE)
 {
     window.createWindowSurface(instance, &m_surface);
     spdlog::info("Surface created successfully...");

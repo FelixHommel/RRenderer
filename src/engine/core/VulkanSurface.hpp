@@ -30,7 +30,7 @@ public:
 private:
     VkInstance instance;
 
-    VkSurfaceKHR m_surface;
+    VkSurfaceKHR m_surface{ VK_NULL_HANDLE };
 };
 
 } // !rr
