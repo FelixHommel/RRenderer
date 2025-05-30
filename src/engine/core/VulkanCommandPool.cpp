@@ -3,12 +3,14 @@
 #include "core/VulkanCommandBuffer.hpp"
 #include "core/VulkanDevice.hpp"
 
+#include "exception/EngineException.hpp"
+#include "exception/VulkanException.hpp"
 #include "spdlog/spdlog.h"
+#include <source_location>
 #include <vulkan/vulkan_core.h>
 
 #include <cstdint>
 #include <memory>
-#include <stdexcept>
 #include <vector>
 
 namespace rr
@@ -20,10 +22,7 @@ VulkanCommandPool::VulkanCommandPool(VulkanDevice& device)
 {
     QueueFamilyIndices indices{ device.findPhysicalQueueFamilies() };
     if(!indices.graphicsFamily.has_value())
-    {
-        spdlog::critical("graphics queue has no value");
-        throw std::runtime_error("The graphics queue had no value that could be used");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::QUEUE_FAMILY_INDEX_IS_EMPTY);
 
     VkCommandPoolCreateInfo createInfo{
         .sType = VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO,
@@ -32,10 +31,7 @@ VulkanCommandPool::VulkanCommandPool(VulkanDevice& device)
     };
 
     if(vkCreateCommandPool(device.getHandle(), &createInfo, nullptr, &m_commandPool) != VK_SUCCESS)
-    {
-        spdlog::critical("Failure while creating command pool");
-        throw std::runtime_error("Failed to create command pool");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_COMMAND_POOL);
 
     spdlog::info("Command pool created successfully...");
 }
