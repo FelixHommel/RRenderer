@@ -2,7 +2,10 @@
 
 #include "core/VulkanDevice.hpp"
 
+#include "exception/EngineException.hpp"
+#include "exception/VulkanException.hpp"
 #include "spdlog/spdlog.h"
+#include <source_location>
 #include <vulkan/vulkan_core.h>
 
 #include <algorithm>
@@ -97,10 +100,7 @@ VkResult VulkanSwapchain::submitCommandBuffer(const VkCommandBuffer* commandBuff
 
     vkResetFences(device.getHandle(), 1, &m_inFlightFences[m_currentFrame]);
     if(vkQueueSubmit(device.getGraphicsQueueHandle(), 1, &submitInfo, m_inFlightFences[m_currentFrame]) != VK_SUCCESS)
-    {
-        spdlog::critical("Failure while submitting draw command buffer");
-        throw std::runtime_error("Failed to submit draw command buffer");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::QUEUE_SUBMIT_GRAPHICS);
 
     std::array<VkSwapchainKHR, 1> swapchains{ m_swapchain };
     VkPresentInfoKHR presentInfo{
@@ -172,10 +172,7 @@ void VulkanSwapchain::createSwapchain()
     }
 
     if(vkCreateSwapchainKHR(device.getHandle(), &createInfo, nullptr, &m_swapchain) != VK_SUCCESS)
-    {
-        spdlog::critical("Failure while creating swapchain");
-        throw std::runtime_error("Failed to create swapchain");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_SWAPCHAIN_KHR);
 
     vkGetSwapchainImagesKHR(device.getHandle(), m_swapchain, &imageCount, nullptr);
     m_swapchainImages.resize(imageCount);
@@ -209,10 +206,7 @@ void VulkanSwapchain::createImageViews()
         };
 
         if(vkCreateImageView(device.getHandle(), &createInfo, nullptr, &m_swapchainImageViews[i]) != VK_SUCCESS)
-        {
-            spdlog::critical("Failure while creating swapchain image #{}", i);
-            throw std::runtime_error("Failure while creaing swapchain image views");
-        }
+            throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_IMAGE_VIEW, i);
     }
 }
 
@@ -281,10 +275,7 @@ void VulkanSwapchain::createRenderPass()
     };
 
     if(vkCreateRenderPass(device.getHandle(), &createInfo, nullptr, &m_renderPass) != VK_SUCCESS)
-    {
-        spdlog::critical("Failure while creating render pass");
-        throw std::runtime_error("Failed to create render pass");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_RENDER_PASS);
 }
 
 /**
@@ -337,10 +328,7 @@ void VulkanSwapchain::createDepthResources()
         };
 
         if(vkCreateImageView(device.getHandle(), &imageViewCreateInfo, nullptr, &m_depthImageViews[i]) != VK_SUCCESS)
-        {
-            spdlog::critical("Failure while creating depth image view #{}", i);
-            throw std::runtime_error("Failed to create depth image views");
-        }
+            throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_IMAGE_VIEW, i);
     }
 }
 
@@ -367,10 +355,7 @@ void VulkanSwapchain::createFramebuffers()
         };
 
         if(vkCreateFramebuffer(device.getHandle(), &createInfo, nullptr, &m_swapchainFramebuffers[i]) != VK_SUCCESS)
-        {
-            spdlog::critical("Failure while creating framebuffer #{}", i);
-            throw std::runtime_error("Failed to craete framebuffers");
-        }
+            throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_FRAMEBUFFER, i);
     }
 }
 
@@ -396,20 +381,14 @@ void VulkanSwapchain::createSyncObjects()
     for(std::size_t i{0}; i < m_renderFinishedSemaphores.size(); ++i)
     {
         if(vkCreateSemaphore(device.getHandle(), &semaphoreCreateInfo, nullptr, &m_renderFinishedSemaphores[i]) != VK_SUCCESS)
-        {
-            spdlog::critical("Failure while creating semaphores");
-            throw std::runtime_error("Failed to create semaphores");
-        }
+            throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_SEMAPHORE, i);
     }
 
     for(std::size_t i{0}; i < MAX_FRAMES_IN_FLIGHT; ++i)
     {
         if(vkCreateSemaphore(device.getHandle(), &semaphoreCreateInfo, nullptr, &m_imageAvailableSemaphores[i]) != VK_SUCCESS ||
             vkCreateFence(device.getHandle(), &fenceCreateInfo, nullptr, &m_inFlightFences[i]) != VK_SUCCESS)
-        {
-            spdlog::critical("Failure while creating fences");
-            throw std::runtime_error("Failed to create fences");
-        }
+            throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_IN_FLIGHT_SYNC_OBJECT, i);
     }
 }
 
