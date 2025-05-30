@@ -24,8 +24,8 @@ private:
     VkInstance m_instance{ VK_NULL_HANDLE };
 
     static bool checkValidationLayerSupport();
-    static std::vector<const char*> getRequiredExtensions(bool useValidationLayers);
-    static void hasGLFWRequiredInstanceExtensions(bool useValidationLayers);
+    static std::vector<const char*> getRequiredExtensions();
+    static void hasGLFWRequiredInstanceExtensions();
 };
 
 } // !rr
