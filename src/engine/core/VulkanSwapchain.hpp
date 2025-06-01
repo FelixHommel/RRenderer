@@ -80,7 +80,7 @@ private:
     void createSyncObjects();
 
     /** Supporting methods */
-    VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities);
+    [[nodiscard]] VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities) const;
     [[nodiscard]] VkFormat findDepthFormat() const;
 
     /** Supporting functions */

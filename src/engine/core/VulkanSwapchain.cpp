@@ -398,7 +398,7 @@ void VulkanSwapchain::createSyncObjects()
  *  @param capabilities - VkSurfaceCapabilitiesKHR object containing details about the extent of the surface
  *  @returns VkExtent2D - extent that is going to be used by the swapchain
 */
-VkExtent2D VulkanSwapchain::chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities)
+VkExtent2D VulkanSwapchain::chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities) const
 {
     if(capabilities.currentExtent.width != UINT32_MAX)
         return capabilities.currentExtent;
