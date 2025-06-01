@@ -14,9 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install LLVM 19
+      - name: Install dependencies
         run: |
-          sudo apt install clang-tidy-19
+          sudo apt install clang-tidy-19 cmake g++ ninja-build vulkan-tools libvulkan-dev
           alias clang-tidy=clang-tidy-19
 
       - name: Configure CMake
