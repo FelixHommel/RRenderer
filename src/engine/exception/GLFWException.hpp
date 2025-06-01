@@ -4,6 +4,7 @@
 #include "exception/EngineException.hpp"
 
 #include <cstdint>
+#include <string>
 
 namespace rr
 {

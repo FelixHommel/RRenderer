@@ -4,12 +4,13 @@
 #include "exception/EngineException.hpp"
 
 #include <cstddef>
+#include <cstdint>
 #include <string>
 
 namespace rr
 {
 
-enum class VulkanExceptionCause
+enum class VulkanExceptionCause : std::uint8_t
 {
     CREATE_INSTANCE,
     IMAGE_ACQUISITION,
@@ -59,7 +60,7 @@ public:
 private:
     VulkanExceptionCause m_cause;
 
-    std::string causeToString(VulkanExceptionCause cause)
+    static std::string causeToString(VulkanExceptionCause cause)
     {
         switch(cause)
         {
@@ -95,7 +96,7 @@ private:
         }
     }
 
-    std::string causeToString(VulkanExceptionCause cause, std::size_t index)
+    static std::string causeToString(VulkanExceptionCause cause, std::size_t index)
     {
         return causeToString(cause) + std::to_string(index);
     }

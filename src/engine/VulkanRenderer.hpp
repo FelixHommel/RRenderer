@@ -13,8 +13,10 @@
 #include "core/VulkanSwapchain.hpp"
 #include "window/Window.hpp"
 
-#include <memory>
 #include <vulkan/vulkan_core.h>
+
+#include <memory>
+#include <vector>
 
 namespace rr
 {

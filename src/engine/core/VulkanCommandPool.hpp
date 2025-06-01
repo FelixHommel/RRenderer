@@ -4,10 +4,11 @@
 #include "core/VulkanCommandBuffer.hpp"
 #include "core/VulkanDevice.hpp"
 
-#include <cstdint>
 #include <vulkan/vulkan_core.h>
 
+#include <cstdint>
 #include <memory>
+#include <vector>
 
 namespace rr
 {

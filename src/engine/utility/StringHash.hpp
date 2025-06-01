@@ -2,6 +2,7 @@
 #define RRENDERER_ENGINE_UTILITY_STRING_HASH_HPP
 
 #include <cstddef>
+#include <functional>
 #include <string_view>
 
 namespace rr

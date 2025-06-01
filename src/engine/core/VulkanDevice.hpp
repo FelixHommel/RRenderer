@@ -1,12 +1,16 @@
 #ifndef RRENDERER_ENGINE_CORE_VULKAN_DEVICE_HPP
 #define RRENDERER_ENGINE_CORE_VULKAN_DEVICE_HPP
 
+#include "exception/VulkanException.hpp"
+#include "exception/EngineException.hpp"
+
 #include <vulkan/vulkan_core.h>
 
 #include <array>
 #include <cstdint>
 #include <optional>
 #include <set>
+#include <source_location>
 #include <vector>
 
 namespace rr
@@ -24,11 +28,24 @@ struct QueueFamilyIndices
     std::optional<std::uint32_t> graphicsFamily;
     std::optional<std::uint32_t> presentFamily;
 
-    [[nodiscard]] constexpr bool isComplete() const noexcept { return graphicsFamily.has_value() && presentFamily.has_value(); }
-    [[nodiscard]] constexpr bool areSameQueue() const noexcept { return graphicsFamily.value() == presentFamily.value(); }
+    [[nodiscard]] constexpr bool isComplete() const { return graphicsFamily.has_value() && presentFamily.has_value(); }
+    [[nodiscard]] constexpr bool areSameQueue() const
+    {
+        if(graphicsFamily.has_value() && presentFamily.has_value())
+            return graphicsFamily.value() == presentFamily.value();
+        
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::QUEUE_FAMILY_INDEX_IS_EMPTY);
 
-    [[nodiscard]] constexpr std::set<std::uint32_t> getUniqueFamilies() const noexcept { return { graphicsFamily.value_or(0), presentFamily.value_or(0) }; }
-    [[nodiscard]] constexpr std::array<std::uint32_t, 2> toAray() const noexcept { return { graphicsFamily.value(), presentFamily.value() }; }
+    }
+
+    [[nodiscard]] constexpr std::set<std::uint32_t> getUniqueFamilies() const { return { graphicsFamily.value_or(0), presentFamily.value_or(0) }; }
+    [[nodiscard]] constexpr std::array<std::uint32_t, 2> toAray() const
+    {
+        if(graphicsFamily.has_value() && presentFamily.has_value())
+            return { graphicsFamily.value(), presentFamily.value() };
+
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::QUEUE_FAMILY_INDEX_IS_EMPTY);
+    }
 };
 
 /*
