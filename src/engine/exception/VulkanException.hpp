@@ -40,6 +40,7 @@ enum class VulkanExceptionCause : std::uint8_t
     CREATE_FRAMEBUFFER,
     CREATE_SEMAPHORE,
     CREATE_IN_FLIGHT_SYNC_OBJECT,
+    VALIDATION_LAYERS_UNAVAILABLE
 };
 
 class VulkanException : public EngineException
@@ -92,6 +93,7 @@ private:
             case VulkanExceptionCause::CREATE_FRAMEBUFFER: return "creation of framebuffer #";
             case VulkanExceptionCause::CREATE_SEMAPHORE: return "creation of VkSemaphore #";
             case VulkanExceptionCause::CREATE_IN_FLIGHT_SYNC_OBJECT: return "creation of in flight VkFence or VkSemaphore #";
+            case VulkanExceptionCause::VALIDATION_LAYERS_UNAVAILABLE: return "checking for validation layer availability";
             default: return "unknown events";
         }
     }

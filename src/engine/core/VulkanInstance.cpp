@@ -56,10 +56,7 @@ VKAPI_ATTR VkBool32 VKAPI_CALL debugCallback(
 VulkanInstance::VulkanInstance()
 {
     if(useValidationLayers && !checkValidationLayerSupport())
-    {
-        spdlog::critical("validation layers were requested but aren't available");
-        throw std::runtime_error("validation layers were requested but aren't available");
-    }
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::VALIDATION_LAYERS_UNAVAILABLE);
 
     VkApplicationInfo appInfo{
         .sType = VK_STRUCTURE_TYPE_APPLICATION_INFO,
