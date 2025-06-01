@@ -4,8 +4,8 @@ include (${PROJECT_SOURCE_DIR}/cmake/StaticAnalyzers.cmake)
 
 add_executable(${NAME} main.cpp)
 
-target_compile_features(${NAME} PRIVATE cxx_std_20)
-target_link_libraries(${NAME} PRIVATE project_warnings) # Add other required libraries as needed
+target_compile_features(${NAME} PRIVATE cxx_std_23)
+target_link_libraries(${NAME} PRIVATE project_warnings Vulkan::Vulkan spdlog::spdlog Engine)
 
 add_custom_command(
     TARGET ${NAME} POST_BUILD

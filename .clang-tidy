@@ -72,7 +72,6 @@ Checks: >
   cppcoreguidelines-slicing,
   cppcoreguidelines-special-member-functions,
   cppcoreguidelines-virtual-class-destructor,
-  llvm-header-guard,
   llvm-include-order,
   misc-confusable-identifiers,
   misc-header-include-cycle,
