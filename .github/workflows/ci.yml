@@ -19,6 +19,9 @@ jobs:
           sudo apt install clang-tidy-19
           alias clang-tidy=clang-tidy-19
 
+      - name: Configure CMake
+        run: cmake --preset release
+
       - name: clang-tidy
         run: clang-tidy --quiet -p build --warnings-as-errors=* $(find src/ -name '*.cpp' -or -name '*.hpp')
 
