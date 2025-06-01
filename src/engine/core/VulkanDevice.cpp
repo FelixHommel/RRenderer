@@ -156,7 +156,7 @@ void VulkanDevice::createLogicalDevice()
     spdlog::info("Logical device created successfully...");
 }
 
-bool VulkanDevice::isDeviceSuitable(VkPhysicalDevice device)
+bool VulkanDevice::isDeviceSuitable(VkPhysicalDevice device) const
 {
     QueueFamilyIndices indices{ findQueueFamilies(device) };
     bool extensionsSupported{ checkDeviceExtensionsSupported(device) };
