@@ -19,7 +19,7 @@ enum class GLFWExceptionCause : std::uint8_t
 class GLFWException : public EngineException
 {
 public:
-    GLFWException(GLFWExceptionCause cause)
+    explicit GLFWException(GLFWExceptionCause cause)
         : EngineException("Vulkan error occurd during " + causeToString(cause))
         , m_cause(cause)
     {}
@@ -33,9 +33,11 @@ private:
     {
         switch(cause)
         {
-            case GLFWExceptionCause::GLFW_INIT_FAILED: return "initialization of GLFW";
-            case GLFWExceptionCause::WINDOW_CREATION_FAILED: return "creation of  a GLFW window";
-            case GLFWExceptionCause::SURFACE_CREATION_FAILED: return "creation of a window surface";
+            using enum GLFWExceptionCause;
+
+            case GLFW_INIT_FAILED: return "initialization of GLFW";
+            case WINDOW_CREATION_FAILED: return "creation of  a GLFW window";
+            case SURFACE_CREATION_FAILED: return "creation of a window surface";
             default: return "unknown events";
         }
     }
