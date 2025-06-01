@@ -3,7 +3,6 @@ set(NAME "Engine")
 include (${PROJECT_SOURCE_DIR}/cmake/StaticAnalyzers.cmake)
 
 add_library(${NAME}
-    Renderer.cpp
     Renderer.hpp
     VulkanRenderer.cpp
     VulkanRenderer.hpp
