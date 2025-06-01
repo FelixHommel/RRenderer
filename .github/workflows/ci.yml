@@ -23,7 +23,7 @@ jobs:
         run: cmake --preset release
 
       - name: clang-tidy
-        run: clang-tidy --quiet -p build --warnings-as-errors=* $(find src/ -name '*.cpp' -or -name '*.hpp')
+        run: clang-tidy -p ./ --warnings-as-errors=\* $(find src/ -name '*.cpp' -or -name '*.hpp')
 
   build-and-test:
     name: Build phase
