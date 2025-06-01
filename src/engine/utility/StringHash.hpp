@@ -10,7 +10,7 @@ namespace rr
 
 struct StringHash
 {
-    using isTransparent = void; // NOTE: needed for heterogenous operations
+    using is_transparent = void; // NOTE: needed for heterogenous operations
 
     std::size_t operator()(std::string_view sv) const
     {
