@@ -11,7 +11,7 @@ namespace rr
 class FileIOException : public EngineException
 {
 public:
-    FileIOException(std::string path)
+    explicit FileIOException(const std::string& path)
         : EngineException("An error occured while trying to open a file: " + std::string(path))
         , m_path(path)
     {}
