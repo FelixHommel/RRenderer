@@ -16,7 +16,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          sudo apt install clang-tidy-19 cmake g++ ninja-build vulkan-tools libvulkan-dev
+          sudo apt install -y clang-tidy-19 cmake g++ ninja-build vulkan-tools libvulkan-dev glslang-tools glslang-dev xorg-dev libx11-dev mesa-common-dev libwayland-dev wayland-protocols libxkbcommon-dev
           alias clang-tidy=clang-tidy-19
 
       - name: Configure CMake
