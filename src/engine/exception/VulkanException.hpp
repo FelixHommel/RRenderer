@@ -5,6 +5,7 @@
 
 #include <cstddef>
 #include <cstdint>
+#include <format>
 #include <string>
 
 namespace rr
@@ -102,7 +103,7 @@ private:
 
     static std::string causeToString(VulkanExceptionCause cause, std::size_t index)
     {
-        return causeToString(cause) + std::to_string(index);
+        return std::format("{}{}",causeToString(cause), index);
     }
 };
 
