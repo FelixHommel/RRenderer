@@ -14,4 +14,10 @@ target_link_libraries(${TEST_NAME}
         GTest::gtest_main
 )
 
+# Setup for coverage
+set(GCC_COVERAGE_COMPILER_FLAGS "-fprofile-arcs -ftest-coverage")
+set(GCC_COVERAGE_LINK_FLAGS "--coverage")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILER_FLAGS}")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${GCC_COVERAGE_LINK_FLAGS}")
+
 gtest_discover_tests(${TEST_NAME})
