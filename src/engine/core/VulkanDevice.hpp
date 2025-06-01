@@ -38,7 +38,7 @@ struct QueueFamilyIndices
 
     }
 
-    [[nodiscard]] constexpr std::set<std::uint32_t> getUniqueFamilies() const { return { graphicsFamily.value_or(0), presentFamily.value_or(0) }; }
+    [[nodiscard]] std::set<std::uint32_t> getUniqueFamilies() const { return { graphicsFamily.value_or(0), presentFamily.value_or(0) }; }
     [[nodiscard]] constexpr std::array<std::uint32_t, 2> toAray() const
     {
         if(graphicsFamily.has_value() && presentFamily.has_value())
