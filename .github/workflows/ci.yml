@@ -22,6 +22,9 @@ jobs:
       - name: Configure CMake
         run: cmake --preset release
 
+      - name: Build
+        run: cmake --build --preset release
+
       - name: clang-tidy
         run: clang-tidy -p ./ --warnings-as-errors=\* $(find src/ -name '*.cpp' -or -name '*.hpp')
 
