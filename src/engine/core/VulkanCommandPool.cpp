@@ -18,7 +18,6 @@ namespace rr
 
 VulkanCommandPool::VulkanCommandPool(VulkanDevice& device)
     : device(device)
-    , m_commandPool(VK_NULL_HANDLE)
 {
     QueueFamilyIndices indices{ device.findPhysicalQueueFamilies() };
     if(!indices.graphicsFamily.has_value())

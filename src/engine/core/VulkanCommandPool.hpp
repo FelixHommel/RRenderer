@@ -30,7 +30,7 @@ public:
 private:
     VulkanDevice& device;
 
-    VkCommandPool m_commandPool;
+    VkCommandPool m_commandPool{ VK_NULL_HANDLE };
 };
 
 } // !rr
