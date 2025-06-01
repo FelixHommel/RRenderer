@@ -18,6 +18,7 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y clang-tidy
+          echo clang-tidy --version
 
       - name: clang-tidy
         run: clang-tidy --quiet -p build --warnings-as-errors=* $(find src/ -name '*.cpp' -or -name '*.hpp')
