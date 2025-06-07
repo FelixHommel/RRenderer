@@ -41,5 +41,6 @@ target_link_libraries(${NAME}
     PUBLIC
         Vulkan::Vulkan
         spdlog::spdlog
+        glm::glm
         glfw
 )
