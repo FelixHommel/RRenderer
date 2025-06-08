@@ -21,6 +21,7 @@
 #include <cstdint>
 #include <memory>
 #include <source_location>
+#include <vector>
 
 namespace rr
 {
@@ -35,10 +36,10 @@ VulkanRenderer::VulkanRenderer(Window& window)
     , m_commandPool(std::make_unique<VulkanCommandPool>(*m_device))
     , m_commandBuffers(m_commandPool->allocateCommandBuffer(m_swapchain->imageCount()))
 {
-    std::vector<Vertex> vertices{{ 
-        {0.f, -0.5f}, {1.f, 0.f, 0.f}},
-        {{0.5f, 0.5f}, {0.f, 1.f, 0.f}},
-        {{-0.5f, 0.5f}, {0.f, 0.f, 1.f}}
+    std::vector<Vertex> vertices{
+        {.position = {0.f, -0.5f}, .color = {1.f, 0.f, 0.f}}, //NOLINT
+        {.position = {0.5f, 0.5f}, .color = {0.f, 1.f, 0.f}}, //NOLINT
+        {.position = {-0.5f, 0.5f}, .color = {0.f, 0.f, 1.f}} //NOLINT
     };
     m_model = std::make_unique<VulkanMesh>(*m_device, vertices);
 
