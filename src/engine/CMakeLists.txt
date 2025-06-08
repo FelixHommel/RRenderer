@@ -31,6 +31,8 @@ add_library(${NAME}
     core/VulkanCommandPool.hpp
     core/VulkanCommandBuffer.cpp
     core/VulkanCommandBuffer.hpp
+    core/VulkanMesh.cpp
+    core/VulkanMesh.hpp
 )
 
 target_include_directories(${NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
@@ -41,6 +43,6 @@ target_link_libraries(${NAME}
     PUBLIC
         Vulkan::Vulkan
         spdlog::spdlog
-        glm::glm
+        glm
         glfw
 )
