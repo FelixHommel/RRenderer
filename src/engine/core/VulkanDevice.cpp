@@ -69,6 +69,33 @@ void VulkanDevice::createImageWithInfo(const VkImageCreateInfo& createInfo, VkMe
         throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::BIND_IMAGE_MEMORY);
 }
 
+void VulkanDevice::createBuffer(VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer& buffer, VkDeviceMemory& bufferMemory)
+{
+    VkBufferCreateInfo createInfo{
+        .sType = VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO,
+        .size = size,
+        .usage = usage,
+        .sharingMode = VK_SHARING_MODE_EXCLUSIVE
+    };
+
+    if(vkCreateBuffer(m_device, &createInfo, nullptr, &buffer) != VK_SUCCESS)
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_BUFFER);
+
+    VkMemoryRequirements memRequirements;
+    vkGetBufferMemoryRequirements(m_device, buffer, &memRequirements);
+
+    VkMemoryAllocateInfo allocInfo{
+        .sType = VK_STRUCTURE_TYPE_MEMORY_ALLOCATE_INFO,
+        .allocationSize = memRequirements.size,
+        .memoryTypeIndex = findMemoryType(memRequirements.memoryTypeBits, properties)
+    };
+
+    if(vkAllocateMemory(m_device, &allocInfo, nullptr, &bufferMemory) != VK_SUCCESS)
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::ALLOCATE_MEMORY);
+
+    vkBindBufferMemory(m_device, buffer, bufferMemory, 0);
+}
+
 void VulkanDevice::pickPhyscialDevice()
 {
     std::uint32_t deviceCount{0};
