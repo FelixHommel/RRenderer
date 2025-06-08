@@ -5,6 +5,7 @@
 #include "exception/EngineException.hpp"
 #include "exception/VulkanException.hpp"
 #include "spdlog/spdlog.h"
+#include <memory>
 #include <source_location>
 #include <vulkan/vulkan_core.h>
 
@@ -24,12 +25,17 @@ VulkanSwapchain::VulkanSwapchain(VulkanDevice& device, VkSurfaceKHR surface, VkE
     , surface(surface)
     , windowExtent(windowExtent)
 {
-    createSwapchain();
-    createImageViews();
-    createRenderPass();
-    createDepthResources();
-    createFramebuffers();
-    createSyncObjects();
+    createVulkanSwapchain();
+}
+
+VulkanSwapchain::VulkanSwapchain(VulkanDevice& device, VkExtent2D windowExtent, std::shared_ptr<VulkanSwapchain> previous)
+    : device(device)
+    , surface(VK_NULL_HANDLE)
+    , windowExtent(windowExtent)
+    , m_oldSwapchain(previous)
+{
+    createVulkanSwapchain();
+    m_oldSwapchain = nullptr;
 }
 
 VulkanSwapchain::~VulkanSwapchain()
@@ -127,6 +133,16 @@ VkFramebuffer VulkanSwapchain::getFramebufferHandle(std::size_t index) const
     return m_swapchainFramebuffers[index];
 }
 
+void VulkanSwapchain::createVulkanSwapchain()
+{
+    createSwapchain();
+    createImageViews();
+    createRenderPass();
+    createDepthResources();
+    createFramebuffers();
+    createSyncObjects();
+}
+
 /**
  *  Set up the swapchain with format, extent and used queues.
 */
@@ -159,7 +175,7 @@ void VulkanSwapchain::createSwapchain()
         .compositeAlpha = VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR,
         .presentMode = presentMode,
         .clipped = VK_TRUE,
-        .oldSwapchain = VK_NULL_HANDLE
+        .oldSwapchain = m_oldSwapchain == nullptr ? VK_NULL_HANDLE : m_oldSwapchain->getHandle()
     };
 
     QueueFamilyIndices indices{ device.findPhysicalQueueFamilies() };

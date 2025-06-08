@@ -3,6 +3,7 @@
 
 #include "core/VulkanDevice.hpp"
 
+#include <memory>
 #include <vulkan/vulkan_core.h>
 
 #include <cstddef>
@@ -23,6 +24,7 @@ class VulkanSwapchain
 {
 public:
     VulkanSwapchain(VulkanDevice& device, VkSurfaceKHR surface, VkExtent2D windowExtent);
+    VulkanSwapchain(VulkanDevice& device, VkExtent2D windowExtent, std::shared_ptr<VulkanSwapchain> previous);
     ~VulkanSwapchain();
 
     VulkanSwapchain(const VulkanSwapchain&) = delete;
@@ -40,6 +42,7 @@ public:
     [[nodiscard]] VkResult submitCommandBuffer(const VkCommandBuffer* commandBuffer, const std::uint32_t* imageIndex);
 
     /** Raw handle access */
+    [[nodiscard]] VkSwapchainKHR getHandle() const { return m_swapchain; }
     [[nodiscard]] VkRenderPass getRenderPassHandle() const { return m_renderPass; }
     [[nodiscard]] VkFramebuffer getFramebufferHandle(std::size_t index) const;
 
@@ -53,6 +56,7 @@ private:
     VkSwapchainKHR m_swapchain{ VK_NULL_HANDLE };
     std::vector<VkFramebuffer> m_swapchainFramebuffers{ VK_NULL_HANDLE };
     VkRenderPass m_renderPass{ VK_NULL_HANDLE };
+    std::shared_ptr<VulkanSwapchain> m_oldSwapchain{ nullptr };
 
     /** Images */
     VkFormat m_swapchainImageFormat{};
@@ -70,6 +74,8 @@ private:
     std::vector<VkSemaphore> m_renderFinishedSemaphores;
     std::vector<VkFence> m_inFlightFences;
     std::vector<VkFence> m_imagesInFlight;
+
+    void createVulkanSwapchain();
 
     /** Setup functions */
     void createSwapchain();
