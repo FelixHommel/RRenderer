@@ -4,6 +4,7 @@
 #include "core/VulkanDebugMessenger.hpp"
 #include "core/VulkanDevice.hpp"
 #include "core/VulkanInstance.hpp"
+#include "core/VulkanMesh.hpp"
 #include "core/VulkanPipeline.hpp"
 #include "core/VulkanPipelineLayout.hpp"
 #include "core/VulkanSurface.hpp"
@@ -20,6 +21,7 @@
 #include <cstdint>
 #include <memory>
 #include <source_location>
+#include <vector>
 
 namespace rr
 {
@@ -34,6 +36,13 @@ VulkanRenderer::VulkanRenderer(Window& window)
     , m_commandPool(std::make_unique<VulkanCommandPool>(*m_device))
     , m_commandBuffers(m_commandPool->allocateCommandBuffer(m_swapchain->imageCount()))
 {
+    std::vector<Vertex> vertices{
+        {.position = {0.f, -0.5f}, .color = {1.f, 0.f, 0.f}}, //NOLINT
+        {.position = {0.5f, 0.5f}, .color = {0.f, 1.f, 0.f}}, //NOLINT
+        {.position = {-0.5f, 0.5f}, .color = {0.f, 0.f, 1.f}} //NOLINT
+    };
+    m_model = std::make_unique<VulkanMesh>(*m_device, vertices);
+
     spdlog::info("allocated {} command buffers", m_commandBuffers.size());
     recordCommandBuffers();
 }
@@ -96,7 +105,8 @@ void VulkanRenderer::recordCommandBuffers()
         vkCmdBeginRenderPass(m_commandBuffers[i]->getHandle(), &renderPassBeginInfo, VK_SUBPASS_CONTENTS_INLINE);
 
         m_pipeline->bind(m_commandBuffers[i]->getHandle());
-        vkCmdDraw(m_commandBuffers[i]->getHandle(), 3, 1, 0, 0);
+        m_model->bind(m_commandBuffers[i]->getHandle());
+        m_model->draw(m_commandBuffers[i]->getHandle());
 
         vkCmdEndRenderPass(m_commandBuffers[i]->getHandle());
 

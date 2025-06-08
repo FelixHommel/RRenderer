@@ -7,6 +7,7 @@
 #include "core/VulkanDebugMessenger.hpp"
 #include "core/VulkanDevice.hpp"
 #include "core/VulkanInstance.hpp"
+#include "core/VulkanMesh.hpp"
 #include "core/VulkanPipeline.hpp"
 #include "core/VulkanPipelineLayout.hpp"
 #include "core/VulkanSurface.hpp"
@@ -52,6 +53,7 @@ private:
     std::unique_ptr<VulkanPipeline> m_pipeline;
     std::unique_ptr<VulkanCommandPool> m_commandPool;
     std::vector<std::unique_ptr<VulkanCommandBuffer>> m_commandBuffers;
+    std::unique_ptr<VulkanMesh> m_model;
 
     static constexpr VkClearColorValue m_clearColor{ 0.1f, 0.1f, 0.1f, 1.f };
     
