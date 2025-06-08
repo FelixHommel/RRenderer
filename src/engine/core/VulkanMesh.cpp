@@ -31,7 +31,7 @@ VulkanMesh::VulkanMesh(VulkanDevice& device, const std::vector<Vertex>& vertices
 
     void* data{ nullptr };
     vkMapMemory(device.getHandle(), m_vertexBufferMemory, 0, bufferSize, 0, &data);
-    std::memcpy(data, vertices.data(), static_cast<std::size_t>(bufferSize));
+    std::memcpy(data, vertices.data(), bufferSize);
     vkUnmapMemory(device.getHandle(), m_vertexBufferMemory);
 }
 
