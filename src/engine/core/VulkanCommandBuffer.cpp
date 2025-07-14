@@ -16,7 +16,9 @@ namespace rr
  *  Construct a single CommandBuffer
  */
 VulkanCommandBuffer::VulkanCommandBuffer(VkDevice device, VkCommandPool commandPool, VkCommandBufferLevel level)
-    : m_commandBuffer(VK_NULL_HANDLE)
+    : device(device)
+    , commandPool(commandPool)
+    , m_commandBuffer(VK_NULL_HANDLE)
 {
     VkCommandBufferAllocateInfo allocInfo{
         .sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO,
@@ -32,9 +34,17 @@ VulkanCommandBuffer::VulkanCommandBuffer(VkDevice device, VkCommandPool commandP
 /**
  *  Helper constructor for the create function
  */
-VulkanCommandBuffer::VulkanCommandBuffer(VkCommandBuffer commandBuffer)
-    : m_commandBuffer(commandBuffer)
+VulkanCommandBuffer::VulkanCommandBuffer(VkDevice device, VkCommandPool commandPool, VkCommandBuffer commandBuffer)
+    : device(device)
+    , commandPool(commandPool)
+    , m_commandBuffer(commandBuffer)
 {}
+
+VulkanCommandBuffer::~VulkanCommandBuffer()
+{
+    if(m_commandBuffer != VK_NULL_HANDLE)
+        vkFreeCommandBuffers(device, commandPool, 1, &m_commandBuffer);
+}
 
 /**
  * Factory method to create <code>count<\code> of <code>VulkanCommandBuffer<\code>
@@ -61,7 +71,7 @@ std::vector<std::unique_ptr<VulkanCommandBuffer>> VulkanCommandBuffer::create(Vk
 
     std::vector<std::unique_ptr<VulkanCommandBuffer>> wrapped;
     for(const auto& buffer : rawBuffers)
-        wrapped.push_back(std::make_unique<VulkanCommandBuffer>(buffer));
+        wrapped.push_back(std::make_unique<VulkanCommandBuffer>(device, commandPool, buffer));
 
     return wrapped;
 }

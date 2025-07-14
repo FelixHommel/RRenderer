@@ -24,6 +24,8 @@ public:
     VulkanCommandPool& operator=(const VulkanCommandPool&) = delete;
     VulkanCommandPool& operator=(VulkanCommandPool&&) = delete;
 
+    [[nodiscard]] VkCommandPool getHandle() const { return m_commandPool; }
+
     std::unique_ptr<VulkanCommandBuffer> allocateCommandBuffer();
     std::vector<std::unique_ptr<VulkanCommandBuffer>> allocateCommandBuffer(std::uint32_t count);
 
