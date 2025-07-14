@@ -86,10 +86,11 @@ void VulkanRenderer::shutdown()
 
 std::unique_ptr<VulkanPipeline> VulkanRenderer::createPipeline()
 {
-    auto config = VulkanPipeline::defaultPipelineConfigInfo(m_swapchain->getExtent());
-    config.renderPass = m_swapchain->getRenderPassHandle();
-    config.pipelineLayout = m_pipelineLayout->getHandle();
-    return std::make_unique<VulkanPipeline>(m_device->getHandle(), config, BASIC_VERT_SHADER_PATH, BASIC_FRAG_SHADER_PATH);
+    PipelineConfigInfo pipelineConfig{};
+    VulkanPipeline::defaultPipelineConfigInfo(pipelineConfig);
+    pipelineConfig.renderPass = m_swapchain->getRenderPassHandle();
+    pipelineConfig.pipelineLayout = m_pipelineLayout->getHandle();
+    return std::make_unique<VulkanPipeline>(m_device->getHandle(), pipelineConfig, BASIC_VERT_SHADER_PATH, BASIC_FRAG_SHADER_PATH);
 }
 
 void VulkanRenderer::recreateSwapchain()
@@ -132,6 +133,22 @@ void VulkanRenderer::recordCommandBuffers(std::size_t imageIndex)
     };
 
     vkCmdBeginRenderPass(m_commandBuffers[imageIndex]->getHandle(), &renderPassBeginInfo, VK_SUBPASS_CONTENTS_INLINE);
+
+    VkViewport viewport{
+        .x = 0,
+        .y = 0,
+        .width = static_cast<float>(m_swapchain->getExtent().width),
+        .height = static_cast<float>(m_swapchain->getExtent().height),
+        .minDepth = 0.f,
+        .maxDepth = 1.f
+    };
+    vkCmdSetViewport(m_commandBuffers[imageIndex]->getHandle(), 0, 1, &viewport);
+
+    VkRect2D scissor{
+        { 0, 0 },
+        m_swapchain->getExtent()
+    };
+    vkCmdSetScissor(m_commandBuffers[imageIndex]->getHandle(), 0, 1, &scissor);
 
     m_pipeline->bind(m_commandBuffers[imageIndex]->getHandle());
     m_model->bind(m_commandBuffers[imageIndex]->getHandle());
