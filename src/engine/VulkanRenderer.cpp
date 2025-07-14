@@ -15,6 +15,8 @@
 #include "window/Window.hpp"
 
 #include "spdlog/spdlog.h"
+#include <cassert>
+#include <utility>
 #include <vulkan/vulkan_core.h>
 
 #include <array>
@@ -86,6 +88,9 @@ void VulkanRenderer::shutdown()
 
 std::unique_ptr<VulkanPipeline> VulkanRenderer::createPipeline()
 {
+    assert(m_swapchain != nullptr && "Cannot create pipeline before swapchain");
+    assert(m_pipelineLayout != nullptr && "cannot create pipeline before pipeline layout");
+
     PipelineConfigInfo pipelineConfig{};
     VulkanPipeline::defaultPipelineConfigInfo(pipelineConfig);
     pipelineConfig.renderPass = m_swapchain->getRenderPassHandle();
@@ -103,7 +108,19 @@ void VulkanRenderer::recreateSwapchain()
     }
 
     vkDeviceWaitIdle(m_device->getHandle());
-    m_swapchain = std::make_unique<VulkanSwapchain>(*m_device, m_surface->getHandle(), extent);
+
+    if(m_swapchain == nullptr)
+    {
+        m_swapchain = std::make_unique<VulkanSwapchain>(*m_device, m_surface->getHandle(), extent);
+    }
+    else
+    {
+        m_swapchain = std::make_unique<VulkanSwapchain>(*m_device, m_surface->getHandle(), extent, std::move(m_swapchain));
+
+        if(m_swapchain->imageCount() != m_commandBuffers.size())
+            m_commandBuffers = m_commandPool->allocateCommandBuffer(m_swapchain->imageCount());
+    }
+
     m_pipeline = createPipeline();
 }
 

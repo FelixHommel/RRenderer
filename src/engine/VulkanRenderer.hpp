@@ -63,7 +63,7 @@ private:
     static constexpr std::string_view BASIC_VERT_SHADER_PATH{ "./shaders/basic.vert.spv" };
     static constexpr std::string_view BASIC_FRAG_SHADER_PATH{ "./shaders/basic.frag.spv" };
     
-    std::unique_ptr<VulkanPipeline> createPipeline();
+    [[nodiscard]] std::unique_ptr<VulkanPipeline> createPipeline();
 
     void recreateSwapchain();
     void recordCommandBuffers(std::size_t imageIndex);

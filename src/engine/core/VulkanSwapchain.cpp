@@ -28,11 +28,11 @@ VulkanSwapchain::VulkanSwapchain(VulkanDevice& device, VkSurfaceKHR surface, VkE
     createVulkanSwapchain();
 }
 
-VulkanSwapchain::VulkanSwapchain(VulkanDevice& device, VkExtent2D windowExtent, std::shared_ptr<VulkanSwapchain> previous)
+VulkanSwapchain::VulkanSwapchain(VulkanDevice& device, VkSurfaceKHR surface, VkExtent2D windowExtent, std::shared_ptr<VulkanSwapchain> previous)
     : device(device)
-    , surface(VK_NULL_HANDLE)
-    , windowExtent(windowExtent)
-    , m_oldSwapchain(previous)
+    , surface(surface)
+    , windowExtent{ windowExtent }
+    , m_oldSwapchain{ previous }
 {
     createVulkanSwapchain();
     m_oldSwapchain = nullptr;
