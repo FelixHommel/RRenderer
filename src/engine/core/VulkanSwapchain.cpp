@@ -32,10 +32,8 @@ VulkanSwapchain::VulkanSwapchain(VulkanDevice& device, VkSurfaceKHR surface, VkE
     : device(device)
     , surface(surface)
     , windowExtent{ windowExtent }
-    , m_oldSwapchain{ previous }
 {
-    createVulkanSwapchain();
-    m_oldSwapchain = nullptr;
+    createVulkanSwapchain(previous);
 }
 
 VulkanSwapchain::~VulkanSwapchain()
@@ -133,9 +131,9 @@ VkFramebuffer VulkanSwapchain::getFramebufferHandle(std::size_t index) const
     return m_swapchainFramebuffers[index];
 }
 
-void VulkanSwapchain::createVulkanSwapchain()
+void VulkanSwapchain::createVulkanSwapchain(std::shared_ptr<VulkanSwapchain> previous)
 {
-    createSwapchain();
+    createSwapchain(previous);
     createImageViews();
     createRenderPass();
     createDepthResources();
@@ -146,7 +144,7 @@ void VulkanSwapchain::createVulkanSwapchain()
 /**
  *  Set up the swapchain with format, extent and used queues.
 */
-void VulkanSwapchain::createSwapchain()
+void VulkanSwapchain::createSwapchain(std::shared_ptr<VulkanSwapchain> previous)
 {
     SwapchainSupportDetails swapchainSupport{ device.getSwapchainSupport() };
 
@@ -175,7 +173,7 @@ void VulkanSwapchain::createSwapchain()
         .compositeAlpha = VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR,
         .presentMode = presentMode,
         .clipped = VK_TRUE,
-        .oldSwapchain = m_oldSwapchain == nullptr ? VK_NULL_HANDLE : m_oldSwapchain->getHandle()
+        .oldSwapchain = previous == nullptr ? VK_NULL_HANDLE : previous->getHandle()
     };
 
     QueueFamilyIndices indices{ device.findPhysicalQueueFamilies() };

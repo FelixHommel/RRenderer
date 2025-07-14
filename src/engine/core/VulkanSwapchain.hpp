@@ -56,7 +56,6 @@ private:
     VkSwapchainKHR m_swapchain{ VK_NULL_HANDLE };
     std::vector<VkFramebuffer> m_swapchainFramebuffers{ VK_NULL_HANDLE };
     VkRenderPass m_renderPass{ VK_NULL_HANDLE };
-    std::shared_ptr<VulkanSwapchain> m_oldSwapchain{ nullptr };
 
     /** Images */
     VkFormat m_swapchainImageFormat{};
@@ -75,10 +74,10 @@ private:
     std::vector<VkFence> m_inFlightFences;
     std::vector<VkFence> m_imagesInFlight;
 
-    void createVulkanSwapchain();
+    void createVulkanSwapchain(std::shared_ptr<VulkanSwapchain> previous = nullptr);
 
     /** Setup functions */
-    void createSwapchain();
+    void createSwapchain(std::shared_ptr<VulkanSwapchain> previous = nullptr);
     void createImageViews();
     void createRenderPass();
     void createDepthResources();
