@@ -1,5 +1,6 @@
 #include "VulkanRenderer.hpp"
 
+#include "GLFW/glfw3.h"
 #include "core/VulkanCommandPool.hpp"
 #include "core/VulkanDebugMessenger.hpp"
 #include "core/VulkanDevice.hpp"
@@ -27,7 +28,8 @@ namespace rr
 {
 
 VulkanRenderer::VulkanRenderer(Window& window)
-    :  m_debugMessenger(std::make_unique<VulkanDebugMessenger>(m_instance->getHandle()))
+    : window(window)
+    , m_debugMessenger(std::make_unique<VulkanDebugMessenger>(m_instance->getHandle()))
     , m_surface(std::make_unique<VulkanSurface>(m_instance->getHandle(), window))
     , m_device(std::make_unique<VulkanDevice>(m_instance->getHandle(), m_surface->getHandle()))
     , m_swapchain(std::make_unique<VulkanSwapchain>(*m_device, m_surface->getHandle(), window.getExtent()))
@@ -44,7 +46,6 @@ VulkanRenderer::VulkanRenderer(Window& window)
     m_model = std::make_unique<VulkanMesh>(*m_device, vertices);
 
     spdlog::info("allocated {} command buffers", m_commandBuffers.size());
-    recordCommandBuffers();
 }
 
 void VulkanRenderer::render()
@@ -52,10 +53,26 @@ void VulkanRenderer::render()
     std::uint32_t imageIndex{};
     auto result{ m_swapchain->acquireNextImage(&imageIndex) };
 
+    if(result == VK_ERROR_OUT_OF_DATE_KHR)
+    {
+        recreateSwapchain();
+
+        return;
+    }
+
     if(result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR)
         throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::IMAGE_ACQUISITION);
 
+    recordCommandBuffers(imageIndex);
     result = m_swapchain->submitCommandBuffer(&m_commandBuffers[imageIndex]->getHandle(), &imageIndex);
+
+    if(result == VK_ERROR_OUT_OF_DATE_KHR || result == VK_SUBOPTIMAL_KHR || window.wasWindowResized())
+    {
+        window.resetWindowResized();
+        recreateSwapchain();
+
+        return;
+    }
 
     if(result != VK_SUCCESS)
         throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::SUBMIT_COMMAND_BUFFER);
@@ -72,49 +89,58 @@ std::unique_ptr<VulkanPipeline> VulkanRenderer::createPipeline()
     auto config = VulkanPipeline::defaultPipelineConfigInfo(m_swapchain->getExtent());
     config.renderPass = m_swapchain->getRenderPassHandle();
     config.pipelineLayout = m_pipelineLayout->getHandle();
-    return std::make_unique<VulkanPipeline>(m_device->getHandle(), config, "./shaders/basic.vert.spv", "./shaders/basic.frag.spv");
+    return std::make_unique<VulkanPipeline>(m_device->getHandle(), config, BASIC_VERT_SHADER_PATH, BASIC_FRAG_SHADER_PATH);
 }
 
-void VulkanRenderer::recordCommandBuffers()
+void VulkanRenderer::recreateSwapchain()
+{
+    auto extent{ window.getExtent() };
+    while(extent.height == 0 || extent.width == 0)
+    {
+        extent = window.getExtent();
+        glfwWaitEvents();
+    }
+
+    vkDeviceWaitIdle(m_device->getHandle());
+    m_swapchain = std::make_unique<VulkanSwapchain>(*m_device, m_surface->getHandle(), extent);
+    m_pipeline = createPipeline();
+}
+
+void VulkanRenderer::recordCommandBuffers(std::size_t imageIndex)
 {
     VkCommandBufferBeginInfo beginInfo{
         .sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO
     };
 
-    for(std::size_t i{0}; i < m_commandBuffers.size(); ++i)
-    {
-        if(vkBeginCommandBuffer(m_commandBuffers.at(i)->getHandle(), &beginInfo) != VK_SUCCESS)
-            throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::BEGIN_RECORD_COMMAND_BUFFER, i);
+    if(vkBeginCommandBuffer(m_commandBuffers.at(imageIndex)->getHandle(), &beginInfo) != VK_SUCCESS)
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::BEGIN_RECORD_COMMAND_BUFFER, imageIndex);
 
-        std::array<VkClearValue, 2> clearValues{
-            VkClearValue{ .color = m_clearColor },
-            VkClearValue{ .depthStencil = { 1.f, 0 } }
-        };
-        VkRenderPassBeginInfo renderPassBeginInfo{
-            .sType = VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO,
-            .renderPass = m_swapchain->getRenderPassHandle(),
-            .framebuffer = m_swapchain->getFramebufferHandle(i),
-            .renderArea = {
-                .offset = { 0, 0 },
-                .extent = m_swapchain->getExtent()
-            },
-            .clearValueCount = static_cast<std::uint32_t>(clearValues.size()),
-            .pClearValues = clearValues.data()
-        };
+    std::array<VkClearValue, 2> clearValues{
+        VkClearValue{ .color = CLEAR_COLOR },
+        VkClearValue{ .depthStencil = { 1.f, 0 } }
+    };
+    VkRenderPassBeginInfo renderPassBeginInfo{
+        .sType = VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO,
+        .renderPass = m_swapchain->getRenderPassHandle(),
+        .framebuffer = m_swapchain->getFramebufferHandle(imageIndex),
+        .renderArea = {
+            .offset = { 0, 0 },
+            .extent = m_swapchain->getExtent()
+        },
+        .clearValueCount = static_cast<std::uint32_t>(clearValues.size()),
+        .pClearValues = clearValues.data()
+    };
 
-        vkCmdBeginRenderPass(m_commandBuffers[i]->getHandle(), &renderPassBeginInfo, VK_SUBPASS_CONTENTS_INLINE);
+    vkCmdBeginRenderPass(m_commandBuffers[imageIndex]->getHandle(), &renderPassBeginInfo, VK_SUBPASS_CONTENTS_INLINE);
 
-        m_pipeline->bind(m_commandBuffers[i]->getHandle());
-        m_model->bind(m_commandBuffers[i]->getHandle());
-        m_model->draw(m_commandBuffers[i]->getHandle());
+    m_pipeline->bind(m_commandBuffers[imageIndex]->getHandle());
+    m_model->bind(m_commandBuffers[imageIndex]->getHandle());
+    m_model->draw(m_commandBuffers[imageIndex]->getHandle());
 
-        vkCmdEndRenderPass(m_commandBuffers[i]->getHandle());
+    vkCmdEndRenderPass(m_commandBuffers[imageIndex]->getHandle());
 
-        if(vkEndCommandBuffer(m_commandBuffers[i]->getHandle()) != VK_SUCCESS)
-            throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::END_RECORD_COMMAND_BUFFER, i);
-    }
-
-    spdlog::info("Command buffers recorded successfully");
+    if(vkEndCommandBuffer(m_commandBuffers[imageIndex]->getHandle()) != VK_SUCCESS)
+        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::END_RECORD_COMMAND_BUFFER, imageIndex);
 }
 
 }
