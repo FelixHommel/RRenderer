@@ -20,8 +20,8 @@ class VulkanCommandBuffer
 {
 public:
     VulkanCommandBuffer(VkDevice device, VkCommandPool commandPool, VkCommandBufferLevel = VK_COMMAND_BUFFER_LEVEL_PRIMARY);
-    explicit VulkanCommandBuffer(VkCommandBuffer commandBuffer);
-    ~VulkanCommandBuffer() = default;
+    explicit VulkanCommandBuffer(VkDevice device, VkCommandPool commandPool, VkCommandBuffer commandBuffer);
+    ~VulkanCommandBuffer();
 
     VulkanCommandBuffer(const VulkanCommandBuffer&) = delete;
     VulkanCommandBuffer(VulkanCommandBuffer&&) = delete;
@@ -34,6 +34,9 @@ public:
     [[nodiscard]] VkCommandBuffer& getHandle() { return m_commandBuffer; }
     
 private:
+    VkDevice device;
+    VkCommandPool commandPool;
+
     VkCommandBuffer m_commandBuffer;
 };
 

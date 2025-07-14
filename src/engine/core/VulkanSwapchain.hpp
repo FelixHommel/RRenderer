@@ -3,6 +3,7 @@
 
 #include "core/VulkanDevice.hpp"
 
+#include <memory>
 #include <vulkan/vulkan_core.h>
 
 #include <cstddef>
@@ -23,6 +24,7 @@ class VulkanSwapchain
 {
 public:
     VulkanSwapchain(VulkanDevice& device, VkSurfaceKHR surface, VkExtent2D windowExtent);
+    VulkanSwapchain(VulkanDevice& device, VkSurfaceKHR surface, VkExtent2D windowExtent, std::shared_ptr<VulkanSwapchain> previous);
     ~VulkanSwapchain();
 
     VulkanSwapchain(const VulkanSwapchain&) = delete;
@@ -40,6 +42,7 @@ public:
     [[nodiscard]] VkResult submitCommandBuffer(const VkCommandBuffer* commandBuffer, const std::uint32_t* imageIndex);
 
     /** Raw handle access */
+    [[nodiscard]] VkSwapchainKHR getHandle() const { return m_swapchain; }
     [[nodiscard]] VkRenderPass getRenderPassHandle() const { return m_renderPass; }
     [[nodiscard]] VkFramebuffer getFramebufferHandle(std::size_t index) const;
 
@@ -71,8 +74,10 @@ private:
     std::vector<VkFence> m_inFlightFences;
     std::vector<VkFence> m_imagesInFlight;
 
+    void createVulkanSwapchain(std::shared_ptr<VulkanSwapchain> previous = nullptr);
+
     /** Setup functions */
-    void createSwapchain();
+    void createSwapchain(std::shared_ptr<VulkanSwapchain> previous = nullptr);
     void createImageViews();
     void createRenderPass();
     void createDepthResources();

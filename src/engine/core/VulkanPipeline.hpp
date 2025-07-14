@@ -12,14 +12,23 @@ namespace rr
 
 struct PipelineConfigInfo
 {
-    VkViewport viewport{};
-    VkRect2D scissor{};
+    PipelineConfigInfo() = default;
+    ~PipelineConfigInfo() = default;
+
+    PipelineConfigInfo(PipelineConfigInfo&&) = delete;
+    PipelineConfigInfo& operator=(PipelineConfigInfo&&) = delete;
+    PipelineConfigInfo(const PipelineConfigInfo&) = delete;
+    PipelineConfigInfo& operator=(const PipelineConfigInfo&) = delete;
+
+    VkPipelineViewportStateCreateInfo viewportInfo{};
     VkPipelineInputAssemblyStateCreateInfo inputAssemblyInfo{};
     VkPipelineRasterizationStateCreateInfo rasterizationInfo{};
     VkPipelineMultisampleStateCreateInfo multisampleInfo{};
     VkPipelineColorBlendAttachmentState colorBlendAttachment{};
     VkPipelineColorBlendStateCreateInfo colorBlendInfo{};
     VkPipelineDepthStencilStateCreateInfo depthStencilInfo{};
+    std::vector<VkDynamicState> dynamicStateEnables;
+    VkPipelineDynamicStateCreateInfo dynamicStateInfo{};
     VkPipelineLayout pipelineLayout{ nullptr };
     VkRenderPass renderPass{ nullptr };
     std::uint32_t subpass{ 0 };
@@ -36,8 +45,7 @@ public:
     VulkanPipeline& operator=(const VulkanPipeline&) = delete;
     VulkanPipeline& operator=(VulkanPipeline&&) = delete;
 
-    static PipelineConfigInfo defaultPipelineConfigInfo(VkExtent2D extent);
-    static PipelineConfigInfo defaultPipelineConfigInfo(std::uint32_t width, std::uint32_t height);
+    static void defaultPipelineConfigInfo(PipelineConfigInfo& configInfo);
 
     void bind(VkCommandBuffer cmdBuffer);
 

@@ -25,11 +25,14 @@ Window::Window(int width, int height, const std::string& title)
     spdlog::info("GLFW initialized successfully...");
 
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
-    glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+    glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
 
     m_window = glfwCreateWindow(m_width, m_height, m_title.c_str(), nullptr, nullptr);
     if(m_window == nullptr)
         throwWithLog<GLFWException>(std::source_location::current(), GLFWExceptionCause::WINDOW_CREATION_FAILED);
+
+    glfwSetWindowUserPointer(m_window, this);
+    glfwSetFramebufferSizeCallback(m_window, Window::framebufferResizeCallback);
 
     spdlog::info("Window({}, {}) created successfully...", m_width, m_height);
 }
@@ -43,6 +46,15 @@ void Window::createWindowSurface(VkInstance& instance, VkSurfaceKHR* surface)
 {
     if(glfwCreateWindowSurface(instance, m_window, nullptr, surface) != VK_SUCCESS)
         throwWithLog<GLFWException>(std::source_location::current(), GLFWExceptionCause::SURFACE_CREATION_FAILED);
+}
+
+void Window::framebufferResizeCallback(GLFWwindow* window, int width, int height)
+{
+    auto* pWindow = reinterpret_cast<Window*>(glfwGetWindowUserPointer(window));
+
+    pWindow->m_framebufferResized = true;
+    pWindow->m_width = width;
+    pWindow->m_height = height;
 }
 
 } // !rr
