@@ -1,3 +1,8 @@
+---
+name: Problem Story
+about: Describe a specific problem or Bug
+---
+
 # Problem Story
 
 > In order to [solve problem], we will [build solution]
