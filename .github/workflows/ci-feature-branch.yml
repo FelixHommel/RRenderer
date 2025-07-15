@@ -9,6 +9,7 @@ on:
 jobs:
   lint:
     name: Linting phase
+    if: github.event_name == 'push' || github.event.pull_request.base.ref != 'main' && github.event.pull_request.base.ref != 'dev'
     runs-on: ubuntu-latest
 
     strategy:
@@ -33,6 +34,7 @@ jobs:
 
   build-and-test:
     name: Build phase
+    if: github.event_name == 'push' || github.event.pull_request.base.ref != 'main' && github.event.pull_request.base.ref != 'dev'
     runs-on: ubuntu-latest
 
     strategy:
