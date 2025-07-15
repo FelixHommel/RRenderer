@@ -1,8 +1,6 @@
 name: RRenderer CI - major branch
 
 on:
-  push:
-    branches: [main]
   pull_request:
     branches: [main, dev]
 
