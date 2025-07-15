@@ -14,11 +14,13 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
-      fail-fast: ${{ !isMajor }}
-
-    env:
-      isMajor: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev' || github.event.pull_request.base.ref == 'main' || github.event.pull_request.base.ref == 'dev' }}
-      build_type: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev' || github.event.pull_request.base.ref == 'main' || github.event.pull_request.base.ref == 'dev' && 'release' || 'debug' }}
+      fail-fast: ${{ !(
+        github.ref == 'refs/heads/main' ||
+        github.ref == 'refs/heads/dev' ||
+        (github.event_name == 'pull_request' &&
+         (github.event.pull_request.base.ref == 'main' ||
+          github.event.pull_request.base.ref == 'dev'))
+      ) }}
 
     steps:
       - uses: actions/checkout@v4
@@ -30,25 +32,36 @@ jobs:
           alias clang-tidy=clang-tidy-19
 
       - name: Configure CMake
-        run: cmake --preset ${{ env.build_type }}
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" || "${{ github.ref }}" == "refs/heads/dev" || "${{ github.event.pull_request.base.ref }}" == "main" || "${{ github.event.pull_request.base.ref }}" == "dev" ]]; then
+            cmake --preset release
+          else
+            cmake --preset debug
+          fi
 
       - name: Build
-        run: cmake --build --preset ${{ env.build_type }}
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" || "${{ github.ref }}" == "refs/heads/dev" || "${{ github.event.pull_request.base.ref }}" == "main" || "${{ github.event.pull_request.base.ref }}" == "dev" ]]; then
+            cmake --build --preset release
+          else
+            cmake --build --preset debug
+          fi
 
       - name: clang-tidy
         run: clang-tidy -p ./ --warnings-as-errors=\* $(find src/ -name '*.cpp' -or -name '*.hpp')
-
 
   build-and-test:
     name: Build phase
     runs-on: ubuntu-latest
 
     strategy:
-      fail-fast: ${{ !isMajor }}
-
-    env:
-      isMajor: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev' || github.event.pull_request.base.ref == 'main' || github.event.pull_request.base.ref == 'dev' }}
-      build_type: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev' || github.event.pull_request.base.ref == 'main' || github.event.pull_request.base.ref == 'dev' && 'release' || 'debug' }}
+      fail-fast: ${{ !(
+        github.ref == 'refs/heads/main' ||
+        github.ref == 'refs/heads/dev' ||
+        (github.event_name == 'pull_request' &&
+         (github.event.pull_request.base.ref == 'main' ||
+          github.event.pull_request.base.ref == 'dev'))
+      ) }}
 
     steps:
       - uses: actions/checkout@v4
@@ -59,14 +72,24 @@ jobs:
           sudo apt install -y cmake g++ ninja-build vulkan-tools libvulkan-dev glslang-tools glslang-dev xorg-dev libx11-dev mesa-common-dev libwayland-dev wayland-protocols libxkbcommon-dev
 
       - name: Configure CMake
-        run: cmake --preset ${{ env.build_type }}
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" || "${{ github.ref }}" == "refs/heads/dev" || "${{ github.event.pull_request.base.ref }}" == "main" || "${{ github.event.pull_request.base.ref }}" == "dev" ]]; then
+            cmake --preset release
+          else
+            cmake --preset debug
+          fi
 
       - name: Build
-        run: cmake --build --preset ${{ env.build_type }}
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" || "${{ github.ref }}" == "refs/heads/dev" || "${{ github.event.pull_request.base.ref }}" == "main" || "${{ github.event.pull_request.base.ref }}" == "dev" ]]; then
+            cmake --build --preset release
+          else
+            cmake --build --preset debug
+          fi
 
       - name: Test
         run: |
-          if [[ "${{ env.build_type }}" == "release" ]]; then
+          if [[ "${{ github.ref }}" == "refs/heads/main" || "${{ github.ref }}" == "refs/heads/dev" || "${{ github.event.pull_request.base.ref }}" == "main" || "${{ github.event.pull_request.base.ref }}" == "dev" ]]; then
             ctest --test-dir build/release/test/ --rerun-failed --output-on-failure
           else
             ctest --test-dir build/debug/test/ --rerun-failed --output-on-failure
