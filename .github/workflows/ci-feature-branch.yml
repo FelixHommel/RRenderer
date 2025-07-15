@@ -1,16 +1,19 @@
-name: RRenderer CI - major branch
+name: RRenderer CI - feature branch
 
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main, dev]
+    branches-ignore:
+      - main
+      - dev
 
 jobs:
   lint:
     name: Linting phase
     runs-on: ubuntu-latest
-  
+
+    strategy:
+      fail-fast: true
+
     steps:
       - uses: actions/checkout@v4
 
@@ -20,10 +23,10 @@ jobs:
           alias clang-tidy=clang-tidy-19
 
       - name: Configure CMake
-        run: cmake --preset release
+        run: cmake --preset debug
 
       - name: Build
-        run: cmake --build --preset release
+        run: cmake --build --preset debug
 
       - name: clang-tidy
         run: clang-tidy -p ./ --warnings-as-errors=\* $(find src/ -name '*.cpp' -or -name '*.hpp')
@@ -33,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
-      fail-fast: false
+      fail-fast: true
 
     steps:
       - uses: actions/checkout@v4
@@ -44,10 +47,10 @@ jobs:
           sudo apt install -y cmake g++ ninja-build vulkan-tools libvulkan-dev glslang-tools glslang-dev xorg-dev libx11-dev mesa-common-dev libwayland-dev wayland-protocols libxkbcommon-dev
 
       - name: Configure CMake
-        run: cmake --preset release
+        run: cmake --preset debug
 
       - name: Build
-        run: cmake --build --preset release
+        run: cmake --build --preset debug
 
       - name: Test
-        run: ctest --test-dir build/release/test/ --rerun-failed --output-on-failure
+        run: ctest --test-dir build/debug/test/ --rerun-failed --output-on-failure
