@@ -1,4 +1,4 @@
-name: RRenderer CI
+name: RRenderer CI - major branch
 
 on:
   push:
