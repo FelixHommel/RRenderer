@@ -53,4 +53,4 @@ jobs:
         run: cmake --build --preset debug
 
       - name: Test
-        run: ctest --test-dir build/release/test/ --rerun-failed --output-on-failure
+        run: ctest --test-dir build/debug/test/ --rerun-failed --output-on-failure
