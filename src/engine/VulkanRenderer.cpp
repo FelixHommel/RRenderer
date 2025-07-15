@@ -126,6 +126,9 @@ void VulkanRenderer::recreateSwapchain()
 
 void VulkanRenderer::recordCommandBuffers(std::size_t imageIndex)
 {
+    static int frame{ 30 }; //NOLINT
+    frame = (++frame) % 100; //NOLINT
+
     VkCommandBufferBeginInfo beginInfo{
         .sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO
     };
@@ -169,7 +172,17 @@ void VulkanRenderer::recordCommandBuffers(std::size_t imageIndex)
 
     m_pipeline->bind(m_commandBuffers[imageIndex]->getHandle());
     m_model->bind(m_commandBuffers[imageIndex]->getHandle());
-    m_model->draw(m_commandBuffers[imageIndex]->getHandle());
+
+    for(int i{ 0 }; i < 4; ++i)
+    {
+        SimplePushConstantData pushData{
+            .offset = { -0.5f + (frame * 0.02f), -0.4f + (i * 0.25f) }, //NOLINT
+            .color = { 0.f, 0.f, 0.2f + (0.2f * i) } //NOLINT
+        };
+
+        vkCmdPushConstants(m_commandBuffers[imageIndex]->getHandle(), m_pipelineLayout->getHandle(), VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, 0, sizeof(SimplePushConstantData), &pushData);
+        m_model->draw(m_commandBuffers[imageIndex]->getHandle());
+    }
 
     vkCmdEndRenderPass(m_commandBuffers[imageIndex]->getHandle());
 
