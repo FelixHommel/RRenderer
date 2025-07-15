@@ -1,3 +1,8 @@
+---
+name: Job Story
+about: When a particular context arises, what task needs to be done?
+---
+
 # Job Story
 
 > When [situation], I want to [motivation/goal], so that I can [expected outcome].

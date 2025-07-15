@@ -11,12 +11,18 @@ namespace rr
 VulkanPipelineLayout::VulkanPipelineLayout(VkDevice device)
     : device(device)
 {
+    VkPushConstantRange pushConstantRange{
+        .stageFlags = VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT,
+        .offset = 0,
+        .size = sizeof(SimplePushConstantData)
+    };
+
     VkPipelineLayoutCreateInfo createInfo{
         .sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO,
         .setLayoutCount = 0,
         .pSetLayouts = nullptr,
-        .pushConstantRangeCount = 0,
-        .pPushConstantRanges = nullptr
+        .pushConstantRangeCount = 1,
+        .pPushConstantRanges = &pushConstantRange
     };
 
     if(vkCreatePipelineLayout(device, &createInfo, nullptr, &m_pipelineLayout) != VK_SUCCESS)
