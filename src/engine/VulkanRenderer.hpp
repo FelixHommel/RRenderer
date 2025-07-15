@@ -14,9 +14,9 @@
 #include "core/VulkanSwapchain.hpp"
 #include "window/Window.hpp"
 
-#include <cstddef>
 #include <vulkan/vulkan_core.h>
 
+#include <cstddef>
 #include <memory>
 #include <string_view>
 #include <vector>
@@ -59,7 +59,7 @@ private:
     std::vector<std::unique_ptr<VulkanCommandBuffer>> m_commandBuffers;
     std::unique_ptr<VulkanMesh> m_model;
 
-    static constexpr VkClearColorValue CLEAR_COLOR{ 0.1f, 0.1f, 0.1f, 1.f };
+    static constexpr VkClearColorValue CLEAR_COLOR{ 0.01f, 0.01f, 0.01f, 1.f };
     static constexpr std::string_view BASIC_VERT_SHADER_PATH{ "./shaders/basic.vert.spv" };
     static constexpr std::string_view BASIC_FRAG_SHADER_PATH{ "./shaders/basic.frag.spv" };
     
