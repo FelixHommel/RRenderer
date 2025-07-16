@@ -7,11 +7,11 @@
 #include "core/VulkanDebugMessenger.hpp"
 #include "core/VulkanDevice.hpp"
 #include "core/VulkanInstance.hpp"
-#include "core/VulkanMesh.hpp"
 #include "core/VulkanPipeline.hpp"
 #include "core/VulkanPipelineLayout.hpp"
 #include "core/VulkanSurface.hpp"
 #include "core/VulkanSwapchain.hpp"
+#include "utility/RenderObject.hpp"
 #include "window/Window.hpp"
 
 #include <vulkan/vulkan_core.h>
@@ -57,7 +57,7 @@ private:
     std::unique_ptr<VulkanPipeline> m_pipeline;
     std::unique_ptr<VulkanCommandPool> m_commandPool;
     std::vector<std::unique_ptr<VulkanCommandBuffer>> m_commandBuffers;
-    std::unique_ptr<VulkanMesh> m_model;
+    std::vector<RenderObject> m_renderObjects;
 
     static constexpr VkClearColorValue CLEAR_COLOR{ 0.01f, 0.01f, 0.01f, 1.f };
     static constexpr std::string_view BASIC_VERT_SHADER_PATH{ "./shaders/basic.vert.spv" };
@@ -65,8 +65,10 @@ private:
     
     [[nodiscard]] std::unique_ptr<VulkanPipeline> createPipeline();
 
+    void loadRenderObjects();
     void recreateSwapchain();
     void recordCommandBuffers(std::size_t imageIndex);
+    void renderObjects(VkCommandBuffer comandBuffer);
 };
 
 } // !rr
