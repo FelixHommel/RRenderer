@@ -11,24 +11,23 @@
 #include "core/VulkanSwapchain.hpp"
 #include "exception/EngineException.hpp"
 #include "exception/VulkanException.hpp"
-#include "glm/common.hpp"
 #include "glm/ext/vector_float3.hpp"
 #include "utility/RenderObject.hpp"
 #include "window/Window.hpp"
 
 #include "GLFW/glfw3.h"
-#include "glm/gtc/constants.hpp"
 #include "spdlog/spdlog.h"
-#include <chrono>
-#include <thread>
 #include <vulkan/vulkan_core.h>
 
 #include <array>
 #include <cassert>
+#include <chrono>
 #include <cstddef>
 #include <cstdint>
 #include <memory>
+#include <numbers>
 #include <source_location>
+#include <thread>
 #include <utility>
 #include <vector>
 
@@ -99,7 +98,6 @@ void VulkanRenderer::loadRenderObjects()
     auto mesh = std::make_shared<VulkanMesh>(*m_device, vertices);
 
     std::vector<glm::vec3> colors {
-
         { 1.f, 0.7f, 0.73f }, //NOLINT
         { 1.f, 0.87f, 0.73f }, //NOLINT
         { 1.f, 1.f, 0.73f }, //NOLINT
@@ -113,7 +111,7 @@ void VulkanRenderer::loadRenderObjects()
     const std::size_t triCount{ 40 };
     for(std::size_t i{ 0 }; i < triCount; ++i)
     {
-        RenderObject triangle{ mesh, colors.at(i % colors.size()), { .translation = {}, .scale = { glm::vec2(0.5f) + i * 0.025f }, .rotation = i * glm::pi<float>() * 0.025f } }; //NOLINT
+        RenderObject triangle{ mesh, colors.at(i % colors.size()), { .translation = {}, .scale = { glm::vec2(0.5f) + i * 0.025f }, .rotation = i * std::numbers::pi_v<float> * 0.025f } }; //NOLINT
 
         m_renderObjects.push_back(std::move(triangle));
     }
@@ -214,7 +212,7 @@ void VulkanRenderer::renderObjects(VkCommandBuffer comandBuffer)
     for(auto& obj : m_renderObjects)
     {
         ++i;
-        obj.setRotation(glm::mod<float>(obj.getRotation() + 0.001f * i, 2.f * glm::pi<float>())); //NOLINT
+        obj.setRotation(glm::mod<float>(obj.getRotation() + 0.001f * i, 2.f * std::numbers::pi_v<float>)); //NOLINT
     }
 
     m_pipeline->bind(comandBuffer);
