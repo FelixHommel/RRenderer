@@ -1,0 +1,35 @@
+name: Generate Doxygen Documentation
+
+on:
+  push:
+    branches: ["**"]
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: sudo apt install -y doxygen
+
+      - name: Set up git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Generate Documentation
+        run: |
+          rm -rf docs
+          doxygen
+
+      - name: Commit and Push
+        run: |
+          git add .
+          if git diff --cached --quiet; then
+            echo "No documentation changes to commit"
+          else
+            git commit -m "Update Doxygen documentation [skip ci]"
+            git push
+          fi
