@@ -1,6 +1,5 @@
 #include "VulkanRenderer.hpp"
 
-#include "GLFW/glfw3.h"
 #include "core/VulkanCommandPool.hpp"
 #include "core/VulkanDebugMessenger.hpp"
 #include "core/VulkanDevice.hpp"
@@ -12,18 +11,24 @@
 #include "core/VulkanSwapchain.hpp"
 #include "exception/EngineException.hpp"
 #include "exception/VulkanException.hpp"
+#include "glm/ext/vector_float3.hpp"
+#include "utility/RenderObject.hpp"
 #include "window/Window.hpp"
 
+#include "GLFW/glfw3.h"
 #include "spdlog/spdlog.h"
-#include <cassert>
-#include <utility>
 #include <vulkan/vulkan_core.h>
 
 #include <array>
+#include <cassert>
+#include <chrono>
 #include <cstddef>
 #include <cstdint>
 #include <memory>
+#include <numbers>
 #include <source_location>
+#include <thread>
+#include <utility>
 #include <vector>
 
 namespace rr
@@ -40,18 +45,15 @@ VulkanRenderer::VulkanRenderer(Window& window)
     , m_commandPool(std::make_unique<VulkanCommandPool>(*m_device))
     , m_commandBuffers(m_commandPool->allocateCommandBuffer(m_swapchain->imageCount()))
 {
-    std::vector<Vertex> vertices{
-        {.position = {0.f, -0.5f}, .color = {1.f, 0.f, 0.f}}, //NOLINT
-        {.position = {0.5f, 0.5f}, .color = {0.f, 1.f, 0.f}}, //NOLINT
-        {.position = {-0.5f, 0.5f}, .color = {0.f, 0.f, 1.f}} //NOLINT
-    };
-    m_model = std::make_unique<VulkanMesh>(*m_device, vertices);
+    loadRenderObjects();
 
     spdlog::info("allocated {} command buffers", m_commandBuffers.size());
 }
 
 void VulkanRenderer::render()
 {
+    const int FPS = 33;
+    std::this_thread::sleep_for(std::chrono::milliseconds(FPS));
     std::uint32_t imageIndex{};
     auto result{ m_swapchain->acquireNextImage(&imageIndex) };
 
@@ -84,6 +86,35 @@ void VulkanRenderer::shutdown()
 {
     if(m_device)
         vkDeviceWaitIdle(m_device->getHandle());
+}
+
+void VulkanRenderer::loadRenderObjects()
+{
+    std::vector<Vertex> vertices{
+        {.position = {0.f, -0.5f}, .color = {1.f, 0.f, 0.f}}, //NOLINT
+        {.position = {0.5f, 0.5f}, .color = {0.f, 1.f, 0.f}}, //NOLINT
+        {.position = {-0.5f, 0.5f}, .color = {0.f, 0.f, 1.f}} //NOLINT
+    };
+    auto mesh = std::make_shared<VulkanMesh>(*m_device, vertices);
+
+    std::vector<glm::vec3> colors {
+        { 1.f, 0.7f, 0.73f }, //NOLINT
+        { 1.f, 0.87f, 0.73f }, //NOLINT
+        { 1.f, 1.f, 0.73f }, //NOLINT
+        { 0.73f, 1.f, 0.8f }, //NOLINT
+        { 0.73f, 0.88f, 1.f } //NOLINT
+    };
+
+    for(auto& color : colors)
+        color = glm::pow(color, glm::vec3(2.2f)); //NOLINT
+
+    const std::size_t triCount{ 40 };
+    for(std::size_t i{ 0 }; i < triCount; ++i)
+    {
+        RenderObject triangle{ mesh, colors.at(i % colors.size()), { .translation = {}, .scale = { glm::vec2(0.5f) + i * 0.025f }, .rotation = i * std::numbers::pi_v<float> * 0.025f } }; //NOLINT
+
+        m_renderObjects.push_back(std::move(triangle));
+    }
 }
 
 std::unique_ptr<VulkanPipeline> VulkanRenderer::createPipeline()
@@ -126,9 +157,6 @@ void VulkanRenderer::recreateSwapchain()
 
 void VulkanRenderer::recordCommandBuffers(std::size_t imageIndex)
 {
-    static int frame{ 30 }; //NOLINT
-    frame = (++frame) % 100; //NOLINT
-
     VkCommandBufferBeginInfo beginInfo{
         .sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO
     };
@@ -170,24 +198,36 @@ void VulkanRenderer::recordCommandBuffers(std::size_t imageIndex)
     };
     vkCmdSetScissor(m_commandBuffers[imageIndex]->getHandle(), 0, 1, &scissor);
 
-    m_pipeline->bind(m_commandBuffers[imageIndex]->getHandle());
-    m_model->bind(m_commandBuffers[imageIndex]->getHandle());
-
-    for(int i{ 0 }; i < 4; ++i)
-    {
-        SimplePushConstantData pushData{
-            .offset = { -0.5f + (frame * 0.02f), -0.4f + (i * 0.25f) }, //NOLINT
-            .color = { 0.f, 0.f, 0.2f + (0.2f * i) } //NOLINT
-        };
-
-        vkCmdPushConstants(m_commandBuffers[imageIndex]->getHandle(), m_pipelineLayout->getHandle(), VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, 0, sizeof(SimplePushConstantData), &pushData);
-        m_model->draw(m_commandBuffers[imageIndex]->getHandle());
-    }
+    renderObjects(m_commandBuffers[imageIndex]->getHandle());
 
     vkCmdEndRenderPass(m_commandBuffers[imageIndex]->getHandle());
 
     if(vkEndCommandBuffer(m_commandBuffers[imageIndex]->getHandle()) != VK_SUCCESS)
         throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::END_RECORD_COMMAND_BUFFER, imageIndex);
+}
+
+void VulkanRenderer::renderObjects(VkCommandBuffer comandBuffer)
+{
+    int i{ 0 };
+    for(auto& obj : m_renderObjects)
+    {
+        ++i;
+        obj.setRotation(glm::mod<float>(obj.getRotation() + 0.001f * i, 2.f * std::numbers::pi_v<float>)); //NOLINT
+    }
+
+    m_pipeline->bind(comandBuffer);
+    for(auto& obj : m_renderObjects)
+    {
+        SimplePushConstantData pushData{
+            .transform = obj.getTransformMatrix(),
+            .offset = obj.getTranslation(),
+            .color = obj.getColor()
+        };
+
+        vkCmdPushConstants(comandBuffer, m_pipelineLayout->getHandle(), VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, 0, sizeof(SimplePushConstantData), &pushData);
+
+        obj.render(comandBuffer);
+    }
 }
 
 }
