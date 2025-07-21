@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structrr_1_1PipelineConfigInfo" kind="struct" language="C++" prot="public">
+    <compoundname>rr::PipelineConfigInfo</compoundname>
+    <includes refid="VulkanPipeline_8hpp" local="no">VulkanPipeline.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1a3a5f12bb280c470d9e6e42f18b26f07b" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineViewportStateCreateInfo</ref></type>
+        <definition>VkPipelineViewportStateCreateInfo rr::PipelineConfigInfo::viewportInfo</definition>
+        <argsstring></argsstring>
+        <name>viewportInfo</name>
+        <qualifiedname>rr::PipelineConfigInfo::viewportInfo</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="29" column="39" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1a0cfaf39043a86b53fc34412d78c7fd70" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineInputAssemblyStateCreateInfo</ref></type>
+        <definition>VkPipelineInputAssemblyStateCreateInfo rr::PipelineConfigInfo::inputAssemblyInfo</definition>
+        <argsstring></argsstring>
+        <name>inputAssemblyInfo</name>
+        <qualifiedname>rr::PipelineConfigInfo::inputAssemblyInfo</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="30" column="44" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1aa8b9020ce566f8040ac61bc66849bede" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineRasterizationStateCreateInfo</ref></type>
+        <definition>VkPipelineRasterizationStateCreateInfo rr::PipelineConfigInfo::rasterizationInfo</definition>
+        <argsstring></argsstring>
+        <name>rasterizationInfo</name>
+        <qualifiedname>rr::PipelineConfigInfo::rasterizationInfo</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="31" column="44" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1a937ef03e03849c4712d0a05019f4733d" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineMultisampleStateCreateInfo</ref></type>
+        <definition>VkPipelineMultisampleStateCreateInfo rr::PipelineConfigInfo::multisampleInfo</definition>
+        <argsstring></argsstring>
+        <name>multisampleInfo</name>
+        <qualifiedname>rr::PipelineConfigInfo::multisampleInfo</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="32" column="42" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1a28af641bae33ad50f5d247ea6a4b561c" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineColorBlendAttachmentState</ref></type>
+        <definition>VkPipelineColorBlendAttachmentState rr::PipelineConfigInfo::colorBlendAttachment</definition>
+        <argsstring></argsstring>
+        <name>colorBlendAttachment</name>
+        <qualifiedname>rr::PipelineConfigInfo::colorBlendAttachment</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="33" column="41" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1aa795ec91994f876223135cf4e5e56cae" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineColorBlendStateCreateInfo</ref></type>
+        <definition>VkPipelineColorBlendStateCreateInfo rr::PipelineConfigInfo::colorBlendInfo</definition>
+        <argsstring></argsstring>
+        <name>colorBlendInfo</name>
+        <qualifiedname>rr::PipelineConfigInfo::colorBlendInfo</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="34" column="41" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1aa73e91c31f86996cf821409c9e650327" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineDepthStencilStateCreateInfo</ref></type>
+        <definition>VkPipelineDepthStencilStateCreateInfo rr::PipelineConfigInfo::depthStencilInfo</definition>
+        <argsstring></argsstring>
+        <name>depthStencilInfo</name>
+        <qualifiedname>rr::PipelineConfigInfo::depthStencilInfo</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="35" column="43" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1a813b218dbcbdbf3be5e55e424e9fe210" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDynamicState</ref> &gt;</type>
+        <definition>std::vector&lt;VkDynamicState&gt; rr::PipelineConfigInfo::dynamicStateEnables</definition>
+        <argsstring></argsstring>
+        <name>dynamicStateEnables</name>
+        <qualifiedname>rr::PipelineConfigInfo::dynamicStateEnables</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="36" column="17" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1a474b053fb98712a6be288e9c2472942e" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineDynamicStateCreateInfo</ref></type>
+        <definition>VkPipelineDynamicStateCreateInfo rr::PipelineConfigInfo::dynamicStateInfo</definition>
+        <argsstring></argsstring>
+        <name>dynamicStateInfo</name>
+        <qualifiedname>rr::PipelineConfigInfo::dynamicStateInfo</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="37" column="38" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1ada9b2da065ff5be22b02b004183bfbfe" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineLayout</ref></type>
+        <definition>VkPipelineLayout rr::PipelineConfigInfo::pipelineLayout</definition>
+        <argsstring></argsstring>
+        <name>pipelineLayout</name>
+        <qualifiedname>rr::PipelineConfigInfo::pipelineLayout</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nullptr</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="38" column="22" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1a99cd16fc80a9466832916011aa93f0df" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkRenderPass</ref></type>
+        <definition>VkRenderPass rr::PipelineConfigInfo::renderPass</definition>
+        <argsstring></argsstring>
+        <name>renderPass</name>
+        <qualifiedname>rr::PipelineConfigInfo::renderPass</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nullptr</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="39" column="18" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1ab7e3ff95268b43c0abda670ce48cbc92" prot="public" static="no" mutable="no">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t rr::PipelineConfigInfo::subpass</definition>
+        <argsstring></argsstring>
+        <name>subpass</name>
+        <qualifiedname>rr::PipelineConfigInfo::subpass</qualifiedname>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="40" column="19" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="40" bodyend="40"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structrr_1_1PipelineConfigInfo_1a151abb6b9fe9c3841041eb533ec5acd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::PipelineConfigInfo::PipelineConfigInfo</definition>
+        <argsstring>()=default</argsstring>
+        <name>PipelineConfigInfo</name>
+        <qualifiedname>rr::PipelineConfigInfo::PipelineConfigInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="21" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structrr_1_1PipelineConfigInfo_1a6e5b87c2d5bfd86c338d560b3c649cf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::PipelineConfigInfo::~PipelineConfigInfo</definition>
+        <argsstring>()=default</argsstring>
+        <name>~PipelineConfigInfo</name>
+        <qualifiedname>rr::PipelineConfigInfo::~PipelineConfigInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="22" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structrr_1_1PipelineConfigInfo_1aa9ad79fb1bed6ae3100852045e4e57a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::PipelineConfigInfo::PipelineConfigInfo</definition>
+        <argsstring>(PipelineConfigInfo &amp;&amp;)=delete</argsstring>
+        <name>PipelineConfigInfo</name>
+        <qualifiedname>rr::PipelineConfigInfo::PipelineConfigInfo</qualifiedname>
+        <param>
+          <type><ref refid="structrr_1_1PipelineConfigInfo" kindref="compound">PipelineConfigInfo</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="24" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structrr_1_1PipelineConfigInfo_1aec4d83ad2ebcce795dbd78a607705638" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structrr_1_1PipelineConfigInfo" kindref="compound">PipelineConfigInfo</ref> &amp;</type>
+        <definition>PipelineConfigInfo &amp; rr::PipelineConfigInfo::operator=</definition>
+        <argsstring>(PipelineConfigInfo &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::PipelineConfigInfo::operator=</qualifiedname>
+        <param>
+          <type><ref refid="structrr_1_1PipelineConfigInfo" kindref="compound">PipelineConfigInfo</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="25" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="structrr_1_1PipelineConfigInfo_1aedaf59485a173ea7fc611b53ec64254d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::PipelineConfigInfo::PipelineConfigInfo</definition>
+        <argsstring>(const PipelineConfigInfo &amp;)=delete</argsstring>
+        <name>PipelineConfigInfo</name>
+        <qualifiedname>rr::PipelineConfigInfo::PipelineConfigInfo</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="structrr_1_1PipelineConfigInfo" kindref="compound">PipelineConfigInfo</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="26" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structrr_1_1PipelineConfigInfo_1ae3f914ce126bdbb9e10f952662023cd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structrr_1_1PipelineConfigInfo" kindref="compound">PipelineConfigInfo</ref> &amp;</type>
+        <definition>PipelineConfigInfo &amp; rr::PipelineConfigInfo::operator=</definition>
+        <argsstring>(const PipelineConfigInfo &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::PipelineConfigInfo::operator=</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="structrr_1_1PipelineConfigInfo" kindref="compound">PipelineConfigInfo</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="27" column="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="structrr_1_1PipelineConfigInfo" kindref="compound">PipelineConfigInfo</ref> stores information regarding the <computeroutput>VkPipeline</computeroutput> </para>
+    </briefdescription>
+    <detaileddescription>
+<para>It stores all fixed state structs that are needed to initialize a <computeroutput>VkPipeline</computeroutput>.</para>
+<para><simplesect kind="author"><para>Felix Hommel </para>
+</simplesect>
+<simplesect kind="date"><para>7/20/2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="src/engine/core/VulkanPipeline.hpp" line="19" column="1" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="20" bodyend="41"/>
+    <listofallmembers>
+      <member refid="structrr_1_1PipelineConfigInfo_1a28af641bae33ad50f5d247ea6a4b561c" prot="public" virt="non-virtual"><scope>rr::PipelineConfigInfo</scope><name>colorBlendAttachment</name></member>
+      <member refid="structrr_1_1PipelineConfigInfo_1aa795ec91994f876223135cf4e5e56cae" prot="public" virt="non-virtual"><scope>rr::PipelineConfigInfo</scope><name>colorBlendInfo</name></member>
+      <member refid="structrr_1_1PipelineConfigInfo_1aa73e91c31f86996cf821409c9e650327" prot="public" virt="non-virtual"><scope>rr::PipelineConfigInfo</scope><name>depthStencilInfo</name></member>
+      <member refid="structrr_1_1PipelineConfigInfo_1a813b218dbcbdbf3be5e55e424e9fe210" prot="public" virt="non-virtual"><scope>rr::PipelineConfigInfo</scope><name>dynamicStateEnables</name></member>
+      <member refid="structrr_1_1PipelineConfigInfo_1a474b053fb98712a6be288e9c2472942e" prot="public" virt="non-virtual"><scope>rr::PipelineConfigInfo</scope><name>dynamicStateInfo</name></member>
+      <member refid="structrr_1_1PipelineConfigInfo_1a0cfaf39043a86b53fc34412d78c7fd70" prot="public" virt="non-virtual"><scope>rr::PipelineConfigInfo</scope><name>inputAssemblyInfo</name></member>
+      <member refid="structrr_1_1PipelineConfigInfo_1a937ef03e03849c4712d0a05019f4733d" prot="public" virt="non-virtual"><scope>rr::PipelineConfigInfo</scope><name>multisampleInfo</name></member>
+      <member refid="structrr_1_1PipelineConfigInfo_1aec4d83ad2ebcce795dbd78a607705638" prot="public" virt="non-virtual"><scope>rr::PipelineConfigInfo</scope><name>operator=</name></member>
+      <member refid="structrr_1_1PipelineConfigInfo_1ae3f914ce126bdbb9e10f952662023cd6" prot="public" virt="non-virtual"><scope>rr::PipelineConfigInfo</scope><name>operator=</name></member>
+      <member refid="structrr_1_1PipelineConfigInfo_1a151abb6b9fe9c3841041eb533ec5acd1" prot="public" virt="non-virtual"><scope>rr::PipelineConfigInfo</scope><name>PipelineConfigInfo</name></member>
+      <member refid="structrr_1_1PipelineConfigInfo_1aa9ad79fb1bed6ae3100852045e4e57a3" prot="public" virt="non-virtual"><scope>rr::PipelineConfigInfo</scope><name>PipelineConfigInfo</name></member>
+      <member refid="structrr_1_1PipelineConfigInfo_1aedaf59485a173ea7fc611b53ec64254d" prot="public" virt="non-virtual"><scope>rr::PipelineConfigInfo</scope><name>PipelineConfigInfo</name></member>
+      <member refid="structrr_1_1PipelineConfigInfo_1ada9b2da065ff5be22b02b004183bfbfe" prot="public" virt="non-virtual"><scope>rr::PipelineConfigInfo</scope><name>pipelineLayout</name></member>
+      <member refid="structrr_1_1PipelineConfigInfo_1aa8b9020ce566f8040ac61bc66849bede" prot="public" virt="non-virtual"><scope>rr::PipelineConfigInfo</scope><name>rasterizationInfo</name></member>
+      <member refid="structrr_1_1PipelineConfigInfo_1a99cd16fc80a9466832916011aa93f0df" prot="public" virt="non-virtual"><scope>rr::PipelineConfigInfo</scope><name>renderPass</name></member>
+      <member refid="structrr_1_1PipelineConfigInfo_1ab7e3ff95268b43c0abda670ce48cbc92" prot="public" virt="non-virtual"><scope>rr::PipelineConfigInfo</scope><name>subpass</name></member>
+      <member refid="structrr_1_1PipelineConfigInfo_1a3a5f12bb280c470d9e6e42f18b26f07b" prot="public" virt="non-virtual"><scope>rr::PipelineConfigInfo</scope><name>viewportInfo</name></member>
+      <member refid="structrr_1_1PipelineConfigInfo_1a6e5b87c2d5bfd86c338d560b3c649cf5" prot="public" virt="non-virtual"><scope>rr::PipelineConfigInfo</scope><name>~PipelineConfigInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,402 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classrr_1_1VulkanPipeline" kind="class" language="C++" prot="public">
+    <compoundname>rr::VulkanPipeline</compoundname>
+    <includes refid="VulkanPipeline_8hpp" local="no">VulkanPipeline.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrr_1_1VulkanPipeline_1acb2d82414022551a391a99c459268d9b" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDevice</ref></type>
+        <definition>VkDevice rr::VulkanPipeline::device</definition>
+        <argsstring></argsstring>
+        <name>device</name>
+        <qualifiedname>rr::VulkanPipeline::device</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="65" column="14" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanPipeline_1ad99319747744a319aaa97d51da67efa1" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipeline</ref></type>
+        <definition>VkPipeline rr::VulkanPipeline::m_pipeline</definition>
+        <argsstring></argsstring>
+        <name>m_pipeline</name>
+        <qualifiedname>rr::VulkanPipeline::m_pipeline</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="67" column="16" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanPipeline_1abcacb54601919bb06eb087c184704260" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkShaderModule</ref></type>
+        <definition>VkShaderModule rr::VulkanPipeline::m_vertShaderModule</definition>
+        <argsstring></argsstring>
+        <name>m_vertShaderModule</name>
+        <qualifiedname>rr::VulkanPipeline::m_vertShaderModule</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="68" column="20" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanPipeline_1a7484df1b868337472c389838eaa30842" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkShaderModule</ref></type>
+        <definition>VkShaderModule rr::VulkanPipeline::m_fragShaderModule</definition>
+        <argsstring></argsstring>
+        <name>m_fragShaderModule</name>
+        <qualifiedname>rr::VulkanPipeline::m_fragShaderModule</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="69" column="20" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="69" bodyend="69"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrr_1_1VulkanPipeline_1ab3e8ba1737d8dce209dab76a336f3185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanPipeline::VulkanPipeline</definition>
+        <argsstring>(VkDevice device, const PipelineConfigInfo &amp;configInfo, const std::filesystem::path &amp;vertFilepath, const std::filesystem::path &amp;fragFilepath)</argsstring>
+        <name>VulkanPipeline</name>
+        <qualifiedname>rr::VulkanPipeline::VulkanPipeline</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDevice</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="structrr_1_1PipelineConfigInfo" kindref="compound">PipelineConfigInfo</ref> &amp;</type>
+          <declname>configInfo</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> std::filesystem::path &amp;</type>
+          <declname>vertFilepath</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> std::filesystem::path &amp;</type>
+          <declname>fragFilepath</declname>
+        </param>
+        <briefdescription>
+<para>Create a new <ref refid="classrr_1_1VulkanPipeline" kindref="compound">VulkanPipeline</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <computeroutput>VkDevice</computeroutput> where the Pipeline is running on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>configInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="structrr_1_1PipelineConfigInfo" kindref="compound">PipelineConfigInfo</ref>&amp;</computeroutput> which provides configuration of the <computeroutput><ref refid="classrr_1_1VulkanPipeline" kindref="compound">VulkanPipeline</ref></computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vertFilepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>std::filesystem::path&amp;</computeroutput> to the vertex shader (.spv compiled) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fragFilepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>std::filesystem::path&amp;</computeroutput> to the vertex shader (.spv compiled)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</ref> if there was an error during pipeline creation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="52" column="5" bodyfile="src/engine/core/VulkanPipeline.cpp" bodystart="30" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanPipeline_1a30ddc999f7ebb5b4a2cdf91431b3b86a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanPipeline::~VulkanPipeline</definition>
+        <argsstring>()</argsstring>
+        <name>~VulkanPipeline</name>
+        <qualifiedname>rr::VulkanPipeline::~VulkanPipeline</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="53" column="5" bodyfile="src/engine/core/VulkanPipeline.cpp" bodystart="93" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanPipeline_1a3ae5020da35e53354a37dc7949e29542" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanPipeline::VulkanPipeline</definition>
+        <argsstring>(const VulkanPipeline &amp;)=delete</argsstring>
+        <name>VulkanPipeline</name>
+        <qualifiedname>rr::VulkanPipeline::VulkanPipeline</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1VulkanPipeline" kindref="compound">VulkanPipeline</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="55" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanPipeline_1a069d9b0b0a6d34c6e387e3f6920988b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1VulkanPipeline" kindref="compound">VulkanPipeline</ref> &amp;</type>
+        <definition>VulkanPipeline &amp; rr::VulkanPipeline::operator=</definition>
+        <argsstring>(const VulkanPipeline &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::VulkanPipeline::operator=</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1VulkanPipeline" kindref="compound">VulkanPipeline</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="56" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanPipeline_1a7137f0f9bdf95ffd98ca5205fa7bbd6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanPipeline::VulkanPipeline</definition>
+        <argsstring>(VulkanPipeline &amp;&amp;)=delete</argsstring>
+        <name>VulkanPipeline</name>
+        <qualifiedname>rr::VulkanPipeline::VulkanPipeline</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1VulkanPipeline" kindref="compound">VulkanPipeline</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="57" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanPipeline_1a1b01cbff0f0db7a1a3d8221379038aff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1VulkanPipeline" kindref="compound">VulkanPipeline</ref> &amp;</type>
+        <definition>VulkanPipeline &amp; rr::VulkanPipeline::operator=</definition>
+        <argsstring>(VulkanPipeline &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::VulkanPipeline::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1VulkanPipeline" kindref="compound">VulkanPipeline</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="58" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanPipeline_1a75bef441869f8fb0170c419a964b1b38" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanPipeline::bind</definition>
+        <argsstring>(VkCommandBuffer cmdBuffer) const</argsstring>
+        <name>bind</name>
+        <qualifiedname>rr::VulkanPipeline::bind</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBuffer</ref></type>
+          <declname>cmdBuffer</declname>
+        </param>
+        <briefdescription>
+<para>Bind the Pipeline for use in <computeroutput>cmdBuffer</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmdBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <computeroutput>VkCommandBuffer</computeroutput> that the Pipeline will be bound to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="62" column="10" bodyfile="src/engine/core/VulkanPipeline.cpp" bodystart="183" bodyend="186"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classrr_1_1VulkanPipeline_1ad843bf228df062f81e2bf1bae58198ee" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanPipeline::defaultPipelineConfigInfo</definition>
+        <argsstring>(PipelineConfigInfo &amp;configInfo)</argsstring>
+        <name>defaultPipelineConfigInfo</name>
+        <qualifiedname>rr::VulkanPipeline::defaultPipelineConfigInfo</qualifiedname>
+        <param>
+          <type><ref refid="structrr_1_1PipelineConfigInfo" kindref="compound">PipelineConfigInfo</ref> &amp;</type>
+          <declname>configInfo</declname>
+        </param>
+        <briefdescription>
+<para>Provide a default configuration for a <computeroutput>VkPipeline</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">configInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="structrr_1_1PipelineConfigInfo" kindref="compound">PipelineConfigInfo</ref>&amp;</computeroutput> where the configuration will be stored </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="60" column="17" bodyfile="src/engine/core/VulkanPipeline.cpp" bodystart="104" bodyend="178"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classrr_1_1VulkanPipeline_1af1c1947f8e2afce4625b7a11e20eeb4c" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanPipeline::createShaderModule</definition>
+        <argsstring>(const std::vector&lt; char &gt; &amp;code, VkShaderModule *shaderModule) const</argsstring>
+        <name>createShaderModule</name>
+        <qualifiedname>rr::VulkanPipeline::createShaderModule</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">char</ref> &gt; &amp;</type>
+          <declname>code</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkShaderModule</ref> *</type>
+          <declname>shaderModule</declname>
+        </param>
+        <briefdescription>
+<para>Create a shader module from <computeroutput>code</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>code</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the source code of the shader </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">shaderModule</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the &apos;VkShaderModule&apos; handle where the created shader will be saved</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</ref> if there was an error while creating the module </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="71" column="10" bodyfile="src/engine/core/VulkanPipeline.cpp" bodystart="194" bodyend="204"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classrr_1_1VulkanPipeline_1a1ef168d8106ab3544dca84f089f5f4c8" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">char</ref> &gt;</type>
+        <definition>std::vector&lt; char &gt; rr::VulkanPipeline::readFile</definition>
+        <argsstring>(const std::filesystem::path &amp;filepath)</argsstring>
+        <name>readFile</name>
+        <qualifiedname>rr::VulkanPipeline::readFile</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> std::filesystem::path &amp;</type>
+          <declname>filepath</declname>
+        </param>
+        <briefdescription>
+<para>Read a file and return it&apos;s content. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>std::filesystem::path&amp;</computeroutput> to the file</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector containing the file&apos;s content as <computeroutput>char</computeroutput> </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+ref <ref refid="classrr_1_1FileIOException" kindref="compound">FileIOException</ref> if there was an error while reading the file </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="74" column="24" bodyfile="src/engine/core/VulkanPipeline.cpp" bodystart="212" bodyend="228"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classrr_1_1VulkanPipeline" kindref="compound">VulkanPipeline</ref> is a wrapper around <computeroutput>VkPipeline</computeroutput> </para>
+    </briefdescription>
+    <detaileddescription>
+<para>It handles creation of the <computeroutput>VkPipeline</computeroutput> and provides access tp the handle.</para>
+<para><simplesect kind="author"><para>Felix Hommel </para>
+</simplesect>
+<simplesect kind="date"><para>7/20/2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="src/engine/core/VulkanPipeline.hpp" line="49" column="1" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="50" bodyend="75"/>
+    <listofallmembers>
+      <member refid="classrr_1_1VulkanPipeline_1a75bef441869f8fb0170c419a964b1b38" prot="public" virt="non-virtual"><scope>rr::VulkanPipeline</scope><name>bind</name></member>
+      <member refid="classrr_1_1VulkanPipeline_1af1c1947f8e2afce4625b7a11e20eeb4c" prot="private" virt="non-virtual"><scope>rr::VulkanPipeline</scope><name>createShaderModule</name></member>
+      <member refid="classrr_1_1VulkanPipeline_1ad843bf228df062f81e2bf1bae58198ee" prot="public" virt="non-virtual"><scope>rr::VulkanPipeline</scope><name>defaultPipelineConfigInfo</name></member>
+      <member refid="classrr_1_1VulkanPipeline_1acb2d82414022551a391a99c459268d9b" prot="private" virt="non-virtual"><scope>rr::VulkanPipeline</scope><name>device</name></member>
+      <member refid="classrr_1_1VulkanPipeline_1a7484df1b868337472c389838eaa30842" prot="private" virt="non-virtual"><scope>rr::VulkanPipeline</scope><name>m_fragShaderModule</name></member>
+      <member refid="classrr_1_1VulkanPipeline_1ad99319747744a319aaa97d51da67efa1" prot="private" virt="non-virtual"><scope>rr::VulkanPipeline</scope><name>m_pipeline</name></member>
+      <member refid="classrr_1_1VulkanPipeline_1abcacb54601919bb06eb087c184704260" prot="private" virt="non-virtual"><scope>rr::VulkanPipeline</scope><name>m_vertShaderModule</name></member>
+      <member refid="classrr_1_1VulkanPipeline_1a069d9b0b0a6d34c6e387e3f6920988b7" prot="public" virt="non-virtual"><scope>rr::VulkanPipeline</scope><name>operator=</name></member>
+      <member refid="classrr_1_1VulkanPipeline_1a1b01cbff0f0db7a1a3d8221379038aff" prot="public" virt="non-virtual"><scope>rr::VulkanPipeline</scope><name>operator=</name></member>
+      <member refid="classrr_1_1VulkanPipeline_1a1ef168d8106ab3544dca84f089f5f4c8" prot="private" virt="non-virtual"><scope>rr::VulkanPipeline</scope><name>readFile</name></member>
+      <member refid="classrr_1_1VulkanPipeline_1ab3e8ba1737d8dce209dab76a336f3185" prot="public" virt="non-virtual"><scope>rr::VulkanPipeline</scope><name>VulkanPipeline</name></member>
+      <member refid="classrr_1_1VulkanPipeline_1a3ae5020da35e53354a37dc7949e29542" prot="public" virt="non-virtual"><scope>rr::VulkanPipeline</scope><name>VulkanPipeline</name></member>
+      <member refid="classrr_1_1VulkanPipeline_1a7137f0f9bdf95ffd98ca5205fa7bbd6f" prot="public" virt="non-virtual"><scope>rr::VulkanPipeline</scope><name>VulkanPipeline</name></member>
+      <member refid="classrr_1_1VulkanPipeline_1a30ddc999f7ebb5b4a2cdf91431b3b86a" prot="public" virt="non-virtual"><scope>rr::VulkanPipeline</scope><name>~VulkanPipeline</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

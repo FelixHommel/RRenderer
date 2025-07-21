@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="VulkanPipelineLayout_8hpp" kind="file" language="C++">
+    <compoundname>VulkanPipelineLayout.hpp</compoundname>
+    <includes local="yes">glm/ext/matrix_float2x2.hpp</includes>
+    <includes local="yes">glm/ext/vector_float2.hpp</includes>
+    <includes local="yes">glm/ext/vector_float3.hpp</includes>
+    <includes local="no">vulkan/vulkan_core.h</includes>
+    <includedby refid="VulkanPipelineLayout_8cpp" local="yes">VulkanPipelineLayout.cpp</includedby>
+    <includedby refid="VulkanRenderer_8cpp" local="yes">VulkanRenderer.cpp</includedby>
+    <includedby refid="VulkanRenderer_8hpp" local="yes">VulkanRenderer.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>VulkanPipelineLayout.hpp</label>
+        <link refid="VulkanPipelineLayout_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>glm/ext/matrix_float2x2.hpp</label>
+      </node>
+      <node id="3">
+        <label>glm/ext/vector_float2.hpp</label>
+      </node>
+      <node id="4">
+        <label>glm/ext/vector_float3.hpp</label>
+      </node>
+      <node id="5">
+        <label>vulkan/vulkan_core.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>VulkanRenderer.cpp</label>
+        <link refid="VulkanRenderer_8cpp"/>
+      </node>
+      <node id="4">
+        <label>VulkanRenderer.hpp</label>
+        <link refid="VulkanRenderer_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>VulkanPipelineLayout.cpp</label>
+        <link refid="VulkanPipelineLayout_8cpp"/>
+      </node>
+      <node id="1">
+        <label>VulkanPipelineLayout.hpp</label>
+        <link refid="VulkanPipelineLayout_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structrr_1_1SimplePushConstantData" prot="public">rr::SimplePushConstantData</innerclass>
+    <innerclass refid="classrr_1_1VulkanPipelineLayout" prot="public">rr::VulkanPipelineLayout</innerclass>
+    <innernamespace refid="namespacerr">rr</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="VulkanPipelineLayout_8hpp_1a816ab7d5c2ce1f0a01216042837beb93" prot="public" static="no">
+        <name>GLM_FORCE_RADIANS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipelineLayout.hpp" line="4" column="9" bodyfile="src/engine/core/VulkanPipelineLayout.hpp" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="VulkanPipelineLayout_8hpp_1aa53e0967978ad7a8792f6961156ec968" prot="public" static="no">
+        <name>GLM_FORCE_DEPTH_ZERO_TO_ONE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipelineLayout.hpp" line="5" column="9" bodyfile="src/engine/core/VulkanPipelineLayout.hpp" bodystart="5" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RRENDERER_ENGINE_CORE_VULKAN_PIPELINE_LAYOUT_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RRENDERER_ENGINE_CORE_VULKAN_PIPELINE_LAYOUT_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="VulkanPipelineLayout_8hpp_1a816ab7d5c2ce1f0a01216042837beb93" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GLM_FORCE_RADIANS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="VulkanPipelineLayout_8hpp_1aa53e0967978ad7a8792f6961156ec968" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GLM_FORCE_DEPTH_ZERO_TO_ONE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;glm/ext/matrix_float2x2.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;glm/ext/vector_float2.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;glm/ext/vector_float3.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vulkan/vulkan_core.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerr" kindref="compound">rr</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="namespacerr_1a161e261e156ebc427a43973d660935fc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::size_t<sp/><ref refid="namespacerr_1a161e261e156ebc427a43973d660935fc" kindref="member">ALIGNMENT_OF_GLM_VEC3</ref>{<sp/>16<sp/>};<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="structrr_1_1SimplePushConstantData" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrr_1_1SimplePushConstantData" kindref="compound">SimplePushConstantData</ref></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23" refid="structrr_1_1SimplePushConstantData_1aab316d39cb2bb31ec5c613254b9866a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>glm::mat2<sp/><ref refid="structrr_1_1SimplePushConstantData_1aab316d39cb2bb31ec5c613254b9866a9" kindref="member">transform</ref>{<sp/>1.f<sp/>};</highlight></codeline>
+<codeline lineno="24" refid="structrr_1_1SimplePushConstantData_1a0870de9d24fd45f698f37fa11b594920" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>glm::vec2<sp/><ref refid="structrr_1_1SimplePushConstantData_1a0870de9d24fd45f698f37fa11b594920" kindref="member">offset</ref>;</highlight></codeline>
+<codeline lineno="25" refid="structrr_1_1SimplePushConstantData_1afd1c8ae3d621a547a2cd239ca0274b37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">alignas</highlight><highlight class="normal">(<ref refid="namespacerr_1a161e261e156ebc427a43973d660935fc" kindref="member">ALIGNMENT_OF_GLM_VEC3</ref>)<sp/>glm::vec3<sp/><ref refid="structrr_1_1SimplePushConstantData_1afd1c8ae3d621a547a2cd239ca0274b37" kindref="member">color</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classrr_1_1VulkanPipelineLayout" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrr_1_1VulkanPipelineLayout" kindref="compound">VulkanPipelineLayout</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1VulkanPipelineLayout" kindref="compound">VulkanPipelineLayout</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDevice</ref><sp/>device);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1VulkanPipelineLayout_1a2ffa5a12a9970b5be79fb36f5ca4a633" kindref="member">~VulkanPipelineLayout</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classrr_1_1VulkanPipelineLayout_1af47f4c7d8b2fd1ad831763503c7320ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1VulkanPipelineLayout_1af47f4c7d8b2fd1ad831763503c7320ee" kindref="member">VulkanPipelineLayout</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1VulkanPipelineLayout" kindref="compound">VulkanPipelineLayout</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41" refid="classrr_1_1VulkanPipelineLayout_1a0f920ca26cc6f5e34e1057eccf0c964b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1VulkanPipelineLayout" kindref="compound">VulkanPipelineLayout</ref>&amp;<sp/><ref refid="classrr_1_1VulkanPipelineLayout_1a0f920ca26cc6f5e34e1057eccf0c964b" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1VulkanPipelineLayout" kindref="compound">VulkanPipelineLayout</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42" refid="classrr_1_1VulkanPipelineLayout_1aaacfa329c7c467b37bc48402be6db7ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1VulkanPipelineLayout_1aaacfa329c7c467b37bc48402be6db7ba" kindref="member">VulkanPipelineLayout</ref>(<ref refid="classrr_1_1VulkanPipelineLayout" kindref="compound">VulkanPipelineLayout</ref>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43" refid="classrr_1_1VulkanPipelineLayout_1add90e07a5d912c2b1a19edc1bc95389a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1VulkanPipelineLayout" kindref="compound">VulkanPipelineLayout</ref>&amp;<sp/><ref refid="classrr_1_1VulkanPipelineLayout_1add90e07a5d912c2b1a19edc1bc95389a" kindref="member">operator=</ref>(<ref refid="classrr_1_1VulkanPipelineLayout" kindref="compound">VulkanPipelineLayout</ref>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classrr_1_1VulkanPipelineLayout_1ac5cd17afaed406d163423062acf23569" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineLayout</ref><sp/><ref refid="classrr_1_1VulkanPipelineLayout_1ac5cd17afaed406d163423062acf23569" kindref="member">getHandle</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_pipelineLayout;<sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDevice</ref><sp/>device;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineLayout</ref><sp/>m_pipelineLayout{<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref><sp/>};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>!rr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!RRENDERER_ENGINE_CORE_VULKAN_PIPELINE_LAYOUT_HPP</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/engine/core/VulkanPipelineLayout.hpp"/>
+  </compounddef>
+</doxygen>

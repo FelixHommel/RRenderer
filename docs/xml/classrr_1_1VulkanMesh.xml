@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classrr_1_1VulkanMesh" kind="class" language="C++" prot="public">
+    <compoundname>rr::VulkanMesh</compoundname>
+    <includes refid="VulkanMesh_8hpp" local="no">VulkanMesh.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrr_1_1VulkanMesh_1ae11ae47c3d343dedc5bb0aa6dbf9642a" prot="private" static="no" mutable="no">
+        <type><ref refid="classrr_1_1VulkanDevice" kindref="compound">VulkanDevice</ref> &amp;</type>
+        <definition>VulkanDevice&amp; rr::VulkanMesh::device</definition>
+        <argsstring></argsstring>
+        <name>device</name>
+        <qualifiedname>rr::VulkanMesh::device</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanMesh.hpp" line="55" column="18" bodyfile="src/engine/core/VulkanMesh.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanMesh_1ad6f5dbfdc64ab734170c3badb97a1f19" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkBuffer</ref></type>
+        <definition>VkBuffer rr::VulkanMesh::m_vertexBuffer</definition>
+        <argsstring></argsstring>
+        <name>m_vertexBuffer</name>
+        <qualifiedname>rr::VulkanMesh::m_vertexBuffer</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanMesh.hpp" line="57" column="14" bodyfile="src/engine/core/VulkanMesh.hpp" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanMesh_1a3c8cb04e099024d1c5d86e9b1a0cd2a6" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDeviceMemory</ref></type>
+        <definition>VkDeviceMemory rr::VulkanMesh::m_vertexBufferMemory</definition>
+        <argsstring></argsstring>
+        <name>m_vertexBufferMemory</name>
+        <qualifiedname>rr::VulkanMesh::m_vertexBufferMemory</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanMesh.hpp" line="58" column="20" bodyfile="src/engine/core/VulkanMesh.hpp" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanMesh_1a0ab3df70fb1b4a8544576edc47cc4bdf" prot="private" static="no" mutable="no">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t rr::VulkanMesh::m_vertexCount</definition>
+        <argsstring></argsstring>
+        <name>m_vertexCount</name>
+        <qualifiedname>rr::VulkanMesh::m_vertexCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanMesh.hpp" line="59" column="19" bodyfile="src/engine/core/VulkanMesh.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrr_1_1VulkanMesh_1a6ddf0c623ae5cab6854d66c24c3728ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanMesh::VulkanMesh</definition>
+        <argsstring>(VulkanDevice &amp;device, const std::vector&lt; Vertex &gt; &amp;vertices)</argsstring>
+        <name>VulkanMesh</name>
+        <qualifiedname>rr::VulkanMesh::VulkanMesh</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1VulkanDevice" kindref="compound">VulkanDevice</ref> &amp;</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> std::vector&lt; <ref refid="structrr_1_1Vertex" kindref="compound">Vertex</ref> &gt; &amp;</type>
+          <declname>vertices</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classrr_1_1VulkanMesh" kindref="compound">VulkanMesh</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanMesh.hpp" line="43" column="5" bodyfile="src/engine/core/VulkanMesh.cpp" bodystart="58" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanMesh_1abe659d1e8cb40308dbafa7874b9778cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanMesh::~VulkanMesh</definition>
+        <argsstring>()</argsstring>
+        <name>~VulkanMesh</name>
+        <qualifiedname>rr::VulkanMesh::~VulkanMesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanMesh.hpp" line="44" column="5" bodyfile="src/engine/core/VulkanMesh.cpp" bodystart="79" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanMesh_1a8a35559e5b96506d03c18f721244bc4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanMesh::VulkanMesh</definition>
+        <argsstring>(const VulkanMesh &amp;)=delete</argsstring>
+        <name>VulkanMesh</name>
+        <qualifiedname>rr::VulkanMesh::VulkanMesh</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1VulkanMesh" kindref="compound">VulkanMesh</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanMesh.hpp" line="46" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanMesh_1ae9b588ff3adf69a0272c271320397d5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1VulkanMesh" kindref="compound">VulkanMesh</ref> &amp;</type>
+        <definition>VulkanMesh &amp; rr::VulkanMesh::operator=</definition>
+        <argsstring>(const VulkanMesh &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::VulkanMesh::operator=</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1VulkanMesh" kindref="compound">VulkanMesh</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanMesh.hpp" line="47" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanMesh_1a8cb7c175dba40596d575c83d96cf4708" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanMesh::VulkanMesh</definition>
+        <argsstring>(VulkanMesh &amp;&amp;)=delete</argsstring>
+        <name>VulkanMesh</name>
+        <qualifiedname>rr::VulkanMesh::VulkanMesh</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1VulkanMesh" kindref="compound">VulkanMesh</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanMesh.hpp" line="48" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanMesh_1a5516b716bc4056eecaa83ab365c8502d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1VulkanMesh" kindref="compound">VulkanMesh</ref> &amp;</type>
+        <definition>VulkanMesh &amp; rr::VulkanMesh::operator=</definition>
+        <argsstring>(VulkanMesh &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::VulkanMesh::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1VulkanMesh" kindref="compound">VulkanMesh</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanMesh.hpp" line="49" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanMesh_1af3397a25b9cc564676f5a2066bd3f7a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanMesh::bind</definition>
+        <argsstring>(VkCommandBuffer cmdBuffer) const</argsstring>
+        <name>bind</name>
+        <qualifiedname>rr::VulkanMesh::bind</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBuffer</ref></type>
+          <declname>cmdBuffer</declname>
+        </param>
+        <briefdescription>
+<para>Bind the mesh to a command buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmdBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>VkCommandBuffer</computeroutput> to bind the mesh to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanMesh.hpp" line="51" column="10" bodyfile="src/engine/core/VulkanMesh.cpp" bodystart="88" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanMesh_1ae012c81d4c76742866f525b61edcba2c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanMesh::draw</definition>
+        <argsstring>(VkCommandBuffer cmdBuffer) const</argsstring>
+        <name>draw</name>
+        <qualifiedname>rr::VulkanMesh::draw</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBuffer</ref></type>
+          <declname>cmdBuffer</declname>
+        </param>
+        <briefdescription>
+<para>Draw the mesh to a command buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmdBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>VkCommandBuffer</computeroutput> where the mesh is drawn to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanMesh.hpp" line="52" column="10" bodyfile="src/engine/core/VulkanMesh.cpp" bodystart="99" bodyend="102"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A <ref refid="classrr_1_1VulkanMesh" kindref="compound">VulkanMesh</ref> is a collection of <ref refid="structrr_1_1Vertex" kindref="compound">Vertex</ref> that makes some sort of shape. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>They are allocated on the <computeroutput>VkDevice</computeroutput> and provide drawing and binding functionalities.</para>
+<para><simplesect kind="author"><para>Felix Hommel </para>
+</simplesect>
+<simplesect kind="date"><para>7/20/2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="src/engine/core/VulkanMesh.hpp" line="40" column="1" bodyfile="src/engine/core/VulkanMesh.hpp" bodystart="41" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classrr_1_1VulkanMesh_1af3397a25b9cc564676f5a2066bd3f7a1" prot="public" virt="non-virtual"><scope>rr::VulkanMesh</scope><name>bind</name></member>
+      <member refid="classrr_1_1VulkanMesh_1ae11ae47c3d343dedc5bb0aa6dbf9642a" prot="private" virt="non-virtual"><scope>rr::VulkanMesh</scope><name>device</name></member>
+      <member refid="classrr_1_1VulkanMesh_1ae012c81d4c76742866f525b61edcba2c" prot="public" virt="non-virtual"><scope>rr::VulkanMesh</scope><name>draw</name></member>
+      <member refid="classrr_1_1VulkanMesh_1ad6f5dbfdc64ab734170c3badb97a1f19" prot="private" virt="non-virtual"><scope>rr::VulkanMesh</scope><name>m_vertexBuffer</name></member>
+      <member refid="classrr_1_1VulkanMesh_1a3c8cb04e099024d1c5d86e9b1a0cd2a6" prot="private" virt="non-virtual"><scope>rr::VulkanMesh</scope><name>m_vertexBufferMemory</name></member>
+      <member refid="classrr_1_1VulkanMesh_1a0ab3df70fb1b4a8544576edc47cc4bdf" prot="private" virt="non-virtual"><scope>rr::VulkanMesh</scope><name>m_vertexCount</name></member>
+      <member refid="classrr_1_1VulkanMesh_1ae9b588ff3adf69a0272c271320397d5a" prot="public" virt="non-virtual"><scope>rr::VulkanMesh</scope><name>operator=</name></member>
+      <member refid="classrr_1_1VulkanMesh_1a5516b716bc4056eecaa83ab365c8502d" prot="public" virt="non-virtual"><scope>rr::VulkanMesh</scope><name>operator=</name></member>
+      <member refid="classrr_1_1VulkanMesh_1a6ddf0c623ae5cab6854d66c24c3728ee" prot="public" virt="non-virtual"><scope>rr::VulkanMesh</scope><name>VulkanMesh</name></member>
+      <member refid="classrr_1_1VulkanMesh_1a8a35559e5b96506d03c18f721244bc4d" prot="public" virt="non-virtual"><scope>rr::VulkanMesh</scope><name>VulkanMesh</name></member>
+      <member refid="classrr_1_1VulkanMesh_1a8cb7c175dba40596d575c83d96cf4708" prot="public" virt="non-virtual"><scope>rr::VulkanMesh</scope><name>VulkanMesh</name></member>
+      <member refid="classrr_1_1VulkanMesh_1abe659d1e8cb40308dbafa7874b9778cb" prot="public" virt="non-virtual"><scope>rr::VulkanMesh</scope><name>~VulkanMesh</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

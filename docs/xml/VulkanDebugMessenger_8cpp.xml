@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="VulkanDebugMessenger_8cpp" kind="file" language="C++">
+    <compoundname>VulkanDebugMessenger.cpp</compoundname>
+    <includes refid="VulkanDebugMessenger_8hpp" local="yes">VulkanDebugMessenger.hpp</includes>
+    <includes refid="constants_8hpp" local="yes">constants.hpp</includes>
+    <includes refid="EngineException_8hpp" local="yes">exception/EngineException.hpp</includes>
+    <includes refid="VulkanException_8hpp" local="yes">exception/VulkanException.hpp</includes>
+    <includes local="yes">spdlog/spdlog.h</includes>
+    <includes local="no">vulkan/vk_platform.h</includes>
+    <includes local="no">vulkan/vulkan_core.h</includes>
+    <includes local="no">source_location</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>constants.hpp</label>
+        <link refid="constants_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>VulkanDebugMessenger.cpp</label>
+        <link refid="VulkanDebugMessenger_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>VulkanDebugMessenger.hpp</label>
+        <link refid="VulkanDebugMessenger_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>exception/EngineException.hpp</label>
+        <link refid="EngineException_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>exception/VulkanException.hpp</label>
+        <link refid="VulkanException_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>cstddef</label>
+      </node>
+      <node id="14">
+        <label>cstdint</label>
+      </node>
+      <node id="8">
+        <label>exception</label>
+      </node>
+      <node id="15">
+        <label>format</label>
+      </node>
+      <node id="9">
+        <label>source_location</label>
+      </node>
+      <node id="7">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>utility</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+      <node id="16">
+        <label>vulkan/vk_platform.h</label>
+      </node>
+      <node id="3">
+        <label>vulkan/vulkan_core.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacerr">rr</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanDebugMessenger_8hpp" kindref="compound">VulkanDebugMessenger.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="constants_8hpp" kindref="compound">constants.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="EngineException_8hpp" kindref="compound">exception/EngineException.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanException_8hpp" kindref="compound">exception/VulkanException.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;spdlog/spdlog.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vulkan/vk_platform.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vulkan/vulkan_core.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;source_location&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerr" kindref="compound">rr</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VKAPI_ATTR</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkBool32</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VKAPI_CALL</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">debugCallback</ref>(</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDebugUtilsMessageSeverityFlagBitsEXT</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">messageSeverity</ref>,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDebugUtilsMessageTypeFlagsEXT</ref><sp/></highlight><highlight class="comment">/*messageType*/</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDebugUtilsMessengerCallbackDataEXT</ref>*<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pCallbackData</ref>,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/></highlight><highlight class="comment">/*pUserData*/</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">messageSeverity</ref>)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT</ref>:<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::error(</highlight><highlight class="stringliteral">&quot;validation<sp/>layer:<sp/>{}&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pCallbackData</ref>-&gt;pMessage);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT</ref>:<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::warn(</highlight><highlight class="stringliteral">&quot;validation<sp/>layer:<sp/>{}&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pCallbackData</ref>-&gt;pMessage);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;validation<sp/>layer:<sp/>{}&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pCallbackData</ref>-&gt;pMessage);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="namespacerr_1adc931f1a560ba309782f5a2fd009654e" refkind="member"><highlight class="normal"><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkResult</ref><sp/><ref refid="namespacerr_1adc931f1a560ba309782f5a2fd009654e" kindref="member">CreateDebugUtilsMessengerEXT</ref>(</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkInstance</ref><sp/>instance,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDebugUtilsMessengerCreateInfoEXT</ref>*<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pCreateInfo</ref>,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkAllocationCallbacks</ref>*<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pAllocator</ref>,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDebugUtilsMessengerEXT</ref>*<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pDebugMessenger</ref>)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">func</ref>{</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">PFN_vkCreateDebugUtilsMessengerEXT</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vkGetInstanceProcAddr</ref>(instance,<sp/></highlight><highlight class="stringliteral">&quot;vkCreateDebugUtilsMessengerEXT&quot;</highlight><highlight class="normal">))};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">func</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">func</ref>(instance,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pCreateInfo</ref>,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pAllocator</ref>,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pDebugMessenger</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_ERROR_EXTENSION_NOT_PRESENT</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="namespacerr_1a31fa27895ecf3cd2e0e1b0256ba4d821" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a31fa27895ecf3cd2e0e1b0256ba4d821" kindref="member">DestroyDebugUtilsMessengerEXT</ref>(</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkInstance</ref><sp/>instance,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDebugUtilsMessengerEXT</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">debugMessenger</ref>,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkAllocationCallbacks</ref>*<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pAllocator</ref>)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">func</ref>{</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">PFN_vkDestroyDebugUtilsMessengerEXT</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vkGetInstanceProcAddr</ref>(instance,<sp/></highlight><highlight class="stringliteral">&quot;vkDestroyDebugUtilsMessengerEXT&quot;</highlight><highlight class="normal">))};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">func</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">func</ref>(instance,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">debugMessenger</ref>,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pAllocator</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="classrr_1_1VulkanDebugMessenger_1ac0e0a15b30f5573bbc5279014ca5eda6" refkind="member"><highlight class="normal"><ref refid="classrr_1_1VulkanDebugMessenger_1ac0e0a15b30f5573bbc5279014ca5eda6" kindref="member">VulkanDebugMessenger::VulkanDebugMessenger</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkInstance</ref><sp/>instance)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>instance(instance)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(!<ref refid="namespacerr_1ac1cbc0d85292b014626bd26873cc0354" kindref="member">useValidationLayers</ref>)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDebugUtilsMessengerCreateInfoEXT</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">createInfo</ref>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT</ref>,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.messageSeverity<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT</ref><sp/>|<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT</ref>,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.messageType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT</ref><sp/>|<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT</ref><sp/>|<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT</ref>,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pfnUserCallback<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">debugCallback</ref>,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pUserData<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="namespacerr_1adc931f1a560ba309782f5a2fd009654e" kindref="member">CreateDebugUtilsMessengerEXT</ref>(instance,<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">createInfo</ref>,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;m_debugMessenger)<sp/>!=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_SUCCESS</ref>)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">throwWithLog&lt;VulkanException&gt;</ref>(std::source_location::current(),<sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eac54fb03f9b99aa18a777217bde527f1e" kindref="member">VulkanExceptionCause::CREATE_DEBUG_MESSENGER</ref>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;Debug<sp/>messenger<sp/>created<sp/>successfully...&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classrr_1_1VulkanDebugMessenger_1af436f1c4a5d0c22f1f3e4479ec34270f" refkind="member"><highlight class="normal"><ref refid="classrr_1_1VulkanDebugMessenger_1af436f1c4a5d0c22f1f3e4479ec34270f" kindref="member">VulkanDebugMessenger::~VulkanDebugMessenger</ref>()</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="namespacerr_1ac1cbc0d85292b014626bd26873cc0354" kindref="member">useValidationLayers</ref>)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a31fa27895ecf3cd2e0e1b0256ba4d821" kindref="member">DestroyDebugUtilsMessengerEXT</ref>(instance,<sp/>m_debugMessenger,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>!rr</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/engine/core/VulkanDebugMessenger.cpp"/>
+  </compounddef>
+</doxygen>

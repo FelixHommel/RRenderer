@@ -1,0 +1,352 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classrr_1_1VulkanCommandBuffer" kind="class" language="C++" prot="public">
+    <compoundname>rr::VulkanCommandBuffer</compoundname>
+    <includes refid="VulkanCommandBuffer_8hpp" local="no">VulkanCommandBuffer.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrr_1_1VulkanCommandBuffer_1a2cd57c5664e5d966c44b897a6a5e64a7" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDevice</ref></type>
+        <definition>VkDevice rr::VulkanCommandBuffer::device</definition>
+        <argsstring></argsstring>
+        <name>device</name>
+        <qualifiedname>rr::VulkanCommandBuffer::device</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="37" column="14" bodyfile="src/engine/core/VulkanCommandBuffer.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanCommandBuffer_1a7f992c88567f730fd4f54c730cc99b3a" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandPool</ref></type>
+        <definition>VkCommandPool rr::VulkanCommandBuffer::commandPool</definition>
+        <argsstring></argsstring>
+        <name>commandPool</name>
+        <qualifiedname>rr::VulkanCommandBuffer::commandPool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="38" column="19" bodyfile="src/engine/core/VulkanCommandBuffer.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanCommandBuffer_1a804c684bcbfaa3132c06c46319206c17" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBuffer</ref></type>
+        <definition>VkCommandBuffer rr::VulkanCommandBuffer::m_commandBuffer</definition>
+        <argsstring></argsstring>
+        <name>m_commandBuffer</name>
+        <qualifiedname>rr::VulkanCommandBuffer::m_commandBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="40" column="21" bodyfile="src/engine/core/VulkanCommandBuffer.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrr_1_1VulkanCommandBuffer_1a9244fe9cfc0f832ff5b08f5c4eafda47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanCommandBuffer::VulkanCommandBuffer</definition>
+        <argsstring>(VkDevice device, VkCommandPool commandPool, VkCommandBufferLevel level=VK_COMMAND_BUFFER_LEVEL_PRIMARY)</argsstring>
+        <name>VulkanCommandBuffer</name>
+        <qualifiedname>rr::VulkanCommandBuffer::VulkanCommandBuffer</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDevice</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandPool</ref></type>
+          <declname>commandPool</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBufferLevel</ref></type>
+          <declname>level</declname>
+          <defval><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_COMMAND_BUFFER_LEVEL_PRIMARY</ref></defval>
+        </param>
+        <briefdescription>
+<para>Construct a single <ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a VkDevice handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>commandPool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a VkCommandPool handle where the Command buffer is allocated in </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Level of the Command buffer. Default: VK_COMMAND_BUFFER_LEVEL_PRIMARY </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="23" column="5" bodyfile="src/engine/core/VulkanCommandBuffer.cpp" bodystart="20" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanCommandBuffer_1ad8840cec3f66260b586598ad4dc5979e" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanCommandBuffer::VulkanCommandBuffer</definition>
+        <argsstring>(VkDevice device, VkCommandPool commandPool, VkCommandBuffer commandBuffer)</argsstring>
+        <name>VulkanCommandBuffer</name>
+        <qualifiedname>rr::VulkanCommandBuffer::VulkanCommandBuffer</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDevice</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandPool</ref></type>
+          <declname>commandPool</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBuffer</ref></type>
+          <declname>commandBuffer</declname>
+        </param>
+        <briefdescription>
+<para>Helper constructor for the <ref refid="classrr_1_1VulkanCommandBuffer_1af4f3675ff5a3b09c90b9c8f3f60fd49e" kindref="member">create()</ref> function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a VkDevice handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>commandPool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a VkCommandPool handle where the Command buffer is allocated in </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>commandBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the VkCommandBuffer handle which the <ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref> is managing </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="24" column="14" bodyfile="src/engine/core/VulkanCommandBuffer.cpp" bodystart="41" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanCommandBuffer_1a6dc9c736562c5000b03bc6035f484031" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanCommandBuffer::~VulkanCommandBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>~VulkanCommandBuffer</name>
+        <qualifiedname>rr::VulkanCommandBuffer::~VulkanCommandBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="25" column="5" bodyfile="src/engine/core/VulkanCommandBuffer.cpp" bodystart="47" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanCommandBuffer_1ab7377de4d312f6f6939aee50412f1ceb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanCommandBuffer::VulkanCommandBuffer</definition>
+        <argsstring>(const VulkanCommandBuffer &amp;)=delete</argsstring>
+        <name>VulkanCommandBuffer</name>
+        <qualifiedname>rr::VulkanCommandBuffer::VulkanCommandBuffer</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="27" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanCommandBuffer_1a693ed067fff4b09d1a818a6de0946346" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref> &amp;</type>
+        <definition>VulkanCommandBuffer &amp; rr::VulkanCommandBuffer::operator=</definition>
+        <argsstring>(const VulkanCommandBuffer &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::VulkanCommandBuffer::operator=</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="28" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanCommandBuffer_1ab509769d7ca845ff9d16b02571b11741" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanCommandBuffer::VulkanCommandBuffer</definition>
+        <argsstring>(VulkanCommandBuffer &amp;&amp;)=delete</argsstring>
+        <name>VulkanCommandBuffer</name>
+        <qualifiedname>rr::VulkanCommandBuffer::VulkanCommandBuffer</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="29" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanCommandBuffer_1a1f8d6491fc23f053e84fc8c79f3160c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref> &amp;</type>
+        <definition>VulkanCommandBuffer &amp; rr::VulkanCommandBuffer::operator=</definition>
+        <argsstring>(VulkanCommandBuffer &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::VulkanCommandBuffer::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="30" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanCommandBuffer_1af417a199b0992fa1a0fdc07e68e9f686" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBuffer</ref> &amp;</type>
+        <definition>VkCommandBuffer &amp; rr::VulkanCommandBuffer::getHandleRef</definition>
+        <argsstring>()</argsstring>
+        <name>getHandleRef</name>
+        <qualifiedname>rr::VulkanCommandBuffer::getHandleRef</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="34" column="22" bodyfile="src/engine/core/VulkanCommandBuffer.hpp" bodystart="34" bodyend="34"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classrr_1_1VulkanCommandBuffer_1af4f3675ff5a3b09c90b9c8f3f60fd49e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::unique_ptr&lt; <ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref> &gt; &gt;</type>
+        <definition>std::vector&lt; std::unique_ptr&lt; VulkanCommandBuffer &gt; &gt; rr::VulkanCommandBuffer::create</definition>
+        <argsstring>(VkDevice device, VkCommandPool commandPool, std::uint32_t count, VkCommandBufferLevel level=VK_COMMAND_BUFFER_LEVEL_PRIMARY)</argsstring>
+        <name>create</name>
+        <qualifiedname>rr::VulkanCommandBuffer::create</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDevice</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandPool</ref></type>
+          <declname>commandPool</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBufferLevel</ref></type>
+          <declname>level</declname>
+          <defval><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_COMMAND_BUFFER_LEVEL_PRIMARY</ref></defval>
+        </param>
+        <briefdescription>
+<para>Factory method to create <computeroutput>count</computeroutput> of <ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>VkDevice from where the buffers are located on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>commandPool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>VkCommandPool where the buffers are allocated in </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>amount of buffers to allocate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>level of the buffers. Default: VK_COMMAND_BUFFER_LEVEL_PRIMARY</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vector with the allocated VulkanCommandBuffers </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="32" column="24" bodyfile="src/engine/core/VulkanCommandBuffer.cpp" bodystart="61" bodyend="80"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref> is a wrapper around VkCommandBuffer </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref> is managing a VkCommandBuffer handle provides access to it and is capable of creating new VulkanCommandBuffers.</para>
+<para><simplesect kind="author"><para>Felix Hommel </para>
+</simplesect>
+<simplesect kind="date"><para>5/26/2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="src/engine/core/VulkanCommandBuffer.hpp" line="20" column="1" bodyfile="src/engine/core/VulkanCommandBuffer.hpp" bodystart="21" bodyend="41"/>
+    <listofallmembers>
+      <member refid="classrr_1_1VulkanCommandBuffer_1a7f992c88567f730fd4f54c730cc99b3a" prot="private" virt="non-virtual"><scope>rr::VulkanCommandBuffer</scope><name>commandPool</name></member>
+      <member refid="classrr_1_1VulkanCommandBuffer_1af4f3675ff5a3b09c90b9c8f3f60fd49e" prot="public" virt="non-virtual"><scope>rr::VulkanCommandBuffer</scope><name>create</name></member>
+      <member refid="classrr_1_1VulkanCommandBuffer_1a2cd57c5664e5d966c44b897a6a5e64a7" prot="private" virt="non-virtual"><scope>rr::VulkanCommandBuffer</scope><name>device</name></member>
+      <member refid="classrr_1_1VulkanCommandBuffer_1af417a199b0992fa1a0fdc07e68e9f686" prot="public" virt="non-virtual"><scope>rr::VulkanCommandBuffer</scope><name>getHandleRef</name></member>
+      <member refid="classrr_1_1VulkanCommandBuffer_1a804c684bcbfaa3132c06c46319206c17" prot="private" virt="non-virtual"><scope>rr::VulkanCommandBuffer</scope><name>m_commandBuffer</name></member>
+      <member refid="classrr_1_1VulkanCommandBuffer_1a693ed067fff4b09d1a818a6de0946346" prot="public" virt="non-virtual"><scope>rr::VulkanCommandBuffer</scope><name>operator=</name></member>
+      <member refid="classrr_1_1VulkanCommandBuffer_1a1f8d6491fc23f053e84fc8c79f3160c0" prot="public" virt="non-virtual"><scope>rr::VulkanCommandBuffer</scope><name>operator=</name></member>
+      <member refid="classrr_1_1VulkanCommandBuffer_1a9244fe9cfc0f832ff5b08f5c4eafda47" prot="public" virt="non-virtual"><scope>rr::VulkanCommandBuffer</scope><name>VulkanCommandBuffer</name></member>
+      <member refid="classrr_1_1VulkanCommandBuffer_1ad8840cec3f66260b586598ad4dc5979e" prot="public" virt="non-virtual"><scope>rr::VulkanCommandBuffer</scope><name>VulkanCommandBuffer</name></member>
+      <member refid="classrr_1_1VulkanCommandBuffer_1ab7377de4d312f6f6939aee50412f1ceb" prot="public" virt="non-virtual"><scope>rr::VulkanCommandBuffer</scope><name>VulkanCommandBuffer</name></member>
+      <member refid="classrr_1_1VulkanCommandBuffer_1ab509769d7ca845ff9d16b02571b11741" prot="public" virt="non-virtual"><scope>rr::VulkanCommandBuffer</scope><name>VulkanCommandBuffer</name></member>
+      <member refid="classrr_1_1VulkanCommandBuffer_1a6dc9c736562c5000b03bc6035f484031" prot="public" virt="non-virtual"><scope>rr::VulkanCommandBuffer</scope><name>~VulkanCommandBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classrr_1_1VulkanSurface" kind="class" language="C++" prot="public">
+    <compoundname>rr::VulkanSurface</compoundname>
+    <includes refid="VulkanSurface_8hpp" local="no">VulkanSurface.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrr_1_1VulkanSurface_1ae950728cffa4ae759fe90b1459f1a73a" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkInstance</ref></type>
+        <definition>VkInstance rr::VulkanSurface::instance</definition>
+        <argsstring></argsstring>
+        <name>instance</name>
+        <qualifiedname>rr::VulkanSurface::instance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSurface.hpp" line="29" column="16" bodyfile="src/engine/core/VulkanSurface.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanSurface_1a3098277f1baad426a3cf286f3b92dadb" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSurfaceKHR</ref></type>
+        <definition>VkSurfaceKHR rr::VulkanSurface::m_surface</definition>
+        <argsstring></argsstring>
+        <name>m_surface</name>
+        <qualifiedname>rr::VulkanSurface::m_surface</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSurface.hpp" line="31" column="18" bodyfile="src/engine/core/VulkanSurface.hpp" bodystart="31" bodyend="31"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrr_1_1VulkanSurface_1ad406e4c6ca0adf0c88f1688609dba090" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanSurface::VulkanSurface</definition>
+        <argsstring>(VkInstance instance, Window &amp;window)</argsstring>
+        <name>VulkanSurface</name>
+        <qualifiedname>rr::VulkanSurface::VulkanSurface</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkInstance</ref></type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type><ref refid="classrr_1_1Window" kindref="compound">Window</ref> &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Create a new <ref refid="classrr_1_1VulkanSurface" kindref="compound">VulkanSurface</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a <computeroutput>VkInstance</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="classrr_1_1Window" kindref="compound">Window</ref>&amp;</computeroutput> needed to interface with the surface </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSurface.hpp" line="18" column="5" bodyfile="src/engine/core/VulkanSurface.cpp" bodystart="15" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSurface_1a5b68d646119c27708537d3192d0c9fe4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanSurface::~VulkanSurface</definition>
+        <argsstring>()</argsstring>
+        <name>~VulkanSurface</name>
+        <qualifiedname>rr::VulkanSurface::~VulkanSurface</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSurface.hpp" line="19" column="5" bodyfile="src/engine/core/VulkanSurface.cpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSurface_1a7314394521782d8f62a12f80e3b7ac84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanSurface::VulkanSurface</definition>
+        <argsstring>(const VulkanSurface &amp;)=delete</argsstring>
+        <name>VulkanSurface</name>
+        <qualifiedname>rr::VulkanSurface::VulkanSurface</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1VulkanSurface" kindref="compound">VulkanSurface</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSurface.hpp" line="21" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSurface_1a2ec877c2fe9b387b23d8be02410199f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1VulkanSurface" kindref="compound">VulkanSurface</ref> &amp;</type>
+        <definition>VulkanSurface &amp; rr::VulkanSurface::operator=</definition>
+        <argsstring>(const VulkanSurface &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::VulkanSurface::operator=</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1VulkanSurface" kindref="compound">VulkanSurface</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSurface.hpp" line="22" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSurface_1acb7380e31083e749577d31b13e313568" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanSurface::VulkanSurface</definition>
+        <argsstring>(VulkanSurface &amp;&amp;)=delete</argsstring>
+        <name>VulkanSurface</name>
+        <qualifiedname>rr::VulkanSurface::VulkanSurface</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1VulkanSurface" kindref="compound">VulkanSurface</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSurface.hpp" line="23" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSurface_1a5a877402527748c3d87f9e66d53f60b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1VulkanSurface" kindref="compound">VulkanSurface</ref> &amp;</type>
+        <definition>VulkanSurface &amp; rr::VulkanSurface::operator=</definition>
+        <argsstring>(VulkanSurface &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::VulkanSurface::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1VulkanSurface" kindref="compound">VulkanSurface</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSurface.hpp" line="24" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSurface_1ad9d761971ce2587464ee40fa1818ff7a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSurfaceKHR</ref></type>
+        <definition>VkSurfaceKHR rr::VulkanSurface::getHandle</definition>
+        <argsstring>() const</argsstring>
+        <name>getHandle</name>
+        <qualifiedname>rr::VulkanSurface::getHandle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSurface.hpp" line="26" column="19" bodyfile="src/engine/core/VulkanSurface.hpp" bodystart="26" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classrr_1_1VulkanSurface" kindref="compound">VulkanSurface</ref> is a wrapper of VkSurfaceKHR. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Felix Hommel </para>
+</simplesect>
+<simplesect kind="date"><para>5/26/2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="src/engine/core/VulkanSurface.hpp" line="15" column="1" bodyfile="src/engine/core/VulkanSurface.hpp" bodystart="16" bodyend="32"/>
+    <listofallmembers>
+      <member refid="classrr_1_1VulkanSurface_1ad9d761971ce2587464ee40fa1818ff7a" prot="public" virt="non-virtual"><scope>rr::VulkanSurface</scope><name>getHandle</name></member>
+      <member refid="classrr_1_1VulkanSurface_1ae950728cffa4ae759fe90b1459f1a73a" prot="private" virt="non-virtual"><scope>rr::VulkanSurface</scope><name>instance</name></member>
+      <member refid="classrr_1_1VulkanSurface_1a3098277f1baad426a3cf286f3b92dadb" prot="private" virt="non-virtual"><scope>rr::VulkanSurface</scope><name>m_surface</name></member>
+      <member refid="classrr_1_1VulkanSurface_1a2ec877c2fe9b387b23d8be02410199f3" prot="public" virt="non-virtual"><scope>rr::VulkanSurface</scope><name>operator=</name></member>
+      <member refid="classrr_1_1VulkanSurface_1a5a877402527748c3d87f9e66d53f60b3" prot="public" virt="non-virtual"><scope>rr::VulkanSurface</scope><name>operator=</name></member>
+      <member refid="classrr_1_1VulkanSurface_1ad406e4c6ca0adf0c88f1688609dba090" prot="public" virt="non-virtual"><scope>rr::VulkanSurface</scope><name>VulkanSurface</name></member>
+      <member refid="classrr_1_1VulkanSurface_1a7314394521782d8f62a12f80e3b7ac84" prot="public" virt="non-virtual"><scope>rr::VulkanSurface</scope><name>VulkanSurface</name></member>
+      <member refid="classrr_1_1VulkanSurface_1acb7380e31083e749577d31b13e313568" prot="public" virt="non-virtual"><scope>rr::VulkanSurface</scope><name>VulkanSurface</name></member>
+      <member refid="classrr_1_1VulkanSurface_1a5b68d646119c27708537d3192d0c9fe4" prot="public" virt="non-virtual"><scope>rr::VulkanSurface</scope><name>~VulkanSurface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

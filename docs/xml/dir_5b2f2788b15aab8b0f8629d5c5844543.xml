@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_5b2f2788b15aab8b0f8629d5c5844543" kind="dir">
+    <compoundname>utility</compoundname>
+    <innerfile refid="RenderObject_8cpp">RenderObject.cpp</innerfile>
+    <innerfile refid="RenderObject_8hpp">RenderObject.hpp</innerfile>
+    <innerfile refid="StringHash_8hpp">StringHash.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/engine/utility/"/>
+  </compounddef>
+</doxygen>

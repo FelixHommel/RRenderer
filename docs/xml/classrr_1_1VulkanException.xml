@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classrr_1_1VulkanException" kind="class" language="C++" prot="public">
+    <compoundname>rr::VulkanException</compoundname>
+    <basecompoundref refid="classrr_1_1EngineException" prot="public" virt="non-virtual">rr::EngineException</basecompoundref>
+    <includes refid="VulkanException_8hpp" local="no">VulkanException.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrr_1_1VulkanException_1a6195843a901faeaff093612683b4d7fc" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01e" kindref="member">VulkanExceptionCause</ref></type>
+        <definition>VulkanExceptionCause rr::VulkanException::m_cause</definition>
+        <argsstring></argsstring>
+        <name>m_cause</name>
+        <qualifiedname>rr::VulkanException::m_cause</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/exception/VulkanException.hpp" line="72" column="26" bodyfile="src/engine/exception/VulkanException.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrr_1_1VulkanException_1afda7cfa737f2913174dfda57985bd2a5" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanException::VulkanException</definition>
+        <argsstring>(VulkanExceptionCause cause)</argsstring>
+        <name>VulkanException</name>
+        <qualifiedname>rr::VulkanException::VulkanException</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01e" kindref="member">VulkanExceptionCause</ref></type>
+          <declname>cause</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/exception/VulkanException.hpp" line="59" column="14" bodyfile="src/engine/exception/VulkanException.hpp" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanException_1a6aaf19509619b99f57353ae22f9b533a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanException::VulkanException</definition>
+        <argsstring>(VulkanExceptionCause cause, std::size_t index)</argsstring>
+        <name>VulkanException</name>
+        <qualifiedname>rr::VulkanException::VulkanException</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01e" kindref="member">VulkanExceptionCause</ref></type>
+          <declname>cause</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/exception/VulkanException.hpp" line="64" column="5" bodyfile="src/engine/exception/VulkanException.hpp" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanException_1a0879ae8439e3ffbbde768b718132e998" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01e" kindref="member">VulkanExceptionCause</ref></type>
+        <definition>VulkanExceptionCause rr::VulkanException::cause</definition>
+        <argsstring>() const</argsstring>
+        <name>cause</name>
+        <qualifiedname>rr::VulkanException::cause</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/exception/VulkanException.hpp" line="69" column="27" bodyfile="src/engine/exception/VulkanException.hpp" bodystart="69" bodyend="69"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classrr_1_1VulkanException_1a7bb4f523f4cc3d0c64859017f44a111d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string rr::VulkanException::causeToString</definition>
+        <argsstring>(VulkanExceptionCause cause)</argsstring>
+        <name>causeToString</name>
+        <qualifiedname>rr::VulkanException::causeToString</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01e" kindref="member">VulkanExceptionCause</ref></type>
+          <declname>cause</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/exception/VulkanException.hpp" line="74" column="24" bodyfile="src/engine/exception/VulkanException.hpp" bodystart="74" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanException_1a644efe211080b80471d32a1455f4e2d2" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string rr::VulkanException::causeToString</definition>
+        <argsstring>(VulkanExceptionCause cause, std::size_t index)</argsstring>
+        <name>causeToString</name>
+        <qualifiedname>rr::VulkanException::causeToString</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01e" kindref="member">VulkanExceptionCause</ref></type>
+          <declname>cause</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/exception/VulkanException.hpp" line="114" column="24" bodyfile="src/engine/exception/VulkanException.hpp" bodystart="114" bodyend="117"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>If a Vulkan operation fails or doesn&apos;t behave as expected a <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</ref> can be thrown. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Felix Hommel </para>
+</simplesect>
+<simplesect kind="date"><para>7/19/2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>rr::EngineException</label>
+        <link refid="classrr_1_1EngineException"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>rr::VulkanException</label>
+        <link refid="classrr_1_1VulkanException"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::exception</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>rr::EngineException</label>
+        <link refid="classrr_1_1EngineException"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>rr::VulkanException</label>
+        <link refid="classrr_1_1VulkanException"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/engine/exception/VulkanException.hpp" line="56" column="1" bodyfile="src/engine/exception/VulkanException.hpp" bodystart="57" bodyend="118"/>
+    <listofallmembers>
+      <member refid="classrr_1_1VulkanException_1a0879ae8439e3ffbbde768b718132e998" prot="public" virt="non-virtual"><scope>rr::VulkanException</scope><name>cause</name></member>
+      <member refid="classrr_1_1VulkanException_1a7bb4f523f4cc3d0c64859017f44a111d" prot="private" virt="non-virtual"><scope>rr::VulkanException</scope><name>causeToString</name></member>
+      <member refid="classrr_1_1VulkanException_1a644efe211080b80471d32a1455f4e2d2" prot="private" virt="non-virtual"><scope>rr::VulkanException</scope><name>causeToString</name></member>
+      <member refid="classrr_1_1EngineException_1afc765524baf587c8ecc7e6164ed27afb" prot="public" virt="non-virtual"><scope>rr::VulkanException</scope><name>EngineException</name></member>
+      <member refid="classrr_1_1VulkanException_1a6195843a901faeaff093612683b4d7fc" prot="private" virt="non-virtual"><scope>rr::VulkanException</scope><name>m_cause</name></member>
+      <member refid="classrr_1_1VulkanException_1afda7cfa737f2913174dfda57985bd2a5" prot="public" virt="non-virtual"><scope>rr::VulkanException</scope><name>VulkanException</name></member>
+      <member refid="classrr_1_1VulkanException_1a6aaf19509619b99f57353ae22f9b533a" prot="public" virt="non-virtual"><scope>rr::VulkanException</scope><name>VulkanException</name></member>
+      <member refid="classrr_1_1EngineException_1a6deb90a977fde221a852fd0f2ba085fe" prot="public" virt="non-virtual"><scope>rr::VulkanException</scope><name>what</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

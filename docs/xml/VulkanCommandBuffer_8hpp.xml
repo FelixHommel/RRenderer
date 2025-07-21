@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="VulkanCommandBuffer_8hpp" kind="file" language="C++">
+    <compoundname>VulkanCommandBuffer.hpp</compoundname>
+    <includes local="no">vulkan/vulkan_core.h</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="VulkanCommandBuffer_8cpp" local="yes">VulkanCommandBuffer.cpp</includedby>
+    <includedby refid="VulkanCommandPool_8cpp" local="yes">VulkanCommandPool.cpp</includedby>
+    <includedby refid="VulkanCommandPool_8hpp" local="yes">VulkanCommandPool.hpp</includedby>
+    <includedby refid="VulkanRenderer_8hpp" local="yes">VulkanRenderer.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>VulkanCommandBuffer.hpp</label>
+        <link refid="VulkanCommandBuffer_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="4">
+        <label>memory</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+      <node id="2">
+        <label>vulkan/vulkan_core.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>VulkanRenderer.cpp</label>
+        <link refid="VulkanRenderer_8cpp"/>
+      </node>
+      <node id="6">
+        <label>VulkanRenderer.hpp</label>
+        <link refid="VulkanRenderer_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>VulkanCommandBuffer.cpp</label>
+        <link refid="VulkanCommandBuffer_8cpp"/>
+      </node>
+      <node id="1">
+        <label>VulkanCommandBuffer.hpp</label>
+        <link refid="VulkanCommandBuffer_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>VulkanCommandPool.cpp</label>
+        <link refid="VulkanCommandPool_8cpp"/>
+      </node>
+      <node id="4">
+        <label>VulkanCommandPool.hpp</label>
+        <link refid="VulkanCommandPool_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classrr_1_1VulkanCommandBuffer" prot="public">rr::VulkanCommandBuffer</innerclass>
+    <innernamespace refid="namespacerr">rr</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RRENDERER_ENGINE_CORE_VULKAN_COMMAND_BUFFER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RRENDERER_ENGINE_CORE_VULKAN_COMMAND_BUFFER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vulkan/vulkan_core.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerr" kindref="compound">rr</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classrr_1_1VulkanCommandBuffer" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDevice</ref><sp/>device,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandPool</ref><sp/>commandPool,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBufferLevel</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">level</ref><sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_COMMAND_BUFFER_LEVEL_PRIMARY</ref>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDevice</ref><sp/>device,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandPool</ref><sp/>commandPool,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBuffer</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">commandBuffer</ref>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1VulkanCommandBuffer_1a6dc9c736562c5000b03bc6035f484031" kindref="member">~VulkanCommandBuffer</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classrr_1_1VulkanCommandBuffer_1ab7377de4d312f6f6939aee50412f1ceb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1VulkanCommandBuffer_1ab7377de4d312f6f6939aee50412f1ceb" kindref="member">VulkanCommandBuffer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28" refid="classrr_1_1VulkanCommandBuffer_1a693ed067fff4b09d1a818a6de0946346" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref>&amp;<sp/><ref refid="classrr_1_1VulkanCommandBuffer_1a693ed067fff4b09d1a818a6de0946346" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29" refid="classrr_1_1VulkanCommandBuffer_1ab509769d7ca845ff9d16b02571b11741" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1VulkanCommandBuffer_1ab509769d7ca845ff9d16b02571b11741" kindref="member">VulkanCommandBuffer</ref>(<ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30" refid="classrr_1_1VulkanCommandBuffer_1a1f8d6491fc23f053e84fc8c79f3160c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref>&amp;<sp/><ref refid="classrr_1_1VulkanCommandBuffer_1a1f8d6491fc23f053e84fc8c79f3160c0" kindref="member">operator=</ref>(<ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;std::unique_ptr&lt;VulkanCommandBuffer&gt;&gt;<sp/><ref refid="classrr_1_1VulkanCommandBuffer_1af4f3675ff5a3b09c90b9c8f3f60fd49e" kindref="member">create</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDevice</ref><sp/>device,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandPool</ref><sp/>commandPool,<sp/>std::uint32_t<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">count</ref>,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBufferLevel</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">level</ref><sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_COMMAND_BUFFER_LEVEL_PRIMARY</ref>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classrr_1_1VulkanCommandBuffer_1af417a199b0992fa1a0fdc07e68e9f686" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBuffer</ref>&amp;<sp/><ref refid="classrr_1_1VulkanCommandBuffer_1af417a199b0992fa1a0fdc07e68e9f686" kindref="member">getHandleRef</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_commandBuffer;<sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDevice</ref><sp/>device;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandPool</ref><sp/>commandPool;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBuffer</ref><sp/>m_commandBuffer;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>!rr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!RRENDERER_ENGINE_CORE_VULKAN_COMMAND_BUFFER_HPP</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/engine/core/VulkanCommandBuffer.hpp"/>
+  </compounddef>
+</doxygen>

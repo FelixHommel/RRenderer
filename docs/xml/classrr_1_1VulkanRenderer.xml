@@ -1,0 +1,545 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classrr_1_1VulkanRenderer" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>rr::VulkanRenderer</compoundname>
+    <basecompoundref refid="classrr_1_1Renderer" prot="public" virt="non-virtual">rr::Renderer</basecompoundref>
+    <includes refid="VulkanRenderer_8hpp" local="no">VulkanRenderer.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrr_1_1VulkanRenderer_1acf5fb9498698b5536219617491bd050b" prot="private" static="no" mutable="no">
+        <type><ref refid="classrr_1_1Window" kindref="compound">Window</ref> &amp;</type>
+        <definition>Window&amp; rr::VulkanRenderer::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <qualifiedname>rr::VulkanRenderer::window</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="50" column="12" bodyfile="src/engine/VulkanRenderer.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanRenderer_1a931845f77134e84c83f549c24ca9b2c5" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classrr_1_1VulkanInstance" kindref="compound">VulkanInstance</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;VulkanInstance&gt; rr::VulkanRenderer::m_instance</definition>
+        <argsstring></argsstring>
+        <name>m_instance</name>
+        <qualifiedname>rr::VulkanRenderer::m_instance</qualifiedname>
+        <initializer>{ std::make_unique&lt;<ref refid="classrr_1_1VulkanInstance" kindref="compound">VulkanInstance</ref>&gt;() }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="53" column="21" bodyfile="src/engine/VulkanRenderer.hpp" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanRenderer_1a59a40f5eeb6297a5e091442341d35e3a" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classrr_1_1VulkanDebugMessenger" kindref="compound">VulkanDebugMessenger</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;VulkanDebugMessenger&gt; rr::VulkanRenderer::m_debugMessenger</definition>
+        <argsstring></argsstring>
+        <name>m_debugMessenger</name>
+        <qualifiedname>rr::VulkanRenderer::m_debugMessenger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="54" column="21" bodyfile="src/engine/VulkanRenderer.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanRenderer_1a3dca550bc7f0147c97e82456a06d93b6" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classrr_1_1VulkanSurface" kindref="compound">VulkanSurface</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;VulkanSurface&gt; rr::VulkanRenderer::m_surface</definition>
+        <argsstring></argsstring>
+        <name>m_surface</name>
+        <qualifiedname>rr::VulkanRenderer::m_surface</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="55" column="21" bodyfile="src/engine/VulkanRenderer.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanRenderer_1a9061feda9467768fdb341f7ea702cb27" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classrr_1_1VulkanDevice" kindref="compound">VulkanDevice</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;VulkanDevice&gt; rr::VulkanRenderer::m_device</definition>
+        <argsstring></argsstring>
+        <name>m_device</name>
+        <qualifiedname>rr::VulkanRenderer::m_device</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="56" column="21" bodyfile="src/engine/VulkanRenderer.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanRenderer_1ac701b75cb89976ed04be9c56e93d6b63" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;VulkanSwapchain&gt; rr::VulkanRenderer::m_swapchain</definition>
+        <argsstring></argsstring>
+        <name>m_swapchain</name>
+        <qualifiedname>rr::VulkanRenderer::m_swapchain</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="57" column="21" bodyfile="src/engine/VulkanRenderer.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanRenderer_1a0ab0059e9534fc5ddfacd3ff2be2a971" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classrr_1_1VulkanPipelineLayout" kindref="compound">VulkanPipelineLayout</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;VulkanPipelineLayout&gt; rr::VulkanRenderer::m_pipelineLayout</definition>
+        <argsstring></argsstring>
+        <name>m_pipelineLayout</name>
+        <qualifiedname>rr::VulkanRenderer::m_pipelineLayout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="58" column="21" bodyfile="src/engine/VulkanRenderer.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanRenderer_1ae76fd6c8ced71b60cbbf1c1819f8609e" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classrr_1_1VulkanPipeline" kindref="compound">VulkanPipeline</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;VulkanPipeline&gt; rr::VulkanRenderer::m_pipeline</definition>
+        <argsstring></argsstring>
+        <name>m_pipeline</name>
+        <qualifiedname>rr::VulkanRenderer::m_pipeline</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="59" column="21" bodyfile="src/engine/VulkanRenderer.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanRenderer_1ac3aa9444929fd2962f36dc7e7f0cfe31" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classrr_1_1VulkanCommandPool" kindref="compound">VulkanCommandPool</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;VulkanCommandPool&gt; rr::VulkanRenderer::m_commandPool</definition>
+        <argsstring></argsstring>
+        <name>m_commandPool</name>
+        <qualifiedname>rr::VulkanRenderer::m_commandPool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="60" column="21" bodyfile="src/engine/VulkanRenderer.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanRenderer_1abcaa01e0144b4782e61e71217e9de70e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::unique_ptr&lt; <ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::unique_ptr&lt;VulkanCommandBuffer&gt; &gt; rr::VulkanRenderer::m_commandBuffers</definition>
+        <argsstring></argsstring>
+        <name>m_commandBuffers</name>
+        <qualifiedname>rr::VulkanRenderer::m_commandBuffers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="61" column="17" bodyfile="src/engine/VulkanRenderer.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanRenderer_1a9ad5811339cf6ca5a6cefeb89c934080" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref> &gt;</type>
+        <definition>std::vector&lt;RenderObject&gt; rr::VulkanRenderer::m_renderObjects</definition>
+        <argsstring></argsstring>
+        <name>m_renderObjects</name>
+        <qualifiedname>rr::VulkanRenderer::m_renderObjects</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="62" column="17" bodyfile="src/engine/VulkanRenderer.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classrr_1_1VulkanRenderer_1ad27da1a42f10fcf4e0614b239bbe6473" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">constexpr</ref> <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkClearColorValue</ref></type>
+        <definition>constexpr VkClearColorValue rr::VulkanRenderer::CLEAR_COLOR</definition>
+        <argsstring></argsstring>
+        <name>CLEAR_COLOR</name>
+        <qualifiedname>rr::VulkanRenderer::CLEAR_COLOR</qualifiedname>
+        <initializer>{ 0.01<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">f</ref>, 0.01<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">f</ref>, 0.01<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">f</ref>, 1.<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">f</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="64" column="40" bodyfile="src/engine/VulkanRenderer.hpp" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanRenderer_1a26853283a67a09bee47b4e399715de96" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">constexpr</ref> std::string_view</type>
+        <definition>constexpr std::string_view rr::VulkanRenderer::BASIC_VERT_SHADER_PATH</definition>
+        <argsstring></argsstring>
+        <name>BASIC_VERT_SHADER_PATH</name>
+        <qualifiedname>rr::VulkanRenderer::BASIC_VERT_SHADER_PATH</qualifiedname>
+        <initializer>{ &quot;./shaders/basic.vert.spv&quot; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="65" column="39" bodyfile="src/engine/VulkanRenderer.hpp" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanRenderer_1a721587d7b9f06c4a10acf417e8aa6010" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">constexpr</ref> std::string_view</type>
+        <definition>constexpr std::string_view rr::VulkanRenderer::BASIC_FRAG_SHADER_PATH</definition>
+        <argsstring></argsstring>
+        <name>BASIC_FRAG_SHADER_PATH</name>
+        <qualifiedname>rr::VulkanRenderer::BASIC_FRAG_SHADER_PATH</qualifiedname>
+        <initializer>{ &quot;./shaders/basic.frag.spv&quot; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="66" column="39" bodyfile="src/engine/VulkanRenderer.hpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrr_1_1VulkanRenderer_1a192c280503d63a994ac5d3bfb1959d2a" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanRenderer::VulkanRenderer</definition>
+        <argsstring>(Window &amp;window)</argsstring>
+        <name>VulkanRenderer</name>
+        <qualifiedname>rr::VulkanRenderer::VulkanRenderer</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1Window" kindref="compound">Window</ref> &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classrr_1_1VulkanRenderer" kindref="compound">VulkanRenderer</ref> based on <computeroutput>window</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="classrr_1_1Window" kindref="compound">Window</ref>&amp;</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="38" column="14" bodyfile="src/engine/VulkanRenderer.cpp" bodystart="40" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanRenderer_1a2cb11fae02ec643abaff8c4ddbd5e33f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanRenderer::~VulkanRenderer</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~VulkanRenderer</name>
+        <qualifiedname>rr::VulkanRenderer::~VulkanRenderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="39" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanRenderer_1a30884f3950bf2341c92e8022b5420a99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanRenderer::VulkanRenderer</definition>
+        <argsstring>(const VulkanRenderer &amp;)=delete</argsstring>
+        <name>VulkanRenderer</name>
+        <qualifiedname>rr::VulkanRenderer::VulkanRenderer</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1VulkanRenderer" kindref="compound">VulkanRenderer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="41" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanRenderer_1afd2c948a02e265d52d1ebca6d4c1c1e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanRenderer::VulkanRenderer</definition>
+        <argsstring>(VulkanRenderer &amp;&amp;)=delete</argsstring>
+        <name>VulkanRenderer</name>
+        <qualifiedname>rr::VulkanRenderer::VulkanRenderer</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1VulkanRenderer" kindref="compound">VulkanRenderer</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="42" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanRenderer_1a1d749271c1755a688c4a595a72d78ba0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1VulkanRenderer" kindref="compound">VulkanRenderer</ref> &amp;</type>
+        <definition>VulkanRenderer &amp; rr::VulkanRenderer::operator=</definition>
+        <argsstring>(const VulkanRenderer &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::VulkanRenderer::operator=</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1VulkanRenderer" kindref="compound">VulkanRenderer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="43" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanRenderer_1a6468d30dc724c0e3aba5bfa413143cf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1VulkanRenderer" kindref="compound">VulkanRenderer</ref> &amp;</type>
+        <definition>VulkanRenderer &amp; rr::VulkanRenderer::operator=</definition>
+        <argsstring>(VulkanRenderer &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::VulkanRenderer::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1VulkanRenderer" kindref="compound">VulkanRenderer</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="44" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanRenderer_1a01f2527977e7f7ca4cd0d393a9f5af85" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanRenderer::render</definition>
+        <argsstring>() override</argsstring>
+        <name>render</name>
+        <qualifiedname>rr::VulkanRenderer::render</qualifiedname>
+        <reimplements refid="classrr_1_1Renderer_1a84e149938d154bd8d067b1be2e94a2fb">render</reimplements>
+        <briefdescription>
+<para>Update the frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</ref> if there are any errors during the rendering process </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="46" column="10" bodyfile="src/engine/VulkanRenderer.cpp" bodystart="59" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanRenderer_1a3e5a5b49686f304be39194b4aa0ffb2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanRenderer::shutdown</definition>
+        <argsstring>() override</argsstring>
+        <name>shutdown</name>
+        <qualifiedname>rr::VulkanRenderer::shutdown</qualifiedname>
+        <reimplements refid="classrr_1_1Renderer_1add7edc93f23223e70b770a36e0e804c4">shutdown</reimplements>
+        <briefdescription>
+<para>Shutdown the <ref refid="classrr_1_1Renderer" kindref="compound">Renderer</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="47" column="10" bodyfile="src/engine/VulkanRenderer.cpp" bodystart="94" bodyend="98"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classrr_1_1VulkanRenderer_1a6ed2a8fae0b86289a15f0ff5bce05a6b" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classrr_1_1VulkanPipeline" kindref="compound">VulkanPipeline</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; VulkanPipeline &gt; rr::VulkanRenderer::createPipeline</definition>
+        <argsstring>() const</argsstring>
+        <name>createPipeline</name>
+        <qualifiedname>rr::VulkanRenderer::createPipeline</qualifiedname>
+        <briefdescription>
+<para>Create a new <ref refid="classrr_1_1VulkanPipeline" kindref="compound">VulkanPipeline</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It is returned as a std::unique_ptr. <ref refid="classrr_1_1VulkanPipeline" kindref="compound">VulkanPipeline</ref> depends on the render passes and the pipeline layout.</para>
+<para><simplesect kind="return"><para>std::unique_ptr&lt;VulkanPipeline&gt;, the newly created Pipeline </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="68" column="22" bodyfile="src/engine/VulkanRenderer.cpp" bodystart="136" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanRenderer_1ae4936264f549ae0320eaf3a7ca99878e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanRenderer::loadRenderObjects</definition>
+        <argsstring>()</argsstring>
+        <name>loadRenderObjects</name>
+        <qualifiedname>rr::VulkanRenderer::loadRenderObjects</qualifiedname>
+        <briefdescription>
+<para>Load all models that are used in the <ref refid="classrr_1_1Renderer" kindref="compound">Renderer</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="70" column="10" bodyfile="src/engine/VulkanRenderer.cpp" bodystart="101" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanRenderer_1a09596ac1cb9981ec2e4d67702a4515ae" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanRenderer::recreateSwapchain</definition>
+        <argsstring>()</argsstring>
+        <name>recreateSwapchain</name>
+        <qualifiedname>rr::VulkanRenderer::recreateSwapchain</qualifiedname>
+        <briefdescription>
+<para>Recreate the <ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref> in the case that it is outdated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="71" column="10" bodyfile="src/engine/VulkanRenderer.cpp" bodystart="150" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanRenderer_1ab8a4296c489aa902e9e27c69a6681fa6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanRenderer::recordCommandBuffers</definition>
+        <argsstring>(std::size_t imageIndex)</argsstring>
+        <name>recordCommandBuffers</name>
+        <qualifiedname>rr::VulkanRenderer::recordCommandBuffers</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>imageIndex</declname>
+        </param>
+        <briefdescription>
+<para>Record a Command buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>imageIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::size_t denoting which image is being recorded to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="72" column="10" bodyfile="src/engine/VulkanRenderer.cpp" bodystart="179" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanRenderer_1a256f3998e0c668766f7f8fca09d8a7e7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanRenderer::renderObjects</definition>
+        <argsstring>(VkCommandBuffer commandBuffer)</argsstring>
+        <name>renderObjects</name>
+        <qualifiedname>rr::VulkanRenderer::renderObjects</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBuffer</ref></type>
+          <declname>commandBuffer</declname>
+        </param>
+        <briefdescription>
+<para>Render all <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">RenderObjects</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>commandBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>VkCommandBuffer to which the <ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref> are recorded to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/VulkanRenderer.hpp" line="73" column="10" bodyfile="src/engine/VulkanRenderer.cpp" bodystart="233" bodyend="255"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Vulkan implementation for the <ref refid="classrr_1_1Renderer" kindref="compound">Renderer</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>It is the key interface with which the rendering can be done. It manages all the Vulkan objects and components.</para>
+<para><simplesect kind="author"><para>Felix Hommel </para>
+</simplesect>
+<simplesect kind="date"><para>5/25/2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>rr::Renderer</label>
+        <link refid="classrr_1_1Renderer"/>
+      </node>
+      <node id="1">
+        <label>rr::VulkanRenderer</label>
+        <link refid="classrr_1_1VulkanRenderer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>rr::Renderer</label>
+        <link refid="classrr_1_1Renderer"/>
+      </node>
+      <node id="1">
+        <label>rr::VulkanRenderer</label>
+        <link refid="classrr_1_1VulkanRenderer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/engine/VulkanRenderer.hpp" line="35" column="1" bodyfile="src/engine/VulkanRenderer.hpp" bodystart="36" bodyend="74"/>
+    <listofallmembers>
+      <member refid="classrr_1_1VulkanRenderer_1a721587d7b9f06c4a10acf417e8aa6010" prot="private" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>BASIC_FRAG_SHADER_PATH</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1a26853283a67a09bee47b4e399715de96" prot="private" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>BASIC_VERT_SHADER_PATH</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1ad27da1a42f10fcf4e0614b239bbe6473" prot="private" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>CLEAR_COLOR</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1a6ed2a8fae0b86289a15f0ff5bce05a6b" prot="private" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>createPipeline</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1ae4936264f549ae0320eaf3a7ca99878e" prot="private" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>loadRenderObjects</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1abcaa01e0144b4782e61e71217e9de70e" prot="private" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>m_commandBuffers</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1ac3aa9444929fd2962f36dc7e7f0cfe31" prot="private" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>m_commandPool</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1a59a40f5eeb6297a5e091442341d35e3a" prot="private" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>m_debugMessenger</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1a9061feda9467768fdb341f7ea702cb27" prot="private" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>m_device</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1a931845f77134e84c83f549c24ca9b2c5" prot="private" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>m_instance</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1ae76fd6c8ced71b60cbbf1c1819f8609e" prot="private" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>m_pipeline</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1a0ab0059e9534fc5ddfacd3ff2be2a971" prot="private" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>m_pipelineLayout</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1a9ad5811339cf6ca5a6cefeb89c934080" prot="private" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>m_renderObjects</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1a3dca550bc7f0147c97e82456a06d93b6" prot="private" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>m_surface</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1ac701b75cb89976ed04be9c56e93d6b63" prot="private" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>m_swapchain</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1a1d749271c1755a688c4a595a72d78ba0" prot="public" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>operator=</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1a6468d30dc724c0e3aba5bfa413143cf5" prot="public" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>operator=</name></member>
+      <member refid="classrr_1_1Renderer_1a97d5b67e737ea23129d9f7c199a16610" prot="public" virt="non-virtual" ambiguityscope="rr::Renderer::"><scope>rr::VulkanRenderer</scope><name>operator=</name></member>
+      <member refid="classrr_1_1Renderer_1af91f2e8ab8de28bcb1c3279d5bfef2db" prot="public" virt="non-virtual" ambiguityscope="rr::Renderer::"><scope>rr::VulkanRenderer</scope><name>operator=</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1ab8a4296c489aa902e9e27c69a6681fa6" prot="private" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>recordCommandBuffers</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1a09596ac1cb9981ec2e4d67702a4515ae" prot="private" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>recreateSwapchain</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1a01f2527977e7f7ca4cd0d393a9f5af85" prot="public" virt="virtual"><scope>rr::VulkanRenderer</scope><name>render</name></member>
+      <member refid="classrr_1_1Renderer_1a40758a1ac2264dbcb62fb2b0c85bf981" prot="public" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>Renderer</name></member>
+      <member refid="classrr_1_1Renderer_1a4f0e7d611a08788ce54ce39820982e83" prot="public" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>Renderer</name></member>
+      <member refid="classrr_1_1Renderer_1ae31ddb831141cfba38a2cb4a49767a8a" prot="public" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>Renderer</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1a256f3998e0c668766f7f8fca09d8a7e7" prot="private" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>renderObjects</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1a3e5a5b49686f304be39194b4aa0ffb2b" prot="public" virt="virtual"><scope>rr::VulkanRenderer</scope><name>shutdown</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1a192c280503d63a994ac5d3bfb1959d2a" prot="public" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>VulkanRenderer</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1a30884f3950bf2341c92e8022b5420a99" prot="public" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>VulkanRenderer</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1afd2c948a02e265d52d1ebca6d4c1c1e2" prot="public" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>VulkanRenderer</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1acf5fb9498698b5536219617491bd050b" prot="private" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>window</name></member>
+      <member refid="classrr_1_1Renderer_1acbde91675e409c0840b8387e6c4e08d5" prot="public" virt="virtual"><scope>rr::VulkanRenderer</scope><name>~Renderer</name></member>
+      <member refid="classrr_1_1VulkanRenderer_1a2cb11fae02ec643abaff8c4ddbd5e33f" prot="public" virt="non-virtual"><scope>rr::VulkanRenderer</scope><name>~VulkanRenderer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
