@@ -3,6 +3,28 @@
     "$schema": "https://cmake.org/cmake/help/latest/_downloads/3e2d73bff478d88a7de0de736ba5e361/schema.json",
     "configurePresets": [
         {
+            "name": "debug-clang",
+            "displayName": "Debug Clang",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "/usr/bin/clang-19",
+                "CMAKE_CXX_COMPILER": "/usr/bin/clang++-19"
+            }
+        },
+        {
+            "name": "release-clang",
+            "displayName": "Release Clang",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/release",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_C_COMPILER": "/usr/bin/clang-19",
+                "CMAKE_CXX_COMPILER": "/usr/bin/clang++-19"
+            }
+        },
+        {
             "name": "debug",
             "displayName": "Debug",
             "generator": "Ninja",
