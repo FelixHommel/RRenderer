@@ -1,5 +1,12 @@
 #include "RenderObject.hpp"
 
+#include "core/VulkanMesh.hpp"
+
+#include "glm/ext/vector_float3.hpp"
+#include <vulkan/vulkan_core.h>
+
+#include <memory>
+
 namespace rr
 {
 

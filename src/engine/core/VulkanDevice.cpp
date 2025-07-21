@@ -8,6 +8,7 @@
 #include <source_location>
 #include <vulkan/vulkan_core.h>
 
+#include <cstdint>
 #include <cstring>
 #include <functional>
 #include <set>
