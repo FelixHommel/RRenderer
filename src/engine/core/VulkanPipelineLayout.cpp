@@ -8,6 +8,11 @@
 namespace rr
 {
 
+/// \brief Construct a new \ref VulkanPipelineLayout
+///
+/// \param device a `VkDevice` where the `VulkanPipelineLayout` will be used on
+///
+/// \throws \ref VulkanException if the creation of the `VulkanPipelineLayout` had any errors
 VulkanPipelineLayout::VulkanPipelineLayout(VkDevice device)
     : device(device)
 {

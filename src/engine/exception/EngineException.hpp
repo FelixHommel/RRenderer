@@ -11,6 +11,10 @@
 namespace rr
 {
 
+/// \brief General purpose base exception for an engine exception
+///
+/// \author Felix Hommel
+/// \date 7/19/2025
 class EngineException : public std::exception
 {
 public:

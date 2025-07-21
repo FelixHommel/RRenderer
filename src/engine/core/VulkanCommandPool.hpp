@@ -13,6 +13,12 @@
 namespace rr
 {
 
+/// \brief VulkanCommandPool is a wrapper around VkCommandPool
+///
+/// It manages a VkCommandPool handle and provides functionality to allocate command buffers.
+///
+/// \author Felix Hommel
+/// \date 7/19/2025
 class VulkanCommandPool
 {
 public:
@@ -20,14 +26,14 @@ public:
     ~VulkanCommandPool();
 
     VulkanCommandPool(const VulkanCommandPool&) = delete;
-    VulkanCommandPool(VulkanCommandPool&&) = delete;
     VulkanCommandPool& operator=(const VulkanCommandPool&) = delete;
+    VulkanCommandPool(VulkanCommandPool&&) = delete;
     VulkanCommandPool& operator=(VulkanCommandPool&&) = delete;
 
     [[nodiscard]] VkCommandPool getHandle() const { return m_commandPool; }
 
-    std::unique_ptr<VulkanCommandBuffer> allocateCommandBuffer();
-    std::vector<std::unique_ptr<VulkanCommandBuffer>> allocateCommandBuffer(std::uint32_t count);
+    [[nodiscard]] std::unique_ptr<VulkanCommandBuffer> allocateCommandBuffer();
+    [[nodiscard]] std::vector<std::unique_ptr<VulkanCommandBuffer>> allocateCommandBuffer(std::uint32_t count) const;
 
 private:
     VulkanDevice& device;

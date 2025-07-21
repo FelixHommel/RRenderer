@@ -10,6 +10,12 @@
 namespace rr
 {
 
+/// \brief \ref PipelineConfigInfo stores information regarding the `VkPipeline`
+///
+/// It stores all fixed state structs that are needed to initialize a `VkPipeline`.
+///
+/// \author Felix Hommel
+/// \date 7/20/2025
 struct PipelineConfigInfo
 {
     PipelineConfigInfo() = default;
@@ -34,6 +40,12 @@ struct PipelineConfigInfo
     std::uint32_t subpass{ 0 };
 };
 
+/// \brief \ref VulkanPipeline is a wrapper around `VkPipeline`
+///
+/// It handles creation of the `VkPipeline` and provides access tp the handle.
+///
+/// \author Felix Hommel
+/// \date 7/20/2025
 class VulkanPipeline
 {
 public:
@@ -41,8 +53,8 @@ public:
     ~VulkanPipeline();
 
     VulkanPipeline(const VulkanPipeline&) = delete;
-    VulkanPipeline(VulkanPipeline&&) = delete;
     VulkanPipeline& operator=(const VulkanPipeline&) = delete;
+    VulkanPipeline(VulkanPipeline&&) = delete;
     VulkanPipeline& operator=(VulkanPipeline&&) = delete;
 
     static void defaultPipelineConfigInfo(PipelineConfigInfo& configInfo);

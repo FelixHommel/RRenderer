@@ -9,6 +9,10 @@
 namespace rr
 {
 
+/// \brief Enum which contains various reasons why GLFW may throw an exception
+///
+/// \author Felix Hommel
+/// \date 7/19/2025
 enum class GLFWExceptionCause : std::uint8_t
 {
     GLFW_INIT_FAILED,
@@ -16,6 +20,10 @@ enum class GLFWExceptionCause : std::uint8_t
     SURFACE_CREATION_FAILED
 };
 
+/// \brief If a GLFW operation fails or doesn't behave as expected a GLFWException can be thrown
+///
+/// \author Felix Hommel
+/// \date 7/19/2025
 class GLFWException : public EngineException
 {
 public:

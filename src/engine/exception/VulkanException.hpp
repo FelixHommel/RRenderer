@@ -11,6 +11,10 @@
 namespace rr
 {
 
+/// \brief Enum which contains various reasons why Vulkan may throw an exception
+///
+/// \author Felix Hommel
+/// \date 7/19/2025
 enum class VulkanExceptionCause : std::uint8_t
 {
     CREATE_INSTANCE,
@@ -45,6 +49,10 @@ enum class VulkanExceptionCause : std::uint8_t
     CREATE_BUFFER
 };
 
+/// \brief If a Vulkan operation fails or doesn't behave as expected a VulkanException can be thrown
+///
+/// \author Felix Hommel
+/// \date 7/19/2025
 class VulkanException : public EngineException
 {
 public:

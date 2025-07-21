@@ -8,6 +8,10 @@
 namespace rr
 {
 
+/// \brief Create a new \ref VulkanSurface
+///
+/// \param instance a `VkInstance`
+/// \param window `Window&` needed to interface with the surface
 VulkanSurface::VulkanSurface(VkInstance instance, Window& window)
     : instance(instance)
 {

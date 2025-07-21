@@ -7,6 +7,12 @@
 namespace rr
 {
 
+/// \brief \ref VulkanInstance wraps `VkInstance`
+///
+/// It provides basic access to the underlying `VkInstance` and manages it's lifetime.
+///
+/// \author Felix Hommel
+/// \date 7/20/2025
 class VulkanInstance
 {
 public:

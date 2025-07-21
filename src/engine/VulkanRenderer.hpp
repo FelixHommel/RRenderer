@@ -24,12 +24,14 @@
 namespace rr
 {
 
-/**
- * Vulkan implementation for the Renderer.
- *
- * @author Felix Hommel
- * @date 5/25/2025
-*/
+
+/// \brief Vulkan implementation for the Renderer.
+///
+/// It is the key interface with which the rendering can be done. It manages all the Vulkan
+/// objects and components.
+///
+/// \author Felix Hommel
+/// \date 5/25/2025
 class VulkanRenderer : public Renderer
 {
 public:
@@ -47,7 +49,7 @@ public:
 private:
     Window& window;
 
-    //NOTE: Order here matters in orer for the right order of dstructions to work and not interfere with vulkan objects
+    //NOTE: Order here matters in order for the right order of destruction to work and not interfere with vulkan objects
     std::unique_ptr<VulkanInstance> m_instance{ std::make_unique<VulkanInstance>() };
     std::unique_ptr<VulkanDebugMessenger> m_debugMessenger;
     std::unique_ptr<VulkanSurface> m_surface;
@@ -63,12 +65,12 @@ private:
     static constexpr std::string_view BASIC_VERT_SHADER_PATH{ "./shaders/basic.vert.spv" };
     static constexpr std::string_view BASIC_FRAG_SHADER_PATH{ "./shaders/basic.frag.spv" };
     
-    [[nodiscard]] std::unique_ptr<VulkanPipeline> createPipeline();
+    [[nodiscard]] std::unique_ptr<VulkanPipeline> createPipeline() const;
 
     void loadRenderObjects();
     void recreateSwapchain();
     void recordCommandBuffers(std::size_t imageIndex);
-    void renderObjects(VkCommandBuffer comandBuffer);
+    void renderObjects(VkCommandBuffer commandBuffer);
 };
 
 } // !rr

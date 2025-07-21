@@ -20,6 +20,11 @@
 namespace rr
 {
 
+/// \brief Create a new \ref VulkanSwapchain
+///
+/// \param device `VulkanDevice&` to the device the swapchain is running on
+/// \param surface `VkSurfaceKHR` that is drawn to
+/// \param windowExtent `VkExtent2D` size of the window
 VulkanSwapchain::VulkanSwapchain(VulkanDevice& device, VkSurfaceKHR surface, VkExtent2D windowExtent)
     : device(device)
     , surface(surface)
@@ -28,6 +33,12 @@ VulkanSwapchain::VulkanSwapchain(VulkanDevice& device, VkSurfaceKHR surface, VkE
     createVulkanSwapchain();
 }
 
+/// \brief Create a new \ref VulkanSwapchain based on another \ref VulkanSwapchain
+///
+/// \param device `VulkanDevice&` to the device the swapchain is running on
+/// \param surface `VkSurfaceKHR` that is drawn to
+/// \param windowExtent `VkExtent2D` size of the window
+/// \param previous old `VulkanSwapchain` stored in a std::shared_ptr
 VulkanSwapchain::VulkanSwapchain(VulkanDevice& device, VkSurfaceKHR surface, VkExtent2D windowExtent, std::shared_ptr<VulkanSwapchain> previous)
     : device(device)
     , surface(surface)
@@ -38,7 +49,7 @@ VulkanSwapchain::VulkanSwapchain(VulkanDevice& device, VkSurfaceKHR surface, VkE
 
 VulkanSwapchain::~VulkanSwapchain()
 {
-    auto count = imageCount();
+    const std::size_t count = imageCount();
 
     for(auto* const imageView : m_swapchainImageViews)
         vkDestroyImageView(device.getHandle(), imageView, nullptr);
@@ -57,8 +68,8 @@ VulkanSwapchain::~VulkanSwapchain()
         vkFreeMemory(device.getHandle(), m_depthImagesMemory[i], nullptr);
     }
 
-    for(auto* const framebuffe : m_swapchainFramebuffers)
-        vkDestroyFramebuffer(device.getHandle(), framebuffe, nullptr);
+    for(auto* const framebuffer : m_swapchainFramebuffers)
+        vkDestroyFramebuffer(device.getHandle(), framebuffer, nullptr);
 
     vkDestroyRenderPass(device.getHandle(), m_renderPass, nullptr);
 
@@ -74,13 +85,25 @@ VulkanSwapchain::~VulkanSwapchain()
     }
 }
 
-VkResult VulkanSwapchain::acquireNextImage(std::uint32_t* imageIndex)
+/// \brief Get the next render target from the Swapchain
+///
+/// \param[out] imageIndex `std::uint32_t*` where the index of the next image is stored
+///
+/// \returns the `VkResult` of `vkAcquireNextImageKHR(...)`
+VkResult VulkanSwapchain::acquireNextImage(std::uint32_t* imageIndex) const
 {
     vkWaitForFences(device.getHandle(), 1, &m_inFlightFences[m_currentFrame], VK_TRUE, std::numeric_limits<std::uint64_t>::max());
 
     return vkAcquireNextImageKHR(device.getHandle(), m_swapchain, std::numeric_limits<std::uint64_t>::max(), m_imageAvailableSemaphores[m_currentFrame], VK_NULL_HANDLE, imageIndex);
 }
 
+/// \brief Submit \p commandBuffer to the Swapchain in order to be rendered
+///
+/// \param commandBuffer `VkCommandBuffer*` currently used command buffer
+/// \param imageIndex `std::uint32_t*` index of the currently used swapchain image
+///
+/// \returns `VkResult` of `vkQueuePresentKHR(...)`
+/// \throws \ref VulkanException if an error occurred while submitting the command buffer
 VkResult VulkanSwapchain::submitCommandBuffer(const VkCommandBuffer* commandBuffer, const std::uint32_t* imageIndex)
 {
     if(m_imagesInFlight[*imageIndex] != VK_NULL_HANDLE)
@@ -123,6 +146,14 @@ VkResult VulkanSwapchain::submitCommandBuffer(const VkCommandBuffer* commandBuff
     return result;
 }
 
+/// \brief Get the framebuffer at \p index
+///
+/// Performs bounds checking before accessing the framebuffer array.
+///
+/// \param index `std::size_t` the index of the requested framebuffer
+///
+/// \returns `VkFramebuffer` at \p index if \p index is within bounds
+/// \throws `std::out_of_range` if \p index is greater than the amount of available framebuffers
 VkFramebuffer VulkanSwapchain::getFramebufferHandle(std::size_t index) const
 {
     if(index >= m_swapchainFramebuffers.size())
@@ -131,6 +162,9 @@ VkFramebuffer VulkanSwapchain::getFramebufferHandle(std::size_t index) const
     return m_swapchainFramebuffers[index];
 }
 
+/// \brief Set up a new \ref VulkanSwapchain
+///
+/// \param previous `std::shared_ptr` to an old \ref VulkanSwapchain [default=nullptr]
 void VulkanSwapchain::createVulkanSwapchain(std::shared_ptr<VulkanSwapchain> previous)
 {
     createSwapchain(previous);
@@ -141,9 +175,11 @@ void VulkanSwapchain::createVulkanSwapchain(std::shared_ptr<VulkanSwapchain> pre
     createSyncObjects();
 }
 
-/**
- *  Set up the swapchain with format, extent and used queues.
-*/
+/// \brief Set up the `VkSwapchainKHR` with format, extent and used queues
+///
+/// \param previous `std::shared_ptr` to an old \ref VulkanSwapchain [default=nullptr]
+///
+/// \throws \ref VulkanException if there was an error while creating the `VkSwapchainKHR`
 void VulkanSwapchain::createSwapchain(std::shared_ptr<VulkanSwapchain> previous)
 {
     SwapchainSupportDetails swapchainSupport{ device.getSwapchainSupport() };
@@ -196,9 +232,9 @@ void VulkanSwapchain::createSwapchain(std::shared_ptr<VulkanSwapchain> previous)
     m_swapchainImageExtent = extent;
 }
 
-/**
- *  Set up the image views used by the swapchain.
-*/
+/// \brief Set up the image views used by the swapchain
+///
+/// \throws \ref VulkanException if there was an error while creating the image views
 void VulkanSwapchain::createImageViews()
 {
     m_swapchainImageViews.resize(m_swapchainImages.size());
@@ -224,9 +260,9 @@ void VulkanSwapchain::createImageViews()
     }
 }
 
-/**
- *  Set up the render passes with all used attachments.
-*/
+/// \brief Set up the render passes with all used attachments
+///
+/// \throws \ref VulkanException if there was an error while creating the render pass
 void VulkanSwapchain::createRenderPass()
 {
     VkAttachmentDescription depthAttachment{
@@ -292,9 +328,9 @@ void VulkanSwapchain::createRenderPass()
         throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_RENDER_PASS);
 }
 
-/**
- *  Set up the depth images, image views and their memory on the device.
-*/
+/// Set up the depth images, image views and their memory on the device
+///
+/// \throws \ref VulkanException if there was an error while creating the depth image views
 void VulkanSwapchain::createDepthResources()
 {
     VkFormat depthFormat{ findDepthFormat() };
@@ -346,9 +382,9 @@ void VulkanSwapchain::createDepthResources()
     }
 }
 
-/**
- *  Set up the framebuffers which are use by the swapchain to display frames.
-*/
+/// \brief Set up the framebuffers which are use by the swapchain to display frames
+///
+/// \throws \ref VulkanException if there was an error while creating the framebuffers
 void VulkanSwapchain::createFramebuffers()
 {
     m_swapchainFramebuffers.resize(imageCount());
@@ -373,9 +409,9 @@ void VulkanSwapchain::createFramebuffers()
     }
 }
 
-/**
- *  Set up the semaphores and fences used during the presentation of frames.
-*/
+/// \brief Set up the semaphores and fences used during the presentation of frames
+///
+/// \throws \ref VulkanException if there was an error while creating either any semaphores or any fences
 void VulkanSwapchain::createSyncObjects()
 {
     m_imageAvailableSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
@@ -406,12 +442,11 @@ void VulkanSwapchain::createSyncObjects()
     }
 }
 
-/**
- *  Choose a Extent2D for the swapchain.
- *
- *  @param capabilities - VkSurfaceCapabilitiesKHR object containing details about the extent of the surface
- *  @returns VkExtent2D - extent that is going to be used by the swapchain
-*/
+/// \brief Choose a `VkExtent2D` for the swapchain
+///
+/// \param capabilities `VkSurfaceCapabilitiesKHR&` object containing details about the extent of the surface
+///
+/// \returns `VkExtent2D` that is going to be used by the swapchain
 VkExtent2D VulkanSwapchain::chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities) const
 {
     if(capabilities.currentExtent.width != UINT32_MAX)
@@ -424,26 +459,22 @@ VkExtent2D VulkanSwapchain::chooseSwapExtent(const VkSurfaceCapabilitiesKHR& cap
     return actualExtent;
 }
 
-/**
- *  Search the device for a suitable depth format
- *
- *  @returns VkFormat - which is going to be used by the depth resources
-*/
+/// \brief Search the device for a suitable depth format
+///
+/// \returns `VkFormat` which is going to be used by the depth resources
 VkFormat VulkanSwapchain::findDepthFormat() const
 {
     return device.findSupportedFormat(
-        {VK_FORMAT_D32_SFLOAT, VK_FORMAT_D32_SFLOAT_S8_UINT, VK_FORMAT_D24_UNORM_S8_UINT},
+        { VK_FORMAT_D32_SFLOAT, VK_FORMAT_D32_SFLOAT_S8_UINT, VK_FORMAT_D24_UNORM_S8_UINT },
         VK_IMAGE_TILING_OPTIMAL,
         VK_FORMAT_FEATURE_DEPTH_STENCIL_ATTACHMENT_BIT);
 }
 
-/**
- *  Pick a suitable Surface format from a selection of available formats
- *
- *  @param availableFormats - vector with all available Formats
- *  @return the first format that matches VK_FORMAT_B8G8R8A8_UNORM or if there is no format that matches,
- *          the first format in <code>availableFormats<\code>
-*/
+/// \brief Pick a suitable `VkSurfaceFormatKHR` from a selection of available formats
+///
+/// \param availableFormats std::vector with all available `VkSurfaceFormatKHR`
+///
+/// \returns the first format that matches VK_FORMAT_B8G8R8A8_UNORM or if there is no format that matches, the first format in \p availableFormats
 VkSurfaceFormatKHR VulkanSwapchain::chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& availableFormats)
 {
     for(const auto& format : availableFormats)
@@ -452,15 +483,14 @@ VkSurfaceFormatKHR VulkanSwapchain::chooseSwapSurfaceFormat(const std::vector<Vk
             return format;
     }
 
-    return availableFormats.at(0);
+    return availableFormats.front();
 }
 
-/**
- *  Pick a present mode for the swapchain.
- *
- *  @param availablePresentModes - vector containing all available present modes
- *  @returns present mode with Mailbox system, if none match return FIFO(V-Sync)
-*/
+/// \brief Pick a present mode for the swapchain.
+///
+/// \param availablePresentModes std::vector containing all available present modes
+///
+/// \returns `VkPresentModeKHR` with Mailbox system, if none match return FIFO(V-Sync)
 VkPresentModeKHR VulkanSwapchain::chooseSwapPresentMode(const std::vector<VkPresentModeKHR>& availablePresentModes)
 {
     for(const auto& presentMode : availablePresentModes)
