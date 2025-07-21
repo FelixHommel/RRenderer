@@ -228,8 +228,8 @@ void VulkanDevice::createLogicalDevice()
 /// \return `true` if \p device is suitable, `false` if not
 bool VulkanDevice::isPhysicalDeviceSuitable(VkPhysicalDevice device) const
 {
-    QueueFamilyIndices indices{ findQueueFamilies(device) };
-    bool extensionsSupported{ checkDeviceExtensionsSupported(device) };
+    const QueueFamilyIndices indices{ findQueueFamilies(device) };
+    const bool extensionsSupported{ checkDeviceExtensionsSupported(device) };
     bool swapchainSuitable{ false };
 
     if(extensionsSupported)
@@ -356,4 +356,4 @@ std::uint32_t VulkanDevice::findMemoryType(std::uint32_t typeFilter, VkMemoryPro
     throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::NO_SUITABLE_MEMORY_TYPE_FOUND);
 }
 
-}
+} // !rr

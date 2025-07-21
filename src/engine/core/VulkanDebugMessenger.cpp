@@ -71,13 +71,15 @@ void DestroyDebugUtilsMessengerEXT(
 /// \brief Construct a new \ref VulkanDebugMessenger
 ///
 /// \param instance VkInstance the \ref VulkanDebugMessenger is bound to
+///
+/// \throws \ref VulkanException if anything goes wring while creating the debug messenger
 VulkanDebugMessenger::VulkanDebugMessenger(VkInstance instance)
     : instance(instance)
 {
     if constexpr (!useValidationLayers)
         return;
 
-    constexpr VkDebugUtilsMessengerCreateInfoEXT createInfo{
+    const VkDebugUtilsMessengerCreateInfoEXT createInfo{
         .sType = VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT,
         .messageSeverity = VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT,
         .messageType = VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT,

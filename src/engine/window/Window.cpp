@@ -19,7 +19,7 @@ namespace rr
 /// \param height height of the window
 /// \param title title of the window
 ///
-/// \throws std::runtime_error if anything goes wrong while creation
+/// \throws \ref GLFWException if anything goes wrong while creating the Window
 Window::Window(int width, int height, const std::string& title)
     : m_window(nullptr)
     , m_width(width)

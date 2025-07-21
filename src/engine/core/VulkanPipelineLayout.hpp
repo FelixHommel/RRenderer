@@ -38,8 +38,8 @@ public:
     ~VulkanPipelineLayout();
 
     VulkanPipelineLayout(const VulkanPipelineLayout&) = delete;
-    VulkanPipelineLayout(VulkanPipelineLayout&&) = delete;
     VulkanPipelineLayout& operator=(const VulkanPipelineLayout&) = delete;
+    VulkanPipelineLayout(VulkanPipelineLayout&&) = delete;
     VulkanPipelineLayout& operator=(VulkanPipelineLayout&&) = delete;
 
     [[nodiscard]] VkPipelineLayout getHandle() const { return m_pipelineLayout; }

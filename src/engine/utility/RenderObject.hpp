@@ -88,6 +88,6 @@ class RenderObject
         void updateTransformMatrix();
 };
 
-} //!rr
+} // !rr
 
 #endif //!RRENDERER_ENGINE_UTILITY_RENDER_OBJECT_HPP

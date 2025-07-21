@@ -111,10 +111,10 @@ VkResult VulkanSwapchain::submitCommandBuffer(const VkCommandBuffer* commandBuff
 
     m_imagesInFlight[*imageIndex] = m_inFlightFences[m_currentFrame];
 
-    std::array<VkSemaphore, 1> waitSemaphores{ m_imageAvailableSemaphores[m_currentFrame] };
-    std::array<VkPipelineStageFlags, 1> waitStages{ VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT };
-    std::array<VkSemaphore, 1> signalSemaphore{ m_renderFinishedSemaphores[*imageIndex] };
-    VkSubmitInfo submitInfo{
+    const std::array<VkSemaphore, 1> waitSemaphores{ m_imageAvailableSemaphores[m_currentFrame] };
+    const std::array<VkPipelineStageFlags, 1> waitStages{ VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT };
+    const std::array<VkSemaphore, 1> signalSemaphore{ m_renderFinishedSemaphores[*imageIndex] };
+    const VkSubmitInfo submitInfo{
         .sType = VK_STRUCTURE_TYPE_SUBMIT_INFO,
         .waitSemaphoreCount = static_cast<std::uint32_t>(waitSemaphores.size()),
         .pWaitSemaphores = waitSemaphores.data(),
@@ -130,7 +130,7 @@ VkResult VulkanSwapchain::submitCommandBuffer(const VkCommandBuffer* commandBuff
         throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::QUEUE_SUBMIT_GRAPHICS);
 
     std::array<VkSwapchainKHR, 1> swapchains{ m_swapchain };
-    VkPresentInfoKHR presentInfo{
+    const VkPresentInfoKHR presentInfo{
         .sType = VK_STRUCTURE_TYPE_PRESENT_INFO_KHR,
         .waitSemaphoreCount = static_cast<std::uint32_t>(signalSemaphore.size()),
         .pWaitSemaphores = signalSemaphore.data(),
@@ -139,7 +139,7 @@ VkResult VulkanSwapchain::submitCommandBuffer(const VkCommandBuffer* commandBuff
         .pImageIndices = imageIndex
     };
 
-    auto result{ vkQueuePresentKHR(device.getPresentQueueHandle(), &presentInfo) };
+    const auto result{ vkQueuePresentKHR(device.getPresentQueueHandle(), &presentInfo) };
 
     m_currentFrame = (m_currentFrame + 1) % MAX_FRAMES_IN_FLIGHT;
 
@@ -182,11 +182,11 @@ void VulkanSwapchain::createVulkanSwapchain(std::shared_ptr<VulkanSwapchain> pre
 /// \throws \ref VulkanException if there was an error while creating the `VkSwapchainKHR`
 void VulkanSwapchain::createSwapchain(std::shared_ptr<VulkanSwapchain> previous)
 {
-    SwapchainSupportDetails swapchainSupport{ device.getSwapchainSupport() };
+    const SwapchainSupportDetails swapchainSupport{ device.getSwapchainSupport() };
 
-    VkSurfaceFormatKHR surfaceFormat{ chooseSwapSurfaceFormat(swapchainSupport.formats) };
-    VkPresentModeKHR presentMode{ chooseSwapPresentMode(swapchainSupport.presentModes) };
-    VkExtent2D extent{ chooseSwapExtent(swapchainSupport.capabilities) };
+    const VkSurfaceFormatKHR surfaceFormat{ chooseSwapSurfaceFormat(swapchainSupport.formats) };
+    const VkPresentModeKHR presentMode{ chooseSwapPresentMode(swapchainSupport.presentModes) };
+    const VkExtent2D extent{ chooseSwapExtent(swapchainSupport.capabilities) };
 
     std::uint32_t imageCount{ swapchainSupport.capabilities.minImageCount + 1 };
     if(swapchainSupport.capabilities.maxImageCount > 0 && imageCount > swapchainSupport.capabilities.maxImageCount)
@@ -212,10 +212,10 @@ void VulkanSwapchain::createSwapchain(std::shared_ptr<VulkanSwapchain> previous)
         .oldSwapchain = previous == nullptr ? VK_NULL_HANDLE : previous->getHandle()
     };
 
-    QueueFamilyIndices indices{ device.findPhysicalQueueFamilies() };
+    const QueueFamilyIndices indices{ device.findPhysicalQueueFamilies() };
     if(!indices.areSameQueue())
     {
-        auto queueFamilyIndices{ indices.toAray() };
+        const auto queueFamilyIndices{ indices.toAray() };
         createInfo.imageSharingMode = VK_SHARING_MODE_CONCURRENT;
         createInfo.queueFamilyIndexCount = static_cast<std::uint32_t>(queueFamilyIndices.size());
         createInfo.pQueueFamilyIndices = queueFamilyIndices.data();
@@ -241,7 +241,7 @@ void VulkanSwapchain::createImageViews()
 
     for(std::size_t i{0}; i < m_swapchainImageViews.size(); ++i)
     {
-        VkImageViewCreateInfo createInfo{
+        const VkImageViewCreateInfo createInfo{
             .sType = VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO,
             .image = m_swapchainImages[i],
             .viewType = VK_IMAGE_VIEW_TYPE_2D,
@@ -265,7 +265,7 @@ void VulkanSwapchain::createImageViews()
 /// \throws \ref VulkanException if there was an error while creating the render pass
 void VulkanSwapchain::createRenderPass()
 {
-    VkAttachmentDescription depthAttachment{
+    const VkAttachmentDescription depthAttachment{
         .format = findDepthFormat(),
         .samples = VK_SAMPLE_COUNT_1_BIT,
         .loadOp = VK_ATTACHMENT_LOAD_OP_CLEAR,
@@ -276,12 +276,12 @@ void VulkanSwapchain::createRenderPass()
         .finalLayout = VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL
     };
 
-    VkAttachmentReference depthAttachmentRef{
+    const VkAttachmentReference depthAttachmentRef{
         .attachment = 1,
         .layout = VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL
     };
 
-    VkAttachmentDescription colorAttachment{
+    const VkAttachmentDescription colorAttachment{
         .format = m_swapchainImageFormat,
         .samples = VK_SAMPLE_COUNT_1_BIT,
         .loadOp = VK_ATTACHMENT_LOAD_OP_CLEAR,
@@ -292,19 +292,19 @@ void VulkanSwapchain::createRenderPass()
         .finalLayout = VK_IMAGE_LAYOUT_PRESENT_SRC_KHR
     };
 
-    VkAttachmentReference colorAttachmentRef{
+    const VkAttachmentReference colorAttachmentRef{
         .attachment = 0,
         .layout = VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL
     };
 
-    VkSubpassDescription subpass{
+    const VkSubpassDescription subpass{
         .pipelineBindPoint = VK_PIPELINE_BIND_POINT_GRAPHICS,
         .colorAttachmentCount = 1,
         .pColorAttachments = &colorAttachmentRef,
         .pDepthStencilAttachment = &depthAttachmentRef
     };
 
-    VkSubpassDependency dependency{
+    const VkSubpassDependency dependency{
         .srcSubpass = VK_SUBPASS_EXTERNAL,
         .dstSubpass = 0,
         .srcStageMask = VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT | VK_PIPELINE_STAGE_EARLY_FRAGMENT_TESTS_BIT,
@@ -313,8 +313,8 @@ void VulkanSwapchain::createRenderPass()
         .dstAccessMask = VK_ACCESS_COLOR_ATTACHMENT_WRITE_BIT | VK_ACCESS_DEPTH_STENCIL_ATTACHMENT_WRITE_BIT
     };
 
-    std::array<VkAttachmentDescription, 2> attachments{ colorAttachment, depthAttachment };
-    VkRenderPassCreateInfo createInfo{
+    const std::array<VkAttachmentDescription, 2> attachments{ colorAttachment, depthAttachment };
+    const VkRenderPassCreateInfo createInfo{
         .sType = VK_STRUCTURE_TYPE_RENDER_PASS_CREATE_INFO,
         .attachmentCount = static_cast<std::uint32_t>(attachments.size()),
         .pAttachments = attachments.data(),
@@ -328,13 +328,13 @@ void VulkanSwapchain::createRenderPass()
         throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_RENDER_PASS);
 }
 
-/// Set up the depth images, image views and their memory on the device
+/// \brief Set up the depth images, image views and their memory on the device
 ///
 /// \throws \ref VulkanException if there was an error while creating the depth image views
 void VulkanSwapchain::createDepthResources()
 {
-    VkFormat depthFormat{ findDepthFormat() };
-    VkExtent2D swapchainExtent{ m_swapchainImageExtent };
+    const VkFormat depthFormat{ findDepthFormat() };
+    const VkExtent2D swapchainExtent{ m_swapchainImageExtent };
 
     m_depthImages.resize(imageCount());
     m_depthImagesMemory.resize(imageCount());
@@ -342,7 +342,7 @@ void VulkanSwapchain::createDepthResources()
 
     for(std::size_t i{0}; i < imageCount(); ++i)
     {
-        VkImageCreateInfo imageCreateInfo{
+        const VkImageCreateInfo imageCreateInfo{
             .sType = VK_STRUCTURE_TYPE_IMAGE_CREATE_INFO,
             .flags = 0,
             .imageType = VK_IMAGE_TYPE_2D,
@@ -363,7 +363,7 @@ void VulkanSwapchain::createDepthResources()
 
         device.createImageWithInfo(imageCreateInfo, VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, m_depthImages[i], m_depthImagesMemory[i]);
 
-        VkImageViewCreateInfo imageViewCreateInfo{
+        const VkImageViewCreateInfo imageViewCreateInfo{
             .sType = VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO,
             .image = m_depthImages[i],
             .viewType = VK_IMAGE_VIEW_TYPE_2D,
@@ -391,10 +391,10 @@ void VulkanSwapchain::createFramebuffers()
 
     for(std::size_t i{0}; i < imageCount(); ++i)
     {
-        std::array<VkImageView, 2> attachments{ m_swapchainImageViews[i], m_depthImageViews[i] };
+        const std::array<VkImageView, 2> attachments{ m_swapchainImageViews[i], m_depthImageViews[i] };
 
-        VkExtent2D swapchainExtent{ m_swapchainImageExtent };
-        VkFramebufferCreateInfo createInfo{
+        const VkExtent2D swapchainExtent{ m_swapchainImageExtent };
+        const VkFramebufferCreateInfo createInfo{
             .sType = VK_STRUCTURE_TYPE_FRAMEBUFFER_CREATE_INFO,
             .renderPass = m_renderPass,
             .attachmentCount = static_cast<std::uint32_t>(attachments.size()),
@@ -419,11 +419,11 @@ void VulkanSwapchain::createSyncObjects()
     m_inFlightFences.resize(MAX_FRAMES_IN_FLIGHT);
     m_imagesInFlight.resize(imageCount(), VK_NULL_HANDLE);
 
-    VkSemaphoreCreateInfo semaphoreCreateInfo{
+    const VkSemaphoreCreateInfo semaphoreCreateInfo{
         .sType = VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO
     };
 
-    VkFenceCreateInfo fenceCreateInfo{
+    const VkFenceCreateInfo fenceCreateInfo{
         .sType = VK_STRUCTURE_TYPE_FENCE_CREATE_INFO,
         .flags = VK_FENCE_CREATE_SIGNALED_BIT
     };

@@ -44,8 +44,8 @@ public:
     ~VulkanMesh();
 
     VulkanMesh(const VulkanMesh&) = delete;
-    VulkanMesh(VulkanMesh&&) = delete;
     VulkanMesh& operator=(const VulkanMesh&) = delete;
+    VulkanMesh(VulkanMesh&&) = delete;
     VulkanMesh& operator=(VulkanMesh&&) = delete;
 
     void bind(VkCommandBuffer cmdBuffer) const;

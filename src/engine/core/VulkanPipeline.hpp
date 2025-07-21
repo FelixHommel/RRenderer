@@ -59,7 +59,7 @@ public:
 
     static void defaultPipelineConfigInfo(PipelineConfigInfo& configInfo);
 
-    void bind(VkCommandBuffer cmdBuffer);
+    void bind(VkCommandBuffer cmdBuffer) const;
 
 private:
     VkDevice device;
@@ -68,9 +68,9 @@ private:
     VkShaderModule m_vertShaderModule{ VK_NULL_HANDLE };
     VkShaderModule m_fragShaderModule{ VK_NULL_HANDLE };
 
-    void createShaderModule(const std::vector<char>& code, VkShaderModule* shaderModule);
+    void createShaderModule(const std::vector<char>& code, VkShaderModule* shaderModule) const;
 
-    // TODO: move to dedicated file io class
+    // TODO: move to dedicated File-IO related class
     static std::vector<char> readFile(const std::filesystem::path& filepath);
 };
 

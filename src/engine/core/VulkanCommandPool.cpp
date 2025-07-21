@@ -19,6 +19,8 @@ namespace rr
 /// \brief Construct a new \ref VulkanCommandPool
 ///
 /// \param device VulkanDevice& where the command pool is on
+///
+/// \throws \ref VulkanException if \p device has no queue of the graphics family
 VulkanCommandPool::VulkanCommandPool(VulkanDevice& device)
     : device(device)
 {

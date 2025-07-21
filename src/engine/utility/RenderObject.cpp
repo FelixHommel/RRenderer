@@ -36,4 +36,4 @@ void RenderObject::updateTransformMatrix()
     m_transformIsDirty = false;
 }
 
-}
+} // !rr

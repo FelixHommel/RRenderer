@@ -36,7 +36,7 @@ namespace rr
 
 /// \brief Construct a new \ref VulkanRenderer based on \p window
 ///
-/// \param window Window&
+/// \param window `Window&`
 VulkanRenderer::VulkanRenderer(Window& window)
     : window(window)
     , m_debugMessenger(std::make_unique<VulkanDebugMessenger>(m_instance->getHandle()))
@@ -54,10 +54,12 @@ VulkanRenderer::VulkanRenderer(Window& window)
 }
 
 /// \brief Update the frame
+///
+/// \throws \ref VulkanException if there are any errors during the rendering process
 void VulkanRenderer::render()
 {
     // TODO: find better way to limit frames
-    const int FPS = 33;
+    constexpr int FPS{ 33 };
     std::this_thread::sleep_for(std::chrono::milliseconds(FPS));
 
     std::uint32_t imageIndex{};
@@ -98,12 +100,12 @@ void VulkanRenderer::shutdown()
 /// \brief Load all models that are used in the Renderer
 void VulkanRenderer::loadRenderObjects()
 {
-    std::vector<Vertex> vertices{
+    const std::vector<Vertex> vertices{
         {.position = {0.f, -0.5f}, .color = {1.f, 0.f, 0.f}}, //NOLINT
         {.position = {0.5f, 0.5f}, .color = {0.f, 1.f, 0.f}}, //NOLINT
         {.position = {-0.5f, 0.5f}, .color = {0.f, 0.f, 1.f}} //NOLINT
     };
-    auto mesh = std::make_shared<VulkanMesh>(*m_device, vertices);
+    const auto mesh = std::make_shared<VulkanMesh>(*m_device, vertices);
 
     std::vector<glm::vec3> colors {
         { 1.f, 0.7f, 0.73f }, //NOLINT
@@ -140,6 +142,7 @@ std::unique_ptr<VulkanPipeline> VulkanRenderer::createPipeline() const
     VulkanPipeline::defaultPipelineConfigInfo(pipelineConfig);
     pipelineConfig.renderPass = m_swapchain->getRenderPassHandle();
     pipelineConfig.pipelineLayout = m_pipelineLayout->getHandle();
+
     return std::make_unique<VulkanPipeline>(m_device->getHandle(), pipelineConfig, BASIC_VERT_SHADER_PATH, BASIC_FRAG_SHADER_PATH);
 }
 
@@ -175,18 +178,18 @@ void VulkanRenderer::recreateSwapchain()
 /// \param imageIndex std::size_t denoting which image is being recorded to
 void VulkanRenderer::recordCommandBuffers(std::size_t imageIndex)
 {
-    VkCommandBufferBeginInfo beginInfo{
+    const VkCommandBufferBeginInfo beginInfo{
         .sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO
     };
 
     if(vkBeginCommandBuffer(m_commandBuffers.at(imageIndex)->getHandleRef(), &beginInfo) != VK_SUCCESS)
         throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::BEGIN_RECORD_COMMAND_BUFFER, imageIndex);
 
-    std::array<VkClearValue, 2> clearValues{
+    constexpr std::array<VkClearValue, 2> clearValues{
         VkClearValue{ .color = CLEAR_COLOR },
         VkClearValue{ .depthStencil = { 1.f, 0 } }
     };
-    VkRenderPassBeginInfo renderPassBeginInfo{
+    const VkRenderPassBeginInfo renderPassBeginInfo{
         .sType = VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO,
         .renderPass = m_swapchain->getRenderPassHandle(),
         .framebuffer = m_swapchain->getFramebufferHandle(imageIndex),
@@ -200,7 +203,7 @@ void VulkanRenderer::recordCommandBuffers(std::size_t imageIndex)
 
     vkCmdBeginRenderPass(m_commandBuffers[imageIndex]->getHandleRef(), &renderPassBeginInfo, VK_SUBPASS_CONTENTS_INLINE);
 
-    VkViewport viewport{
+    const VkViewport viewport{
         .x = 0,
         .y = 0,
         .width = static_cast<float>(m_swapchain->getExtent().width),
@@ -210,7 +213,7 @@ void VulkanRenderer::recordCommandBuffers(std::size_t imageIndex)
     };
     vkCmdSetViewport(m_commandBuffers[imageIndex]->getHandleRef(), 0, 1, &viewport);
 
-    VkRect2D scissor{
+    const VkRect2D scissor{
         { 0, 0 },
         m_swapchain->getExtent()
     };

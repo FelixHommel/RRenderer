@@ -32,7 +32,7 @@ namespace rr
 ///
 /// \author Felix Hommel
 /// \date 5/25/2025
-class VulkanRenderer : public Renderer
+class VulkanRenderer final : public Renderer
 {
 public:
     explicit VulkanRenderer(Window& window);

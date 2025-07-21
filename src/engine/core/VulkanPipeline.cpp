@@ -36,7 +36,7 @@ VulkanPipeline::VulkanPipeline(VkDevice device, const PipelineConfigInfo& config
     createShaderModule(readFile(vertFilepath), &m_vertShaderModule);
     createShaderModule(readFile(fragFilepath), &m_fragShaderModule);
 
-    std::array<VkPipelineShaderStageCreateInfo,2 > shaderStages{
+    const std::array<VkPipelineShaderStageCreateInfo,2 > shaderStages{
         {
             {
                 .sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO,
@@ -55,9 +55,9 @@ VulkanPipeline::VulkanPipeline(VkDevice device, const PipelineConfigInfo& config
         }
     };
 
-    auto bindingDescriptions = Vertex::getBindingDescriptions();
-    auto attributeDescriptions = Vertex::getAttributeDescriptions();
-    VkPipelineVertexInputStateCreateInfo vertexInputInfo{
+    const auto bindingDescriptions = Vertex::getBindingDescriptions();
+    const auto attributeDescriptions = Vertex::getAttributeDescriptions();
+    const VkPipelineVertexInputStateCreateInfo vertexInputInfo{
         .sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO,
         .vertexBindingDescriptionCount = static_cast<std::uint32_t>(bindingDescriptions.size()),
         .pVertexBindingDescriptions = bindingDescriptions.data(),
@@ -65,7 +65,7 @@ VulkanPipeline::VulkanPipeline(VkDevice device, const PipelineConfigInfo& config
         .pVertexAttributeDescriptions = attributeDescriptions.data()
     };
 
-    VkGraphicsPipelineCreateInfo pipelineInfo{
+    const VkGraphicsPipelineCreateInfo pipelineInfo{
         .sType = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO,
         .stageCount = 2,
         .pStages = shaderStages.data(),
@@ -180,7 +180,7 @@ void VulkanPipeline::defaultPipelineConfigInfo(PipelineConfigInfo& configInfo)
 /// \brief Bind the Pipeline for use in \p cmdBuffer
 ///
 /// \param cmdBuffer the `VkCommandBuffer` that the Pipeline will be bound to
-void VulkanPipeline::bind(VkCommandBuffer cmdBuffer)
+void VulkanPipeline::bind(VkCommandBuffer cmdBuffer) const
 {
     vkCmdBindPipeline(cmdBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, m_pipeline);
 }
@@ -191,9 +191,9 @@ void VulkanPipeline::bind(VkCommandBuffer cmdBuffer)
 /// \param[out] shaderModule the 'VkShaderModule' handle where the created shader will be saved
 ///
 /// \throws \ref VulkanException if there was an error while creating the module
-void VulkanPipeline::createShaderModule(const std::vector<char>& code, VkShaderModule* shaderModule)
+void VulkanPipeline::createShaderModule(const std::vector<char>& code, VkShaderModule* shaderModule) const
 {
-    VkShaderModuleCreateInfo createInfo{
+    const VkShaderModuleCreateInfo createInfo{
         .sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO,
         .codeSize = code.size(),
         .pCode = reinterpret_cast<const std::uint32_t*>(code.data())

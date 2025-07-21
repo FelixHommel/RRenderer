@@ -19,7 +19,7 @@ namespace rr
 /// \return std::vector of `VkVertexInputBindingDescription`
 std::vector<VkVertexInputBindingDescription> Vertex::getBindingDescriptions()
 {
-    std::vector<VkVertexInputBindingDescription> bindingDescriptions{
+    const std::vector<VkVertexInputBindingDescription> bindingDescriptions{
             {
                 .binding = 0,
                 .stride = sizeof(Vertex),
@@ -36,7 +36,7 @@ std::vector<VkVertexInputBindingDescription> Vertex::getBindingDescriptions()
 std::vector<VkVertexInputAttributeDescription> Vertex::getAttributeDescriptions()
 {
     // NOTE: For each attribute in the vertex buffer add an entry to the attribute description
-    std::vector<VkVertexInputAttributeDescription> attributeDescription{
+    const std::vector<VkVertexInputAttributeDescription> attributeDescription{
             {
                 .location = 0,
                 .binding = 0,
@@ -61,7 +61,7 @@ VulkanMesh::VulkanMesh(VulkanDevice& device, const std::vector<Vertex>& vertices
 {
     assert(m_vertexCount >= 3 && "At least 3 vertices are needed to create a vertex buffer");
 
-    VkDeviceSize bufferSize{ sizeof(vertices[0]) * m_vertexCount };
+    const VkDeviceSize bufferSize{ sizeof(vertices[0]) * m_vertexCount };
 
     device.createBuffer(
         bufferSize,

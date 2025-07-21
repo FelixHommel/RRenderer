@@ -22,7 +22,7 @@ VulkanCommandBuffer::VulkanCommandBuffer(VkDevice device, VkCommandPool commandP
     , commandPool(commandPool)
     , m_commandBuffer(VK_NULL_HANDLE)
 {
-    VkCommandBufferAllocateInfo allocInfo{
+    const VkCommandBufferAllocateInfo allocInfo{
         .sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO,
         .commandPool = commandPool,
         .level = level,
@@ -62,7 +62,7 @@ std::vector<std::unique_ptr<VulkanCommandBuffer>> VulkanCommandBuffer::create(Vk
 {
     std::vector<VkCommandBuffer> rawBuffers(count);
 
-    VkCommandBufferAllocateInfo allocInfo{
+    const VkCommandBufferAllocateInfo allocInfo{
         .sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO,
         .commandPool = commandPool,
         .level = level,

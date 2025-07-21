@@ -17,7 +17,7 @@ namespace rr
 /// \date 7/18/2025
 struct StringHash
 {
-    using is_transparent = void; // NOTE: needed for heterogenous operations
+    using is_transparent = void; // NOTE: needed for heterogeneous operations
 
     std::size_t operator()(std::string_view sv) const
     {

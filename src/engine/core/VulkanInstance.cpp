@@ -60,7 +60,7 @@ VulkanInstance::VulkanInstance()
     if(useValidationLayers && !checkValidationLayerSupport())
         throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::VALIDATION_LAYERS_UNAVAILABLE);
 
-    VkApplicationInfo appInfo{
+    const VkApplicationInfo appInfo{
         .sType = VK_STRUCTURE_TYPE_APPLICATION_INFO,
         .pApplicationName = "RRenderer Application",
         .pEngineName = "RRenderer",
@@ -68,7 +68,7 @@ VulkanInstance::VulkanInstance()
         .apiVersion = VK_API_VERSION_1_0
     };
 
-    auto extensions{ getRequiredExtensions() };
+    const auto extensions{ getRequiredExtensions() };
     VkInstanceCreateInfo createInfo{
         .sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO,
         .pApplicationInfo = &appInfo,
@@ -172,7 +172,7 @@ void VulkanInstance::hasGLFWRequiredInstanceExtensions()
     }
 
     spdlog::info("required extensions:");
-    auto requiredExtensions{ getRequiredExtensions() };
+    const auto requiredExtensions{ getRequiredExtensions() };
     for(const auto& required : requiredExtensions)
     {
         spdlog::info("\t{}", required);

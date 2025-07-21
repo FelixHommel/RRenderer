@@ -10,7 +10,7 @@
 
 TEST(FileIOException, constructor)
 {
-    std::filesystem::path p("non-existing-file-that-cant-be-found.nothing");
+    const std::filesystem::path p("non-existing-file-that-cant-be-found.nothing");
 
     try
     {
