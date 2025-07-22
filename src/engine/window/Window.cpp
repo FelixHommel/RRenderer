@@ -21,32 +21,33 @@ namespace rr
 ///
 /// \throws \ref GLFWException if anything goes wrong while creating the Window
 Window::Window(int width, int height, const std::string& title)
-    : m_window(nullptr)
-    , m_width(width)
-    , m_height(height)
-    , m_title(title)
+	: m_window(nullptr)
+	, m_width(width)
+	, m_height(height)
+	, m_title(title)
 {
-    if(glfwInit() == 0)
-        throwWithLog<GLFWException>(std::source_location::current(), GLFWExceptionCause::GLFW_INIT_FAILED);
+	if (glfwInit() == 0)
+		throwWithLog<GLFWException>(std::source_location::current(), GLFWExceptionCause::GLFW_INIT_FAILED);
 
-    spdlog::info("GLFW initialized successfully...");
+	spdlog::info("GLFW initialized successfully...");
 
-    glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
-    glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
+	glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+	glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
 
-    m_window = glfwCreateWindow(m_width, m_height, m_title.c_str(), nullptr, nullptr);
-    if(m_window == nullptr)
-        throwWithLog<GLFWException>(std::source_location::current(), GLFWExceptionCause::WINDOW_CREATION_FAILED);
+	m_window = glfwCreateWindow(m_width, m_height, m_title.c_str(), nullptr, nullptr);
+	if (m_window == nullptr)
+		throwWithLog<GLFWException>(
+			std::source_location::current(), GLFWExceptionCause::WINDOW_CREATION_FAILED);
 
-    glfwSetWindowUserPointer(m_window, this);
-    glfwSetFramebufferSizeCallback(m_window, Window::framebufferResizeCallback);
+	glfwSetWindowUserPointer(m_window, this);
+	glfwSetFramebufferSizeCallback(m_window, Window::framebufferResizeCallback);
 
-    spdlog::info("Window({}, {}) created successfully...", m_width, m_height);
+	spdlog::info("Window({}, {}) created successfully...", m_width, m_height);
 }
 
 Window::~Window()
 {
-    glfwDestroyWindow(m_window);
+	glfwDestroyWindow(m_window);
 }
 
 /// \brief Create a surface to which Vulkan can draw to
@@ -57,18 +58,19 @@ Window::~Window()
 /// \throws \ref GLFWException if GLFW couldn't create a valid surface
 void Window::createWindowSurface(VkInstance& instance, VkSurfaceKHR* surface) const
 {
-    if(glfwCreateWindowSurface(instance, m_window, nullptr, surface) != VK_SUCCESS)
-        throwWithLog<GLFWException>(std::source_location::current(), GLFWExceptionCause::SURFACE_CREATION_FAILED);
+	if (glfwCreateWindowSurface(instance, m_window, nullptr, surface) != VK_SUCCESS)
+		throwWithLog<GLFWException>(
+			std::source_location::current(), GLFWExceptionCause::SURFACE_CREATION_FAILED);
 }
 
 /// \brief GLFW callback function for resizing the framebuffer
 void Window::framebufferResizeCallback(GLFWwindow* window, int width, int height)
 {
-    auto* pWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
+	auto* pWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
 
-    pWindow->m_framebufferResized = true;
-    pWindow->m_width = width;
-    pWindow->m_height = height;
+	pWindow->m_framebufferResized = true;
+	pWindow->m_width = width;
+	pWindow->m_height = height;
 }
 
-} // !rr
+} // namespace rr

@@ -17,55 +17,58 @@ namespace
 {
 
 VKAPI_ATTR VkBool32 VKAPI_CALL debugCallback(
-    VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity,
-    VkDebugUtilsMessageTypeFlagsEXT /*messageType*/,
-    const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData,
-    void* /*pUserData*/)
+	VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity,
+	VkDebugUtilsMessageTypeFlagsEXT /*messageType*/,
+	const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData,
+	void* /*pUserData*/)
 {
-    switch(messageSeverity)
-    {
-        case VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT: {
-            spdlog::error("validation layer: {}", pCallbackData->pMessage);
-            break;
-        }
-        case VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT: {
-            spdlog::warn("validation layer: {}", pCallbackData->pMessage);
-            break;
-        }
-        default: {
-            spdlog::info("validation layer: {}", pCallbackData->pMessage);
-            break;
-        }
-    }
+	switch (messageSeverity)
+	{
+		case VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT:
+		{
+			spdlog::error("validation layer: {}", pCallbackData->pMessage);
+			break;
+		}
+		case VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT:
+		{
+			spdlog::warn("validation layer: {}", pCallbackData->pMessage);
+			break;
+		}
+		default:
+		{
+			spdlog::info("validation layer: {}", pCallbackData->pMessage);
+			break;
+		}
+	}
 
-    return VK_FALSE;
+	return VK_FALSE;
 }
 
-}
+} // namespace
 
 VkResult CreateDebugUtilsMessengerEXT(
-    VkInstance instance,
-    const VkDebugUtilsMessengerCreateInfoEXT* pCreateInfo,
-    const VkAllocationCallbacks* pAllocator,
-    VkDebugUtilsMessengerEXT* pDebugMessenger)
+	VkInstance instance,
+	const VkDebugUtilsMessengerCreateInfoEXT* pCreateInfo,
+	const VkAllocationCallbacks* pAllocator,
+	VkDebugUtilsMessengerEXT* pDebugMessenger)
 {
-    auto func{reinterpret_cast<PFN_vkCreateDebugUtilsMessengerEXT>(vkGetInstanceProcAddr(instance, "vkCreateDebugUtilsMessengerEXT"))};
+	auto func{ reinterpret_cast<PFN_vkCreateDebugUtilsMessengerEXT>(
+		vkGetInstanceProcAddr(instance, "vkCreateDebugUtilsMessengerEXT")) };
 
-    if(func != nullptr)
-        return func(instance, pCreateInfo, pAllocator, pDebugMessenger);
+	if (func != nullptr)
+		return func(instance, pCreateInfo, pAllocator, pDebugMessenger);
 
-    return VK_ERROR_EXTENSION_NOT_PRESENT;
+	return VK_ERROR_EXTENSION_NOT_PRESENT;
 }
 
 void DestroyDebugUtilsMessengerEXT(
-    VkInstance instance,
-    VkDebugUtilsMessengerEXT debugMessenger,
-    const VkAllocationCallbacks* pAllocator)
+	VkInstance instance, VkDebugUtilsMessengerEXT debugMessenger, const VkAllocationCallbacks* pAllocator)
 {
-    auto func{reinterpret_cast<PFN_vkDestroyDebugUtilsMessengerEXT>(vkGetInstanceProcAddr(instance, "vkDestroyDebugUtilsMessengerEXT"))};
+	auto func{ reinterpret_cast<PFN_vkDestroyDebugUtilsMessengerEXT>(
+		vkGetInstanceProcAddr(instance, "vkDestroyDebugUtilsMessengerEXT")) };
 
-    if(func != nullptr)
-        func(instance, debugMessenger, pAllocator);
+	if (func != nullptr)
+		func(instance, debugMessenger, pAllocator);
 }
 
 /// \brief Construct a new \ref VulkanDebugMessenger
@@ -74,29 +77,33 @@ void DestroyDebugUtilsMessengerEXT(
 ///
 /// \throws \ref VulkanException if anything goes wring while creating the debug messenger
 VulkanDebugMessenger::VulkanDebugMessenger(VkInstance instance)
-    : instance(instance)
+	: instance(instance)
 {
-    if constexpr (!useValidationLayers)
-        return;
+	if constexpr (!useValidationLayers)
+		return;
 
-    const VkDebugUtilsMessengerCreateInfoEXT createInfo{
-        .sType = VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT,
-        .messageSeverity = VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT,
-        .messageType = VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT,
-        .pfnUserCallback = debugCallback,
-        .pUserData = nullptr
-    };
+	const VkDebugUtilsMessengerCreateInfoEXT createInfo{
+		.sType = VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT,
+		.messageSeverity =
+			VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT,
+		.messageType = VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT |
+					   VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT |
+					   VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT,
+		.pfnUserCallback = debugCallback,
+		.pUserData = nullptr
+	};
 
-    if(CreateDebugUtilsMessengerEXT(instance, &createInfo, nullptr, &m_debugMessenger) != VK_SUCCESS)
-        throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_DEBUG_MESSENGER);
+	if (CreateDebugUtilsMessengerEXT(instance, &createInfo, nullptr, &m_debugMessenger) != VK_SUCCESS)
+		throwWithLog<VulkanException>(
+			std::source_location::current(), VulkanExceptionCause::CREATE_DEBUG_MESSENGER);
 
-    spdlog::info("Debug messenger created successfully...");
+	spdlog::info("Debug messenger created successfully...");
 }
 
 VulkanDebugMessenger::~VulkanDebugMessenger()
 {
-    if(useValidationLayers)
-        DestroyDebugUtilsMessengerEXT(instance, m_debugMessenger, nullptr);
+	if (useValidationLayers)
+		DestroyDebugUtilsMessengerEXT(instance, m_debugMessenger, nullptr);
 }
 
-} // !rr
+} // namespace rr

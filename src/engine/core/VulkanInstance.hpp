@@ -16,24 +16,24 @@ namespace rr
 class VulkanInstance
 {
 public:
-    VulkanInstance();
-    ~VulkanInstance();
+	VulkanInstance();
+	~VulkanInstance();
 
-    VulkanInstance(const VulkanInstance&) = delete;
-    VulkanInstance& operator=(const VulkanInstance&) = delete;
-    VulkanInstance(VulkanInstance&&) = delete;
-    VulkanInstance& operator=(VulkanInstance&&) = delete;
+	VulkanInstance(const VulkanInstance&) = delete;
+	VulkanInstance& operator=(const VulkanInstance&) = delete;
+	VulkanInstance(VulkanInstance&&) = delete;
+	VulkanInstance& operator=(VulkanInstance&&) = delete;
 
-    [[nodiscard]] VkInstance getHandle() const { return m_instance; }
+	[[nodiscard]] VkInstance getHandle() const { return m_instance; }
 
 private:
-    VkInstance m_instance{ VK_NULL_HANDLE };
+	VkInstance m_instance{ VK_NULL_HANDLE };
 
-    static bool checkValidationLayerSupport();
-    static std::vector<const char*> getRequiredExtensions();
-    static void hasGLFWRequiredInstanceExtensions();
+	static bool checkValidationLayerSupport();
+	static std::vector<const char*> getRequiredExtensions();
+	static void hasGLFWRequiredInstanceExtensions();
 };
 
-} // !rr
+} // namespace rr
 
 #endif // !RRENDERER_ENGINE_CORE_VULKAN_INSTANCE_HPP
