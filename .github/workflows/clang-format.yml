@@ -1,5 +1,7 @@
 name: Check format
-on: [push, pull_request]
+on:
+  pull_request:
+    branches: ["**"]
 
 jobs:
   clang-format:
@@ -17,7 +19,4 @@ jobs:
         run: |
           FILES=$(find ./src -regex ".*\.\(cpp\|hpp\)")
           echo "$FILES" | xargs clang-format-19 --dry-run --Werror
-
-      - name: Show formatting diff
-        run: echo "$FILES" | xargs clang-format-19 --diff
 
