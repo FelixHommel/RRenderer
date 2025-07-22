@@ -28,8 +28,8 @@
 </programlisting></para>
 </sect3>
 <sect3 id="index_1autotoc_md5">
-<title>Configure CMake and Build</title>
-<para><blockquote><para><zwj/>If you want to use debug builds instead replace <computeroutput>release</computeroutput> with <computeroutput>debug</computeroutput>. You also can choose to use clang with <computeroutput>release-clang</computeroutput> or <computeroutput>debug-clang</computeroutput>. </para>
+<title>Configure CMake and Build the Program</title>
+<para><blockquote><para><zwj/>If you want to use debug builds instead replace <computeroutput>release</computeroutput> with <computeroutput>debug</computeroutput>. You also can also force use clang or gcc with <computeroutput>release-clang</computeroutput>, <computeroutput>debug-clang</computeroutput>, <computeroutput>release-gcc</computeroutput> or <computeroutput>debug-gcc</computeroutput>. </para>
 </blockquote><programlisting filename=".bash"><codeline><highlight class="normal">cmake<sp/>--preset<sp/>release</highlight></codeline>
 <codeline><highlight class="normal">cmake<sp/>--build<sp/>--preset<sp/>release</highlight></codeline>
 </programlisting></para>
