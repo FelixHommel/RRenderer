@@ -22,7 +22,7 @@ git clone https://github.com/FelixHommel/RRenderer.git
 cd RRenderer
 ```
 
-#### Configure CMake and Build
+#### Configure CMake and Build the Program
 
 > If you want to use debug builds instead replace ```release``` with ```debug```.
 > You also can also force use clang or gcc with ```release-clang```, ```debug-clang```, ```release-gcc``` or ```debug-gcc```.
