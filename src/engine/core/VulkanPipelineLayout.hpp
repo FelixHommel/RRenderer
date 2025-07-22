@@ -12,15 +12,25 @@
 namespace rr
 {
 
-constexpr std::size_t ALIGN_OF_VEC3{ 16 };
+constexpr std::size_t ALIGNMENT_OF_GLM_VEC3{ 16 }; ///< Alignment of a glm::vec3
 
+/// \brief Simple struct containing everything that is being used as push constants
+///
+/// \author Felix Hommel
+/// \date 7/20/2025
 struct SimplePushConstantData
 {
     glm::mat2 transform{ 1.f };
     glm::vec2 offset;
-    alignas(ALIGN_OF_VEC3) glm::vec3 color;
+    alignas(ALIGNMENT_OF_GLM_VEC3) glm::vec3 color;
 };
 
+/// \brief \ref VulkanPipelineLayout is a wrapper around `VkPipelineLayout`
+///
+/// It is used to tell the `VulkanPipeline` about descriptor set layouts and push constant ranges.
+///
+/// \author Felix Hommel
+/// \date 7/20/2025
 class VulkanPipelineLayout
 {
 public:
@@ -28,8 +38,8 @@ public:
     ~VulkanPipelineLayout();
 
     VulkanPipelineLayout(const VulkanPipelineLayout&) = delete;
-    VulkanPipelineLayout(VulkanPipelineLayout&&) = delete;
     VulkanPipelineLayout& operator=(const VulkanPipelineLayout&) = delete;
+    VulkanPipelineLayout(VulkanPipelineLayout&&) = delete;
     VulkanPipelineLayout& operator=(VulkanPipelineLayout&&) = delete;
 
     [[nodiscard]] VkPipelineLayout getHandle() const { return m_pipelineLayout; }

@@ -7,7 +7,6 @@
 #include <vulkan/vulkan_core.h>
 
 #include <array>
-#include <cstdint>
 #include <optional>
 #include <set>
 #include <source_location>
@@ -16,6 +15,13 @@
 namespace rr
 {
 
+/// \brief \ref SwapchainSupportDetails is a collection of information about the Swapchain
+///
+/// \ref SwapchainSupportDetails saves information about the capabilities, format and present
+/// mode of the surface.
+///
+/// \author Felix Hommel
+/// \date 5/26/2025
 struct SwapchainSupportDetails
 {
     VkSurfaceCapabilitiesKHR capabilities;
@@ -23,6 +29,13 @@ struct SwapchainSupportDetails
     std::vector<VkPresentModeKHR> presentModes;
 };
 
+/// \brief \ref QueueFamilyIndices is a collection about different Queues that are utilized by the Renderer
+///
+/// \ref QueueFamilyIndices stores the handles of a graphics and present Queue family. In addition, it implements
+/// several convenience and utility functions.
+///
+/// \author Felix Hommel
+/// \date 5/26/2025
 struct QueueFamilyIndices
 {
     std::optional<std::uint32_t> graphicsFamily;
@@ -48,13 +61,13 @@ struct QueueFamilyIndices
     }
 };
 
-/*
- *  <code>VulkanDevice<\code> is a wrapper around <code>VkDevice<\code>, <code>VkPhysicalDevice<\code> and also
- *  manages the queues.
- *
- *  @author Felix Hommel
- *  @date 5/26/2025
-*/ 
+/// \brief \ref VulkanDevice is a wrapper around VkDevice and VkPhysicalDevice
+///
+/// \ref VulkanDevice manages a VkDevice, VkPhysicalDevice nad all Queues associated
+/// with the VkDevice.
+///
+/// @author Felix Hommel
+/// @date 5/26/2025
 class VulkanDevice
 {
 public:
@@ -70,12 +83,22 @@ public:
     [[nodiscard]] VkQueue getGraphicsQueueHandle() const { return m_graphicsQueue; }
     [[nodiscard]] VkQueue getPresentQueueHandle() const { return m_presentQueue; }
 
+    /// \brief Determine the swapchain support of the VkPhysicalDevice
+    ///
+    /// \return \ref SwapchainSupportDetails
+    /// \sa SwapchainSupportDetails
     [[nodiscard]] SwapchainSupportDetails getSwapchainSupport() const { return querySwapchainSupport(m_physicalDevice); }
-    [[nodiscard]] QueueFamilyIndices findPhysicalQueueFamilies() const { return findQueueFamilies(m_physicalDevice); }
-    [[nodiscard]] VkFormat findSupportedFormat(const std::vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features);
 
-    void createImageWithInfo(const VkImageCreateInfo& createInfo, VkMemoryPropertyFlags properties, VkImage& image, VkDeviceMemory& imageMemory);
-    void createBuffer(VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer& buffer, VkDeviceMemory& bufferMemory);
+    /// \brief Determine which queue families the VkPhysicalDevice is supporting
+    ///
+    /// \return \ref QueueFamilyIndices
+    /// \sa QueueFamilyIndices
+    [[nodiscard]] QueueFamilyIndices findPhysicalQueueFamilies() const { return findQueueFamilies(m_physicalDevice); }
+
+    [[nodiscard]] VkFormat findSupportedFormat(const std::vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features) const;
+
+    void createImageWithInfo(const VkImageCreateInfo& createInfo, VkMemoryPropertyFlags properties, VkImage& image, VkDeviceMemory& imageMemory) const;
+    void createBuffer(VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer& buffer, VkDeviceMemory& bufferMemory) const;
 
 private:
     VkInstance instance;
@@ -87,16 +110,16 @@ private:
     VkQueue m_graphicsQueue{ VK_NULL_HANDLE };
     VkQueue m_presentQueue{ VK_NULL_HANDLE };
 
-    const std::vector<const char*> deviceExtensions{ VK_KHR_SWAPCHAIN_EXTENSION_NAME };
+    const std::vector<const char*> deviceExtensions{ VK_KHR_SWAPCHAIN_EXTENSION_NAME }; ///< List of extensions that the device must support
 
-    void pickPhyscialDevice();
+    void pickPhysicalDevice();
     void createLogicalDevice();
 
-    bool isDeviceSuitable(VkPhysicalDevice device) const;
+    bool isPhysicalDeviceSuitable(VkPhysicalDevice device) const;
     QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device) const;
     bool checkDeviceExtensionsSupported(VkPhysicalDevice device) const;
     SwapchainSupportDetails querySwapchainSupport(VkPhysicalDevice device) const;
-    std::uint32_t findMemoryType(std::uint32_t typeFilter, VkMemoryPropertyFlags properties);
+    std::uint32_t findMemoryType(std::uint32_t typeFilter, VkMemoryPropertyFlags properties) const;
 };
 
 } // !rr

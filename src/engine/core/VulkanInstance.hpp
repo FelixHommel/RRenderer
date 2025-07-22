@@ -7,6 +7,12 @@
 namespace rr
 {
 
+/// \brief \ref VulkanInstance wraps `VkInstance`
+///
+/// It provides basic access to the underlying `VkInstance` and manages it's lifetime.
+///
+/// \author Felix Hommel
+/// \date 7/20/2025
 class VulkanInstance
 {
 public:
@@ -14,8 +20,8 @@ public:
     ~VulkanInstance();
 
     VulkanInstance(const VulkanInstance&) = delete;
-    VulkanInstance(VulkanInstance&&) = delete;
     VulkanInstance& operator=(const VulkanInstance&) = delete;
+    VulkanInstance(VulkanInstance&&) = delete;
     VulkanInstance& operator=(VulkanInstance&&) = delete;
 
     [[nodiscard]] VkInstance getHandle() const { return m_instance; }

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structrr_1_1SimplePushConstantData" kind="struct" language="C++" prot="public">
+    <compoundname>rr::SimplePushConstantData</compoundname>
+    <includes refid="VulkanPipelineLayout_8hpp" local="no">VulkanPipelineLayout.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structrr_1_1SimplePushConstantData_1aab316d39cb2bb31ec5c613254b9866a9" prot="public" static="no" mutable="no">
+        <type>glm::mat2</type>
+        <definition>glm::mat2 rr::SimplePushConstantData::transform</definition>
+        <argsstring></argsstring>
+        <name>transform</name>
+        <qualifiedname>rr::SimplePushConstantData::transform</qualifiedname>
+        <initializer>{ 1.<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">f</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipelineLayout.hpp" line="23" column="15" bodyfile="src/engine/core/VulkanPipelineLayout.hpp" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrr_1_1SimplePushConstantData_1a0870de9d24fd45f698f37fa11b594920" prot="public" static="no" mutable="no">
+        <type>glm::vec2</type>
+        <definition>glm::vec2 rr::SimplePushConstantData::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <qualifiedname>rr::SimplePushConstantData::offset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipelineLayout.hpp" line="24" column="15" bodyfile="src/engine/core/VulkanPipelineLayout.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrr_1_1SimplePushConstantData_1afd1c8ae3d621a547a2cd239ca0274b37" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 rr::SimplePushConstantData::color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <qualifiedname>rr::SimplePushConstantData::color</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipelineLayout.hpp" line="25" column="23" bodyfile="src/engine/core/VulkanPipelineLayout.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Simple struct containing everything that is being used as push constants. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Felix Hommel </para>
+</simplesect>
+<simplesect kind="date"><para>7/20/2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="src/engine/core/VulkanPipelineLayout.hpp" line="21" column="1" bodyfile="src/engine/core/VulkanPipelineLayout.hpp" bodystart="22" bodyend="26"/>
+    <listofallmembers>
+      <member refid="structrr_1_1SimplePushConstantData_1afd1c8ae3d621a547a2cd239ca0274b37" prot="public" virt="non-virtual"><scope>rr::SimplePushConstantData</scope><name>color</name></member>
+      <member refid="structrr_1_1SimplePushConstantData_1a0870de9d24fd45f698f37fa11b594920" prot="public" virt="non-virtual"><scope>rr::SimplePushConstantData</scope><name>offset</name></member>
+      <member refid="structrr_1_1SimplePushConstantData_1aab316d39cb2bb31ec5c613254b9866a9" prot="public" virt="non-virtual"><scope>rr::SimplePushConstantData</scope><name>transform</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

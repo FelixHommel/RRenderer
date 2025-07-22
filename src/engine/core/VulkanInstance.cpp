@@ -52,12 +52,15 @@ VKAPI_ATTR VkBool32 VKAPI_CALL debugCallback(
 
 }
 
+/// \brief Construct a new \ref VulkanInstance
+///
+/// \throws \ref VulkanException if there was an error while creating the instance
 VulkanInstance::VulkanInstance()
 {
     if(useValidationLayers && !checkValidationLayerSupport())
         throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::VALIDATION_LAYERS_UNAVAILABLE);
 
-    VkApplicationInfo appInfo{
+    const VkApplicationInfo appInfo{
         .sType = VK_STRUCTURE_TYPE_APPLICATION_INFO,
         .pApplicationName = "RRenderer Application",
         .pEngineName = "RRenderer",
@@ -65,7 +68,7 @@ VulkanInstance::VulkanInstance()
         .apiVersion = VK_API_VERSION_1_0
     };
 
-    auto extensions{ getRequiredExtensions() };
+    const auto extensions{ getRequiredExtensions() };
     VkInstanceCreateInfo createInfo{
         .sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO,
         .pApplicationInfo = &appInfo,
@@ -103,11 +106,9 @@ VulkanInstance::~VulkanInstance()
     vkDestroyInstance(m_instance, nullptr);
 }
 
-/**
- *  Check if all validation layers are available to use.
- *
- *  @return true if all requested validation layers are available, otherwise false
-*/
+/// \brief Check if all validation layers are available to use
+///
+/// \return `true` if all requested validation layers are available, otherwise `false`
 bool VulkanInstance::checkValidationLayerSupport()
 {
     std::uint32_t layerCount = 0;
@@ -135,11 +136,9 @@ bool VulkanInstance::checkValidationLayerSupport()
     return true;
 }
 
-/**
- *  Collect all required extensions by any parts of the renderer.
- *
- *  @return std::vector of required extension name strings
-*/
+/// \brief Collect all required extensions by any parts of the renderer
+///
+/// \return std::vector of required extension name c-strings
 std::vector<const char*> VulkanInstance::getRequiredExtensions()
 {
     std::uint32_t glfwExtensionCount{ 0 };
@@ -173,7 +172,7 @@ void VulkanInstance::hasGLFWRequiredInstanceExtensions()
     }
 
     spdlog::info("required extensions:");
-    auto requiredExtensions{ getRequiredExtensions() };
+    const auto requiredExtensions{ getRequiredExtensions() };
     for(const auto& required : requiredExtensions)
     {
         spdlog::info("\t{}", required);

@@ -1,0 +1,482 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="classrr_1_1EngineException" kind="class"><name>rr::EngineException</name>
+    <member refid="classrr_1_1EngineException_1ad530154c8519c65411824c7f4e800865" kind="variable"><name>message</name></member>
+    <member refid="classrr_1_1EngineException_1afc765524baf587c8ecc7e6164ed27afb" kind="function"><name>EngineException</name></member>
+    <member refid="classrr_1_1EngineException_1a6deb90a977fde221a852fd0f2ba085fe" kind="function"><name>what</name></member>
+  </compound>
+  <compound refid="classrr_1_1FileIOException" kind="class"><name>rr::FileIOException</name>
+    <member refid="classrr_1_1FileIOException_1af0315147e806106a8dacd8ea413fd92d" kind="variable"><name>m_path</name></member>
+    <member refid="classrr_1_1FileIOException_1ac4d1f60676e3bdc34bb781765eba8e17" kind="function"><name>FileIOException</name></member>
+    <member refid="classrr_1_1FileIOException_1a68e570b248b3c8703f1410b783c841bc" kind="function"><name>getPath</name></member>
+  </compound>
+  <compound refid="classrr_1_1GLFWException" kind="class"><name>rr::GLFWException</name>
+    <member refid="classrr_1_1GLFWException_1a8bbab7f269490fec248cd723fb1b352a" kind="variable"><name>m_cause</name></member>
+    <member refid="classrr_1_1GLFWException_1a9cffdb8f68338795f16f350599594040" kind="function"><name>GLFWException</name></member>
+    <member refid="classrr_1_1GLFWException_1a1b3725d53b06bdd4c5c860447464500c" kind="function"><name>cause</name></member>
+    <member refid="classrr_1_1GLFWException_1ae0f680ee0ad3bed5bee809902d291e13" kind="function"><name>causeToString</name></member>
+  </compound>
+  <compound refid="structrr_1_1PipelineConfigInfo" kind="struct"><name>rr::PipelineConfigInfo</name>
+    <member refid="structrr_1_1PipelineConfigInfo_1a3a5f12bb280c470d9e6e42f18b26f07b" kind="variable"><name>viewportInfo</name></member>
+    <member refid="structrr_1_1PipelineConfigInfo_1a0cfaf39043a86b53fc34412d78c7fd70" kind="variable"><name>inputAssemblyInfo</name></member>
+    <member refid="structrr_1_1PipelineConfigInfo_1aa8b9020ce566f8040ac61bc66849bede" kind="variable"><name>rasterizationInfo</name></member>
+    <member refid="structrr_1_1PipelineConfigInfo_1a937ef03e03849c4712d0a05019f4733d" kind="variable"><name>multisampleInfo</name></member>
+    <member refid="structrr_1_1PipelineConfigInfo_1a28af641bae33ad50f5d247ea6a4b561c" kind="variable"><name>colorBlendAttachment</name></member>
+    <member refid="structrr_1_1PipelineConfigInfo_1aa795ec91994f876223135cf4e5e56cae" kind="variable"><name>colorBlendInfo</name></member>
+    <member refid="structrr_1_1PipelineConfigInfo_1aa73e91c31f86996cf821409c9e650327" kind="variable"><name>depthStencilInfo</name></member>
+    <member refid="structrr_1_1PipelineConfigInfo_1a813b218dbcbdbf3be5e55e424e9fe210" kind="variable"><name>dynamicStateEnables</name></member>
+    <member refid="structrr_1_1PipelineConfigInfo_1a474b053fb98712a6be288e9c2472942e" kind="variable"><name>dynamicStateInfo</name></member>
+    <member refid="structrr_1_1PipelineConfigInfo_1ada9b2da065ff5be22b02b004183bfbfe" kind="variable"><name>pipelineLayout</name></member>
+    <member refid="structrr_1_1PipelineConfigInfo_1a99cd16fc80a9466832916011aa93f0df" kind="variable"><name>renderPass</name></member>
+    <member refid="structrr_1_1PipelineConfigInfo_1ab7e3ff95268b43c0abda670ce48cbc92" kind="variable"><name>subpass</name></member>
+    <member refid="structrr_1_1PipelineConfigInfo_1a151abb6b9fe9c3841041eb533ec5acd1" kind="function"><name>PipelineConfigInfo</name></member>
+    <member refid="structrr_1_1PipelineConfigInfo_1a6e5b87c2d5bfd86c338d560b3c649cf5" kind="function"><name>~PipelineConfigInfo</name></member>
+    <member refid="structrr_1_1PipelineConfigInfo_1aa9ad79fb1bed6ae3100852045e4e57a3" kind="function"><name>PipelineConfigInfo</name></member>
+    <member refid="structrr_1_1PipelineConfigInfo_1aec4d83ad2ebcce795dbd78a607705638" kind="function"><name>operator=</name></member>
+    <member refid="structrr_1_1PipelineConfigInfo_1aedaf59485a173ea7fc611b53ec64254d" kind="function"><name>PipelineConfigInfo</name></member>
+    <member refid="structrr_1_1PipelineConfigInfo_1ae3f914ce126bdbb9e10f952662023cd6" kind="function"><name>operator=</name></member>
+  </compound>
+  <compound refid="structrr_1_1QueueFamilyIndices" kind="struct"><name>rr::QueueFamilyIndices</name>
+    <member refid="structrr_1_1QueueFamilyIndices_1a532f639d4119f9d9a00f1eb3861c4355" kind="variable"><name>graphicsFamily</name></member>
+    <member refid="structrr_1_1QueueFamilyIndices_1a0ad9bd2a7f6e98c09fd4dcf34b33c7b2" kind="variable"><name>presentFamily</name></member>
+    <member refid="structrr_1_1QueueFamilyIndices_1a7117a5107225ade4dcd599ebb5976624" kind="function"><name>isComplete</name></member>
+    <member refid="structrr_1_1QueueFamilyIndices_1ac32603b7cae6336a11c24fa9c0e1f8c4" kind="function"><name>areSameQueue</name></member>
+    <member refid="structrr_1_1QueueFamilyIndices_1a11500c250f59eed9b54f54d9ec32d037" kind="function"><name>getUniqueFamilies</name></member>
+    <member refid="structrr_1_1QueueFamilyIndices_1aeabf88de362ee65fefea2313c07ac214" kind="function"><name>toAray</name></member>
+  </compound>
+  <compound refid="classrr_1_1Renderer" kind="class"><name>rr::Renderer</name>
+    <member refid="classrr_1_1Renderer_1a40758a1ac2264dbcb62fb2b0c85bf981" kind="function"><name>Renderer</name></member>
+    <member refid="classrr_1_1Renderer_1acbde91675e409c0840b8387e6c4e08d5" kind="function"><name>~Renderer</name></member>
+    <member refid="classrr_1_1Renderer_1a4f0e7d611a08788ce54ce39820982e83" kind="function"><name>Renderer</name></member>
+    <member refid="classrr_1_1Renderer_1ae31ddb831141cfba38a2cb4a49767a8a" kind="function"><name>Renderer</name></member>
+    <member refid="classrr_1_1Renderer_1a97d5b67e737ea23129d9f7c199a16610" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1Renderer_1af91f2e8ab8de28bcb1c3279d5bfef2db" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1Renderer_1a84e149938d154bd8d067b1be2e94a2fb" kind="function"><name>render</name></member>
+    <member refid="classrr_1_1Renderer_1add7edc93f23223e70b770a36e0e804c4" kind="function"><name>shutdown</name></member>
+  </compound>
+  <compound refid="classrr_1_1RenderObject" kind="class"><name>rr::RenderObject</name>
+    <member refid="classrr_1_1RenderObject_1a87eead88a4d96f40ac52e1e0dc47e236" kind="typedef"><name>id_t</name></member>
+    <member refid="classrr_1_1RenderObject_1ae47f4faabe25be94bdaedb2f876c28a2" kind="variable"><name>idGenerator</name></member>
+    <member refid="classrr_1_1RenderObject_1a05c7ccde19300b4aef6ffafb81f7d6bc" kind="variable"><name>m_id</name></member>
+    <member refid="classrr_1_1RenderObject_1a02e90a3d5c4c08faeb1d2ea983d969ca" kind="variable"><name>m_mesh</name></member>
+    <member refid="classrr_1_1RenderObject_1a97358a193e01d8a374db0241c6d427a9" kind="variable"><name>m_color</name></member>
+    <member refid="classrr_1_1RenderObject_1a554f9b33c752d0acd3fee511270eef86" kind="variable"><name>m_transform2D</name></member>
+    <member refid="classrr_1_1RenderObject_1ac4bf6bdbb86d38c7099cd89b2359487c" kind="variable"><name>m_transformMatrixCache</name></member>
+    <member refid="classrr_1_1RenderObject_1ad8359cabd56b93c4159f6f7bf080a726" kind="variable"><name>m_transformIsDirty</name></member>
+    <member refid="classrr_1_1RenderObject_1a3635e5f9c8ce9c8963519bcae62251a5" kind="function"><name>RenderObject</name></member>
+    <member refid="classrr_1_1RenderObject_1a09ca7ddd99e17a67ea42129e3531f9df" kind="function"><name>~RenderObject</name></member>
+    <member refid="classrr_1_1RenderObject_1aa40fbbe16e4780df815ef713557580d4" kind="function"><name>RenderObject</name></member>
+    <member refid="classrr_1_1RenderObject_1a0367e16ef2888332091b0f7ccafbd106" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1RenderObject_1afa39e6b74a5b4a929a047553cc4cbb59" kind="function"><name>RenderObject</name></member>
+    <member refid="classrr_1_1RenderObject_1a50323ed960f352158a50959a31585737" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1RenderObject_1afe2005a41fb89f385dc5da44bf180178" kind="function"><name>getId</name></member>
+    <member refid="classrr_1_1RenderObject_1ab7cb53ee2c2cfa92e5782b802daf3226" kind="function"><name>getTranslation</name></member>
+    <member refid="classrr_1_1RenderObject_1a4150c1cc087d728bda5002365bd3f9c6" kind="function"><name>getColor</name></member>
+    <member refid="classrr_1_1RenderObject_1a9f0a65b2e4884aeffb55c072e27fbeaf" kind="function"><name>getRotation</name></member>
+    <member refid="classrr_1_1RenderObject_1a0b115402b35fa93ade4d2a3c59b82716" kind="function"><name>getTransformMatrix</name></member>
+    <member refid="classrr_1_1RenderObject_1abf7bc91e1b23d0abcdf8bb58efce6750" kind="function"><name>setRotation</name></member>
+    <member refid="classrr_1_1RenderObject_1aad6b13493302dc777cc435cfb9cc7c96" kind="function"><name>render</name></member>
+    <member refid="classrr_1_1RenderObject_1ad6955b25213b55d905507af5d2bebb07" kind="function"><name>updateTransformMatrix</name></member>
+  </compound>
+  <compound refid="structrr_1_1SimplePushConstantData" kind="struct"><name>rr::SimplePushConstantData</name>
+    <member refid="structrr_1_1SimplePushConstantData_1aab316d39cb2bb31ec5c613254b9866a9" kind="variable"><name>transform</name></member>
+    <member refid="structrr_1_1SimplePushConstantData_1a0870de9d24fd45f698f37fa11b594920" kind="variable"><name>offset</name></member>
+    <member refid="structrr_1_1SimplePushConstantData_1afd1c8ae3d621a547a2cd239ca0274b37" kind="variable"><name>color</name></member>
+  </compound>
+  <compound refid="structrr_1_1StringHash" kind="struct"><name>rr::StringHash</name>
+    <member refid="structrr_1_1StringHash_1a9e988d40fa86adde8483451fc482b575" kind="typedef"><name>is_transparent</name></member>
+    <member refid="structrr_1_1StringHash_1a87bb1c3fe8fb69b2cb0f8f72ba1fa4cb" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structrr_1_1SwapchainSupportDetails" kind="struct"><name>rr::SwapchainSupportDetails</name>
+    <member refid="structrr_1_1SwapchainSupportDetails_1a9a661f6f9794c004d49348174aab52aa" kind="variable"><name>capabilities</name></member>
+    <member refid="structrr_1_1SwapchainSupportDetails_1aa7d6d63235526cc9472bdaea2df9d7db" kind="variable"><name>formats</name></member>
+    <member refid="structrr_1_1SwapchainSupportDetails_1a5afbe7d3901e9b33017743682d2a69a8" kind="variable"><name>presentModes</name></member>
+  </compound>
+  <compound refid="structrr_1_1Transform2DComponent" kind="struct"><name>rr::Transform2DComponent</name>
+    <member refid="structrr_1_1Transform2DComponent_1afa0203f34ceb12ff5f953fa518d9a6d1" kind="variable"><name>translation</name></member>
+    <member refid="structrr_1_1Transform2DComponent_1a943f3e7e72561e2ed0470229ae665319" kind="variable"><name>scale</name></member>
+    <member refid="structrr_1_1Transform2DComponent_1afcadc56bfd0f43ace214097c34a998c0" kind="variable"><name>rotation</name></member>
+    <member refid="structrr_1_1Transform2DComponent_1a2d83284680a5ff631ae6453970766dda" kind="function"><name>mat2</name></member>
+  </compound>
+  <compound refid="structrr_1_1Vertex" kind="struct"><name>rr::Vertex</name>
+    <member refid="structrr_1_1Vertex_1a1b554f1053b0823d437557da80af9b5c" kind="variable"><name>position</name></member>
+    <member refid="structrr_1_1Vertex_1aef6e4e83a38fdd5c710f288caa5dcf18" kind="variable"><name>color</name></member>
+    <member refid="structrr_1_1Vertex_1ad04eb859222f92a31d1bb35b2f5e27d9" kind="function"><name>getBindingDescriptions</name></member>
+    <member refid="structrr_1_1Vertex_1a3c7371e4b8d9a6d4159aede70005a5bf" kind="function"><name>getAttributeDescriptions</name></member>
+  </compound>
+  <compound refid="classrr_1_1VulkanCommandBuffer" kind="class"><name>rr::VulkanCommandBuffer</name>
+    <member refid="classrr_1_1VulkanCommandBuffer_1a2cd57c5664e5d966c44b897a6a5e64a7" kind="variable"><name>device</name></member>
+    <member refid="classrr_1_1VulkanCommandBuffer_1a7f992c88567f730fd4f54c730cc99b3a" kind="variable"><name>commandPool</name></member>
+    <member refid="classrr_1_1VulkanCommandBuffer_1a804c684bcbfaa3132c06c46319206c17" kind="variable"><name>m_commandBuffer</name></member>
+    <member refid="classrr_1_1VulkanCommandBuffer_1a9244fe9cfc0f832ff5b08f5c4eafda47" kind="function"><name>VulkanCommandBuffer</name></member>
+    <member refid="classrr_1_1VulkanCommandBuffer_1ad8840cec3f66260b586598ad4dc5979e" kind="function"><name>VulkanCommandBuffer</name></member>
+    <member refid="classrr_1_1VulkanCommandBuffer_1a6dc9c736562c5000b03bc6035f484031" kind="function"><name>~VulkanCommandBuffer</name></member>
+    <member refid="classrr_1_1VulkanCommandBuffer_1ab7377de4d312f6f6939aee50412f1ceb" kind="function"><name>VulkanCommandBuffer</name></member>
+    <member refid="classrr_1_1VulkanCommandBuffer_1a693ed067fff4b09d1a818a6de0946346" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanCommandBuffer_1ab509769d7ca845ff9d16b02571b11741" kind="function"><name>VulkanCommandBuffer</name></member>
+    <member refid="classrr_1_1VulkanCommandBuffer_1a1f8d6491fc23f053e84fc8c79f3160c0" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanCommandBuffer_1af417a199b0992fa1a0fdc07e68e9f686" kind="function"><name>getHandleRef</name></member>
+    <member refid="classrr_1_1VulkanCommandBuffer_1af4f3675ff5a3b09c90b9c8f3f60fd49e" kind="function"><name>create</name></member>
+  </compound>
+  <compound refid="classrr_1_1VulkanCommandPool" kind="class"><name>rr::VulkanCommandPool</name>
+    <member refid="classrr_1_1VulkanCommandPool_1aba47d90c49c5e48c7a09ddf7d20b959d" kind="variable"><name>device</name></member>
+    <member refid="classrr_1_1VulkanCommandPool_1accfb0716d7d411b389a5da07bb496b17" kind="variable"><name>m_commandPool</name></member>
+    <member refid="classrr_1_1VulkanCommandPool_1a656c8c7edcfb44c8b934e73156e2b015" kind="function"><name>VulkanCommandPool</name></member>
+    <member refid="classrr_1_1VulkanCommandPool_1a308efb948740f25349f10d122b9e0d18" kind="function"><name>~VulkanCommandPool</name></member>
+    <member refid="classrr_1_1VulkanCommandPool_1ad52ce0476da121589bc03b9e20811e2d" kind="function"><name>VulkanCommandPool</name></member>
+    <member refid="classrr_1_1VulkanCommandPool_1a38cf22f0e3402e3cd8caa927aa281266" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanCommandPool_1a0b2529e06837bebba8529655568e28f2" kind="function"><name>VulkanCommandPool</name></member>
+    <member refid="classrr_1_1VulkanCommandPool_1a9c09f6fc273ffa8257de065d5867a2eb" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanCommandPool_1af919b9f462a0f5403e6d18443afded5f" kind="function"><name>getHandle</name></member>
+    <member refid="classrr_1_1VulkanCommandPool_1aa80e97d8ab7afef7875264dc6f1ad196" kind="function"><name>allocateCommandBuffer</name></member>
+    <member refid="classrr_1_1VulkanCommandPool_1af0bb1fd7ee5efe856f03ead89746c7c5" kind="function"><name>allocateCommandBuffer</name></member>
+  </compound>
+  <compound refid="classrr_1_1VulkanDebugMessenger" kind="class"><name>rr::VulkanDebugMessenger</name>
+    <member refid="classrr_1_1VulkanDebugMessenger_1a56918a604348ea8faa45c529fda66324" kind="variable"><name>instance</name></member>
+    <member refid="classrr_1_1VulkanDebugMessenger_1a4b046cdf5cd718af2fd5dfbebc1971cd" kind="variable"><name>m_debugMessenger</name></member>
+    <member refid="classrr_1_1VulkanDebugMessenger_1ac0e0a15b30f5573bbc5279014ca5eda6" kind="function"><name>VulkanDebugMessenger</name></member>
+    <member refid="classrr_1_1VulkanDebugMessenger_1af436f1c4a5d0c22f1f3e4479ec34270f" kind="function"><name>~VulkanDebugMessenger</name></member>
+    <member refid="classrr_1_1VulkanDebugMessenger_1af2f3ae7f2745110a59cc6ef8f7924ff4" kind="function"><name>VulkanDebugMessenger</name></member>
+    <member refid="classrr_1_1VulkanDebugMessenger_1abe0bb8b0d1d3bc78d6d3a86d1208020e" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanDebugMessenger_1aa19bbe1b603098c9368d4acbfe4f69f1" kind="function"><name>VulkanDebugMessenger</name></member>
+    <member refid="classrr_1_1VulkanDebugMessenger_1af1c977ef08b027abd959772191bedf84" kind="function"><name>operator=</name></member>
+  </compound>
+  <compound refid="classrr_1_1VulkanDevice" kind="class"><name>rr::VulkanDevice</name>
+    <member refid="classrr_1_1VulkanDevice_1a10bc864c3476c21e935207af55b24c8b" kind="variable"><name>instance</name></member>
+    <member refid="classrr_1_1VulkanDevice_1a92e31126bf9f180ec5cc3eaa6d7b22a7" kind="variable"><name>surface</name></member>
+    <member refid="classrr_1_1VulkanDevice_1a32395d156f9bfa8844770d30d1ffb904" kind="variable"><name>m_physicalDevice</name></member>
+    <member refid="classrr_1_1VulkanDevice_1a7e6990e568fd55c199e493d0b094e3fd" kind="variable"><name>m_physicalDeviceProperties</name></member>
+    <member refid="classrr_1_1VulkanDevice_1a3193a0b0db637b42102a5ee8d4554d02" kind="variable"><name>m_device</name></member>
+    <member refid="classrr_1_1VulkanDevice_1ab8e23b9e88a060eb203f9ffb2ac626f0" kind="variable"><name>m_graphicsQueue</name></member>
+    <member refid="classrr_1_1VulkanDevice_1ac55f2f102235b80b8acd2f0f8705c823" kind="variable"><name>m_presentQueue</name></member>
+    <member refid="classrr_1_1VulkanDevice_1a7394e83f8eaa36c1047f3ee82778e2c4" kind="variable"><name>deviceExtensions</name></member>
+    <member refid="classrr_1_1VulkanDevice_1a91a07fedc03c78fd9a9135aafb05f37f" kind="function"><name>VulkanDevice</name></member>
+    <member refid="classrr_1_1VulkanDevice_1a0402e13052955657d0acaa80a67c28f3" kind="function"><name>~VulkanDevice</name></member>
+    <member refid="classrr_1_1VulkanDevice_1a259d39cb248287d755222c9d39c42182" kind="function"><name>VulkanDevice</name></member>
+    <member refid="classrr_1_1VulkanDevice_1aaa707f045938516aa05e365ff0baa5cd" kind="function"><name>VulkanDevice</name></member>
+    <member refid="classrr_1_1VulkanDevice_1ad7d93b626e55a2dc675da6edc4985612" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanDevice_1a070d0796e041b2fea587d7f67eb58a82" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanDevice_1acf48c71ceb51f3b78ed0fa3179f566df" kind="function"><name>getHandle</name></member>
+    <member refid="classrr_1_1VulkanDevice_1a907f8747379cb41be2c699e6ab579508" kind="function"><name>getGraphicsQueueHandle</name></member>
+    <member refid="classrr_1_1VulkanDevice_1a672143df72ac32e02298d22f7342e4f0" kind="function"><name>getPresentQueueHandle</name></member>
+    <member refid="classrr_1_1VulkanDevice_1a410e47201a88cb2a7edb2fb64eb8f323" kind="function"><name>getSwapchainSupport</name></member>
+    <member refid="classrr_1_1VulkanDevice_1a21b0e35783d139f07f7b2576171fc553" kind="function"><name>findPhysicalQueueFamilies</name></member>
+    <member refid="classrr_1_1VulkanDevice_1a18518c22666a9ddfee12ed570d1b8520" kind="function"><name>findSupportedFormat</name></member>
+    <member refid="classrr_1_1VulkanDevice_1a704c0992e4d3d35b3817c6c8c27ee20c" kind="function"><name>createImageWithInfo</name></member>
+    <member refid="classrr_1_1VulkanDevice_1a7b91e0766522d591035cb2bc7f9ea2db" kind="function"><name>createBuffer</name></member>
+    <member refid="classrr_1_1VulkanDevice_1ad87de985a2a7b2a2b42d3f23885282cd" kind="function"><name>pickPhysicalDevice</name></member>
+    <member refid="classrr_1_1VulkanDevice_1ae562e4ca2b07190e2f94691b1a525f41" kind="function"><name>createLogicalDevice</name></member>
+    <member refid="classrr_1_1VulkanDevice_1ac1527b38af65451bf8d1edcbf742f3c8" kind="function"><name>isPhysicalDeviceSuitable</name></member>
+    <member refid="classrr_1_1VulkanDevice_1a1731d3d82a4d93a85c2251b457423c92" kind="function"><name>findQueueFamilies</name></member>
+    <member refid="classrr_1_1VulkanDevice_1a4ca4488ee41f459ea7a75f217e5f1ac6" kind="function"><name>checkDeviceExtensionsSupported</name></member>
+    <member refid="classrr_1_1VulkanDevice_1abc28ba2841a7f3fe7df2fb5f44cc95d0" kind="function"><name>querySwapchainSupport</name></member>
+    <member refid="classrr_1_1VulkanDevice_1a66b66e6298ba42090889688131b4a18d" kind="function"><name>findMemoryType</name></member>
+  </compound>
+  <compound refid="classrr_1_1VulkanException" kind="class"><name>rr::VulkanException</name>
+    <member refid="classrr_1_1VulkanException_1a6195843a901faeaff093612683b4d7fc" kind="variable"><name>m_cause</name></member>
+    <member refid="classrr_1_1VulkanException_1afda7cfa737f2913174dfda57985bd2a5" kind="function"><name>VulkanException</name></member>
+    <member refid="classrr_1_1VulkanException_1a6aaf19509619b99f57353ae22f9b533a" kind="function"><name>VulkanException</name></member>
+    <member refid="classrr_1_1VulkanException_1a0879ae8439e3ffbbde768b718132e998" kind="function"><name>cause</name></member>
+    <member refid="classrr_1_1VulkanException_1a7bb4f523f4cc3d0c64859017f44a111d" kind="function"><name>causeToString</name></member>
+    <member refid="classrr_1_1VulkanException_1a644efe211080b80471d32a1455f4e2d2" kind="function"><name>causeToString</name></member>
+  </compound>
+  <compound refid="classrr_1_1VulkanInstance" kind="class"><name>rr::VulkanInstance</name>
+    <member refid="classrr_1_1VulkanInstance_1af84dd9687e790eed0b95eb5744e2a179" kind="variable"><name>m_instance</name></member>
+    <member refid="classrr_1_1VulkanInstance_1a787a997cb1f385b1016107bb2ac1b1dc" kind="function"><name>VulkanInstance</name></member>
+    <member refid="classrr_1_1VulkanInstance_1a05558323afc2f2e22f32803f0e7c38a1" kind="function"><name>~VulkanInstance</name></member>
+    <member refid="classrr_1_1VulkanInstance_1adba7aea268a9584df115216a1783b2a8" kind="function"><name>VulkanInstance</name></member>
+    <member refid="classrr_1_1VulkanInstance_1aedebd4c5a116ec42473ae5f001fced3e" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanInstance_1ab0bf0b5a810229e3066d5f9f6a2fc590" kind="function"><name>VulkanInstance</name></member>
+    <member refid="classrr_1_1VulkanInstance_1a5170d89c553c7c2ff8434626b54f98f3" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanInstance_1aa066186ccd055b490457be74f4b3bbb4" kind="function"><name>getHandle</name></member>
+    <member refid="classrr_1_1VulkanInstance_1a82a4861f5c7b0b74ccdb8512ff07bb37" kind="function"><name>checkValidationLayerSupport</name></member>
+    <member refid="classrr_1_1VulkanInstance_1a0b45f19b5d3d30703073a956cd7925f6" kind="function"><name>getRequiredExtensions</name></member>
+    <member refid="classrr_1_1VulkanInstance_1a10a4e5e889a61195a18f263517c534a0" kind="function"><name>hasGLFWRequiredInstanceExtensions</name></member>
+  </compound>
+  <compound refid="classrr_1_1VulkanMesh" kind="class"><name>rr::VulkanMesh</name>
+    <member refid="classrr_1_1VulkanMesh_1ae11ae47c3d343dedc5bb0aa6dbf9642a" kind="variable"><name>device</name></member>
+    <member refid="classrr_1_1VulkanMesh_1ad6f5dbfdc64ab734170c3badb97a1f19" kind="variable"><name>m_vertexBuffer</name></member>
+    <member refid="classrr_1_1VulkanMesh_1a3c8cb04e099024d1c5d86e9b1a0cd2a6" kind="variable"><name>m_vertexBufferMemory</name></member>
+    <member refid="classrr_1_1VulkanMesh_1a0ab3df70fb1b4a8544576edc47cc4bdf" kind="variable"><name>m_vertexCount</name></member>
+    <member refid="classrr_1_1VulkanMesh_1a6ddf0c623ae5cab6854d66c24c3728ee" kind="function"><name>VulkanMesh</name></member>
+    <member refid="classrr_1_1VulkanMesh_1abe659d1e8cb40308dbafa7874b9778cb" kind="function"><name>~VulkanMesh</name></member>
+    <member refid="classrr_1_1VulkanMesh_1a8a35559e5b96506d03c18f721244bc4d" kind="function"><name>VulkanMesh</name></member>
+    <member refid="classrr_1_1VulkanMesh_1ae9b588ff3adf69a0272c271320397d5a" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanMesh_1a8cb7c175dba40596d575c83d96cf4708" kind="function"><name>VulkanMesh</name></member>
+    <member refid="classrr_1_1VulkanMesh_1a5516b716bc4056eecaa83ab365c8502d" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanMesh_1af3397a25b9cc564676f5a2066bd3f7a1" kind="function"><name>bind</name></member>
+    <member refid="classrr_1_1VulkanMesh_1ae012c81d4c76742866f525b61edcba2c" kind="function"><name>draw</name></member>
+  </compound>
+  <compound refid="classrr_1_1VulkanPipeline" kind="class"><name>rr::VulkanPipeline</name>
+    <member refid="classrr_1_1VulkanPipeline_1acb2d82414022551a391a99c459268d9b" kind="variable"><name>device</name></member>
+    <member refid="classrr_1_1VulkanPipeline_1ad99319747744a319aaa97d51da67efa1" kind="variable"><name>m_pipeline</name></member>
+    <member refid="classrr_1_1VulkanPipeline_1abcacb54601919bb06eb087c184704260" kind="variable"><name>m_vertShaderModule</name></member>
+    <member refid="classrr_1_1VulkanPipeline_1a7484df1b868337472c389838eaa30842" kind="variable"><name>m_fragShaderModule</name></member>
+    <member refid="classrr_1_1VulkanPipeline_1ab3e8ba1737d8dce209dab76a336f3185" kind="function"><name>VulkanPipeline</name></member>
+    <member refid="classrr_1_1VulkanPipeline_1a30ddc999f7ebb5b4a2cdf91431b3b86a" kind="function"><name>~VulkanPipeline</name></member>
+    <member refid="classrr_1_1VulkanPipeline_1a3ae5020da35e53354a37dc7949e29542" kind="function"><name>VulkanPipeline</name></member>
+    <member refid="classrr_1_1VulkanPipeline_1a069d9b0b0a6d34c6e387e3f6920988b7" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanPipeline_1a7137f0f9bdf95ffd98ca5205fa7bbd6f" kind="function"><name>VulkanPipeline</name></member>
+    <member refid="classrr_1_1VulkanPipeline_1a1b01cbff0f0db7a1a3d8221379038aff" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanPipeline_1a75bef441869f8fb0170c419a964b1b38" kind="function"><name>bind</name></member>
+    <member refid="classrr_1_1VulkanPipeline_1ad843bf228df062f81e2bf1bae58198ee" kind="function"><name>defaultPipelineConfigInfo</name></member>
+    <member refid="classrr_1_1VulkanPipeline_1af1c1947f8e2afce4625b7a11e20eeb4c" kind="function"><name>createShaderModule</name></member>
+    <member refid="classrr_1_1VulkanPipeline_1a1ef168d8106ab3544dca84f089f5f4c8" kind="function"><name>readFile</name></member>
+  </compound>
+  <compound refid="classrr_1_1VulkanPipelineLayout" kind="class"><name>rr::VulkanPipelineLayout</name>
+    <member refid="classrr_1_1VulkanPipelineLayout_1a4b71aafeba03a5954e09003939d2713f" kind="variable"><name>device</name></member>
+    <member refid="classrr_1_1VulkanPipelineLayout_1a90d9c5dc149d85a6c7e96ccda1c9598f" kind="variable"><name>m_pipelineLayout</name></member>
+    <member refid="classrr_1_1VulkanPipelineLayout_1a9c499e0b98c53780333bf347710cb510" kind="function"><name>VulkanPipelineLayout</name></member>
+    <member refid="classrr_1_1VulkanPipelineLayout_1a2ffa5a12a9970b5be79fb36f5ca4a633" kind="function"><name>~VulkanPipelineLayout</name></member>
+    <member refid="classrr_1_1VulkanPipelineLayout_1af47f4c7d8b2fd1ad831763503c7320ee" kind="function"><name>VulkanPipelineLayout</name></member>
+    <member refid="classrr_1_1VulkanPipelineLayout_1a0f920ca26cc6f5e34e1057eccf0c964b" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanPipelineLayout_1aaacfa329c7c467b37bc48402be6db7ba" kind="function"><name>VulkanPipelineLayout</name></member>
+    <member refid="classrr_1_1VulkanPipelineLayout_1add90e07a5d912c2b1a19edc1bc95389a" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanPipelineLayout_1ac5cd17afaed406d163423062acf23569" kind="function"><name>getHandle</name></member>
+  </compound>
+  <compound refid="classrr_1_1VulkanRenderer" kind="class"><name>rr::VulkanRenderer</name>
+    <member refid="classrr_1_1VulkanRenderer_1acf5fb9498698b5536219617491bd050b" kind="variable"><name>window</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1a931845f77134e84c83f549c24ca9b2c5" kind="variable"><name>m_instance</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1a59a40f5eeb6297a5e091442341d35e3a" kind="variable"><name>m_debugMessenger</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1a3dca550bc7f0147c97e82456a06d93b6" kind="variable"><name>m_surface</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1a9061feda9467768fdb341f7ea702cb27" kind="variable"><name>m_device</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1ac701b75cb89976ed04be9c56e93d6b63" kind="variable"><name>m_swapchain</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1a0ab0059e9534fc5ddfacd3ff2be2a971" kind="variable"><name>m_pipelineLayout</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1ae76fd6c8ced71b60cbbf1c1819f8609e" kind="variable"><name>m_pipeline</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1ac3aa9444929fd2962f36dc7e7f0cfe31" kind="variable"><name>m_commandPool</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1abcaa01e0144b4782e61e71217e9de70e" kind="variable"><name>m_commandBuffers</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1a9ad5811339cf6ca5a6cefeb89c934080" kind="variable"><name>m_renderObjects</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1ad27da1a42f10fcf4e0614b239bbe6473" kind="variable"><name>CLEAR_COLOR</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1a26853283a67a09bee47b4e399715de96" kind="variable"><name>BASIC_VERT_SHADER_PATH</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1a721587d7b9f06c4a10acf417e8aa6010" kind="variable"><name>BASIC_FRAG_SHADER_PATH</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1a192c280503d63a994ac5d3bfb1959d2a" kind="function"><name>VulkanRenderer</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1a2cb11fae02ec643abaff8c4ddbd5e33f" kind="function"><name>~VulkanRenderer</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1a30884f3950bf2341c92e8022b5420a99" kind="function"><name>VulkanRenderer</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1afd2c948a02e265d52d1ebca6d4c1c1e2" kind="function"><name>VulkanRenderer</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1a1d749271c1755a688c4a595a72d78ba0" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1a6468d30dc724c0e3aba5bfa413143cf5" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1a01f2527977e7f7ca4cd0d393a9f5af85" kind="function"><name>render</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1a3e5a5b49686f304be39194b4aa0ffb2b" kind="function"><name>shutdown</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1a6ed2a8fae0b86289a15f0ff5bce05a6b" kind="function"><name>createPipeline</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1ae4936264f549ae0320eaf3a7ca99878e" kind="function"><name>loadRenderObjects</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1a09596ac1cb9981ec2e4d67702a4515ae" kind="function"><name>recreateSwapchain</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1ab8a4296c489aa902e9e27c69a6681fa6" kind="function"><name>recordCommandBuffers</name></member>
+    <member refid="classrr_1_1VulkanRenderer_1a256f3998e0c668766f7f8fca09d8a7e7" kind="function"><name>renderObjects</name></member>
+  </compound>
+  <compound refid="classrr_1_1VulkanSurface" kind="class"><name>rr::VulkanSurface</name>
+    <member refid="classrr_1_1VulkanSurface_1ae950728cffa4ae759fe90b1459f1a73a" kind="variable"><name>instance</name></member>
+    <member refid="classrr_1_1VulkanSurface_1a3098277f1baad426a3cf286f3b92dadb" kind="variable"><name>m_surface</name></member>
+    <member refid="classrr_1_1VulkanSurface_1ad406e4c6ca0adf0c88f1688609dba090" kind="function"><name>VulkanSurface</name></member>
+    <member refid="classrr_1_1VulkanSurface_1a5b68d646119c27708537d3192d0c9fe4" kind="function"><name>~VulkanSurface</name></member>
+    <member refid="classrr_1_1VulkanSurface_1a7314394521782d8f62a12f80e3b7ac84" kind="function"><name>VulkanSurface</name></member>
+    <member refid="classrr_1_1VulkanSurface_1a2ec877c2fe9b387b23d8be02410199f3" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanSurface_1acb7380e31083e749577d31b13e313568" kind="function"><name>VulkanSurface</name></member>
+    <member refid="classrr_1_1VulkanSurface_1a5a877402527748c3d87f9e66d53f60b3" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanSurface_1ad9d761971ce2587464ee40fa1818ff7a" kind="function"><name>getHandle</name></member>
+  </compound>
+  <compound refid="classrr_1_1VulkanSwapchain" kind="class"><name>rr::VulkanSwapchain</name>
+    <member refid="classrr_1_1VulkanSwapchain_1a964a34a5f3262e1c47fd871a1d904c21" kind="variable"><name>MAX_FRAMES_IN_FLIGHT</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1aff7464e3b22a39bf2e3d03c3d9052fd4" kind="variable"><name>device</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a1a6643ed72a29901946875faa76d3bcd" kind="variable"><name>surface</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a0daec85972e5f956cc1c8b33a88a31ee" kind="variable"><name>windowExtent</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a7c8f14c92e0fcb2df669a092bc744570" kind="variable"><name>m_swapchain</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a653b72b854efc58b0804efcc406d23b4" kind="variable"><name>m_swapchainFramebuffers</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a1cbfbede026b0ecca14ff56ffbd8c426" kind="variable"><name>m_renderPass</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a93101cd289214c6c353ef18f25831f8a" kind="variable"><name>m_swapchainImageFormat</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a2630ede44745b07ccb85fb9f9772a9ea" kind="variable"><name>m_swapchainImageExtent</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1acd6bf2733aaaf67e356f73474ce5b46b" kind="variable"><name>m_swapchainImages</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a9ea81923dc77e931433502f31f06dd18" kind="variable"><name>m_swapchainImageViews</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a8e92cba3469d807380b06070203461bc" kind="variable"><name>m_depthImages</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1abaf15ed074df47e09611c59191ea0613" kind="variable"><name>m_depthImagesMemory</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a5e0c351aaf8559dff3ee2f1ce7e2c543" kind="variable"><name>m_depthImageViews</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a4aa49beb13d1e65ff89a1a39f807c798" kind="variable"><name>m_currentFrame</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1aeac5428aecccd3bfc15fb2348deb7333" kind="variable"><name>m_lastImageIndex</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a2d397dcd2775e3dc8afd74540b146eb8" kind="variable"><name>m_imageAvailableSemaphores</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a76b44e988886a7b9cff02d872c9a0e27" kind="variable"><name>m_renderFinishedSemaphores</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1aa119a58ffdba628ee53545cfe5f63d14" kind="variable"><name>m_inFlightFences</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a9b5f90901bfc275bb9a2213b568af2b8" kind="variable"><name>m_imagesInFlight</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a004a9f424175004cffa4ed4a42747811" kind="function"><name>VulkanSwapchain</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1af7c852075f3cb222b7a95f5d5b9f933c" kind="function"><name>VulkanSwapchain</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a6779490e76cf6a72a3d20027fbb6f3e9" kind="function"><name>~VulkanSwapchain</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a3e6ddd412eb53f877296e6e88badb91f" kind="function"><name>VulkanSwapchain</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1ad305f54c62a4f9f8a706d8355f205181" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1ac890bae954010a9875420dde28bc3123" kind="function"><name>VulkanSwapchain</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a22adc3a41146b2d53c338246561e1bbf" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a7fd7b4e69a9364cf906b1b2c708bd49c" kind="function"><name>imageCount</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a03f465a16bb29f2034ffb8c13688c185" kind="function"><name>getExtent</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1aa1d92675909218fef6c5629252016623" kind="function"><name>acquireNextImage</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a1ed09be0292cc58b03beb68ec93f5f81" kind="function"><name>submitCommandBuffer</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a8f8ec3fababd315726c66cc88b306e3e" kind="function"><name>getHandle</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1af9bdf1ebc17f04123bfecc93fe62939c" kind="function"><name>getRenderPassHandle</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1ac14fc810f0b3cf2a62c40cbfc87406ce" kind="function"><name>getFramebufferHandle</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a5976715b3c82c580b7f91bffdcbb768e" kind="function"><name>createVulkanSwapchain</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a240e1dfa302a7f598e1c2df2b10f50d6" kind="function"><name>createSwapchain</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a44f00432ac1404eacf18ac0f0eec8947" kind="function"><name>createImageViews</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1acc9c5d6eaaafe91608f837076ea6b7e6" kind="function"><name>createRenderPass</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a9159966ae281d0cbe7cf8f217ce3420e" kind="function"><name>createDepthResources</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a32404744d5753cf9c5de6824c2285df6" kind="function"><name>createFramebuffers</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1ad3c6e1d32eda82ee5e714f646dd05186" kind="function"><name>createSyncObjects</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a0ee85e6fb01401a6d65bf342fee0e1dd" kind="function"><name>chooseSwapExtent</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1aeec60588bc98ea321d943aebc95846b2" kind="function"><name>findDepthFormat</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a83ce8c218576f3803e528aa202931ef5" kind="function"><name>chooseSwapSurfaceFormat</name></member>
+    <member refid="classrr_1_1VulkanSwapchain_1a70a38b34a096589fab627dd3811289d7" kind="function"><name>chooseSwapPresentMode</name></member>
+  </compound>
+  <compound refid="classrr_1_1Window" kind="class"><name>rr::Window</name>
+    <member refid="classrr_1_1Window_1a8c7ad74a479238bff745288cfe55dba3" kind="variable"><name>m_window</name></member>
+    <member refid="classrr_1_1Window_1a59e1a7b2574783007aef0bbfdb95dbdc" kind="variable"><name>m_width</name></member>
+    <member refid="classrr_1_1Window_1ae8a13bd0a53254025a9356a679458cb3" kind="variable"><name>m_height</name></member>
+    <member refid="classrr_1_1Window_1a24ac96b9c00886c05955e9b09cdd3861" kind="variable"><name>m_title</name></member>
+    <member refid="classrr_1_1Window_1ae6e9088839712abbb1e742d215d3d5bf" kind="variable"><name>m_framebufferResized</name></member>
+    <member refid="classrr_1_1Window_1ab9a8b13e34dcfc7c61669a428f8eeff7" kind="function"><name>Window</name></member>
+    <member refid="classrr_1_1Window_1a0e6abfc5b6055b21b43a1e4d6a2e0aa0" kind="function"><name>~Window</name></member>
+    <member refid="classrr_1_1Window_1a8b9707541b35c11a8552036acce56b7b" kind="function"><name>Window</name></member>
+    <member refid="classrr_1_1Window_1a2b48cd5ecc41974ac28a5c6760c2425d" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1Window_1a6ac080e9932daec628d41445498de42e" kind="function"><name>Window</name></member>
+    <member refid="classrr_1_1Window_1a40e61ef3df001e499e70459367b4f0f4" kind="function"><name>operator=</name></member>
+    <member refid="classrr_1_1Window_1ac4b8c93bd90bd3ccc48b14cf81334627" kind="function"><name>getWindowHandle</name></member>
+    <member refid="classrr_1_1Window_1a7e2e2c8a0ea45d3546dd72571db29e36" kind="function"><name>shouldClose</name></member>
+    <member refid="classrr_1_1Window_1afff4d6cbe64ce548adb84d83d042d76b" kind="function"><name>getExtent</name></member>
+    <member refid="classrr_1_1Window_1ad2090b64dc2fcd0b3abe8576c9cbeb43" kind="function"><name>wasWindowResized</name></member>
+    <member refid="classrr_1_1Window_1aa07b985c56776ef99fe362353a844b85" kind="function"><name>resetWindowResized</name></member>
+    <member refid="classrr_1_1Window_1ace8723045e9c0e757894c679bc607688" kind="function"><name>createWindowSurface</name></member>
+    <member refid="classrr_1_1Window_1a9e527bb9b107d6f83803e9316d56640c" kind="function"><name>framebufferResizeCallback</name></member>
+  </compound>
+  <compound refid="namespacerr" kind="namespace"><name>rr</name>
+    <member refid="namespacerr_1aa820520e8b4cccadfd441961b24b4a7d" kind="enum"><name>GLFWExceptionCause</name></member>
+    <member refid="namespacerr_1aa820520e8b4cccadfd441961b24b4a7dafe81900759bffb021f9d7d0c3dd61853" kind="enumvalue"><name>GLFW_INIT_FAILED</name></member>
+    <member refid="namespacerr_1aa820520e8b4cccadfd441961b24b4a7da3955f528221c538bc8351b649f31ffd2" kind="enumvalue"><name>WINDOW_CREATION_FAILED</name></member>
+    <member refid="namespacerr_1aa820520e8b4cccadfd441961b24b4a7da854dfe075b840a6abc404bd60b32bc88" kind="enumvalue"><name>SURFACE_CREATION_FAILED</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01e" kind="enum"><name>VulkanExceptionCause</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea84b2a1b23379e6b5f8f3efeb12beb989" kind="enumvalue"><name>CREATE_INSTANCE</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eaf176359e8f9432b3beaa4c78ba7721a3" kind="enumvalue"><name>IMAGE_ACQUISITION</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea6631fe4082085b6224eeb2e92b83b902" kind="enumvalue"><name>SUBMIT_COMMAND_BUFFER</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eae4711e0023e6af0ca8aa3855c36fc62f" kind="enumvalue"><name>BEGIN_RECORD_COMMAND_BUFFER</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea3fb1230504dfd4e733a3fba790f2e38f" kind="enumvalue"><name>END_RECORD_COMMAND_BUFFER</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea2130fef77965ebd15b4d9df3b9379697" kind="enumvalue"><name>ALLOCATE_COMMAND_BUFFERS</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea98832f0887b8f39ee80ffa87ee28a370" kind="enumvalue"><name>QUEUE_FAMILY_INDEX_IS_EMPTY</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea068681d8f4e4d3a083531f825b701dd0" kind="enumvalue"><name>CREATE_COMMAND_POOL</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eac54fb03f9b99aa18a777217bde527f1e" kind="enumvalue"><name>CREATE_DEBUG_MESSENGER</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea98f77caa8de8cbecc5afa9c58a777fdc" kind="enumvalue"><name>FIND_SUPPORTED_FORMAT</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eab791c8e1d9b12af9c02cfaa01fe5cb3c" kind="enumvalue"><name>CREATE_IMAGE</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea366474e8403689673f0cb92147dcf440" kind="enumvalue"><name>ALLOCATE_MEMORY</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea30cf9871933c00e53f6cbbbd0ce7ec37" kind="enumvalue"><name>BIND_IMAGE_MEMORY</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eaf7d0b6cd945e0f045272510c76302e00" kind="enumvalue"><name>NO_PHYSICAL_DEVICE_FOUND</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea1331dbf3dee01c4af88292fb8abeb8a0" kind="enumvalue"><name>NO_SUITABLE_DEVICE_FOUND</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea2d10e665f5257839e390b655c3c042c8" kind="enumvalue"><name>CREATE_DEVICE</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea4fc96fca1098d3cbc8305a28eac851b2" kind="enumvalue"><name>NO_SUITABLE_MEMORY_TYPE_FOUND</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea92d06b0fb10ac69baff543d0d9724378" kind="enumvalue"><name>GLFW_EXTENSIONS_MISSING</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea3cb314759a31e8700f65c14a3799b857" kind="enumvalue"><name>CREATE_GRAPHICS_PIPELINE</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea09a099c9bc6af953bae959de8aaf12d3" kind="enumvalue"><name>CREATE_SHADER_MODULE</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea15589c019d3b30895e251cbb6efa8464" kind="enumvalue"><name>CREATE_PIPELINE_LAYOUT</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea45b73d306b7518541ac649a5279b34d5" kind="enumvalue"><name>QUEUE_SUBMIT_GRAPHICS</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea85caf283434d7d68b9eb8a7a6dc22f5c" kind="enumvalue"><name>CREATE_SWAPCHAIN_KHR</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea9cdfcc6fac385aca663a5a851a63ba3b" kind="enumvalue"><name>CREATE_IMAGE_VIEW</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eaaa19775d39c08663007aaa3578188184" kind="enumvalue"><name>CREATE_RENDER_PASS</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea5d3fe581ff37074aa6e93ced467f5341" kind="enumvalue"><name>CREATE_FRAMEBUFFER</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea7a14dec3212e192d889c33941519751b" kind="enumvalue"><name>CREATE_SEMAPHORE</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea4d5f131718409d45efc1fcd183ef7a13" kind="enumvalue"><name>CREATE_IN_FLIGHT_SYNC_OBJECT</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eafb3e32789cd673519fe2b9122ed279e6" kind="enumvalue"><name>VALIDATION_LAYERS_UNAVAILABLE</name></member>
+    <member refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea4f0b55ea4bfa924ad57b54792e4ff3a9" kind="enumvalue"><name>CREATE_BUFFER</name></member>
+    <member refid="namespacerr_1a21cc34bd8aceca696b7581ae596e3a04" kind="enum"><name>RendererType</name></member>
+    <member refid="namespacerr_1a21cc34bd8aceca696b7581ae596e3a04a04f6a7842c7710d5539cb9650f8e949d" kind="enumvalue"><name>RRENDERER_VULKAN</name></member>
+    <member refid="namespacerr_1ac1cbc0d85292b014626bd26873cc0354" kind="variable"><name>useValidationLayers</name></member>
+    <member refid="namespacerr_1a5b7ac2476abfdaebdbd4585457325099" kind="variable"><name>validationLayers</name></member>
+    <member refid="namespacerr_1a161e261e156ebc427a43973d660935fc" kind="variable"><name>ALIGNMENT_OF_GLM_VEC3</name></member>
+    <member refid="namespacerr_1adc931f1a560ba309782f5a2fd009654e" kind="function"><name>CreateDebugUtilsMessengerEXT</name></member>
+    <member refid="namespacerr_1a31fa27895ecf3cd2e0e1b0256ba4d821" kind="function"><name>DestroyDebugUtilsMessengerEXT</name></member>
+    <member refid="namespacerr_1a207864460d243d147d44225c3895cc10" kind="function"><name>throwWithLog</name></member>
+  </compound>
+  <compound refid="namespacerr_1_1_0d5" kind="namespace"><name>rr::@5</name>
+  </compound>
+  <compound refid="namespacerr_1_1_0d9" kind="namespace"><name>rr::@9</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="constants_8hpp" kind="file"><name>constants.hpp</name>
+  </compound>
+  <compound refid="VulkanCommandBuffer_8cpp" kind="file"><name>VulkanCommandBuffer.cpp</name>
+  </compound>
+  <compound refid="VulkanCommandBuffer_8hpp" kind="file"><name>VulkanCommandBuffer.hpp</name>
+  </compound>
+  <compound refid="VulkanCommandPool_8cpp" kind="file"><name>VulkanCommandPool.cpp</name>
+  </compound>
+  <compound refid="VulkanCommandPool_8hpp" kind="file"><name>VulkanCommandPool.hpp</name>
+  </compound>
+  <compound refid="VulkanDebugMessenger_8cpp" kind="file"><name>VulkanDebugMessenger.cpp</name>
+  </compound>
+  <compound refid="VulkanDebugMessenger_8hpp" kind="file"><name>VulkanDebugMessenger.hpp</name>
+  </compound>
+  <compound refid="VulkanDevice_8cpp" kind="file"><name>VulkanDevice.cpp</name>
+  </compound>
+  <compound refid="VulkanDevice_8hpp" kind="file"><name>VulkanDevice.hpp</name>
+  </compound>
+  <compound refid="VulkanInstance_8cpp" kind="file"><name>VulkanInstance.cpp</name>
+  </compound>
+  <compound refid="VulkanInstance_8hpp" kind="file"><name>VulkanInstance.hpp</name>
+  </compound>
+  <compound refid="VulkanMesh_8cpp" kind="file"><name>VulkanMesh.cpp</name>
+  </compound>
+  <compound refid="VulkanMesh_8hpp" kind="file"><name>VulkanMesh.hpp</name>
+    <member refid="VulkanMesh_8hpp_1a816ab7d5c2ce1f0a01216042837beb93" kind="define"><name>GLM_FORCE_RADIANS</name></member>
+    <member refid="VulkanMesh_8hpp_1aa53e0967978ad7a8792f6961156ec968" kind="define"><name>GLM_FORCE_DEPTH_ZERO_TO_ONE</name></member>
+  </compound>
+  <compound refid="VulkanPipeline_8cpp" kind="file"><name>VulkanPipeline.cpp</name>
+  </compound>
+  <compound refid="VulkanPipeline_8hpp" kind="file"><name>VulkanPipeline.hpp</name>
+  </compound>
+  <compound refid="VulkanPipelineLayout_8cpp" kind="file"><name>VulkanPipelineLayout.cpp</name>
+  </compound>
+  <compound refid="VulkanPipelineLayout_8hpp" kind="file"><name>VulkanPipelineLayout.hpp</name>
+    <member refid="VulkanPipelineLayout_8hpp_1a816ab7d5c2ce1f0a01216042837beb93" kind="define"><name>GLM_FORCE_RADIANS</name></member>
+    <member refid="VulkanPipelineLayout_8hpp_1aa53e0967978ad7a8792f6961156ec968" kind="define"><name>GLM_FORCE_DEPTH_ZERO_TO_ONE</name></member>
+  </compound>
+  <compound refid="VulkanSurface_8cpp" kind="file"><name>VulkanSurface.cpp</name>
+  </compound>
+  <compound refid="VulkanSurface_8hpp" kind="file"><name>VulkanSurface.hpp</name>
+  </compound>
+  <compound refid="VulkanSwapchain_8cpp" kind="file"><name>VulkanSwapchain.cpp</name>
+  </compound>
+  <compound refid="VulkanSwapchain_8hpp" kind="file"><name>VulkanSwapchain.hpp</name>
+  </compound>
+  <compound refid="EngineException_8hpp" kind="file"><name>EngineException.hpp</name>
+  </compound>
+  <compound refid="FileIOException_8hpp" kind="file"><name>FileIOException.hpp</name>
+  </compound>
+  <compound refid="GLFWException_8hpp" kind="file"><name>GLFWException.hpp</name>
+  </compound>
+  <compound refid="VulkanException_8hpp" kind="file"><name>VulkanException.hpp</name>
+  </compound>
+  <compound refid="Renderer_8hpp" kind="file"><name>Renderer.hpp</name>
+  </compound>
+  <compound refid="RenderObject_8cpp" kind="file"><name>RenderObject.cpp</name>
+  </compound>
+  <compound refid="RenderObject_8hpp" kind="file"><name>RenderObject.hpp</name>
+  </compound>
+  <compound refid="StringHash_8hpp" kind="file"><name>StringHash.hpp</name>
+  </compound>
+  <compound refid="VulkanRenderer_8cpp" kind="file"><name>VulkanRenderer.cpp</name>
+  </compound>
+  <compound refid="VulkanRenderer_8hpp" kind="file"><name>VulkanRenderer.hpp</name>
+  </compound>
+  <compound refid="Window_8cpp" kind="file"><name>Window.cpp</name>
+  </compound>
+  <compound refid="Window_8hpp" kind="file"><name>Window.hpp</name>
+    <member refid="Window_8hpp_1ab91f325a54d3e35fe831a86d6382c2a9" kind="define"><name>GLFW_INCLUDE_VULKAN</name></member>
+  </compound>
+  <compound refid="dir_fdbc7b4b5b4c04d598adc44afc34d9a5" kind="dir"><name>core</name>
+  </compound>
+  <compound refid="dir_2052808828190f934b76e979ee65af8a" kind="dir"><name>engine</name>
+  </compound>
+  <compound refid="dir_9f13a80b6380190ef66302060c03936b" kind="dir"><name>exception</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_5b2f2788b15aab8b0f8629d5c5844543" kind="dir"><name>utility</name>
+  </compound>
+  <compound refid="dir_7f248a1e90b16b9ec55880644bb251aa" kind="dir"><name>window</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

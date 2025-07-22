@@ -13,6 +13,13 @@
 namespace rr
 {
 
+/// \brief Create a new \ref Window
+///
+/// \param width width of the window
+/// \param height height of the window
+/// \param title title of the window
+///
+/// \throws \ref GLFWException if anything goes wrong while creating the Window
 Window::Window(int width, int height, const std::string& title)
     : m_window(nullptr)
     , m_width(width)
@@ -42,15 +49,22 @@ Window::~Window()
     glfwDestroyWindow(m_window);
 }
 
-void Window::createWindowSurface(VkInstance& instance, VkSurfaceKHR* surface)
+/// \brief Create a surface to which Vulkan can draw to
+///
+/// \param &instance VkInstance
+/// \param *surface VkSurfaceKHR
+///
+/// \throws \ref GLFWException if GLFW couldn't create a valid surface
+void Window::createWindowSurface(VkInstance& instance, VkSurfaceKHR* surface) const
 {
     if(glfwCreateWindowSurface(instance, m_window, nullptr, surface) != VK_SUCCESS)
         throwWithLog<GLFWException>(std::source_location::current(), GLFWExceptionCause::SURFACE_CREATION_FAILED);
 }
 
+/// \brief GLFW callback function for resizing the framebuffer
 void Window::framebufferResizeCallback(GLFWwindow* window, int width, int height)
 {
-    auto* pWindow = reinterpret_cast<Window*>(glfwGetWindowUserPointer(window));
+    auto* pWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
 
     pWindow->m_framebufferResized = true;
     pWindow->m_width = width;

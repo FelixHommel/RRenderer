@@ -16,6 +16,12 @@
 namespace rr
 {
 
+/// \brief A \ref Vertex is a simple point
+///
+/// It consists of a position and color.
+///
+/// \author Felix Hommel
+/// \date 7/20/2025
 struct Vertex
 {
     glm::vec2 position;
@@ -25,6 +31,12 @@ struct Vertex
     static std::vector<VkVertexInputAttributeDescription> getAttributeDescriptions();
 };
 
+/// \brief A \ref VulkanMesh is a collection of \ref Vertex that makes some sort of shape
+///
+/// They are allocated on the `VkDevice` and provide drawing and binding functionalities.
+///
+/// \author Felix Hommel
+/// \date 7/20/2025
 class VulkanMesh
 {
 public:
@@ -32,8 +44,8 @@ public:
     ~VulkanMesh();
 
     VulkanMesh(const VulkanMesh&) = delete;
-    VulkanMesh(VulkanMesh&&) = delete;
     VulkanMesh& operator=(const VulkanMesh&) = delete;
+    VulkanMesh(VulkanMesh&&) = delete;
     VulkanMesh& operator=(VulkanMesh&&) = delete;
 
     void bind(VkCommandBuffer cmdBuffer) const;

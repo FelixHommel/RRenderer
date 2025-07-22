@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structrr_1_1QueueFamilyIndices" kind="struct" language="C++" prot="public">
+    <compoundname>rr::QueueFamilyIndices</compoundname>
+    <includes refid="VulkanDevice_8hpp" local="no">VulkanDevice.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structrr_1_1QueueFamilyIndices_1a532f639d4119f9d9a00f1eb3861c4355" prot="public" static="no" mutable="no">
+        <type>std::optional&lt; std::uint32_t &gt;</type>
+        <definition>std::optional&lt;std::uint32_t&gt; rr::QueueFamilyIndices::graphicsFamily</definition>
+        <argsstring></argsstring>
+        <name>graphicsFamily</name>
+        <qualifiedname>rr::QueueFamilyIndices::graphicsFamily</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="41" column="19" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrr_1_1QueueFamilyIndices_1a0ad9bd2a7f6e98c09fd4dcf34b33c7b2" prot="public" static="no" mutable="no">
+        <type>std::optional&lt; std::uint32_t &gt;</type>
+        <definition>std::optional&lt;std::uint32_t&gt; rr::QueueFamilyIndices::presentFamily</definition>
+        <argsstring></argsstring>
+        <name>presentFamily</name>
+        <qualifiedname>rr::QueueFamilyIndices::presentFamily</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="42" column="19" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structrr_1_1QueueFamilyIndices_1a7117a5107225ade4dcd599ebb5976624" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">constexpr</ref> <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bool</ref></type>
+        <definition>constexpr bool rr::QueueFamilyIndices::isComplete</definition>
+        <argsstring>() const</argsstring>
+        <name>isComplete</name>
+        <qualifiedname>rr::QueueFamilyIndices::isComplete</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="44" column="21" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="structrr_1_1QueueFamilyIndices_1ac32603b7cae6336a11c24fa9c0e1f8c4" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">constexpr</ref> <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bool</ref></type>
+        <definition>constexpr bool rr::QueueFamilyIndices::areSameQueue</definition>
+        <argsstring>() const</argsstring>
+        <name>areSameQueue</name>
+        <qualifiedname>rr::QueueFamilyIndices::areSameQueue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="45" column="21" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="45" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="structrr_1_1QueueFamilyIndices_1a11500c250f59eed9b54f54d9ec32d037" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::set&lt; std::uint32_t &gt;</type>
+        <definition>std::set&lt; std::uint32_t &gt; rr::QueueFamilyIndices::getUniqueFamilies</definition>
+        <argsstring>() const</argsstring>
+        <name>getUniqueFamilies</name>
+        <qualifiedname>rr::QueueFamilyIndices::getUniqueFamilies</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="54" column="15" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="structrr_1_1QueueFamilyIndices_1aeabf88de362ee65fefea2313c07ac214" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">constexpr</ref> std::array&lt; std::uint32_t, 2 &gt;</type>
+        <definition>constexpr std::array&lt; std::uint32_t, 2 &gt; rr::QueueFamilyIndices::toAray</definition>
+        <argsstring>() const</argsstring>
+        <name>toAray</name>
+        <qualifiedname>rr::QueueFamilyIndices::toAray</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="55" column="27" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="55" bodyend="61"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="structrr_1_1QueueFamilyIndices" kindref="compound">QueueFamilyIndices</ref> is a collection about different Queues that are utilized by the <ref refid="classrr_1_1Renderer" kindref="compound">Renderer</ref> </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="structrr_1_1QueueFamilyIndices" kindref="compound">QueueFamilyIndices</ref> stores the handles of a graphics and present Queue family. In addition, it implements several convenience and utility functions.</para>
+<para><simplesect kind="author"><para>Felix Hommel </para>
+</simplesect>
+<simplesect kind="date"><para>5/26/2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="src/engine/core/VulkanDevice.hpp" line="39" column="1" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="40" bodyend="62"/>
+    <listofallmembers>
+      <member refid="structrr_1_1QueueFamilyIndices_1ac32603b7cae6336a11c24fa9c0e1f8c4" prot="public" virt="non-virtual"><scope>rr::QueueFamilyIndices</scope><name>areSameQueue</name></member>
+      <member refid="structrr_1_1QueueFamilyIndices_1a11500c250f59eed9b54f54d9ec32d037" prot="public" virt="non-virtual"><scope>rr::QueueFamilyIndices</scope><name>getUniqueFamilies</name></member>
+      <member refid="structrr_1_1QueueFamilyIndices_1a532f639d4119f9d9a00f1eb3861c4355" prot="public" virt="non-virtual"><scope>rr::QueueFamilyIndices</scope><name>graphicsFamily</name></member>
+      <member refid="structrr_1_1QueueFamilyIndices_1a7117a5107225ade4dcd599ebb5976624" prot="public" virt="non-virtual"><scope>rr::QueueFamilyIndices</scope><name>isComplete</name></member>
+      <member refid="structrr_1_1QueueFamilyIndices_1a0ad9bd2a7f6e98c09fd4dcf34b33c7b2" prot="public" virt="non-virtual"><scope>rr::QueueFamilyIndices</scope><name>presentFamily</name></member>
+      <member refid="structrr_1_1QueueFamilyIndices_1aeabf88de362ee65fefea2313c07ac214" prot="public" virt="non-virtual"><scope>rr::QueueFamilyIndices</scope><name>toAray</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

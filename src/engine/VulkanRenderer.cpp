@@ -34,6 +34,9 @@
 namespace rr
 {
 
+/// \brief Construct a new \ref VulkanRenderer based on \p window
+///
+/// \param window `Window&`
 VulkanRenderer::VulkanRenderer(Window& window)
     : window(window)
     , m_debugMessenger(std::make_unique<VulkanDebugMessenger>(m_instance->getHandle()))
@@ -50,10 +53,15 @@ VulkanRenderer::VulkanRenderer(Window& window)
     spdlog::info("allocated {} command buffers", m_commandBuffers.size());
 }
 
+/// \brief Update the frame
+///
+/// \throws \ref VulkanException if there are any errors during the rendering process
 void VulkanRenderer::render()
 {
-    const int FPS = 33;
+    // TODO: find better way to limit frames
+    constexpr int FPS{ 33 };
     std::this_thread::sleep_for(std::chrono::milliseconds(FPS));
+
     std::uint32_t imageIndex{};
     auto result{ m_swapchain->acquireNextImage(&imageIndex) };
 
@@ -68,7 +76,7 @@ void VulkanRenderer::render()
         throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::IMAGE_ACQUISITION);
 
     recordCommandBuffers(imageIndex);
-    result = m_swapchain->submitCommandBuffer(&m_commandBuffers[imageIndex]->getHandle(), &imageIndex);
+    result = m_swapchain->submitCommandBuffer(&m_commandBuffers[imageIndex]->getHandleRef(), &imageIndex);
 
     if(result == VK_ERROR_OUT_OF_DATE_KHR || result == VK_SUBOPTIMAL_KHR || window.wasWindowResized())
     {
@@ -82,20 +90,22 @@ void VulkanRenderer::render()
         throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::SUBMIT_COMMAND_BUFFER);
 }
 
+/// \brief Shutdown the Renderer
 void VulkanRenderer::shutdown()
 {
     if(m_device)
         vkDeviceWaitIdle(m_device->getHandle());
 }
 
+/// \brief Load all models that are used in the Renderer
 void VulkanRenderer::loadRenderObjects()
 {
-    std::vector<Vertex> vertices{
+    const std::vector<Vertex> vertices{
         {.position = {0.f, -0.5f}, .color = {1.f, 0.f, 0.f}}, //NOLINT
         {.position = {0.5f, 0.5f}, .color = {0.f, 1.f, 0.f}}, //NOLINT
         {.position = {-0.5f, 0.5f}, .color = {0.f, 0.f, 1.f}} //NOLINT
     };
-    auto mesh = std::make_shared<VulkanMesh>(*m_device, vertices);
+    const auto mesh = std::make_shared<VulkanMesh>(*m_device, vertices);
 
     std::vector<glm::vec3> colors {
         { 1.f, 0.7f, 0.73f }, //NOLINT
@@ -108,7 +118,7 @@ void VulkanRenderer::loadRenderObjects()
     for(auto& color : colors)
         color = glm::pow(color, glm::vec3(2.2f)); //NOLINT
 
-    const std::size_t triCount{ 40 };
+    constexpr std::size_t triCount{ 40 };
     for(std::size_t i{ 0 }; i < triCount; ++i)
     {
         RenderObject triangle{ mesh, colors.at(i % colors.size()), { .translation = {}, .scale = { glm::vec2(0.5f) + i * 0.025f }, .rotation = i * std::numbers::pi_v<float> * 0.025f } }; //NOLINT
@@ -117,7 +127,13 @@ void VulkanRenderer::loadRenderObjects()
     }
 }
 
-std::unique_ptr<VulkanPipeline> VulkanRenderer::createPipeline()
+/// \brief Create a new \ref VulkanPipeline
+///
+/// It is returned as a std::unique_ptr. \ref VulkanPipeline depends on the render passes
+/// and the pipeline layout.
+///
+/// \return std::unique_ptr<VulkanPipeline>, the newly created Pipeline
+std::unique_ptr<VulkanPipeline> VulkanRenderer::createPipeline() const
 {
     assert(m_swapchain != nullptr && "Cannot create pipeline before swapchain");
     assert(m_pipelineLayout != nullptr && "cannot create pipeline before pipeline layout");
@@ -126,9 +142,11 @@ std::unique_ptr<VulkanPipeline> VulkanRenderer::createPipeline()
     VulkanPipeline::defaultPipelineConfigInfo(pipelineConfig);
     pipelineConfig.renderPass = m_swapchain->getRenderPassHandle();
     pipelineConfig.pipelineLayout = m_pipelineLayout->getHandle();
+
     return std::make_unique<VulkanPipeline>(m_device->getHandle(), pipelineConfig, BASIC_VERT_SHADER_PATH, BASIC_FRAG_SHADER_PATH);
 }
 
+/// \brief Recreate the \ref VulkanSwapchain in the case that it is outdated
 void VulkanRenderer::recreateSwapchain()
 {
     auto extent{ window.getExtent() };
@@ -155,20 +173,23 @@ void VulkanRenderer::recreateSwapchain()
     m_pipeline = createPipeline();
 }
 
+/// \brief Record a Command buffer
+///
+/// \param imageIndex std::size_t denoting which image is being recorded to
 void VulkanRenderer::recordCommandBuffers(std::size_t imageIndex)
 {
-    VkCommandBufferBeginInfo beginInfo{
+    const VkCommandBufferBeginInfo beginInfo{
         .sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO
     };
 
-    if(vkBeginCommandBuffer(m_commandBuffers.at(imageIndex)->getHandle(), &beginInfo) != VK_SUCCESS)
+    if(vkBeginCommandBuffer(m_commandBuffers.at(imageIndex)->getHandleRef(), &beginInfo) != VK_SUCCESS)
         throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::BEGIN_RECORD_COMMAND_BUFFER, imageIndex);
 
-    std::array<VkClearValue, 2> clearValues{
+    constexpr std::array<VkClearValue, 2> clearValues{
         VkClearValue{ .color = CLEAR_COLOR },
         VkClearValue{ .depthStencil = { 1.f, 0 } }
     };
-    VkRenderPassBeginInfo renderPassBeginInfo{
+    const VkRenderPassBeginInfo renderPassBeginInfo{
         .sType = VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO,
         .renderPass = m_swapchain->getRenderPassHandle(),
         .framebuffer = m_swapchain->getFramebufferHandle(imageIndex),
@@ -180,9 +201,9 @@ void VulkanRenderer::recordCommandBuffers(std::size_t imageIndex)
         .pClearValues = clearValues.data()
     };
 
-    vkCmdBeginRenderPass(m_commandBuffers[imageIndex]->getHandle(), &renderPassBeginInfo, VK_SUBPASS_CONTENTS_INLINE);
+    vkCmdBeginRenderPass(m_commandBuffers[imageIndex]->getHandleRef(), &renderPassBeginInfo, VK_SUBPASS_CONTENTS_INLINE);
 
-    VkViewport viewport{
+    const VkViewport viewport{
         .x = 0,
         .y = 0,
         .width = static_cast<float>(m_swapchain->getExtent().width),
@@ -190,23 +211,26 @@ void VulkanRenderer::recordCommandBuffers(std::size_t imageIndex)
         .minDepth = 0.f,
         .maxDepth = 1.f
     };
-    vkCmdSetViewport(m_commandBuffers[imageIndex]->getHandle(), 0, 1, &viewport);
+    vkCmdSetViewport(m_commandBuffers[imageIndex]->getHandleRef(), 0, 1, &viewport);
 
-    VkRect2D scissor{
+    const VkRect2D scissor{
         { 0, 0 },
         m_swapchain->getExtent()
     };
-    vkCmdSetScissor(m_commandBuffers[imageIndex]->getHandle(), 0, 1, &scissor);
+    vkCmdSetScissor(m_commandBuffers[imageIndex]->getHandleRef(), 0, 1, &scissor);
 
-    renderObjects(m_commandBuffers[imageIndex]->getHandle());
+    renderObjects(m_commandBuffers[imageIndex]->getHandleRef());
 
-    vkCmdEndRenderPass(m_commandBuffers[imageIndex]->getHandle());
+    vkCmdEndRenderPass(m_commandBuffers[imageIndex]->getHandleRef());
 
-    if(vkEndCommandBuffer(m_commandBuffers[imageIndex]->getHandle()) != VK_SUCCESS)
+    if(vkEndCommandBuffer(m_commandBuffers[imageIndex]->getHandleRef()) != VK_SUCCESS)
         throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::END_RECORD_COMMAND_BUFFER, imageIndex);
 }
 
-void VulkanRenderer::renderObjects(VkCommandBuffer comandBuffer)
+/// \brief Render all \ref RenderObjects
+///
+/// \param commandBuffer VkCommandBuffer to which the \ref RenderObject are recorded to
+void VulkanRenderer::renderObjects(VkCommandBuffer commandBuffer)
 {
     int i{ 0 };
     for(auto& obj : m_renderObjects)
@@ -215,7 +239,7 @@ void VulkanRenderer::renderObjects(VkCommandBuffer comandBuffer)
         obj.setRotation(glm::mod<float>(obj.getRotation() + 0.001f * i, 2.f * std::numbers::pi_v<float>)); //NOLINT
     }
 
-    m_pipeline->bind(comandBuffer);
+    m_pipeline->bind(commandBuffer);
     for(auto& obj : m_renderObjects)
     {
         SimplePushConstantData pushData{
@@ -224,9 +248,9 @@ void VulkanRenderer::renderObjects(VkCommandBuffer comandBuffer)
             .color = obj.getColor()
         };
 
-        vkCmdPushConstants(comandBuffer, m_pipelineLayout->getHandle(), VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, 0, sizeof(SimplePushConstantData), &pushData);
+        vkCmdPushConstants(commandBuffer, m_pipelineLayout->getHandle(), VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, 0, sizeof(SimplePushConstantData), &pushData);
 
-        obj.render(comandBuffer);
+        obj.render(commandBuffer);
     }
 }
 

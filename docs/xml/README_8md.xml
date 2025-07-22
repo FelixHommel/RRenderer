@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>RRenderer</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Is<sp/>a<sp/>lightweight<sp/>and<sp/>modular<sp/>Renderer<sp/>built<sp/>from<sp/>scratch.<sp/>It&apos;s<sp/>designed<sp/>as<sp/>a<sp/>learning<sp/>project,</highlight></codeline>
+<codeline><highlight class="normal">focusing<sp/>on<sp/>clear<sp/>abstractions<sp/>over<sp/>explicit<sp/>Graphics<sp/>APIs.<sp/>The<sp/>only<sp/>implementation<sp/>is<sp/>Vulkan</highlight></codeline>
+<codeline><highlight class="normal">for<sp/>now.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Building</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Prerequisites</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>C++23<sp/>compatible<sp/>compiler</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>CMake<sp/>$\geq$<sp/>3.30</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>VulkanSDK<sp/>$\geq$<sp/>1.3</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>git</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Build<sp/>instructions</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Clone<sp/>the<sp/>Repository</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/FelixHommel/RRenderer.git</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>RRenderer</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Configure<sp/>CMake<sp/>and<sp/>Build</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;<sp/>If<sp/>you<sp/>want<sp/>to<sp/>use<sp/>debug<sp/>builds<sp/>instead<sp/>replace<sp/>```release```<sp/>with<sp/>```debug```.</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>You<sp/>also<sp/>can<sp/>choose<sp/>to<sp/>use<sp/>clang<sp/>with<sp/>```release-clang```<sp/>or<sp/>```debug-clang```.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>--preset<sp/>release</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>--build<sp/>--preset<sp/>release</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Run<sp/>the<sp/>executable</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">./build/release/src/app/App</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Dependencies</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;<sp/>All<sp/>dependencies<sp/>(except<sp/>VulkanSDK)<sp/>are<sp/>pulled<sp/>in<sp/>from<sp/>CMake,<sp/>so<sp/>there<sp/>is<sp/>no<sp/>need<sp/>to<sp/>install</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>them<sp/>manually<sp/>on<sp/>the<sp/>system.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[GLFW](https://github.com/glfw/glfw)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[GLM](https://github.com/g-truc/glm)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[spdlog](https://github.com/gabime/spdlog)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[googletest](https://github.com/google/googletest)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Acknowledgements<sp/>/<sp/>Credits</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Brendan<sp/>Galea&apos;s](https://www.youtube.com/c/BrendanGalea)<sp/>Vulkan<sp/>(c++)<sp/>Game<sp/>Engine<sp/>Tutorials</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

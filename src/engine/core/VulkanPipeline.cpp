@@ -19,6 +19,14 @@
 namespace rr
 {
 
+/// \brief Create a new \ref VulkanPipeline
+///
+/// \param device the `VkDevice` where the Pipeline is running on
+/// \param configInfo `PipelineConfigInfo&` which provides configuration of the `VulkanPipeline`
+/// \param vertFilepath `std::filesystem::path&` to the vertex shader (.spv compiled)
+/// \param fragFilepath `std::filesystem::path&` to the vertex shader (.spv compiled)
+///
+/// \throws \ref VulkanException if there was an error during pipeline creation
 VulkanPipeline::VulkanPipeline(VkDevice device, const PipelineConfigInfo& configInfo, const std::filesystem::path& vertFilepath, const std::filesystem::path& fragFilepath)
     : device(device)
 {
@@ -28,7 +36,7 @@ VulkanPipeline::VulkanPipeline(VkDevice device, const PipelineConfigInfo& config
     createShaderModule(readFile(vertFilepath), &m_vertShaderModule);
     createShaderModule(readFile(fragFilepath), &m_fragShaderModule);
 
-    std::array<VkPipelineShaderStageCreateInfo,2 > shaderStages{
+    const std::array<VkPipelineShaderStageCreateInfo,2 > shaderStages{
         {
             {
                 .sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO,
@@ -47,9 +55,9 @@ VulkanPipeline::VulkanPipeline(VkDevice device, const PipelineConfigInfo& config
         }
     };
 
-    auto bindingDescriptions = Vertex::getBindingDescriptions();
-    auto attributeDescriptions = Vertex::getAttributeDescriptions();
-    VkPipelineVertexInputStateCreateInfo vertexInputInfo{
+    const auto bindingDescriptions = Vertex::getBindingDescriptions();
+    const auto attributeDescriptions = Vertex::getAttributeDescriptions();
+    const VkPipelineVertexInputStateCreateInfo vertexInputInfo{
         .sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO,
         .vertexBindingDescriptionCount = static_cast<std::uint32_t>(bindingDescriptions.size()),
         .pVertexBindingDescriptions = bindingDescriptions.data(),
@@ -57,7 +65,7 @@ VulkanPipeline::VulkanPipeline(VkDevice device, const PipelineConfigInfo& config
         .pVertexAttributeDescriptions = attributeDescriptions.data()
     };
 
-    VkGraphicsPipelineCreateInfo pipelineInfo{
+    const VkGraphicsPipelineCreateInfo pipelineInfo{
         .sType = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO,
         .stageCount = 2,
         .pStages = shaderStages.data(),
@@ -90,6 +98,9 @@ VulkanPipeline::~VulkanPipeline()
     vkDestroyPipeline(device, m_pipeline, nullptr);
 }
 
+/// \brief Provide a default configuration for a `VkPipeline`
+///
+/// \param[out] configInfo `PipelineConfigInfo&` where the configuration will be stored
 void VulkanPipeline::defaultPipelineConfigInfo(PipelineConfigInfo& configInfo)
 {
     configInfo.inputAssemblyInfo = {
@@ -166,14 +177,23 @@ void VulkanPipeline::defaultPipelineConfigInfo(PipelineConfigInfo& configInfo)
     };
 }
 
-void VulkanPipeline::bind(VkCommandBuffer cmdBuffer)
+/// \brief Bind the Pipeline for use in \p cmdBuffer
+///
+/// \param cmdBuffer the `VkCommandBuffer` that the Pipeline will be bound to
+void VulkanPipeline::bind(VkCommandBuffer cmdBuffer) const
 {
     vkCmdBindPipeline(cmdBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, m_pipeline);
 }
 
-void VulkanPipeline::createShaderModule(const std::vector<char>& code, VkShaderModule* shaderModule)
+/// \brief Create a shader module from \p code
+///
+/// \param code the source code of the shader
+/// \param[out] shaderModule the 'VkShaderModule' handle where the created shader will be saved
+///
+/// \throws \ref VulkanException if there was an error while creating the module
+void VulkanPipeline::createShaderModule(const std::vector<char>& code, VkShaderModule* shaderModule) const
 {
-    VkShaderModuleCreateInfo createInfo{
+    const VkShaderModuleCreateInfo createInfo{
         .sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO,
         .codeSize = code.size(),
         .pCode = reinterpret_cast<const std::uint32_t*>(code.data())
@@ -183,6 +203,12 @@ void VulkanPipeline::createShaderModule(const std::vector<char>& code, VkShaderM
         throwWithLog<VulkanException>(std::source_location::current(), VulkanExceptionCause::CREATE_SHADER_MODULE);
 }
 
+/// \brief Read a file and return it's content
+///
+/// \param filepath `std::filesystem::path&` to the file
+///
+/// \returns std::vector containing the file's content as `char`
+/// \throws \ref FileIOException if there was an error while reading the file
 std::vector<char> VulkanPipeline::readFile(const std::filesystem::path& filepath)
 {
     std::ifstream file(filepath, std::ios::ate | std::ios::binary);
@@ -190,7 +216,7 @@ std::vector<char> VulkanPipeline::readFile(const std::filesystem::path& filepath
     if(!file.is_open())
         throwWithLog<FileIOException>(std::source_location::current(), filepath);
 
-    std::streamsize fileSize{ file.tellg() };
+    const std::streamsize fileSize{ file.tellg() };
     std::vector<char> buffer(fileSize);
 
     file.seekg(0);

@@ -1,13 +1,14 @@
 #include "VulkanDebugMessenger.hpp"
 
 #include "constants.hpp"
-
 #include "exception/EngineException.hpp"
 #include "exception/VulkanException.hpp"
+
 #include "spdlog/spdlog.h"
-#include <source_location>
 #include <vulkan/vk_platform.h>
 #include <vulkan/vulkan_core.h>
+
+#include <source_location>
 
 namespace rr
 {
@@ -67,13 +68,18 @@ void DestroyDebugUtilsMessengerEXT(
         func(instance, debugMessenger, pAllocator);
 }
 
+/// \brief Construct a new \ref VulkanDebugMessenger
+///
+/// \param instance VkInstance the \ref VulkanDebugMessenger is bound to
+///
+/// \throws \ref VulkanException if anything goes wring while creating the debug messenger
 VulkanDebugMessenger::VulkanDebugMessenger(VkInstance instance)
     : instance(instance)
 {
-    if(!useValidationLayers)
+    if constexpr (!useValidationLayers)
         return;
 
-    VkDebugUtilsMessengerCreateInfoEXT createInfo = {
+    const VkDebugUtilsMessengerCreateInfoEXT createInfo{
         .sType = VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT,
         .messageSeverity = VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT,
         .messageType = VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT,

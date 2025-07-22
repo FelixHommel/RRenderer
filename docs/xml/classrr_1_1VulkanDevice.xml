@@ -1,0 +1,780 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classrr_1_1VulkanDevice" kind="class" language="C++" prot="public">
+    <compoundname>rr::VulkanDevice</compoundname>
+    <includes refid="VulkanDevice_8hpp" local="no">VulkanDevice.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrr_1_1VulkanDevice_1a10bc864c3476c21e935207af55b24c8b" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkInstance</ref></type>
+        <definition>VkInstance rr::VulkanDevice::instance</definition>
+        <argsstring></argsstring>
+        <name>instance</name>
+        <qualifiedname>rr::VulkanDevice::instance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="104" column="16" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanDevice_1a92e31126bf9f180ec5cc3eaa6d7b22a7" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSurfaceKHR</ref></type>
+        <definition>VkSurfaceKHR rr::VulkanDevice::surface</definition>
+        <argsstring></argsstring>
+        <name>surface</name>
+        <qualifiedname>rr::VulkanDevice::surface</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="105" column="18" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanDevice_1a32395d156f9bfa8844770d30d1ffb904" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPhysicalDevice</ref></type>
+        <definition>VkPhysicalDevice rr::VulkanDevice::m_physicalDevice</definition>
+        <argsstring></argsstring>
+        <name>m_physicalDevice</name>
+        <qualifiedname>rr::VulkanDevice::m_physicalDevice</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="107" column="22" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanDevice_1a7e6990e568fd55c199e493d0b094e3fd" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPhysicalDeviceProperties</ref></type>
+        <definition>VkPhysicalDeviceProperties rr::VulkanDevice::m_physicalDeviceProperties</definition>
+        <argsstring></argsstring>
+        <name>m_physicalDeviceProperties</name>
+        <qualifiedname>rr::VulkanDevice::m_physicalDeviceProperties</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="108" column="32" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="108" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanDevice_1a3193a0b0db637b42102a5ee8d4554d02" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDevice</ref></type>
+        <definition>VkDevice rr::VulkanDevice::m_device</definition>
+        <argsstring></argsstring>
+        <name>m_device</name>
+        <qualifiedname>rr::VulkanDevice::m_device</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="109" column="14" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanDevice_1ab8e23b9e88a060eb203f9ffb2ac626f0" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkQueue</ref></type>
+        <definition>VkQueue rr::VulkanDevice::m_graphicsQueue</definition>
+        <argsstring></argsstring>
+        <name>m_graphicsQueue</name>
+        <qualifiedname>rr::VulkanDevice::m_graphicsQueue</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="110" column="13" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanDevice_1ac55f2f102235b80b8acd2f0f8705c823" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkQueue</ref></type>
+        <definition>VkQueue rr::VulkanDevice::m_presentQueue</definition>
+        <argsstring></argsstring>
+        <name>m_presentQueue</name>
+        <qualifiedname>rr::VulkanDevice::m_presentQueue</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="111" column="13" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="111" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanDevice_1a7394e83f8eaa36c1047f3ee82778e2c4" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">char</ref> * &gt;</type>
+        <definition>const std::vector&lt;const char*&gt; rr::VulkanDevice::deviceExtensions</definition>
+        <argsstring></argsstring>
+        <name>deviceExtensions</name>
+        <qualifiedname>rr::VulkanDevice::deviceExtensions</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_KHR_SWAPCHAIN_EXTENSION_NAME</ref> }</initializer>
+        <briefdescription>
+<para>List of extensions that the device must support. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="113" column="23" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="113" bodyend="113"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1a91a07fedc03c78fd9a9135aafb05f37f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanDevice::VulkanDevice</definition>
+        <argsstring>(VkInstance instance, VkSurfaceKHR surface)</argsstring>
+        <name>VulkanDevice</name>
+        <qualifiedname>rr::VulkanDevice::VulkanDevice</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkInstance</ref></type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSurfaceKHR</ref></type>
+          <declname>surface</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classrr_1_1VulkanDevice" kindref="compound">VulkanDevice</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>VkInstance</computeroutput> to which the VkDevice is bound </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>surface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <computeroutput>VkSurfaceKHR</computeroutput> that is being used </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="74" column="5" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="25" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1a0402e13052955657d0acaa80a67c28f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanDevice::~VulkanDevice</definition>
+        <argsstring>()</argsstring>
+        <name>~VulkanDevice</name>
+        <qualifiedname>rr::VulkanDevice::~VulkanDevice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="75" column="5" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1a259d39cb248287d755222c9d39c42182" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanDevice::VulkanDevice</definition>
+        <argsstring>(const VulkanDevice &amp;)=delete</argsstring>
+        <name>VulkanDevice</name>
+        <qualifiedname>rr::VulkanDevice::VulkanDevice</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1VulkanDevice" kindref="compound">VulkanDevice</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="77" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1aaa707f045938516aa05e365ff0baa5cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanDevice::VulkanDevice</definition>
+        <argsstring>(VulkanDevice &amp;&amp;)=delete</argsstring>
+        <name>VulkanDevice</name>
+        <qualifiedname>rr::VulkanDevice::VulkanDevice</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1VulkanDevice" kindref="compound">VulkanDevice</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="78" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1ad7d93b626e55a2dc675da6edc4985612" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1VulkanDevice" kindref="compound">VulkanDevice</ref> &amp;</type>
+        <definition>VulkanDevice &amp; rr::VulkanDevice::operator=</definition>
+        <argsstring>(const VulkanDevice &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::VulkanDevice::operator=</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1VulkanDevice" kindref="compound">VulkanDevice</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="79" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1a070d0796e041b2fea587d7f67eb58a82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1VulkanDevice" kindref="compound">VulkanDevice</ref> &amp;</type>
+        <definition>VulkanDevice &amp; rr::VulkanDevice::operator=</definition>
+        <argsstring>(VulkanDevice &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::VulkanDevice::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1VulkanDevice" kindref="compound">VulkanDevice</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="80" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1acf48c71ceb51f3b78ed0fa3179f566df" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDevice</ref></type>
+        <definition>VkDevice rr::VulkanDevice::getHandle</definition>
+        <argsstring>() const</argsstring>
+        <name>getHandle</name>
+        <qualifiedname>rr::VulkanDevice::getHandle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="82" column="15" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1a907f8747379cb41be2c699e6ab579508" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkQueue</ref></type>
+        <definition>VkQueue rr::VulkanDevice::getGraphicsQueueHandle</definition>
+        <argsstring>() const</argsstring>
+        <name>getGraphicsQueueHandle</name>
+        <qualifiedname>rr::VulkanDevice::getGraphicsQueueHandle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="83" column="14" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1a672143df72ac32e02298d22f7342e4f0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkQueue</ref></type>
+        <definition>VkQueue rr::VulkanDevice::getPresentQueueHandle</definition>
+        <argsstring>() const</argsstring>
+        <name>getPresentQueueHandle</name>
+        <qualifiedname>rr::VulkanDevice::getPresentQueueHandle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="84" column="14" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1a410e47201a88cb2a7edb2fb64eb8f323" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structrr_1_1SwapchainSupportDetails" kindref="compound">SwapchainSupportDetails</ref></type>
+        <definition>SwapchainSupportDetails rr::VulkanDevice::getSwapchainSupport</definition>
+        <argsstring>() const</argsstring>
+        <name>getSwapchainSupport</name>
+        <qualifiedname>rr::VulkanDevice::getSwapchainSupport</qualifiedname>
+        <briefdescription>
+<para>Determine the swapchain support of the VkPhysicalDevice. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structrr_1_1SwapchainSupportDetails" kindref="compound">SwapchainSupportDetails</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="structrr_1_1SwapchainSupportDetails" kindref="compound">SwapchainSupportDetails</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="90" column="30" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1a21b0e35783d139f07f7b2576171fc553" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structrr_1_1QueueFamilyIndices" kindref="compound">QueueFamilyIndices</ref></type>
+        <definition>QueueFamilyIndices rr::VulkanDevice::findPhysicalQueueFamilies</definition>
+        <argsstring>() const</argsstring>
+        <name>findPhysicalQueueFamilies</name>
+        <qualifiedname>rr::VulkanDevice::findPhysicalQueueFamilies</qualifiedname>
+        <briefdescription>
+<para>Determine which queue families the VkPhysicalDevice is supporting. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structrr_1_1QueueFamilyIndices" kindref="compound">QueueFamilyIndices</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="structrr_1_1QueueFamilyIndices" kindref="compound">QueueFamilyIndices</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="96" column="25" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1a18518c22666a9ddfee12ed570d1b8520" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkFormat</ref></type>
+        <definition>VkFormat rr::VulkanDevice::findSupportedFormat</definition>
+        <argsstring>(const std::vector&lt; VkFormat &gt; &amp;candidates, VkImageTiling tiling, VkFormatFeatureFlags features) const</argsstring>
+        <name>findSupportedFormat</name>
+        <qualifiedname>rr::VulkanDevice::findSupportedFormat</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkFormat</ref> &gt; &amp;</type>
+          <declname>candidates</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkImageTiling</ref></type>
+          <declname>tiling</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkFormatFeatureFlags</ref></type>
+          <declname>features</declname>
+        </param>
+        <briefdescription>
+<para>Determine which formats the <computeroutput>VkPhysicalDevice</computeroutput> is supporting. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>VkFormat</computeroutput> \thorws <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</ref> if no supported format could be found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="98" column="15" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="42" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1a704c0992e4d3d35b3817c6c8c27ee20c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanDevice::createImageWithInfo</definition>
+        <argsstring>(const VkImageCreateInfo &amp;createInfo, VkMemoryPropertyFlags properties, VkImage &amp;image, VkDeviceMemory &amp;imageMemory) const</argsstring>
+        <name>createImageWithInfo</name>
+        <qualifiedname>rr::VulkanDevice::createImageWithInfo</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkImageCreateInfo</ref> &amp;</type>
+          <declname>createInfo</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkMemoryPropertyFlags</ref></type>
+          <declname>properties</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkImage</ref> &amp;</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDeviceMemory</ref> &amp;</type>
+          <declname>imageMemory</declname>
+        </param>
+        <briefdescription>
+<para>Create a new Image on the <computeroutput>VkDevice</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Allocate memory on the <computeroutput>VkDevice</computeroutput> for the image and then bind the image to the memory.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>createInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>VkImageCreateInfo&amp;</computeroutput> initialized with the needed information about the image </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>properties</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>properties that the image memory should fulfill </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>VkImage&amp;</computeroutput> to store the image handle in </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>imageMemory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>VkDeviceMemory&amp;</computeroutput> to store the image memory in</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+\thorws <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</ref> if anything goes wrong while allocating or binding </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="100" column="10" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="69" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1a7b91e0766522d591035cb2bc7f9ea2db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanDevice::createBuffer</definition>
+        <argsstring>(VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer &amp;buffer, VkDeviceMemory &amp;bufferMemory) const</argsstring>
+        <name>createBuffer</name>
+        <qualifiedname>rr::VulkanDevice::createBuffer</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDeviceSize</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkBufferUsageFlags</ref></type>
+          <declname>usage</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkMemoryPropertyFlags</ref></type>
+          <declname>properties</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkBuffer</ref> &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDeviceMemory</ref> &amp;</type>
+          <declname>bufferMemory</declname>
+        </param>
+        <briefdescription>
+<para>Create a new Buffer on the VkDevice. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Allocate memory for it on the <computeroutput>VkDevice</computeroutput> and then bind the buffer to the allocated memory.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the buffer in byte </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>usage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>how the buffer is used </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>properties</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>properties that the buffer memory should fulfill </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>VkBuffer&amp;</computeroutput> to store the buffer handle in </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bufferMemory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>VkDeviceMemory&amp;</computeroutput> to store the memory handle in</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+\thorws <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</ref> if anything goes wrong while allocating or binding </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="101" column="10" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="101" bodyend="126"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1ad87de985a2a7b2a2b42d3f23885282cd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanDevice::pickPhysicalDevice</definition>
+        <argsstring>()</argsstring>
+        <name>pickPhysicalDevice</name>
+        <qualifiedname>rr::VulkanDevice::pickPhysicalDevice</qualifiedname>
+        <briefdescription>
+<para>Choose the first suitable available physical device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</ref> if no suitable device was found </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="115" column="10" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="131" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1ae562e4ca2b07190e2f94691b1a525f41" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanDevice::createLogicalDevice</definition>
+        <argsstring>()</argsstring>
+        <name>createLogicalDevice</name>
+        <qualifiedname>rr::VulkanDevice::createLogicalDevice</qualifiedname>
+        <briefdescription>
+<para>Create the <computeroutput>VkDevice</computeroutput> and get the queues that are being used from the <computeroutput>VkDevice</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</ref> if there was an error with <computeroutput>VkDevice</computeroutput> creation or Queue finding </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="116" column="10" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="167" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1ac1527b38af65451bf8d1edcbf742f3c8" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bool</ref></type>
+        <definition>bool rr::VulkanDevice::isPhysicalDeviceSuitable</definition>
+        <argsstring>(VkPhysicalDevice device) const</argsstring>
+        <name>isPhysicalDeviceSuitable</name>
+        <qualifiedname>rr::VulkanDevice::isPhysicalDeviceSuitable</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPhysicalDevice</ref></type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>Check whether <computeroutput>device</computeroutput> is a suitable physical device for the <ref refid="classrr_1_1Renderer" kindref="compound">Renderer</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A physical device is suitable if all needed queues are supported, all needed extensions are supported and if it supports sampler anisotropy.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>candidate <computeroutput>VkPhysicalDevice</computeroutput></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if <computeroutput>device</computeroutput> is suitable, <computeroutput>false</computeroutput> if not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="118" column="10" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="230" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1a1731d3d82a4d93a85c2251b457423c92" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structrr_1_1QueueFamilyIndices" kindref="compound">QueueFamilyIndices</ref></type>
+        <definition>QueueFamilyIndices rr::VulkanDevice::findQueueFamilies</definition>
+        <argsstring>(VkPhysicalDevice device) const</argsstring>
+        <name>findQueueFamilies</name>
+        <qualifiedname>rr::VulkanDevice::findQueueFamilies</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPhysicalDevice</ref></type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>Find the Queue families present on <computeroutput>device</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>VkPhysicalDevice</computeroutput> where the queue families are searched on</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structrr_1_1QueueFamilyIndices" kindref="compound">QueueFamilyIndices</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="structrr_1_1QueueFamilyIndices" kindref="compound">QueueFamilyIndices</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="119" column="24" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="254" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1a4ca4488ee41f459ea7a75f217e5f1ac6" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bool</ref></type>
+        <definition>bool rr::VulkanDevice::checkDeviceExtensionsSupported</definition>
+        <argsstring>(VkPhysicalDevice device) const</argsstring>
+        <name>checkDeviceExtensionsSupported</name>
+        <qualifiedname>rr::VulkanDevice::checkDeviceExtensionsSupported</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPhysicalDevice</ref></type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>Check if <computeroutput>device</computeroutput> supports all required extensions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>candidate <computeroutput>VkPhysicalDevice</computeroutput></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if <computeroutput>device</computeroutput> supports all required extensions, <computeroutput>false</computeroutput> if not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="120" column="10" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="289" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1abc28ba2841a7f3fe7df2fb5f44cc95d0" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structrr_1_1SwapchainSupportDetails" kindref="compound">SwapchainSupportDetails</ref></type>
+        <definition>SwapchainSupportDetails rr::VulkanDevice::querySwapchainSupport</definition>
+        <argsstring>(VkPhysicalDevice device) const</argsstring>
+        <name>querySwapchainSupport</name>
+        <qualifiedname>rr::VulkanDevice::querySwapchainSupport</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPhysicalDevice</ref></type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>Get the needed information about what Swapchain features <computeroutput>supports</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>VkPhysicalDevice</computeroutput></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structrr_1_1SwapchainSupportDetails" kindref="compound">SwapchainSupportDetails</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="structrr_1_1SwapchainSupportDetails" kindref="compound">SwapchainSupportDetails</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="121" column="29" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="311" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanDevice_1a66b66e6298ba42090889688131b4a18d" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t rr::VulkanDevice::findMemoryType</definition>
+        <argsstring>(std::uint32_t typeFilter, VkMemoryPropertyFlags properties) const</argsstring>
+        <name>findMemoryType</name>
+        <qualifiedname>rr::VulkanDevice::findMemoryType</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>typeFilter</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkMemoryPropertyFlags</ref></type>
+          <declname>properties</declname>
+        </param>
+        <briefdescription>
+<para>Find suitable memory type on the physical device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Memory type is suitable if it matches <computeroutput>typeFilter</computeroutput> and fulfills all <computeroutput>properties</computeroutput> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>typeFilter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of memory that is needed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>properties</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>VkMemoryPropertyFlags</computeroutput> that specify what properties the memory must have</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>index of the suitable memory type </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</ref> if no suitable memory type was found </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDevice.hpp" line="122" column="19" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="346" bodyend="358"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classrr_1_1VulkanDevice" kindref="compound">VulkanDevice</ref> is a wrapper around VkDevice and VkPhysicalDevice </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classrr_1_1VulkanDevice" kindref="compound">VulkanDevice</ref> manages a VkDevice, VkPhysicalDevice nad all Queues associated with the VkDevice.</para>
+<para><simplesect kind="author"><para>Felix Hommel </para>
+</simplesect>
+<simplesect kind="date"><para>5/26/2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="src/engine/core/VulkanDevice.hpp" line="71" column="1" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="72" bodyend="123"/>
+    <listofallmembers>
+      <member refid="classrr_1_1VulkanDevice_1a4ca4488ee41f459ea7a75f217e5f1ac6" prot="private" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>checkDeviceExtensionsSupported</name></member>
+      <member refid="classrr_1_1VulkanDevice_1a7b91e0766522d591035cb2bc7f9ea2db" prot="public" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>createBuffer</name></member>
+      <member refid="classrr_1_1VulkanDevice_1a704c0992e4d3d35b3817c6c8c27ee20c" prot="public" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>createImageWithInfo</name></member>
+      <member refid="classrr_1_1VulkanDevice_1ae562e4ca2b07190e2f94691b1a525f41" prot="private" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>createLogicalDevice</name></member>
+      <member refid="classrr_1_1VulkanDevice_1a7394e83f8eaa36c1047f3ee82778e2c4" prot="private" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>deviceExtensions</name></member>
+      <member refid="classrr_1_1VulkanDevice_1a66b66e6298ba42090889688131b4a18d" prot="private" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>findMemoryType</name></member>
+      <member refid="classrr_1_1VulkanDevice_1a21b0e35783d139f07f7b2576171fc553" prot="public" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>findPhysicalQueueFamilies</name></member>
+      <member refid="classrr_1_1VulkanDevice_1a1731d3d82a4d93a85c2251b457423c92" prot="private" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>findQueueFamilies</name></member>
+      <member refid="classrr_1_1VulkanDevice_1a18518c22666a9ddfee12ed570d1b8520" prot="public" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>findSupportedFormat</name></member>
+      <member refid="classrr_1_1VulkanDevice_1a907f8747379cb41be2c699e6ab579508" prot="public" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>getGraphicsQueueHandle</name></member>
+      <member refid="classrr_1_1VulkanDevice_1acf48c71ceb51f3b78ed0fa3179f566df" prot="public" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>getHandle</name></member>
+      <member refid="classrr_1_1VulkanDevice_1a672143df72ac32e02298d22f7342e4f0" prot="public" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>getPresentQueueHandle</name></member>
+      <member refid="classrr_1_1VulkanDevice_1a410e47201a88cb2a7edb2fb64eb8f323" prot="public" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>getSwapchainSupport</name></member>
+      <member refid="classrr_1_1VulkanDevice_1a10bc864c3476c21e935207af55b24c8b" prot="private" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>instance</name></member>
+      <member refid="classrr_1_1VulkanDevice_1ac1527b38af65451bf8d1edcbf742f3c8" prot="private" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>isPhysicalDeviceSuitable</name></member>
+      <member refid="classrr_1_1VulkanDevice_1a3193a0b0db637b42102a5ee8d4554d02" prot="private" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>m_device</name></member>
+      <member refid="classrr_1_1VulkanDevice_1ab8e23b9e88a060eb203f9ffb2ac626f0" prot="private" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>m_graphicsQueue</name></member>
+      <member refid="classrr_1_1VulkanDevice_1a32395d156f9bfa8844770d30d1ffb904" prot="private" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>m_physicalDevice</name></member>
+      <member refid="classrr_1_1VulkanDevice_1a7e6990e568fd55c199e493d0b094e3fd" prot="private" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>m_physicalDeviceProperties</name></member>
+      <member refid="classrr_1_1VulkanDevice_1ac55f2f102235b80b8acd2f0f8705c823" prot="private" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>m_presentQueue</name></member>
+      <member refid="classrr_1_1VulkanDevice_1ad7d93b626e55a2dc675da6edc4985612" prot="public" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>operator=</name></member>
+      <member refid="classrr_1_1VulkanDevice_1a070d0796e041b2fea587d7f67eb58a82" prot="public" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>operator=</name></member>
+      <member refid="classrr_1_1VulkanDevice_1ad87de985a2a7b2a2b42d3f23885282cd" prot="private" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>pickPhysicalDevice</name></member>
+      <member refid="classrr_1_1VulkanDevice_1abc28ba2841a7f3fe7df2fb5f44cc95d0" prot="private" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>querySwapchainSupport</name></member>
+      <member refid="classrr_1_1VulkanDevice_1a92e31126bf9f180ec5cc3eaa6d7b22a7" prot="private" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>surface</name></member>
+      <member refid="classrr_1_1VulkanDevice_1a91a07fedc03c78fd9a9135aafb05f37f" prot="public" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>VulkanDevice</name></member>
+      <member refid="classrr_1_1VulkanDevice_1a259d39cb248287d755222c9d39c42182" prot="public" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>VulkanDevice</name></member>
+      <member refid="classrr_1_1VulkanDevice_1aaa707f045938516aa05e365ff0baa5cd" prot="public" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>VulkanDevice</name></member>
+      <member refid="classrr_1_1VulkanDevice_1a0402e13052955657d0acaa80a67c28f3" prot="public" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>~VulkanDevice</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

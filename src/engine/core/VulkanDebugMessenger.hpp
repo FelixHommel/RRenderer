@@ -6,13 +6,12 @@
 namespace rr
 {
 
-/**
- *  <code>VulkanDebugMessenger<\code> is used to collect and display relevant debug information. It wrapps
- *  <code>VkDebugUtilsMessengerEXT<\code>.
- *
- *  @author Felix Hommel
- *  @date 5/25/2025
-*/
+/// \brief VulkanDebugMessenger is a wrapper around VkDebugUtilsMessengerEXT
+///
+/// It is used to collect and display relevant debug information.
+///
+/// \author Felix Hommel
+/// \date 5/25/2025
 class VulkanDebugMessenger
 {
 public:
@@ -20,8 +19,8 @@ public:
     ~VulkanDebugMessenger();
 
     VulkanDebugMessenger(const VulkanDebugMessenger&) = delete;
-    VulkanDebugMessenger(VulkanDebugMessenger&&) = delete;
     VulkanDebugMessenger& operator=(const VulkanDebugMessenger&) = delete;
+    VulkanDebugMessenger(VulkanDebugMessenger&&) = delete;
     VulkanDebugMessenger& operator=(VulkanDebugMessenger&&) = delete;
 
 private:

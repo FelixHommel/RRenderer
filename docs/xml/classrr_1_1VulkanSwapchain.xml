@@ -1,0 +1,1035 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classrr_1_1VulkanSwapchain" kind="class" language="C++" prot="public">
+    <compoundname>rr::VulkanSwapchain</compoundname>
+    <includes refid="VulkanSwapchain_8hpp" local="no">VulkanSwapchain.hpp</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a964a34a5f3262e1c47fd871a1d904c21" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">constexpr</ref> std::uint32_t</type>
+        <definition>constexpr std::uint32_t rr::VulkanSwapchain::MAX_FRAMES_IN_FLIGHT</definition>
+        <argsstring></argsstring>
+        <name>MAX_FRAMES_IN_FLIGHT</name>
+        <qualifiedname>rr::VulkanSwapchain::MAX_FRAMES_IN_FLIGHT</qualifiedname>
+        <initializer>{ 2 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="35" column="36" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1aff7464e3b22a39bf2e3d03c3d9052fd4" prot="private" static="no" mutable="no">
+        <type><ref refid="classrr_1_1VulkanDevice" kindref="compound">VulkanDevice</ref> &amp;</type>
+        <definition>VulkanDevice&amp; rr::VulkanSwapchain::device</definition>
+        <argsstring></argsstring>
+        <name>device</name>
+        <qualifiedname>rr::VulkanSwapchain::device</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="48" column="18" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a1a6643ed72a29901946875faa76d3bcd" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSurfaceKHR</ref></type>
+        <definition>VkSurfaceKHR rr::VulkanSwapchain::surface</definition>
+        <argsstring></argsstring>
+        <name>surface</name>
+        <qualifiedname>rr::VulkanSwapchain::surface</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="49" column="18" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a0daec85972e5f956cc1c8b33a88a31ee" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkExtent2D</ref></type>
+        <definition>VkExtent2D rr::VulkanSwapchain::windowExtent</definition>
+        <argsstring></argsstring>
+        <name>windowExtent</name>
+        <qualifiedname>rr::VulkanSwapchain::windowExtent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="50" column="16" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a7c8f14c92e0fcb2df669a092bc744570" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSwapchainKHR</ref></type>
+        <definition>VkSwapchainKHR rr::VulkanSwapchain::m_swapchain</definition>
+        <argsstring></argsstring>
+        <name>m_swapchain</name>
+        <qualifiedname>rr::VulkanSwapchain::m_swapchain</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="52" column="20" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a653b72b854efc58b0804efcc406d23b4" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkFramebuffer</ref> &gt;</type>
+        <definition>std::vector&lt;VkFramebuffer&gt; rr::VulkanSwapchain::m_swapchainFramebuffers</definition>
+        <argsstring></argsstring>
+        <name>m_swapchainFramebuffers</name>
+        <qualifiedname>rr::VulkanSwapchain::m_swapchainFramebuffers</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="53" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a1cbfbede026b0ecca14ff56ffbd8c426" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkRenderPass</ref></type>
+        <definition>VkRenderPass rr::VulkanSwapchain::m_renderPass</definition>
+        <argsstring></argsstring>
+        <name>m_renderPass</name>
+        <qualifiedname>rr::VulkanSwapchain::m_renderPass</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="54" column="18" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a93101cd289214c6c353ef18f25831f8a" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkFormat</ref></type>
+        <definition>VkFormat rr::VulkanSwapchain::m_swapchainImageFormat</definition>
+        <argsstring></argsstring>
+        <name>m_swapchainImageFormat</name>
+        <qualifiedname>rr::VulkanSwapchain::m_swapchainImageFormat</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="56" column="14" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a2630ede44745b07ccb85fb9f9772a9ea" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkExtent2D</ref></type>
+        <definition>VkExtent2D rr::VulkanSwapchain::m_swapchainImageExtent</definition>
+        <argsstring></argsstring>
+        <name>m_swapchainImageExtent</name>
+        <qualifiedname>rr::VulkanSwapchain::m_swapchainImageExtent</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="57" column="16" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1acd6bf2733aaaf67e356f73474ce5b46b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkImage</ref> &gt;</type>
+        <definition>std::vector&lt;VkImage&gt; rr::VulkanSwapchain::m_swapchainImages</definition>
+        <argsstring></argsstring>
+        <name>m_swapchainImages</name>
+        <qualifiedname>rr::VulkanSwapchain::m_swapchainImages</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="58" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a9ea81923dc77e931433502f31f06dd18" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkImageView</ref> &gt;</type>
+        <definition>std::vector&lt;VkImageView&gt; rr::VulkanSwapchain::m_swapchainImageViews</definition>
+        <argsstring></argsstring>
+        <name>m_swapchainImageViews</name>
+        <qualifiedname>rr::VulkanSwapchain::m_swapchainImageViews</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="59" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a8e92cba3469d807380b06070203461bc" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkImage</ref> &gt;</type>
+        <definition>std::vector&lt;VkImage&gt; rr::VulkanSwapchain::m_depthImages</definition>
+        <argsstring></argsstring>
+        <name>m_depthImages</name>
+        <qualifiedname>rr::VulkanSwapchain::m_depthImages</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="60" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1abaf15ed074df47e09611c59191ea0613" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDeviceMemory</ref> &gt;</type>
+        <definition>std::vector&lt;VkDeviceMemory&gt; rr::VulkanSwapchain::m_depthImagesMemory</definition>
+        <argsstring></argsstring>
+        <name>m_depthImagesMemory</name>
+        <qualifiedname>rr::VulkanSwapchain::m_depthImagesMemory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="61" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a5e0c351aaf8559dff3ee2f1ce7e2c543" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkImageView</ref> &gt;</type>
+        <definition>std::vector&lt;VkImageView&gt; rr::VulkanSwapchain::m_depthImageViews</definition>
+        <argsstring></argsstring>
+        <name>m_depthImageViews</name>
+        <qualifiedname>rr::VulkanSwapchain::m_depthImageViews</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="62" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a4aa49beb13d1e65ff89a1a39f807c798" prot="private" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t rr::VulkanSwapchain::m_currentFrame</definition>
+        <argsstring></argsstring>
+        <name>m_currentFrame</name>
+        <qualifiedname>rr::VulkanSwapchain::m_currentFrame</qualifiedname>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="63" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1aeac5428aecccd3bfc15fb2348deb7333" prot="private" static="no" mutable="no">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t rr::VulkanSwapchain::m_lastImageIndex</definition>
+        <argsstring></argsstring>
+        <name>m_lastImageIndex</name>
+        <qualifiedname>rr::VulkanSwapchain::m_lastImageIndex</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="64" column="19" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a2d397dcd2775e3dc8afd74540b146eb8" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSemaphore</ref> &gt;</type>
+        <definition>std::vector&lt;VkSemaphore&gt; rr::VulkanSwapchain::m_imageAvailableSemaphores</definition>
+        <argsstring></argsstring>
+        <name>m_imageAvailableSemaphores</name>
+        <qualifiedname>rr::VulkanSwapchain::m_imageAvailableSemaphores</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="66" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a76b44e988886a7b9cff02d872c9a0e27" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSemaphore</ref> &gt;</type>
+        <definition>std::vector&lt;VkSemaphore&gt; rr::VulkanSwapchain::m_renderFinishedSemaphores</definition>
+        <argsstring></argsstring>
+        <name>m_renderFinishedSemaphores</name>
+        <qualifiedname>rr::VulkanSwapchain::m_renderFinishedSemaphores</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="67" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1aa119a58ffdba628ee53545cfe5f63d14" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkFence</ref> &gt;</type>
+        <definition>std::vector&lt;VkFence&gt; rr::VulkanSwapchain::m_inFlightFences</definition>
+        <argsstring></argsstring>
+        <name>m_inFlightFences</name>
+        <qualifiedname>rr::VulkanSwapchain::m_inFlightFences</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="68" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a9b5f90901bfc275bb9a2213b568af2b8" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkFence</ref> &gt;</type>
+        <definition>std::vector&lt;VkFence&gt; rr::VulkanSwapchain::m_imagesInFlight</definition>
+        <argsstring></argsstring>
+        <name>m_imagesInFlight</name>
+        <qualifiedname>rr::VulkanSwapchain::m_imagesInFlight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="69" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a004a9f424175004cffa4ed4a42747811" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanSwapchain::VulkanSwapchain</definition>
+        <argsstring>(VulkanDevice &amp;device, VkSurfaceKHR surface, VkExtent2D windowExtent)</argsstring>
+        <name>VulkanSwapchain</name>
+        <qualifiedname>rr::VulkanSwapchain::VulkanSwapchain</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1VulkanDevice" kindref="compound">VulkanDevice</ref> &amp;</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSurfaceKHR</ref></type>
+          <declname>surface</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkExtent2D</ref></type>
+          <declname>windowExtent</declname>
+        </param>
+        <briefdescription>
+<para>Create a new <ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="classrr_1_1VulkanDevice" kindref="compound">VulkanDevice</ref>&amp;</computeroutput> to the device the swapchain is running on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>surface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>VkSurfaceKHR</computeroutput> that is drawn to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>windowExtent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>VkExtent2D</computeroutput> size of the window </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="26" column="5" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="28" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1af7c852075f3cb222b7a95f5d5b9f933c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanSwapchain::VulkanSwapchain</definition>
+        <argsstring>(VulkanDevice &amp;device, VkSurfaceKHR surface, VkExtent2D windowExtent, std::shared_ptr&lt; VulkanSwapchain &gt; previous)</argsstring>
+        <name>VulkanSwapchain</name>
+        <qualifiedname>rr::VulkanSwapchain::VulkanSwapchain</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1VulkanDevice" kindref="compound">VulkanDevice</ref> &amp;</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSurfaceKHR</ref></type>
+          <declname>surface</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkExtent2D</ref></type>
+          <declname>windowExtent</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref> &gt;</type>
+          <declname>previous</declname>
+        </param>
+        <briefdescription>
+<para>Create a new <ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref> based on another <ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="classrr_1_1VulkanDevice" kindref="compound">VulkanDevice</ref>&amp;</computeroutput> to the device the swapchain is running on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>surface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>VkSurfaceKHR</computeroutput> that is drawn to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>windowExtent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>VkExtent2D</computeroutput> size of the window </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>previous</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>old <computeroutput><ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref></computeroutput> stored in a std::shared_ptr </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="27" column="5" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="42" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a6779490e76cf6a72a3d20027fbb6f3e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanSwapchain::~VulkanSwapchain</definition>
+        <argsstring>()</argsstring>
+        <name>~VulkanSwapchain</name>
+        <qualifiedname>rr::VulkanSwapchain::~VulkanSwapchain</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="28" column="5" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="50" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a3e6ddd412eb53f877296e6e88badb91f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanSwapchain::VulkanSwapchain</definition>
+        <argsstring>(const VulkanSwapchain &amp;)=delete</argsstring>
+        <name>VulkanSwapchain</name>
+        <qualifiedname>rr::VulkanSwapchain::VulkanSwapchain</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="30" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1ad305f54c62a4f9f8a706d8355f205181" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref> &amp;</type>
+        <definition>VulkanSwapchain &amp; rr::VulkanSwapchain::operator=</definition>
+        <argsstring>(const VulkanSwapchain &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::VulkanSwapchain::operator=</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="31" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1ac890bae954010a9875420dde28bc3123" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanSwapchain::VulkanSwapchain</definition>
+        <argsstring>(VulkanSwapchain &amp;&amp;)=delete</argsstring>
+        <name>VulkanSwapchain</name>
+        <qualifiedname>rr::VulkanSwapchain::VulkanSwapchain</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="32" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a22adc3a41146b2d53c338246561e1bbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref> &amp;</type>
+        <definition>VulkanSwapchain &amp; rr::VulkanSwapchain::operator=</definition>
+        <argsstring>(VulkanSwapchain &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::VulkanSwapchain::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="33" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a7fd7b4e69a9364cf906b1b2c708bd49c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t rr::VulkanSwapchain::imageCount</definition>
+        <argsstring>() const</argsstring>
+        <name>imageCount</name>
+        <qualifiedname>rr::VulkanSwapchain::imageCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="37" column="18" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a03f465a16bb29f2034ffb8c13688c185" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkExtent2D</ref></type>
+        <definition>VkExtent2D rr::VulkanSwapchain::getExtent</definition>
+        <argsstring>() const</argsstring>
+        <name>getExtent</name>
+        <qualifiedname>rr::VulkanSwapchain::getExtent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="38" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1aa1d92675909218fef6c5629252016623" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkResult</ref></type>
+        <definition>VkResult rr::VulkanSwapchain::acquireNextImage</definition>
+        <argsstring>(std::uint32_t *imageIndex) const</argsstring>
+        <name>acquireNextImage</name>
+        <qualifiedname>rr::VulkanSwapchain::acquireNextImage</qualifiedname>
+        <param>
+          <type>std::uint32_t *</type>
+          <declname>imageIndex</declname>
+        </param>
+        <briefdescription>
+<para>Get the next render target from the Swapchain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">imageIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>std::uint32_t*</computeroutput> where the index of the next image is stored</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the <computeroutput>VkResult</computeroutput> of <computeroutput>vkAcquireNextImageKHR(...)</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="40" column="15" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="93" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a1ed09be0292cc58b03beb68ec93f5f81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkResult</ref></type>
+        <definition>VkResult rr::VulkanSwapchain::submitCommandBuffer</definition>
+        <argsstring>(const VkCommandBuffer *commandBuffer, const std::uint32_t *imageIndex)</argsstring>
+        <name>submitCommandBuffer</name>
+        <qualifiedname>rr::VulkanSwapchain::submitCommandBuffer</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBuffer</ref> *</type>
+          <declname>commandBuffer</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> std::uint32_t *</type>
+          <declname>imageIndex</declname>
+        </param>
+        <briefdescription>
+<para>Submit <computeroutput>commandBuffer</computeroutput> to the Swapchain in order to be rendered. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>commandBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>VkCommandBuffer*</computeroutput> currently used command buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>imageIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>std::uint32_t*</computeroutput> index of the currently used swapchain image</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>VkResult</computeroutput> of <computeroutput>vkQueuePresentKHR(...)</computeroutput> </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</ref> if an error occurred while submitting the command buffer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="41" column="15" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="107" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a8f8ec3fababd315726c66cc88b306e3e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSwapchainKHR</ref></type>
+        <definition>VkSwapchainKHR rr::VulkanSwapchain::getHandle</definition>
+        <argsstring>() const</argsstring>
+        <name>getHandle</name>
+        <qualifiedname>rr::VulkanSwapchain::getHandle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="43" column="21" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1af9bdf1ebc17f04123bfecc93fe62939c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkRenderPass</ref></type>
+        <definition>VkRenderPass rr::VulkanSwapchain::getRenderPassHandle</definition>
+        <argsstring>() const</argsstring>
+        <name>getRenderPassHandle</name>
+        <qualifiedname>rr::VulkanSwapchain::getRenderPassHandle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="44" column="19" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1ac14fc810f0b3cf2a62c40cbfc87406ce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkFramebuffer</ref></type>
+        <definition>VkFramebuffer rr::VulkanSwapchain::getFramebufferHandle</definition>
+        <argsstring>(std::size_t index) const</argsstring>
+        <name>getFramebufferHandle</name>
+        <qualifiedname>rr::VulkanSwapchain::getFramebufferHandle</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get the framebuffer at <computeroutput>index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Performs bounds checking before accessing the framebuffer array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>std::size_t</computeroutput> the index of the requested framebuffer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>VkFramebuffer</computeroutput> at <computeroutput>index</computeroutput> if <computeroutput>index</computeroutput> is within bounds </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>`std::out_of_range`</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if <computeroutput>index</computeroutput> is greater than the amount of available framebuffers </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="45" column="20" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="157" bodyend="163"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a5976715b3c82c580b7f91bffdcbb768e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanSwapchain::createVulkanSwapchain</definition>
+        <argsstring>(std::shared_ptr&lt; VulkanSwapchain &gt; previous=nullptr)</argsstring>
+        <name>createVulkanSwapchain</name>
+        <qualifiedname>rr::VulkanSwapchain::createVulkanSwapchain</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref> &gt;</type>
+          <declname>previous</declname>
+          <defval><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nullptr</ref></defval>
+        </param>
+        <briefdescription>
+<para>Set up a new <ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>previous</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>std::shared_ptr</computeroutput> to an old <ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref> [default=nullptr] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="71" column="10" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="168" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a240e1dfa302a7f598e1c2df2b10f50d6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanSwapchain::createSwapchain</definition>
+        <argsstring>(std::shared_ptr&lt; VulkanSwapchain &gt; previous=nullptr)</argsstring>
+        <name>createSwapchain</name>
+        <qualifiedname>rr::VulkanSwapchain::createSwapchain</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref> &gt;</type>
+          <declname>previous</declname>
+          <defval><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nullptr</ref></defval>
+        </param>
+        <briefdescription>
+<para>Set up the <computeroutput>VkSwapchainKHR</computeroutput> with format, extent and used queues. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>previous</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>std::shared_ptr</computeroutput> to an old <ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref> [default=nullptr]</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</ref> if there was an error while creating the <computeroutput>VkSwapchainKHR</computeroutput> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="73" column="10" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="183" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a44f00432ac1404eacf18ac0f0eec8947" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanSwapchain::createImageViews</definition>
+        <argsstring>()</argsstring>
+        <name>createImageViews</name>
+        <qualifiedname>rr::VulkanSwapchain::createImageViews</qualifiedname>
+        <briefdescription>
+<para>Set up the image views used by the swapchain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</ref> if there was an error while creating the image views </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="74" column="10" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="238" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1acc9c5d6eaaafe91608f837076ea6b7e6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanSwapchain::createRenderPass</definition>
+        <argsstring>()</argsstring>
+        <name>createRenderPass</name>
+        <qualifiedname>rr::VulkanSwapchain::createRenderPass</qualifiedname>
+        <briefdescription>
+<para>Set up the render passes with all used attachments. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</ref> if there was an error while creating the render pass </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="75" column="10" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="266" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a9159966ae281d0cbe7cf8f217ce3420e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanSwapchain::createDepthResources</definition>
+        <argsstring>()</argsstring>
+        <name>createDepthResources</name>
+        <qualifiedname>rr::VulkanSwapchain::createDepthResources</qualifiedname>
+        <briefdescription>
+<para>Set up the depth images, image views and their memory on the device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</ref> if there was an error while creating the depth image views </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="76" column="10" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="334" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a32404744d5753cf9c5de6824c2285df6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanSwapchain::createFramebuffers</definition>
+        <argsstring>()</argsstring>
+        <name>createFramebuffers</name>
+        <qualifiedname>rr::VulkanSwapchain::createFramebuffers</qualifiedname>
+        <briefdescription>
+<para>Set up the framebuffers which are use by the swapchain to display frames. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</ref> if there was an error while creating the framebuffers </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="77" column="10" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="388" bodyend="410"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1ad3c6e1d32eda82ee5e714f646dd05186" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanSwapchain::createSyncObjects</definition>
+        <argsstring>()</argsstring>
+        <name>createSyncObjects</name>
+        <qualifiedname>rr::VulkanSwapchain::createSyncObjects</qualifiedname>
+        <briefdescription>
+<para>Set up the semaphores and fences used during the presentation of frames. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</ref> if there was an error while creating either any semaphores or any fences </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="78" column="10" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="415" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a0ee85e6fb01401a6d65bf342fee0e1dd" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkExtent2D</ref></type>
+        <definition>VkExtent2D rr::VulkanSwapchain::chooseSwapExtent</definition>
+        <argsstring>(const VkSurfaceCapabilitiesKHR &amp;capabilities) const</argsstring>
+        <name>chooseSwapExtent</name>
+        <qualifiedname>rr::VulkanSwapchain::chooseSwapExtent</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSurfaceCapabilitiesKHR</ref> &amp;</type>
+          <declname>capabilities</declname>
+        </param>
+        <briefdescription>
+<para>Choose a <computeroutput>VkExtent2D</computeroutput> for the swapchain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>capabilities</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>VkSurfaceCapabilitiesKHR&amp;</computeroutput> object containing details about the extent of the surface</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>VkExtent2D</computeroutput> that is going to be used by the swapchain </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="80" column="17" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="450" bodyend="460"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1aeec60588bc98ea321d943aebc95846b2" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkFormat</ref></type>
+        <definition>VkFormat rr::VulkanSwapchain::findDepthFormat</definition>
+        <argsstring>() const</argsstring>
+        <name>findDepthFormat</name>
+        <qualifiedname>rr::VulkanSwapchain::findDepthFormat</qualifiedname>
+        <briefdescription>
+<para>Search the device for a suitable depth format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>VkFormat</computeroutput> which is going to be used by the depth resources </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="81" column="15" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="465" bodyend="471"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a83ce8c218576f3803e528aa202931ef5" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSurfaceFormatKHR</ref></type>
+        <definition>VkSurfaceFormatKHR rr::VulkanSwapchain::chooseSwapSurfaceFormat</definition>
+        <argsstring>(const std::vector&lt; VkSurfaceFormatKHR &gt; &amp;availableFormats)</argsstring>
+        <name>chooseSwapSurfaceFormat</name>
+        <qualifiedname>rr::VulkanSwapchain::chooseSwapSurfaceFormat</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSurfaceFormatKHR</ref> &gt; &amp;</type>
+          <declname>availableFormats</declname>
+        </param>
+        <briefdescription>
+<para>Pick a suitable <computeroutput>VkSurfaceFormatKHR</computeroutput> from a selection of available formats. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>availableFormats</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::vector with all available <computeroutput>VkSurfaceFormatKHR</computeroutput></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the first format that matches VK_FORMAT_B8G8R8A8_UNORM or if there is no format that matches, the first format in <computeroutput>availableFormats</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="83" column="31" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="478" bodyend="487"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a70a38b34a096589fab627dd3811289d7" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPresentModeKHR</ref></type>
+        <definition>VkPresentModeKHR rr::VulkanSwapchain::chooseSwapPresentMode</definition>
+        <argsstring>(const std::vector&lt; VkPresentModeKHR &gt; &amp;availablePresentModes)</argsstring>
+        <name>chooseSwapPresentMode</name>
+        <qualifiedname>rr::VulkanSwapchain::chooseSwapPresentMode</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPresentModeKHR</ref> &gt; &amp;</type>
+          <declname>availablePresentModes</declname>
+        </param>
+        <briefdescription>
+<para>Pick a present mode for the swapchain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>availablePresentModes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::vector containing all available present modes</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>VkPresentModeKHR</computeroutput> with Mailbox system, if none match return FIFO(V-Sync) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="84" column="29" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="494" bodyend="507"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref> is a wrapper around <computeroutput>VkSwapchainKHR</computeroutput> and all supporting resources </para>
+    </briefdescription>
+    <detaileddescription>
+<para>It is managing all resources needed to create a <computeroutput><ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref></computeroutput> and the <computeroutput>VkSwapchainKHR</computeroutput> itself, provides access to it and the Swapchain&apos;s framebuffers</para>
+<para><simplesect kind="author"><para>Felix Hommel </para>
+</simplesect>
+<simplesect kind="date"><para>5/26/2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="src/engine/core/VulkanSwapchain.hpp" line="23" column="1" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="24" bodyend="85"/>
+    <listofallmembers>
+      <member refid="classrr_1_1VulkanSwapchain_1aa1d92675909218fef6c5629252016623" prot="public" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>acquireNextImage</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a0ee85e6fb01401a6d65bf342fee0e1dd" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>chooseSwapExtent</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a70a38b34a096589fab627dd3811289d7" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>chooseSwapPresentMode</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a83ce8c218576f3803e528aa202931ef5" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>chooseSwapSurfaceFormat</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a9159966ae281d0cbe7cf8f217ce3420e" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>createDepthResources</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a32404744d5753cf9c5de6824c2285df6" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>createFramebuffers</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a44f00432ac1404eacf18ac0f0eec8947" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>createImageViews</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1acc9c5d6eaaafe91608f837076ea6b7e6" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>createRenderPass</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a240e1dfa302a7f598e1c2df2b10f50d6" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>createSwapchain</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1ad3c6e1d32eda82ee5e714f646dd05186" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>createSyncObjects</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a5976715b3c82c580b7f91bffdcbb768e" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>createVulkanSwapchain</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1aff7464e3b22a39bf2e3d03c3d9052fd4" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>device</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1aeec60588bc98ea321d943aebc95846b2" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>findDepthFormat</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a03f465a16bb29f2034ffb8c13688c185" prot="public" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>getExtent</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1ac14fc810f0b3cf2a62c40cbfc87406ce" prot="public" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>getFramebufferHandle</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a8f8ec3fababd315726c66cc88b306e3e" prot="public" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>getHandle</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1af9bdf1ebc17f04123bfecc93fe62939c" prot="public" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>getRenderPassHandle</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a7fd7b4e69a9364cf906b1b2c708bd49c" prot="public" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>imageCount</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a4aa49beb13d1e65ff89a1a39f807c798" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>m_currentFrame</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a8e92cba3469d807380b06070203461bc" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>m_depthImages</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1abaf15ed074df47e09611c59191ea0613" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>m_depthImagesMemory</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a5e0c351aaf8559dff3ee2f1ce7e2c543" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>m_depthImageViews</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a2d397dcd2775e3dc8afd74540b146eb8" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>m_imageAvailableSemaphores</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a9b5f90901bfc275bb9a2213b568af2b8" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>m_imagesInFlight</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1aa119a58ffdba628ee53545cfe5f63d14" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>m_inFlightFences</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1aeac5428aecccd3bfc15fb2348deb7333" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>m_lastImageIndex</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a76b44e988886a7b9cff02d872c9a0e27" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>m_renderFinishedSemaphores</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a1cbfbede026b0ecca14ff56ffbd8c426" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>m_renderPass</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a7c8f14c92e0fcb2df669a092bc744570" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>m_swapchain</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a653b72b854efc58b0804efcc406d23b4" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>m_swapchainFramebuffers</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a2630ede44745b07ccb85fb9f9772a9ea" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>m_swapchainImageExtent</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a93101cd289214c6c353ef18f25831f8a" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>m_swapchainImageFormat</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1acd6bf2733aaaf67e356f73474ce5b46b" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>m_swapchainImages</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a9ea81923dc77e931433502f31f06dd18" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>m_swapchainImageViews</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a964a34a5f3262e1c47fd871a1d904c21" prot="public" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>MAX_FRAMES_IN_FLIGHT</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1ad305f54c62a4f9f8a706d8355f205181" prot="public" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>operator=</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a22adc3a41146b2d53c338246561e1bbf" prot="public" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>operator=</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a1ed09be0292cc58b03beb68ec93f5f81" prot="public" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>submitCommandBuffer</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a1a6643ed72a29901946875faa76d3bcd" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>surface</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a004a9f424175004cffa4ed4a42747811" prot="public" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>VulkanSwapchain</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1af7c852075f3cb222b7a95f5d5b9f933c" prot="public" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>VulkanSwapchain</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a3e6ddd412eb53f877296e6e88badb91f" prot="public" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>VulkanSwapchain</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1ac890bae954010a9875420dde28bc3123" prot="public" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>VulkanSwapchain</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a0daec85972e5f956cc1c8b33a88a31ee" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>windowExtent</name></member>
+      <member refid="classrr_1_1VulkanSwapchain_1a6779490e76cf6a72a3d20027fbb6f3e9" prot="public" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>~VulkanSwapchain</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
