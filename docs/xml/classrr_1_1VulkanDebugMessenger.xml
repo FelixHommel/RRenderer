@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDebugMessenger.hpp" line="27" column="16" bodyfile="src/engine/core/VulkanDebugMessenger.hpp" bodystart="27" bodyend="-1"/>
+        <location file="src/engine/core/VulkanDebugMessenger.hpp" line="27" column="12" bodyfile="src/engine/core/VulkanDebugMessenger.hpp" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanDebugMessenger_1a4b046cdf5cd718af2fd5dfbebc1971cd" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDebugUtilsMessengerEXT</ref></type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDebugMessenger.hpp" line="28" column="30" bodyfile="src/engine/core/VulkanDebugMessenger.hpp" bodystart="28" bodyend="28"/>
+        <location file="src/engine/core/VulkanDebugMessenger.hpp" line="28" column="26" bodyfile="src/engine/core/VulkanDebugMessenger.hpp" bodystart="28" bodyend="28"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -69,7 +69,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDebugMessenger.hpp" line="18" column="14" bodyfile="src/engine/core/VulkanDebugMessenger.cpp" bodystart="76" bodyend="94"/>
+        <location file="src/engine/core/VulkanDebugMessenger.hpp" line="18" column="10" bodyfile="src/engine/core/VulkanDebugMessenger.cpp" bodystart="79" bodyend="101"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDebugMessenger_1af436f1c4a5d0c22f1f3e4479ec34270f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -83,7 +83,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDebugMessenger.hpp" line="19" column="5" bodyfile="src/engine/core/VulkanDebugMessenger.cpp" bodystart="96" bodyend="100"/>
+        <location file="src/engine/core/VulkanDebugMessenger.hpp" line="19" column="1" bodyfile="src/engine/core/VulkanDebugMessenger.cpp" bodystart="103" bodyend="107"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDebugMessenger_1af2f3ae7f2745110a59cc6ef8f7924ff4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -100,7 +100,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDebugMessenger.hpp" line="21" column="5"/>
+        <location file="src/engine/core/VulkanDebugMessenger.hpp" line="21" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDebugMessenger_1abe0bb8b0d1d3bc78d6d3a86d1208020e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classrr_1_1VulkanDebugMessenger" kindref="compound">VulkanDebugMessenger</ref> &amp;</type>
@@ -117,7 +117,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDebugMessenger.hpp" line="22" column="26"/>
+        <location file="src/engine/core/VulkanDebugMessenger.hpp" line="22" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDebugMessenger_1aa19bbe1b603098c9368d4acbfe4f69f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -134,7 +134,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDebugMessenger.hpp" line="23" column="5"/>
+        <location file="src/engine/core/VulkanDebugMessenger.hpp" line="23" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDebugMessenger_1af1c977ef08b027abd959772191bedf84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classrr_1_1VulkanDebugMessenger" kindref="compound">VulkanDebugMessenger</ref> &amp;</type>
@@ -151,7 +151,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDebugMessenger.hpp" line="24" column="26"/>
+        <location file="src/engine/core/VulkanDebugMessenger.hpp" line="24" column="22"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

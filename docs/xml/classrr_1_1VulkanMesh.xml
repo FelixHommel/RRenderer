@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanMesh.hpp" line="55" column="18" bodyfile="src/engine/core/VulkanMesh.hpp" bodystart="55" bodyend="-1"/>
+        <location file="src/engine/core/VulkanMesh.hpp" line="55" column="14" bodyfile="src/engine/core/VulkanMesh.hpp" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanMesh_1ad6f5dbfdc64ab734170c3badb97a1f19" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkBuffer</ref></type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanMesh.hpp" line="57" column="14" bodyfile="src/engine/core/VulkanMesh.hpp" bodystart="57" bodyend="57"/>
+        <location file="src/engine/core/VulkanMesh.hpp" line="57" column="10" bodyfile="src/engine/core/VulkanMesh.hpp" bodystart="57" bodyend="57"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanMesh_1a3c8cb04e099024d1c5d86e9b1a0cd2a6" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDeviceMemory</ref></type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanMesh.hpp" line="58" column="20" bodyfile="src/engine/core/VulkanMesh.hpp" bodystart="58" bodyend="58"/>
+        <location file="src/engine/core/VulkanMesh.hpp" line="58" column="16" bodyfile="src/engine/core/VulkanMesh.hpp" bodystart="58" bodyend="58"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanMesh_1a0ab3df70fb1b4a8544576edc47cc4bdf" prot="private" static="no" mutable="no">
         <type>std::uint32_t</type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanMesh.hpp" line="59" column="19" bodyfile="src/engine/core/VulkanMesh.hpp" bodystart="59" bodyend="-1"/>
+        <location file="src/engine/core/VulkanMesh.hpp" line="59" column="15" bodyfile="src/engine/core/VulkanMesh.hpp" bodystart="59" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanMesh.hpp" line="43" column="5" bodyfile="src/engine/core/VulkanMesh.cpp" bodystart="58" bodyend="77"/>
+        <location file="src/engine/core/VulkanMesh.hpp" line="43" column="1" bodyfile="src/engine/core/VulkanMesh.cpp" bodystart="50" bodyend="69"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanMesh_1abe659d1e8cb40308dbafa7874b9778cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanMesh.hpp" line="44" column="5" bodyfile="src/engine/core/VulkanMesh.cpp" bodystart="79" bodyend="83"/>
+        <location file="src/engine/core/VulkanMesh.hpp" line="44" column="1" bodyfile="src/engine/core/VulkanMesh.cpp" bodystart="71" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanMesh_1a8a35559e5b96506d03c18f721244bc4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -116,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanMesh.hpp" line="46" column="5"/>
+        <location file="src/engine/core/VulkanMesh.hpp" line="46" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanMesh_1ae9b588ff3adf69a0272c271320397d5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classrr_1_1VulkanMesh" kindref="compound">VulkanMesh</ref> &amp;</type>
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanMesh.hpp" line="47" column="16"/>
+        <location file="src/engine/core/VulkanMesh.hpp" line="47" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanMesh_1a8cb7c175dba40596d575c83d96cf4708" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanMesh.hpp" line="48" column="5"/>
+        <location file="src/engine/core/VulkanMesh.hpp" line="48" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanMesh_1a5516b716bc4056eecaa83ab365c8502d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classrr_1_1VulkanMesh" kindref="compound">VulkanMesh</ref> &amp;</type>
@@ -167,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanMesh.hpp" line="49" column="16"/>
+        <location file="src/engine/core/VulkanMesh.hpp" line="49" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanMesh_1af3397a25b9cc564676f5a2066bd3f7a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
@@ -196,7 +196,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanMesh.hpp" line="51" column="10" bodyfile="src/engine/core/VulkanMesh.cpp" bodystart="88" bodyend="94"/>
+        <location file="src/engine/core/VulkanMesh.hpp" line="51" column="6" bodyfile="src/engine/core/VulkanMesh.cpp" bodystart="80" bodyend="86"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanMesh_1ae012c81d4c76742866f525b61edcba2c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
@@ -225,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanMesh.hpp" line="52" column="10" bodyfile="src/engine/core/VulkanMesh.cpp" bodystart="99" bodyend="102"/>
+        <location file="src/engine/core/VulkanMesh.hpp" line="52" column="6" bodyfile="src/engine/core/VulkanMesh.cpp" bodystart="91" bodyend="94"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

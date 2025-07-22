@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="37" column="14" bodyfile="src/engine/core/VulkanCommandBuffer.hpp" bodystart="37" bodyend="-1"/>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="44" column="10" bodyfile="src/engine/core/VulkanCommandBuffer.hpp" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanCommandBuffer_1a7f992c88567f730fd4f54c730cc99b3a" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandPool</ref></type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="38" column="19" bodyfile="src/engine/core/VulkanCommandBuffer.hpp" bodystart="38" bodyend="-1"/>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="45" column="15" bodyfile="src/engine/core/VulkanCommandBuffer.hpp" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanCommandBuffer_1a804c684bcbfaa3132c06c46319206c17" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBuffer</ref></type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="40" column="21" bodyfile="src/engine/core/VulkanCommandBuffer.hpp" bodystart="40" bodyend="-1"/>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="47" column="17" bodyfile="src/engine/core/VulkanCommandBuffer.hpp" bodystart="47" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="23" column="5" bodyfile="src/engine/core/VulkanCommandBuffer.cpp" bodystart="20" bodyend="34"/>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="23" column="1" bodyfile="src/engine/core/VulkanCommandBuffer.cpp" bodystart="20" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanCommandBuffer_1ad8840cec3f66260b586598ad4dc5979e" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
         <type></type>
@@ -153,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="24" column="14" bodyfile="src/engine/core/VulkanCommandBuffer.cpp" bodystart="41" bodyend="45"/>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="27" column="10" bodyfile="src/engine/core/VulkanCommandBuffer.cpp" bodystart="41" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanCommandBuffer_1a6dc9c736562c5000b03bc6035f484031" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -167,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="25" column="5" bodyfile="src/engine/core/VulkanCommandBuffer.cpp" bodystart="47" bodyend="51"/>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="28" column="1" bodyfile="src/engine/core/VulkanCommandBuffer.cpp" bodystart="48" bodyend="52"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanCommandBuffer_1ab7377de4d312f6f6939aee50412f1ceb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -184,7 +184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="27" column="5"/>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="30" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanCommandBuffer_1a693ed067fff4b09d1a818a6de0946346" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref> &amp;</type>
@@ -201,7 +201,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="28" column="25"/>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="31" column="21"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanCommandBuffer_1ab509769d7ca845ff9d16b02571b11741" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -218,7 +218,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="29" column="5"/>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="32" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanCommandBuffer_1a1f8d6491fc23f053e84fc8c79f3160c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref> &amp;</type>
@@ -235,7 +235,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="30" column="25"/>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="33" column="21"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanCommandBuffer_1af417a199b0992fa1a0fdc07e68e9f686" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBuffer</ref> &amp;</type>
@@ -249,7 +249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="34" column="22" bodyfile="src/engine/core/VulkanCommandBuffer.hpp" bodystart="34" bodyend="34"/>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="41" column="18" bodyfile="src/engine/core/VulkanCommandBuffer.hpp" bodystart="41" bodyend="41"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -319,7 +319,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="32" column="24" bodyfile="src/engine/core/VulkanCommandBuffer.cpp" bodystart="61" bodyend="80"/>
+        <location file="src/engine/core/VulkanCommandBuffer.hpp" line="35" column="20" bodyfile="src/engine/core/VulkanCommandBuffer.cpp" bodystart="62" bodyend="81"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -333,7 +333,7 @@
 </simplesect>
 </para>
     </detaileddescription>
-    <location file="src/engine/core/VulkanCommandBuffer.hpp" line="20" column="1" bodyfile="src/engine/core/VulkanCommandBuffer.hpp" bodystart="21" bodyend="41"/>
+    <location file="src/engine/core/VulkanCommandBuffer.hpp" line="20" column="1" bodyfile="src/engine/core/VulkanCommandBuffer.hpp" bodystart="21" bodyend="48"/>
     <listofallmembers>
       <member refid="classrr_1_1VulkanCommandBuffer_1a7f992c88567f730fd4f54c730cc99b3a" prot="private" virt="non-virtual"><scope>rr::VulkanCommandBuffer</scope><name>commandPool</name></member>
       <member refid="classrr_1_1VulkanCommandBuffer_1af4f3675ff5a3b09c90b9c8f3f60fd49e" prot="public" virt="non-virtual"><scope>rr::VulkanCommandBuffer</scope><name>create</name></member>

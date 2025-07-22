@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="41" column="19" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="41" bodyend="-1"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="41" column="15" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structrr_1_1QueueFamilyIndices_1a0ad9bd2a7f6e98c09fd4dcf34b33c7b2" prot="public" static="no" mutable="no">
         <type>std::optional&lt; std::uint32_t &gt;</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="42" column="19" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="42" bodyend="-1"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="42" column="15" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="42" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="44" column="21" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="44" bodyend="44"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="44" column="17" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="44" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="structrr_1_1QueueFamilyIndices_1ac32603b7cae6336a11c24fa9c0e1f8c4" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">constexpr</ref> <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bool</ref></type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="45" column="21" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="45" bodyend="52"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="48" column="17" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="48" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="structrr_1_1QueueFamilyIndices_1a11500c250f59eed9b54f54d9ec32d037" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>std::set&lt; std::uint32_t &gt;</type>
@@ -74,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="54" column="15" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="54" bodyend="54"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="57" column="11" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="57" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="structrr_1_1QueueFamilyIndices_1aeabf88de362ee65fefea2313c07ac214" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">constexpr</ref> std::array&lt; std::uint32_t, 2 &gt;</type>
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="55" column="27" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="55" bodyend="61"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="61" column="23" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="61" bodyend="68"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -102,7 +102,7 @@
 </simplesect>
 </para>
     </detaileddescription>
-    <location file="src/engine/core/VulkanDevice.hpp" line="39" column="1" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="40" bodyend="62"/>
+    <location file="src/engine/core/VulkanDevice.hpp" line="39" column="1" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="40" bodyend="69"/>
     <listofallmembers>
       <member refid="structrr_1_1QueueFamilyIndices_1ac32603b7cae6336a11c24fa9c0e1f8c4" prot="public" virt="non-virtual"><scope>rr::QueueFamilyIndices</scope><name>areSameQueue</name></member>
       <member refid="structrr_1_1QueueFamilyIndices_1a11500c250f59eed9b54f54d9ec32d037" prot="public" virt="non-virtual"><scope>rr::QueueFamilyIndices</scope><name>getUniqueFamilies</name></member>

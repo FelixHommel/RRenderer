@@ -133,7 +133,7 @@
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineLayout</ref><sp/>m_pipelineLayout{<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref><sp/>};</highlight></codeline>
 <codeline lineno="51"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>!rr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>rr</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!RRENDERER_ENGINE_CORE_VULKAN_PIPELINE_LAYOUT_HPP</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>

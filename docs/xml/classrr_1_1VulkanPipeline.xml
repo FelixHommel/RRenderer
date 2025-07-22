@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="65" column="14" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="65" bodyend="-1"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="69" column="10" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="69" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanPipeline_1ad99319747744a319aaa97d51da67efa1" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipeline</ref></type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="67" column="16" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="67" bodyend="67"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="71" column="12" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="71" bodyend="71"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanPipeline_1abcacb54601919bb06eb087c184704260" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkShaderModule</ref></type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="68" column="20" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="68" bodyend="68"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="72" column="16" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="72" bodyend="72"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanPipeline_1a7484df1b868337472c389838eaa30842" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkShaderModule</ref></type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="69" column="20" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="69" bodyend="69"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="73" column="16" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="73" bodyend="73"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -135,7 +135,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="52" column="5" bodyfile="src/engine/core/VulkanPipeline.cpp" bodystart="30" bodyend="91"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="52" column="1" bodyfile="src/engine/core/VulkanPipeline.cpp" bodystart="30" bodyend="92"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanPipeline_1a30ddc999f7ebb5b4a2cdf91431b3b86a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -149,7 +149,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="53" column="5" bodyfile="src/engine/core/VulkanPipeline.cpp" bodystart="93" bodyend="99"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="57" column="1" bodyfile="src/engine/core/VulkanPipeline.cpp" bodystart="94" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanPipeline_1a3ae5020da35e53354a37dc7949e29542" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -166,7 +166,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="55" column="5"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="59" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanPipeline_1a069d9b0b0a6d34c6e387e3f6920988b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classrr_1_1VulkanPipeline" kindref="compound">VulkanPipeline</ref> &amp;</type>
@@ -183,7 +183,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="56" column="20"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="60" column="16"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanPipeline_1a7137f0f9bdf95ffd98ca5205fa7bbd6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -200,7 +200,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="57" column="5"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="61" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanPipeline_1a1b01cbff0f0db7a1a3d8221379038aff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classrr_1_1VulkanPipeline" kindref="compound">VulkanPipeline</ref> &amp;</type>
@@ -217,7 +217,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="58" column="20"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="62" column="16"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanPipeline_1a75bef441869f8fb0170c419a964b1b38" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
@@ -246,7 +246,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="62" column="10" bodyfile="src/engine/core/VulkanPipeline.cpp" bodystart="183" bodyend="186"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="66" column="6" bodyfile="src/engine/core/VulkanPipeline.cpp" bodystart="168" bodyend="171"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -277,7 +277,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="60" column="17" bodyfile="src/engine/core/VulkanPipeline.cpp" bodystart="104" bodyend="178"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="64" column="13" bodyfile="src/engine/core/VulkanPipeline.cpp" bodystart="105" bodyend="163"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -327,7 +327,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="71" column="10" bodyfile="src/engine/core/VulkanPipeline.cpp" bodystart="194" bodyend="204"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="75" column="6" bodyfile="src/engine/core/VulkanPipeline.cpp" bodystart="179" bodyend="188"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-func">
@@ -367,7 +367,7 @@ ref <ref refid="classrr_1_1FileIOException" kindref="compound">FileIOException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="74" column="24" bodyfile="src/engine/core/VulkanPipeline.cpp" bodystart="212" bodyend="228"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="78" column="20" bodyfile="src/engine/core/VulkanPipeline.cpp" bodystart="196" bodyend="212"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -381,7 +381,7 @@ ref <ref refid="classrr_1_1FileIOException" kindref="compound">FileIOException</
 </simplesect>
 </para>
     </detaileddescription>
-    <location file="src/engine/core/VulkanPipeline.hpp" line="49" column="1" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="50" bodyend="75"/>
+    <location file="src/engine/core/VulkanPipeline.hpp" line="49" column="1" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="50" bodyend="79"/>
     <listofallmembers>
       <member refid="classrr_1_1VulkanPipeline_1a75bef441869f8fb0170c419a964b1b38" prot="public" virt="non-virtual"><scope>rr::VulkanPipeline</scope><name>bind</name></member>
       <member refid="classrr_1_1VulkanPipeline_1af1c1947f8e2afce4625b7a11e20eeb4c" prot="private" virt="non-virtual"><scope>rr::VulkanPipeline</scope><name>createShaderModule</name></member>

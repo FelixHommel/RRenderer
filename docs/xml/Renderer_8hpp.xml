@@ -69,7 +69,7 @@
 <codeline lineno="41" refid="classrr_1_1Renderer_1add7edc93f23223e70b770a36e0e804c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">virtual</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1Renderer_1add7edc93f23223e70b770a36e0e804c4" kindref="member">shutdown</ref>()<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="42"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>!rr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>rr</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!RRENDERER_ENGINE_RENDERER_HPP</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>

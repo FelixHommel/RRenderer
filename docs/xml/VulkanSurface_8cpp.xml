@@ -83,7 +83,7 @@
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vkDestroySurfaceKHR</ref>(instance,<sp/>m_surface,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="25"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>!rr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>rr</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/engine/core/VulkanSurface.cpp"/>
   </compounddef>

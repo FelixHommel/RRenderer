@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="VulkanRenderer_8hpp" kind="file" language="C++">
     <compoundname>VulkanRenderer.hpp</compoundname>
-    <includes refid="Renderer_8hpp" local="yes">Renderer.hpp</includes>
     <includes refid="VulkanCommandBuffer_8hpp" local="yes">core/VulkanCommandBuffer.hpp</includes>
     <includes refid="VulkanCommandPool_8hpp" local="yes">core/VulkanCommandPool.hpp</includes>
     <includes refid="VulkanDebugMessenger_8hpp" local="yes">core/VulkanDebugMessenger.hpp</includes>
@@ -12,6 +11,7 @@
     <includes refid="VulkanPipelineLayout_8hpp" local="yes">core/VulkanPipelineLayout.hpp</includes>
     <includes refid="VulkanSurface_8hpp" local="yes">core/VulkanSurface.hpp</includes>
     <includes refid="VulkanSwapchain_8hpp" local="yes">core/VulkanSwapchain.hpp</includes>
+    <includes refid="Renderer_8hpp" local="yes">Renderer.hpp</includes>
     <includes refid="RenderObject_8hpp" local="yes">utility/RenderObject.hpp</includes>
     <includes refid="Window_8hpp" local="yes">window/Window.hpp</includes>
     <includes local="no">vulkan/vulkan_core.h</includes>
@@ -21,10 +21,10 @@
     <includes local="no">vector</includes>
     <includedby refid="VulkanRenderer_8cpp" local="yes">VulkanRenderer.cpp</includedby>
     <incdepgraph>
-      <node id="2">
+      <node id="33">
         <label>Renderer.hpp</label>
         <link refid="Renderer_8hpp"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -32,191 +32,191 @@
         <link refid="VulkanRenderer_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
         <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="26" relation="include">
+        <childnode refid="29" relation="include">
         </childnode>
-        <childnode refid="30" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
         <childnode refid="33" relation="include">
         </childnode>
         <childnode refid="34" relation="include">
         </childnode>
-        <childnode refid="31" relation="include">
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="37" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="4">
+      <node id="2">
         <label>core/VulkanCommandBuffer.hpp</label>
         <link refid="VulkanCommandBuffer_8hpp"/>
-        <childnode refid="5" relation="include">
-        </childnode>
         <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+      </node>
+      <node id="7">
+        <label>core/VulkanCommandPool.hpp</label>
+        <link refid="VulkanCommandPool_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>core/VulkanDebugMessenger.hpp</label>
+        <link refid="VulkanDebugMessenger_8hpp"/>
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="8">
-        <label>core/VulkanCommandPool.hpp</label>
-        <link refid="VulkanCommandPool_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
+        <label>core/VulkanDevice.hpp</label>
+        <link refid="VulkanDevice_8hpp"/>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="22">
-        <label>core/VulkanDebugMessenger.hpp</label>
-        <link refid="VulkanDebugMessenger_8hpp"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>core/VulkanDevice.hpp</label>
-        <link refid="VulkanDevice_8hpp"/>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="20" relation="include">
         </childnode>
-        <childnode refid="21" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="23">
+      <node id="22">
         <label>core/VulkanInstance.hpp</label>
         <link refid="VulkanInstance_8hpp"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="35">
         <label>core/VulkanMesh.hpp</label>
         <link refid="VulkanMesh_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="28" relation="include">
-        </childnode>
-        <childnode refid="29" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="24">
-        <label>core/VulkanPipeline.hpp</label>
-        <link refid="VulkanPipeline_8hpp"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="26">
-        <label>core/VulkanPipelineLayout.hpp</label>
-        <link refid="VulkanPipelineLayout_8hpp"/>
         <childnode refid="27" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
+        <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="30">
-        <label>core/VulkanSurface.hpp</label>
-        <link refid="VulkanSurface_8hpp"/>
-        <childnode refid="31" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="33">
-        <label>core/VulkanSwapchain.hpp</label>
-        <link refid="VulkanSwapchain_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+      </node>
+      <node id="23">
+        <label>core/VulkanPipeline.hpp</label>
+        <link refid="VulkanPipeline_8hpp"/>
+        <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>core/VulkanPipelineLayout.hpp</label>
+        <link refid="VulkanPipelineLayout_8hpp"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+      </node>
+      <node id="29">
+        <label>core/VulkanSurface.hpp</label>
+        <link refid="VulkanSurface_8hpp"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="11">
+      <node id="32">
+        <label>core/VulkanSwapchain.hpp</label>
+        <link refid="VulkanSwapchain_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
         <label>exception/EngineException.hpp</label>
         <link refid="EngineException_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
         <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+      </node>
+      <node id="15">
+        <label>exception/VulkanException.hpp</label>
+        <link refid="VulkanException_8hpp"/>
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
-      </node>
-      <node id="10">
-        <label>exception/VulkanException.hpp</label>
-        <link refid="VulkanException_8hpp"/>
-        <childnode refid="11" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
       <node id="34">
@@ -224,92 +224,92 @@
         <link refid="RenderObject_8hpp"/>
         <childnode refid="35" relation="include">
         </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
         <childnode refid="27" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
-        </childnode>
         <childnode refid="36" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="31">
-        <label>window/Window.hpp</label>
-        <link refid="Window_8hpp"/>
-        <childnode refid="32" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+      </node>
+      <node id="30">
+        <label>window/Window.hpp</label>
+        <link refid="Window_8hpp"/>
+        <childnode refid="31" relation="include">
+        </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="32">
+      <node id="31">
         <label>GLFW/glfw3.h</label>
       </node>
-      <node id="19">
+      <node id="18">
         <label>array</label>
       </node>
-      <node id="17">
+      <node id="16">
         <label>cstddef</label>
       </node>
-      <node id="3">
+      <node id="4">
         <label>cstdint</label>
       </node>
-      <node id="13">
+      <node id="11">
         <label>exception</label>
       </node>
-      <node id="25">
+      <node id="24">
         <label>filesystem</label>
       </node>
-      <node id="18">
+      <node id="17">
         <label>format</label>
       </node>
-      <node id="27">
+      <node id="26">
         <label>glm/ext/matrix_float2x2.hpp</label>
       </node>
-      <node id="28">
+      <node id="27">
         <label>glm/ext/vector_float2.hpp</label>
       </node>
-      <node id="29">
+      <node id="28">
         <label>glm/ext/vector_float3.hpp</label>
       </node>
       <node id="36">
         <label>glm/trigonometric.hpp</label>
       </node>
-      <node id="6">
+      <node id="5">
         <label>memory</label>
       </node>
-      <node id="20">
+      <node id="19">
         <label>optional</label>
       </node>
-      <node id="21">
+      <node id="20">
         <label>set</label>
       </node>
-      <node id="14">
+      <node id="12">
         <label>source_location</label>
       </node>
-      <node id="12">
+      <node id="10">
         <label>spdlog/spdlog.h</label>
       </node>
-      <node id="15">
+      <node id="13">
         <label>string</label>
       </node>
       <node id="37">
         <label>string_view</label>
       </node>
-      <node id="16">
+      <node id="14">
         <label>utility</label>
       </node>
-      <node id="7">
+      <node id="6">
         <label>vector</label>
       </node>
-      <node id="5">
+      <node id="3">
         <label>vulkan/vulkan_core.h</label>
       </node>
     </incdepgraph>
@@ -335,16 +335,16 @@
 <codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RRENDERER_ENGINE_VULKAN_RENDERER_HPP</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RRENDERER_ENGINE_VULKAN_RENDERER_HPP</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Renderer_8hpp" kindref="compound">Renderer.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanCommandBuffer_8hpp" kindref="compound">core/VulkanCommandBuffer.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanCommandPool_8hpp" kindref="compound">core/VulkanCommandPool.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanDebugMessenger_8hpp" kindref="compound">core/VulkanDebugMessenger.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanDevice_8hpp" kindref="compound">core/VulkanDevice.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanInstance_8hpp" kindref="compound">core/VulkanInstance.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanPipeline_8hpp" kindref="compound">core/VulkanPipeline.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanPipelineLayout_8hpp" kindref="compound">core/VulkanPipelineLayout.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanSurface_8hpp" kindref="compound">core/VulkanSurface.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanSwapchain_8hpp" kindref="compound">core/VulkanSwapchain.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanCommandBuffer_8hpp" kindref="compound">core/VulkanCommandBuffer.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanCommandPool_8hpp" kindref="compound">core/VulkanCommandPool.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanDebugMessenger_8hpp" kindref="compound">core/VulkanDebugMessenger.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanDevice_8hpp" kindref="compound">core/VulkanDevice.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanInstance_8hpp" kindref="compound">core/VulkanInstance.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanPipeline_8hpp" kindref="compound">core/VulkanPipeline.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanPipelineLayout_8hpp" kindref="compound">core/VulkanPipelineLayout.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanSurface_8hpp" kindref="compound">core/VulkanSurface.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanSwapchain_8hpp" kindref="compound">core/VulkanSwapchain.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Renderer_8hpp" kindref="compound">Renderer.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="RenderObject_8hpp" kindref="compound">utility/RenderObject.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Window_8hpp" kindref="compound">window/Window.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
@@ -391,7 +391,7 @@
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkClearColorValue</ref><sp/>CLEAR_COLOR{<sp/>0.01f,<sp/>0.01f,<sp/>0.01f,<sp/>1.f<sp/>};</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::string_view<sp/>BASIC_VERT_SHADER_PATH{<sp/></highlight><highlight class="stringliteral">&quot;./shaders/basic.vert.spv&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::string_view<sp/>BASIC_FRAG_SHADER_PATH{<sp/></highlight><highlight class="stringliteral">&quot;./shaders/basic.frag.spv&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/>std::unique_ptr&lt;VulkanPipeline&gt;<sp/>createPipeline()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loadRenderObjects();</highlight></codeline>
@@ -400,7 +400,7 @@
 <codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>renderObjects(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBuffer</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">commandBuffer</ref>);</highlight></codeline>
 <codeline lineno="74"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>!rr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>rr</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!RRENDERER_ENGINE_VULKAN_RENDERER_HPP</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>

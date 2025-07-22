@@ -94,38 +94,39 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classrr_1_1RenderObject.html#a3635e5f9c8ce9c8963519bcae62251a5">   18</a></span><a class="code hl_function" href="classrr_1_1RenderObject.html#a3635e5f9c8ce9c8963519bcae62251a5">RenderObject::RenderObject</a>(std::shared_ptr&lt;VulkanMesh&gt; <a class="code hl_function" href="namespacerr.html#a207864460d243d147d44225c3895cc10">mesh</a>, <span class="keyword">const</span> glm::vec3&amp; color, <span class="keyword">const</span> <a class="code hl_struct" href="structrr_1_1Transform2DComponent.html">Transform2DComponent</a>&amp; transform)</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    : m_id(idGenerator++)</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    , m_mesh{ <a class="code hl_function" href="namespacerr.html#a207864460d243d147d44225c3895cc10">mesh</a> }</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    , m_color{ color }</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    , m_transform2D{ transform }</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{}</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classrr_1_1RenderObject.html#a3635e5f9c8ce9c8963519bcae62251a5">   18</a></span><a class="code hl_function" href="classrr_1_1RenderObject.html#a3635e5f9c8ce9c8963519bcae62251a5">RenderObject::RenderObject</a>(</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    std::shared_ptr&lt;VulkanMesh&gt; <a class="code hl_function" href="namespacerr.html#a207864460d243d147d44225c3895cc10">mesh</a>, <span class="keyword">const</span> glm::vec3&amp; color, <span class="keyword">const</span> <a class="code hl_struct" href="structrr_1_1Transform2DComponent.html">Transform2DComponent</a>&amp; transform)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    : m_id(idGenerator++)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    , m_mesh{ <a class="code hl_function" href="namespacerr.html#a207864460d243d147d44225c3895cc10">mesh</a> }</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    , m_color{ color }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    , m_transform2D{ transform }</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{}</div>
 </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classrr_1_1RenderObject.html#aad6b13493302dc777cc435cfb9cc7c96">   28</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classrr_1_1RenderObject.html#aad6b13493302dc777cc435cfb9cc7c96">RenderObject::render</a>(<a class="code hl_function" href="namespacerr.html#a207864460d243d147d44225c3895cc10">VkCommandBuffer</a> <a class="code hl_function" href="namespacerr.html#a207864460d243d147d44225c3895cc10">commandBuffer</a>)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    m_mesh-&gt;bind(<a class="code hl_function" href="namespacerr.html#a207864460d243d147d44225c3895cc10">commandBuffer</a>);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    m_mesh-&gt;draw(<a class="code hl_function" href="namespacerr.html#a207864460d243d147d44225c3895cc10">commandBuffer</a>);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classrr_1_1RenderObject.html#aad6b13493302dc777cc435cfb9cc7c96">   29</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classrr_1_1RenderObject.html#aad6b13493302dc777cc435cfb9cc7c96">RenderObject::render</a>(<a class="code hl_function" href="namespacerr.html#a207864460d243d147d44225c3895cc10">VkCommandBuffer</a> <a class="code hl_function" href="namespacerr.html#a207864460d243d147d44225c3895cc10">commandBuffer</a>)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    m_mesh-&gt;bind(<a class="code hl_function" href="namespacerr.html#a207864460d243d147d44225c3895cc10">commandBuffer</a>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    m_mesh-&gt;draw(<a class="code hl_function" href="namespacerr.html#a207864460d243d147d44225c3895cc10">commandBuffer</a>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
 </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> RenderObject::updateTransformMatrix()</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">if</span>(!m_transformIsDirty)</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    m_transformMatrixCache = m_transform2D.<a class="code hl_function" href="structrr_1_1Transform2DComponent.html#a2d83284680a5ff631ae6453970766dda">mat2</a>();</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    m_transformIsDirty = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>} <span class="comment">// !rr</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> RenderObject::updateTransformMatrix()</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">if</span> (!m_transformIsDirty)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    m_transformMatrixCache = m_transform2D.<a class="code hl_function" href="structrr_1_1Transform2DComponent.html#a2d83284680a5ff631ae6453970766dda">mat2</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    m_transformIsDirty = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>} <span class="comment">// namespace rr</span></div>
 <div class="ttc" id="aRenderObject_8hpp_html"><div class="ttname"><a href="RenderObject_8hpp.html">RenderObject.hpp</a></div></div>
 <div class="ttc" id="aVulkanMesh_8hpp_html"><div class="ttname"><a href="VulkanMesh_8hpp.html">VulkanMesh.hpp</a></div></div>
 <div class="ttc" id="aclassrr_1_1RenderObject_html_a3635e5f9c8ce9c8963519bcae62251a5"><div class="ttname"><a href="classrr_1_1RenderObject.html#a3635e5f9c8ce9c8963519bcae62251a5">rr::RenderObject::RenderObject</a></div><div class="ttdeci">RenderObject(std::shared_ptr&lt; VulkanMesh &gt; mesh, const glm::vec3 &amp;color, const Transform2DComponent &amp;transform)</div><div class="ttdoc">Construct a new RenderObject.</div><div class="ttdef"><b>Definition</b> <a href="RenderObject_8cpp_source.html#l00018">RenderObject.cpp:18</a></div></div>
-<div class="ttc" id="aclassrr_1_1RenderObject_html_aad6b13493302dc777cc435cfb9cc7c96"><div class="ttname"><a href="classrr_1_1RenderObject.html#aad6b13493302dc777cc435cfb9cc7c96">rr::RenderObject::render</a></div><div class="ttdeci">void render(VkCommandBuffer commandBuffer) const</div><div class="ttdoc">Render the RenderObject.</div><div class="ttdef"><b>Definition</b> <a href="RenderObject_8cpp_source.html#l00028">RenderObject.cpp:28</a></div></div>
+<div class="ttc" id="aclassrr_1_1RenderObject_html_aad6b13493302dc777cc435cfb9cc7c96"><div class="ttname"><a href="classrr_1_1RenderObject.html#aad6b13493302dc777cc435cfb9cc7c96">rr::RenderObject::render</a></div><div class="ttdeci">void render(VkCommandBuffer commandBuffer) const</div><div class="ttdoc">Render the RenderObject.</div><div class="ttdef"><b>Definition</b> <a href="RenderObject_8cpp_source.html#l00029">RenderObject.cpp:29</a></div></div>
 <div class="ttc" id="anamespacerr_html"><div class="ttname"><a href="namespacerr.html">rr</a></div><div class="ttdef"><b>Definition</b> <a href="constants_8hpp_source.html#l00005">constants.hpp:6</a></div></div>
-<div class="ttc" id="anamespacerr_html_a207864460d243d147d44225c3895cc10"><div class="ttname"><a href="namespacerr.html#a207864460d243d147d44225c3895cc10">rr::throwWithLog</a></div><div class="ttdeci">void throwWithLog(std::source_location loc, Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> <a href="EngineException_8hpp_source.html#l00031">EngineException.hpp:31</a></div></div>
+<div class="ttc" id="anamespacerr_html_a207864460d243d147d44225c3895cc10"><div class="ttname"><a href="namespacerr.html#a207864460d243d147d44225c3895cc10">rr::throwWithLog</a></div><div class="ttdeci">void throwWithLog(std::source_location loc, Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> <a href="EngineException_8hpp_source.html#l00032">EngineException.hpp:32</a></div></div>
 <div class="ttc" id="astructrr_1_1Transform2DComponent_html"><div class="ttname"><a href="structrr_1_1Transform2DComponent.html">rr::Transform2DComponent</a></div><div class="ttdoc">Store information about the transform of an Object.</div><div class="ttdef"><b>Definition</b> <a href="RenderObject_8hpp_source.html#l00024">RenderObject.hpp:25</a></div></div>
 <div class="ttc" id="astructrr_1_1Transform2DComponent_html_a2d83284680a5ff631ae6453970766dda"><div class="ttname"><a href="structrr_1_1Transform2DComponent.html#a2d83284680a5ff631ae6453970766dda">rr::Transform2DComponent::mat2</a></div><div class="ttdeci">glm::mat2 mat2() const</div><div class="ttdoc">Calculate the model matrix based on the transformations.</div><div class="ttdef"><b>Definition</b> <a href="RenderObject_8hpp_source.html#l00031">RenderObject.hpp:31</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -3,11 +3,11 @@
   <compounddef id="VulkanPipeline_8cpp" kind="file" language="C++">
     <compoundname>VulkanPipeline.cpp</compoundname>
     <includes refid="VulkanPipeline_8hpp" local="yes">VulkanPipeline.hpp</includes>
-    <includes refid="VulkanMesh_8hpp" local="yes">VulkanMesh.hpp</includes>
     <includes refid="EngineException_8hpp" local="yes">exception/EngineException.hpp</includes>
     <includes refid="FileIOException_8hpp" local="yes">exception/FileIOException.hpp</includes>
     <includes refid="VulkanException_8hpp" local="yes">exception/VulkanException.hpp</includes>
     <includes local="yes">spdlog/spdlog.h</includes>
+    <includes refid="VulkanMesh_8hpp" local="yes">VulkanMesh.hpp</includes>
     <includes local="no">source_location</includes>
     <includes local="no">vulkan/vulkan_core.h</includes>
     <includes local="no">array</includes>
@@ -18,34 +18,34 @@
     <includes local="no">ios</includes>
     <includes local="no">vector</includes>
     <incdepgraph>
-      <node id="8">
+      <node id="18">
         <label>core/VulkanDevice.hpp</label>
         <link refid="VulkanDevice_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="20" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="17">
         <label>VulkanMesh.hpp</label>
         <link refid="VulkanMesh_8hpp"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="21" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
@@ -61,19 +61,19 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="23" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
         <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="24" relation="include">
         </childnode>
@@ -100,91 +100,91 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="7">
         <label>exception/EngineException.hpp</label>
         <link refid="EngineException_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
         <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+      </node>
+      <node id="13">
+        <label>exception/FileIOException.hpp</label>
+        <link refid="FileIOException_8hpp"/>
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>exception/VulkanException.hpp</label>
+        <link refid="VulkanException_8hpp"/>
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
-      </node>
-      <node id="23">
-        <label>exception/FileIOException.hpp</label>
-        <link refid="FileIOException_8hpp"/>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>exception/VulkanException.hpp</label>
-        <link refid="VulkanException_8hpp"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="18">
+      <node id="19">
         <label>array</label>
       </node>
       <node id="24">
         <label>cassert</label>
       </node>
-      <node id="16">
+      <node id="15">
         <label>cstddef</label>
       </node>
       <node id="4">
         <label>cstdint</label>
       </node>
-      <node id="12">
+      <node id="9">
         <label>exception</label>
       </node>
       <node id="5">
         <label>filesystem</label>
       </node>
-      <node id="17">
+      <node id="16">
         <label>format</label>
       </node>
       <node id="25">
         <label>fstream</label>
       </node>
-      <node id="21">
+      <node id="22">
         <label>glm/ext/vector_float2.hpp</label>
       </node>
-      <node id="22">
+      <node id="23">
         <label>glm/ext/vector_float3.hpp</label>
       </node>
       <node id="26">
         <label>ios</label>
       </node>
-      <node id="19">
+      <node id="20">
         <label>optional</label>
       </node>
-      <node id="20">
+      <node id="21">
         <label>set</label>
       </node>
-      <node id="13">
+      <node id="10">
         <label>source_location</label>
       </node>
-      <node id="11">
+      <node id="8">
         <label>spdlog/spdlog.h</label>
       </node>
-      <node id="14">
+      <node id="11">
         <label>string</label>
       </node>
-      <node id="15">
+      <node id="12">
         <label>utility</label>
       </node>
       <node id="6">
@@ -202,11 +202,11 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanPipeline_8hpp" kindref="compound">VulkanPipeline.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanMesh_8hpp" kindref="compound">VulkanMesh.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="EngineException_8hpp" kindref="compound">exception/EngineException.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="FileIOException_8hpp" kindref="compound">exception/FileIOException.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanException_8hpp" kindref="compound">exception/VulkanException.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;spdlog/spdlog.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="EngineException_8hpp" kindref="compound">exception/EngineException.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="FileIOException_8hpp" kindref="compound">exception/FileIOException.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanException_8hpp" kindref="compound">exception/VulkanException.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;spdlog/spdlog.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VulkanMesh_8hpp" kindref="compound">VulkanMesh.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;source_location&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vulkan/vulkan_core.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
@@ -221,189 +221,173 @@
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerr" kindref="compound">rr</ref></highlight></codeline>
 <codeline lineno="20"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30" refid="classrr_1_1VulkanPipeline_1ab3e8ba1737d8dce209dab76a336f3185" refkind="member"><highlight class="normal"><ref refid="classrr_1_1VulkanPipeline_1ab3e8ba1737d8dce209dab76a336f3185" kindref="member">VulkanPipeline::VulkanPipeline</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDevice</ref><sp/>device,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structrr_1_1PipelineConfigInfo" kindref="compound">PipelineConfigInfo</ref>&amp;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::filesystem::path&amp;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vertFilepath</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::filesystem::path&amp;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">fragFilepath</ref>)</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>device(device)</highlight></codeline>
-<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">assert</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.pipelineLayout<sp/>!=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref><sp/>&amp;&amp;<sp/></highlight><highlight class="stringliteral">&quot;Cannot<sp/>create<sp/>graphics<sp/>pipeline:<sp/>no<sp/>pipeline<sp/>layout<sp/>provided&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">assert</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.renderPass<sp/>!=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref><sp/>&amp;&amp;<sp/></highlight><highlight class="stringliteral">&quot;Cannot<sp/>create<sp/>graphics<sp/>pipeline:<sp/>no<sp/>renderPass<sp/>provided&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>createShaderModule(readFile(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vertFilepath</ref>),<sp/>&amp;m_vertShaderModule);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>createShaderModule(readFile(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">fragFilepath</ref>),<sp/>&amp;m_fragShaderModule);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::array&lt;VkPipelineShaderStageCreateInfo,2<sp/>&gt;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">shaderStages</ref>{</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO</ref>,</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.flags<sp/>=<sp/>0,</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.stage<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_SHADER_STAGE_VERTEX_BIT</ref>,</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.module<sp/>=<sp/>m_vertShaderModule,</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;main&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO</ref>,</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.flags<sp/>=<sp/>0,</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.stage<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_SHADER_STAGE_FRAGMENT_BIT</ref>,</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.module<sp/>=<sp/>m_fragShaderModule,</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;main&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bindingDescriptions</ref><sp/>=<sp/><ref refid="structrr_1_1Vertex_1ad04eb859222f92a31d1bb35b2f5e27d9" kindref="member">Vertex::getBindingDescriptions</ref>();</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">attributeDescriptions</ref><sp/>=<sp/><ref refid="structrr_1_1Vertex_1a3c7371e4b8d9a6d4159aede70005a5bf" kindref="member">Vertex::getAttributeDescriptions</ref>();</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineVertexInputStateCreateInfo</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vertexInputInfo</ref>{</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO</ref>,</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.vertexBindingDescriptionCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bindingDescriptions</ref>.size()),</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pVertexBindingDescriptions</ref><sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bindingDescriptions</ref>.data(),</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.vertexAttributeDescriptionCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">attributeDescriptions</ref>.size()),</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pVertexAttributeDescriptions</ref><sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">attributeDescriptions</ref>.data()</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkGraphicsPipelineCreateInfo</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pipelineInfo</ref>{</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO</ref>,</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.stageCount<sp/>=<sp/>2,</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pStages<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">shaderStages</ref>.data(),</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pVertexInputState<sp/>=<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vertexInputInfo</ref>,</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pInputAssemblyState<sp/>=<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.inputAssemblyInfo,</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pViewportState<sp/>=<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.viewportInfo,</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pRasterizationState<sp/>=<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.rasterizationInfo,</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pMultisampleState<sp/>=<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.multisampleInfo,</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pDepthStencilState<sp/>=<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.depthStencilInfo,</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pColorBlendState<sp/>=<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.colorBlendInfo,</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pDynamicState<sp/>=<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.dynamicStateInfo,</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.layout<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.pipelineLayout,</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.renderPass<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.renderPass,</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.subpass<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.subpass,</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.basePipelineHandle<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref>,</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.basePipelineIndex<sp/>=<sp/>-1</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vkCreateGraphicsPipelines</ref>(device,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref>,<sp/>1,<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pipelineInfo</ref>,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;m_pipeline)<sp/>!=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_SUCCESS</ref>)</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">throwWithLog&lt;VulkanException&gt;</ref>(std::source_location::current(),<sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea3cb314759a31e8700f65c14a3799b857" kindref="member">VulkanExceptionCause::CREATE_GRAPHICS_PIPELINE</ref>);</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;Created<sp/>graphics<sp/>pipeline<sp/>successfully...&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93" refid="classrr_1_1VulkanPipeline_1a30ddc999f7ebb5b4a2cdf91431b3b86a" refkind="member"><highlight class="normal"><ref refid="classrr_1_1VulkanPipeline_1a30ddc999f7ebb5b4a2cdf91431b3b86a" kindref="member">VulkanPipeline::~VulkanPipeline</ref>()</highlight></codeline>
-<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vkDestroyShaderModule</ref>(device,<sp/>m_vertShaderModule,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vkDestroyShaderModule</ref>(device,<sp/>m_fragShaderModule,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vkDestroyPipeline</ref>(device,<sp/>m_pipeline,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104" refid="classrr_1_1VulkanPipeline_1ad843bf228df062f81e2bf1bae58198ee" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1VulkanPipeline_1ad843bf228df062f81e2bf1bae58198ee" kindref="member">VulkanPipeline::defaultPipelineConfigInfo</ref>(<ref refid="structrr_1_1PipelineConfigInfo" kindref="compound">PipelineConfigInfo</ref>&amp;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>)</highlight></codeline>
-<codeline lineno="105"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.inputAssemblyInfo<sp/>=<sp/>{</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO</ref>,</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.topology<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST</ref>,</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.primitiveRestartEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.viewportInfo<sp/>=<sp/>{</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO</ref>,</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.viewportCount<sp/>=<sp/>1,</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pViewports<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.scissorCount<sp/>=<sp/>1,</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pScissors<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.rasterizationInfo<sp/>=<sp/>{</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_STATE_CREATE_INFO</ref>,</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.depthClampEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref>,</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.rasterizerDiscardEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref>,</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.polygonMode<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_POLYGON_MODE_FILL</ref>,</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.cullMode<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_CULL_MODE_NONE</ref>,</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.frontFace<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FRONT_FACE_CLOCKWISE</ref>,</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.depthBiasEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref>,</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.depthBiasConstantFactor<sp/>=<sp/>0.f,</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.depthBiasClamp<sp/>=<sp/>0.f,</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.lineWidth<sp/>=<sp/>1.f</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.multisampleInfo<sp/>=<sp/>{</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_MULTISAMPLE_STATE_CREATE_INFO</ref>,</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.rasterizationSamples<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_SAMPLE_COUNT_1_BIT</ref>,</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sampleShadingEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref>,</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.minSampleShading<sp/>=<sp/>1.f,</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pSampleMask<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.alphaToCoverageEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref>,</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.alphaToOneEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref></highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.colorBlendAttachment<sp/>=<sp/>{</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.blendEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref>,</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.srcColorBlendFactor<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_BLEND_FACTOR_ONE</ref>,</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.dstColorBlendFactor<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_BLEND_FACTOR_ZERO</ref>,</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.colorBlendOp<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_BLEND_OP_ADD</ref>,</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.srcAlphaBlendFactor<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_BLEND_FACTOR_ONE</ref>,</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.dstAlphaBlendFactor<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_BLEND_FACTOR_ZERO</ref>,</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.alphaBlendOp<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_BLEND_OP_ADD</ref>,</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.colorWriteMask<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_COLOR_COMPONENT_R_BIT</ref><sp/>|<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_COLOR_COMPONENT_G_BIT</ref><sp/>|<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_COLOR_COMPONENT_B_BIT</ref><sp/>|<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_COLOR_COMPONENT_A_BIT</ref></highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.colorBlendInfo<sp/>=<sp/>{</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_COLOR_BLEND_STATE_CREATE_INFO</ref>,</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.logicOpEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref>,</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.logicOp<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_LOGIC_OP_COPY</ref>,</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.attachmentCount<sp/>=<sp/>1,</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pAttachments<sp/>=<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.colorBlendAttachment,</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.blendConstants<sp/>=<sp/>{<sp/>0.f,<sp/>0.f,<sp/>0.f,<sp/>0.f<sp/>}</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.depthStencilInfo<sp/>=<sp/>{</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO</ref>,</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.depthTestEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_TRUE</ref>,</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.depthWriteEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_TRUE</ref>,</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.depthCompareOp<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_COMPARE_OP_LESS</ref>,</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.depthBoundsTestEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref>,</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.stencilTestEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref>,</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.front<sp/>=<sp/>{},</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.back<sp/>=<sp/>{},</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.minDepthBounds<sp/>=<sp/>0.f,</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.maxDepthBounds<sp/>=<sp/>1.f</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.dynamicStateEnables<sp/>=<sp/>{</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_DYNAMIC_STATE_VIEWPORT</ref>,</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_DYNAMIC_STATE_SCISSOR</ref></highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.dynamicStateInfo<sp/>=<sp/>{</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_DYNAMIC_STATE_CREATE_INFO</ref>,</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.dynamicStateCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.dynamicStateEnables.size()),</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pDynamicStates</ref><sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.dynamicStateEnables.data()</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"></highlight></codeline>
-<codeline lineno="183" refid="classrr_1_1VulkanPipeline_1a75bef441869f8fb0170c419a964b1b38" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1VulkanPipeline_1a75bef441869f8fb0170c419a964b1b38" kindref="member">VulkanPipeline::bind</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBuffer</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">cmdBuffer</ref>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="184"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vkCmdBindPipeline</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">cmdBuffer</ref>,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_PIPELINE_BIND_POINT_GRAPHICS</ref>,<sp/>m_pipeline);</highlight></codeline>
-<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"></highlight></codeline>
-<codeline lineno="194"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>VulkanPipeline::createShaderModule(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;char&gt;&amp;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">code</ref>,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkShaderModule</ref>*<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">shaderModule</ref>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="195"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkShaderModuleCreateInfo</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">createInfo</ref>{</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO</ref>,</highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.codeSize<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">code</ref>.size(),</highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pCode<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">std::uint32_t*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">code</ref>.data())</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="201"><highlight class="normal"></highlight></codeline>
-<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vkCreateShaderModule</ref>(device,<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">createInfo</ref>,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">shaderModule</ref>)<sp/>!=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_SUCCESS</ref>)</highlight></codeline>
-<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">throwWithLog&lt;VulkanException&gt;</ref>(std::source_location::current(),<sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea09a099c9bc6af953bae959de8aaf12d3" kindref="member">VulkanExceptionCause::CREATE_SHADER_MODULE</ref>);</highlight></codeline>
-<codeline lineno="204"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30" refid="classrr_1_1VulkanPipeline_1ab3e8ba1737d8dce209dab76a336f3185" refkind="member"><highlight class="normal"><ref refid="classrr_1_1VulkanPipeline_1ab3e8ba1737d8dce209dab76a336f3185" kindref="member">VulkanPipeline::VulkanPipeline</ref>(</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDevice</ref><sp/>device,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structrr_1_1PipelineConfigInfo" kindref="compound">PipelineConfigInfo</ref>&amp;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::filesystem::path&amp;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vertFilepath</ref>,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::filesystem::path&amp;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">fragFilepath</ref>)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>device(device)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">assert</ref>(</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.pipelineLayout<sp/>!=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Cannot<sp/>create<sp/>graphics<sp/>pipeline:<sp/>no<sp/>pipeline<sp/>layout<sp/>provided&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">assert</ref>(</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.renderPass<sp/>!=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref><sp/>&amp;&amp;<sp/></highlight><highlight class="stringliteral">&quot;Cannot<sp/>create<sp/>graphics<sp/>pipeline:<sp/>no<sp/>renderPass<sp/>provided&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>createShaderModule(readFile(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vertFilepath</ref>),<sp/>&amp;m_vertShaderModule);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>createShaderModule(readFile(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">fragFilepath</ref>),<sp/>&amp;m_fragShaderModule);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::array&lt;VkPipelineShaderStageCreateInfo,<sp/>2&gt;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">shaderStages</ref>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO</ref>,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.flags<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.stage<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_SHADER_STAGE_VERTEX_BIT</ref>,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.module<sp/>=<sp/>m_vertShaderModule,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;main&quot;</highlight><highlight class="normal"><sp/>},</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO</ref>,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.flags<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.stage<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_SHADER_STAGE_FRAGMENT_BIT</ref>,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.module<sp/>=<sp/>m_fragShaderModule,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;main&quot;</highlight><highlight class="normal"><sp/>}<sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bindingDescriptions</ref><sp/>=<sp/><ref refid="structrr_1_1Vertex_1ad04eb859222f92a31d1bb35b2f5e27d9" kindref="member">Vertex::getBindingDescriptions</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">attributeDescriptions</ref><sp/>=<sp/><ref refid="structrr_1_1Vertex_1a3c7371e4b8d9a6d4159aede70005a5bf" kindref="member">Vertex::getAttributeDescriptions</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineVertexInputStateCreateInfo</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vertexInputInfo</ref>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO</ref>,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.vertexBindingDescriptionCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bindingDescriptions</ref>.size()),</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pVertexBindingDescriptions</ref><sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bindingDescriptions</ref>.data(),</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.vertexAttributeDescriptionCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">attributeDescriptions</ref>.size()),</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pVertexAttributeDescriptions</ref><sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">attributeDescriptions</ref>.data()</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkGraphicsPipelineCreateInfo</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pipelineInfo</ref>{<sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO</ref>,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.stageCount<sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pStages<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">shaderStages</ref>.data(),</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pVertexInputState<sp/>=<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vertexInputInfo</ref>,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pInputAssemblyState<sp/>=<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.inputAssemblyInfo,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pViewportState<sp/>=<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.viewportInfo,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pRasterizationState<sp/>=<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.rasterizationInfo,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pMultisampleState<sp/>=<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.multisampleInfo,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pDepthStencilState<sp/>=<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.depthStencilInfo,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pColorBlendState<sp/>=<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.colorBlendInfo,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pDynamicState<sp/>=<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.dynamicStateInfo,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.layout<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.pipelineLayout,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.renderPass<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.renderPass,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.subpass<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.subpass,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.basePipelineHandle<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref>,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.basePipelineIndex<sp/>=<sp/>-1<sp/>};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vkCreateGraphicsPipelines</ref>(device,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref>,<sp/>1,<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pipelineInfo</ref>,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;m_pipeline)<sp/>!=</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_SUCCESS</ref>)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">throwWithLog&lt;VulkanException&gt;</ref>(</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::source_location::current(),<sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea3cb314759a31e8700f65c14a3799b857" kindref="member">VulkanExceptionCause::CREATE_GRAPHICS_PIPELINE</ref>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;Created<sp/>graphics<sp/>pipeline<sp/>successfully...&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="classrr_1_1VulkanPipeline_1a30ddc999f7ebb5b4a2cdf91431b3b86a" refkind="member"><highlight class="normal"><ref refid="classrr_1_1VulkanPipeline_1a30ddc999f7ebb5b4a2cdf91431b3b86a" kindref="member">VulkanPipeline::~VulkanPipeline</ref>()</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vkDestroyShaderModule</ref>(device,<sp/>m_vertShaderModule,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vkDestroyShaderModule</ref>(device,<sp/>m_fragShaderModule,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vkDestroyPipeline</ref>(device,<sp/>m_pipeline,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="classrr_1_1VulkanPipeline_1ad843bf228df062f81e2bf1bae58198ee" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1VulkanPipeline_1ad843bf228df062f81e2bf1bae58198ee" kindref="member">VulkanPipeline::defaultPipelineConfigInfo</ref>(<ref refid="structrr_1_1PipelineConfigInfo" kindref="compound">PipelineConfigInfo</ref>&amp;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.inputAssemblyInfo<sp/>=<sp/>{<sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO</ref>,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.topology<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST</ref>,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.primitiveRestartEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref><sp/>};</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.viewportInfo<sp/>=<sp/>{<sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO</ref>,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.viewportCount<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pViewports<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.scissorCount<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pScissors<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.rasterizationInfo<sp/>=<sp/>{<sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_STATE_CREATE_INFO</ref>,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.depthClampEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref>,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.rasterizerDiscardEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref>,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.polygonMode<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_POLYGON_MODE_FILL</ref>,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.cullMode<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_CULL_MODE_NONE</ref>,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.frontFace<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FRONT_FACE_CLOCKWISE</ref>,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.depthBiasEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref>,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.depthBiasConstantFactor<sp/>=<sp/>0.f,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.depthBiasClamp<sp/>=<sp/>0.f,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.lineWidth<sp/>=<sp/>1.f<sp/>};</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.multisampleInfo<sp/>=<sp/>{<sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_MULTISAMPLE_STATE_CREATE_INFO</ref>,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.rasterizationSamples<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_SAMPLE_COUNT_1_BIT</ref>,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.sampleShadingEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref>,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.minSampleShading<sp/>=<sp/>1.f,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pSampleMask<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.alphaToCoverageEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref>,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.alphaToOneEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref><sp/>};</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.colorBlendAttachment<sp/>=<sp/>{<sp/>.blendEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref>,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.srcColorBlendFactor<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_BLEND_FACTOR_ONE</ref>,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.dstColorBlendFactor<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_BLEND_FACTOR_ZERO</ref>,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.colorBlendOp<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_BLEND_OP_ADD</ref>,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.srcAlphaBlendFactor<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_BLEND_FACTOR_ONE</ref>,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.dstAlphaBlendFactor<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_BLEND_FACTOR_ZERO</ref>,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.alphaBlendOp<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_BLEND_OP_ADD</ref>,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.colorWriteMask<sp/>=</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_COLOR_COMPONENT_R_BIT</ref><sp/>|<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_COLOR_COMPONENT_G_BIT</ref><sp/>|</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_COLOR_COMPONENT_B_BIT</ref><sp/>|<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_COLOR_COMPONENT_A_BIT</ref><sp/>};</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.colorBlendInfo<sp/>=<sp/>{<sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_COLOR_BLEND_STATE_CREATE_INFO</ref>,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.logicOpEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref>,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.logicOp<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_LOGIC_OP_COPY</ref>,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.attachmentCount<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pAttachments<sp/>=<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.colorBlendAttachment,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.blendConstants<sp/>=<sp/>{<sp/>0.f,<sp/>0.f,<sp/>0.f,<sp/>0.f<sp/>}<sp/>};</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.depthStencilInfo<sp/>=<sp/>{<sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO</ref>,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.depthTestEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_TRUE</ref>,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.depthWriteEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_TRUE</ref>,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.depthCompareOp<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_COMPARE_OP_LESS</ref>,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.depthBoundsTestEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref>,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.stencilTestEnable<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_FALSE</ref>,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.front<sp/>=<sp/>{},</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.back<sp/>=<sp/>{},</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.minDepthBounds<sp/>=<sp/>0.f,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.maxDepthBounds<sp/>=<sp/>1.f<sp/>};</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.dynamicStateEnables<sp/>=<sp/>{<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_DYNAMIC_STATE_VIEWPORT</ref>,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_DYNAMIC_STATE_SCISSOR</ref><sp/>};</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.dynamicStateInfo<sp/>=<sp/>{<sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_PIPELINE_DYNAMIC_STATE_CREATE_INFO</ref>,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.dynamicStateCount<sp/>=</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.dynamicStateEnables.size()),</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pDynamicStates</ref><sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">configInfo</ref>.dynamicStateEnables.data()<sp/>};</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="classrr_1_1VulkanPipeline_1a75bef441869f8fb0170c419a964b1b38" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1VulkanPipeline_1a75bef441869f8fb0170c419a964b1b38" kindref="member">VulkanPipeline::bind</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBuffer</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">cmdBuffer</ref>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="169"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vkCmdBindPipeline</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">cmdBuffer</ref>,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_PIPELINE_BIND_POINT_GRAPHICS</ref>,<sp/>m_pipeline);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>VulkanPipeline::createShaderModule(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;char&gt;&amp;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">code</ref>,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkShaderModule</ref>*<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">shaderModule</ref>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="180"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkShaderModuleCreateInfo</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">createInfo</ref>{<sp/>.sType<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO</ref>,</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.codeSize<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">code</ref>.size(),</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pCode<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">std::uint32_t*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">code</ref>.data())<sp/>};</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">vkCreateShaderModule</ref>(device,<sp/>&amp;<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">createInfo</ref>,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">shaderModule</ref>)<sp/>!=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_SUCCESS</ref>)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">throwWithLog&lt;VulkanException&gt;</ref>(</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::source_location::current(),<sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea09a099c9bc6af953bae959de8aaf12d3" kindref="member">VulkanExceptionCause::CREATE_SHADER_MODULE</ref>);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal">std::vector&lt;char&gt;<sp/>VulkanPipeline::readFile(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::filesystem::path&amp;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">filepath</ref>)</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ifstream<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">file</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">filepath</ref>,<sp/>std::ios::ate<sp/>|<sp/>std::ios::binary);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">file</ref>.is_open())</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">throwWithLog&lt;FileIOException&gt;</ref>(std::source_location::current(),<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">filepath</ref>);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::streamsize<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">fileSize</ref>{<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">file</ref>.tellg()<sp/>};</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;char&gt;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">buffer</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">fileSize</ref>);</highlight></codeline>
 <codeline lineno="205"><highlight class="normal"></highlight></codeline>
-<codeline lineno="212"><highlight class="normal">std::vector&lt;char&gt;<sp/>VulkanPipeline::readFile(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::filesystem::path&amp;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">filepath</ref>)</highlight></codeline>
-<codeline lineno="213"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ifstream<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">file</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">filepath</ref>,<sp/>std::ios::ate<sp/>|<sp/>std::ios::binary);</highlight></codeline>
-<codeline lineno="215"><highlight class="normal"></highlight></codeline>
-<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">file</ref>.is_open())</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">throwWithLog&lt;FileIOException&gt;</ref>(std::source_location::current(),<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">filepath</ref>);</highlight></codeline>
-<codeline lineno="218"><highlight class="normal"></highlight></codeline>
-<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::streamsize<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">fileSize</ref>{<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">file</ref>.tellg()<sp/>};</highlight></codeline>
-<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;char&gt;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">buffer</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">fileSize</ref>);</highlight></codeline>
-<codeline lineno="221"><highlight class="normal"></highlight></codeline>
-<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">file</ref>.seekg(0);</highlight></codeline>
-<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">file</ref>.read(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">buffer</ref>.data(),<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">fileSize</ref>);</highlight></codeline>
-<codeline lineno="224"><highlight class="normal"></highlight></codeline>
-<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">file</ref>.close();</highlight></codeline>
-<codeline lineno="226"><highlight class="normal"></highlight></codeline>
-<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">buffer</ref>;</highlight></codeline>
-<codeline lineno="228"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="229"><highlight class="normal"></highlight></codeline>
-<codeline lineno="230"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>!rr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">file</ref>.seekg(0);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">file</ref>.read(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">buffer</ref>.data(),<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">fileSize</ref>);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">file</ref>.close();</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">buffer</ref>;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>rr</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/engine/core/VulkanPipeline.cpp"/>
   </compounddef>

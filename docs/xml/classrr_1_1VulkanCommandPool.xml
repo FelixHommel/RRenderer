@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandPool.hpp" line="39" column="18" bodyfile="src/engine/core/VulkanCommandPool.hpp" bodystart="39" bodyend="-1"/>
+        <location file="src/engine/core/VulkanCommandPool.hpp" line="40" column="14" bodyfile="src/engine/core/VulkanCommandPool.hpp" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanCommandPool_1accfb0716d7d411b389a5da07bb496b17" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandPool</ref></type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandPool.hpp" line="41" column="19" bodyfile="src/engine/core/VulkanCommandPool.hpp" bodystart="41" bodyend="41"/>
+        <location file="src/engine/core/VulkanCommandPool.hpp" line="42" column="15" bodyfile="src/engine/core/VulkanCommandPool.hpp" bodystart="42" bodyend="42"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -69,7 +69,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandPool.hpp" line="25" column="14" bodyfile="src/engine/core/VulkanCommandPool.cpp" bodystart="24" bodyend="41"/>
+        <location file="src/engine/core/VulkanCommandPool.hpp" line="25" column="10" bodyfile="src/engine/core/VulkanCommandPool.cpp" bodystart="24" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanCommandPool_1a308efb948740f25349f10d122b9e0d18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -83,7 +83,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandPool.hpp" line="26" column="5" bodyfile="src/engine/core/VulkanCommandPool.cpp" bodystart="43" bodyend="46"/>
+        <location file="src/engine/core/VulkanCommandPool.hpp" line="26" column="1" bodyfile="src/engine/core/VulkanCommandPool.cpp" bodystart="44" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanCommandPool_1ad52ce0476da121589bc03b9e20811e2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -100,7 +100,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandPool.hpp" line="28" column="5"/>
+        <location file="src/engine/core/VulkanCommandPool.hpp" line="28" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanCommandPool_1a38cf22f0e3402e3cd8caa927aa281266" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classrr_1_1VulkanCommandPool" kindref="compound">VulkanCommandPool</ref> &amp;</type>
@@ -117,7 +117,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandPool.hpp" line="29" column="23"/>
+        <location file="src/engine/core/VulkanCommandPool.hpp" line="29" column="19"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanCommandPool_1a0b2529e06837bebba8529655568e28f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -134,7 +134,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandPool.hpp" line="30" column="5"/>
+        <location file="src/engine/core/VulkanCommandPool.hpp" line="30" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanCommandPool_1a9c09f6fc273ffa8257de065d5867a2eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classrr_1_1VulkanCommandPool" kindref="compound">VulkanCommandPool</ref> &amp;</type>
@@ -151,7 +151,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandPool.hpp" line="31" column="23"/>
+        <location file="src/engine/core/VulkanCommandPool.hpp" line="31" column="19"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanCommandPool_1af919b9f462a0f5403e6d18443afded5f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandPool</ref></type>
@@ -165,7 +165,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandPool.hpp" line="33" column="20" bodyfile="src/engine/core/VulkanCommandPool.hpp" bodystart="33" bodyend="33"/>
+        <location file="src/engine/core/VulkanCommandPool.hpp" line="33" column="16" bodyfile="src/engine/core/VulkanCommandPool.hpp" bodystart="33" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanCommandPool_1aa80e97d8ab7afef7875264dc6f1ad196" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::unique_ptr&lt; <ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref> &gt;</type>
@@ -185,7 +185,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandPool.hpp" line="35" column="22" bodyfile="src/engine/core/VulkanCommandPool.cpp" bodystart="52" bodyend="55"/>
+        <location file="src/engine/core/VulkanCommandPool.hpp" line="35" column="18" bodyfile="src/engine/core/VulkanCommandPool.cpp" bodystart="53" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanCommandPool_1af0bb1fd7ee5efe856f03ead89746c7c5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; std::unique_ptr&lt; <ref refid="classrr_1_1VulkanCommandBuffer" kindref="compound">VulkanCommandBuffer</ref> &gt; &gt;</type>
@@ -209,7 +209,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanCommandPool.hpp" line="36" column="18" bodyfile="src/engine/core/VulkanCommandPool.cpp" bodystart="61" bodyend="64"/>
+        <location file="src/engine/core/VulkanCommandPool.hpp" line="36" column="14" bodyfile="src/engine/core/VulkanCommandPool.cpp" bodystart="62" bodyend="66"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -223,7 +223,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
 </simplesect>
 </para>
     </detaileddescription>
-    <location file="src/engine/core/VulkanCommandPool.hpp" line="22" column="1" bodyfile="src/engine/core/VulkanCommandPool.hpp" bodystart="23" bodyend="42"/>
+    <location file="src/engine/core/VulkanCommandPool.hpp" line="22" column="1" bodyfile="src/engine/core/VulkanCommandPool.hpp" bodystart="23" bodyend="43"/>
     <listofallmembers>
       <member refid="classrr_1_1VulkanCommandPool_1aa80e97d8ab7afef7875264dc6f1ad196" prot="public" virt="non-virtual"><scope>rr::VulkanCommandPool</scope><name>allocateCommandBuffer</name></member>
       <member refid="classrr_1_1VulkanCommandPool_1af0bb1fd7ee5efe856f03ead89746c7c5" prot="public" virt="non-virtual"><scope>rr::VulkanCommandPool</scope><name>allocateCommandBuffer</name></member>

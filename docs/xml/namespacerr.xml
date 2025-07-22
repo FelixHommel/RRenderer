@@ -323,14 +323,14 @@
         <argsstring></argsstring>
         <name>useValidationLayers</name>
         <qualifiedname>rr::useValidationLayers</qualifiedname>
-        <initializer>{<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">false</ref>}</initializer>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">false</ref> }</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/constants.hpp" line="11" column="27" bodyfile="src/engine/constants.hpp" bodystart="11" bodyend="11"/>
+        <location file="src/engine/constants.hpp" line="11" column="23" bodyfile="src/engine/constants.hpp" bodystart="11" bodyend="11"/>
       </memberdef>
       <memberdef kind="variable" id="namespacerr_1a5b7ac2476abfdaebdbd4585457325099" prot="public" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">char</ref> * &gt;</type>
@@ -338,16 +338,14 @@
         <argsstring></argsstring>
         <name>validationLayers</name>
         <qualifiedname>rr::validationLayers</qualifiedname>
-        <initializer>{
-    &quot;VK_LAYER_KHRONOS_validation&quot;
-}</initializer>
+        <initializer>{ &quot;VK_LAYER_KHRONOS_validation&quot; }</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/constants.hpp" line="14" column="19" bodyfile="src/engine/constants.hpp" bodystart="14" bodyend="16"/>
+        <location file="src/engine/constants.hpp" line="14" column="19" bodyfile="src/engine/constants.hpp" bodystart="14" bodyend="14"/>
       </memberdef>
       <memberdef kind="variable" id="namespacerr_1a161e261e156ebc427a43973d660935fc" prot="public" static="no" constexpr="yes" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">constexpr</ref> std::size_t</type>
@@ -395,7 +393,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDebugMessenger.cpp" line="46" column="10" bodyfile="src/engine/core/VulkanDebugMessenger.cpp" bodystart="46" bodyend="58"/>
+        <location file="src/engine/core/VulkanDebugMessenger.cpp" line="49" column="10" bodyfile="src/engine/core/VulkanDebugMessenger.cpp" bodystart="49" bodyend="62"/>
       </memberdef>
       <memberdef kind="function" id="namespacerr_1a31fa27895ecf3cd2e0e1b0256ba4d821" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
@@ -421,7 +419,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDebugMessenger.cpp" line="60" column="6" bodyfile="src/engine/core/VulkanDebugMessenger.cpp" bodystart="60" bodyend="69"/>
+        <location file="src/engine/core/VulkanDebugMessenger.cpp" line="64" column="6" bodyfile="src/engine/core/VulkanDebugMessenger.cpp" bodystart="64" bodyend="72"/>
       </memberdef>
       <memberdef kind="function" id="namespacerr_1a207864460d243d147d44225c3895cc10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -453,7 +451,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/exception/EngineException.hpp" line="31" column="7" bodyfile="src/engine/exception/EngineException.hpp" bodystart="31" bodyend="35"/>
+        <location file="src/engine/exception/EngineException.hpp" line="32" column="7" bodyfile="src/engine/exception/EngineException.hpp" bodystart="32" bodyend="41"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

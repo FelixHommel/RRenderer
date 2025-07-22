@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="35" column="36" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="35" bodyend="35"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="39" column="32" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="39" bodyend="39"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="48" column="18" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="48" bodyend="-1"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="53" column="14" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a1a6643ed72a29901946875faa76d3bcd" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSurfaceKHR</ref></type>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="49" column="18" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="49" bodyend="-1"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="54" column="14" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="54" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a0daec85972e5f956cc1c8b33a88a31ee" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkExtent2D</ref></type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="50" column="16" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="50" bodyend="-1"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="55" column="12" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a7c8f14c92e0fcb2df669a092bc744570" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSwapchainKHR</ref></type>
@@ -76,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="52" column="20" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="52" bodyend="52"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="57" column="16" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="57" bodyend="57"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a653b72b854efc58b0804efcc406d23b4" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkFramebuffer</ref> &gt;</type>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="53" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="53" bodyend="53"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="58" column="13" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="58" bodyend="58"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a1cbfbede026b0ecca14ff56ffbd8c426" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkRenderPass</ref></type>
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="54" column="18" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="54" bodyend="54"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="59" column="14" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="59" bodyend="59"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a93101cd289214c6c353ef18f25831f8a" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkFormat</ref></type>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="56" column="14" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="56" bodyend="56"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="61" column="10" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a2630ede44745b07ccb85fb9f9772a9ea" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkExtent2D</ref></type>
@@ -136,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="57" column="16" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="57" bodyend="57"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="62" column="12" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="62" bodyend="62"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1acd6bf2733aaaf67e356f73474ce5b46b" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkImage</ref> &gt;</type>
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="58" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="58" bodyend="-1"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="63" column="13" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a9ea81923dc77e931433502f31f06dd18" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkImageView</ref> &gt;</type>
@@ -164,7 +164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="59" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="59" bodyend="-1"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="64" column="13" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="64" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a8e92cba3469d807380b06070203461bc" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkImage</ref> &gt;</type>
@@ -178,7 +178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="60" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="60" bodyend="-1"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="65" column="13" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="65" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1abaf15ed074df47e09611c59191ea0613" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDeviceMemory</ref> &gt;</type>
@@ -192,7 +192,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="61" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="61" bodyend="-1"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="66" column="13" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="66" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a5e0c351aaf8559dff3ee2f1ce7e2c543" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkImageView</ref> &gt;</type>
@@ -206,7 +206,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="62" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="62" bodyend="-1"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="67" column="13" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="67" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a4aa49beb13d1e65ff89a1a39f807c798" prot="private" static="no" mutable="no">
         <type>std::size_t</type>
@@ -221,7 +221,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="63" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="63" bodyend="63"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="68" column="13" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="68" bodyend="68"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1aeac5428aecccd3bfc15fb2348deb7333" prot="private" static="no" mutable="no">
         <type>std::uint32_t</type>
@@ -236,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="64" column="19" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="64" bodyend="64"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="69" column="15" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="69" bodyend="69"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a2d397dcd2775e3dc8afd74540b146eb8" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSemaphore</ref> &gt;</type>
@@ -250,7 +250,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="66" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="66" bodyend="-1"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="71" column="13" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="71" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a76b44e988886a7b9cff02d872c9a0e27" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSemaphore</ref> &gt;</type>
@@ -264,7 +264,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="67" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="67" bodyend="-1"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="72" column="13" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="72" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1aa119a58ffdba628ee53545cfe5f63d14" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkFence</ref> &gt;</type>
@@ -278,7 +278,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="68" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="68" bodyend="-1"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="73" column="13" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="73" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanSwapchain_1a9b5f90901bfc275bb9a2213b568af2b8" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkFence</ref> &gt;</type>
@@ -292,7 +292,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="69" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="69" bodyend="-1"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="74" column="13" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="74" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -347,7 +347,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="26" column="5" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="28" bodyend="34"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="26" column="1" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="28" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1af7c852075f3cb222b7a95f5d5b9f933c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -412,7 +412,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="27" column="5" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="42" bodyend="48"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="27" column="1" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="42" bodyend="52"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a6779490e76cf6a72a3d20027fbb6f3e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -426,7 +426,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="28" column="5" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="50" bodyend="86"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="32" column="1" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="54" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a3e6ddd412eb53f877296e6e88badb91f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -443,7 +443,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="30" column="5"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="34" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1ad305f54c62a4f9f8a706d8355f205181" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref> &amp;</type>
@@ -460,7 +460,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="31" column="21"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="35" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1ac890bae954010a9875420dde28bc3123" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -477,7 +477,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="32" column="5"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="36" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a22adc3a41146b2d53c338246561e1bbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classrr_1_1VulkanSwapchain" kindref="compound">VulkanSwapchain</ref> &amp;</type>
@@ -494,7 +494,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="33" column="21"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="37" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a7fd7b4e69a9364cf906b1b2c708bd49c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>std::size_t</type>
@@ -508,7 +508,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="37" column="18" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="37" bodyend="37"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="41" column="14" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="41" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a03f465a16bb29f2034ffb8c13688c185" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkExtent2D</ref></type>
@@ -522,7 +522,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="38" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="38" bodyend="38"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="42" column="13" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="42" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1aa1d92675909218fef6c5629252016623" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkResult</ref></type>
@@ -553,7 +553,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="40" column="15" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="93" bodyend="98"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="44" column="11" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="97" bodyend="113"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a1ed09be0292cc58b03beb68ec93f5f81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkResult</ref></type>
@@ -603,7 +603,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="41" column="15" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="107" bodyend="147"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="45" column="11" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="122" bodyend="167"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a8f8ec3fababd315726c66cc88b306e3e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSwapchainKHR</ref></type>
@@ -617,7 +617,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="43" column="21" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="43" bodyend="43"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="48" column="17" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="48" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1af9bdf1ebc17f04123bfecc93fe62939c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkRenderPass</ref></type>
@@ -631,7 +631,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="44" column="19" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="44" bodyend="44"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="49" column="15" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="49" bodyend="49"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1ac14fc810f0b3cf2a62c40cbfc87406ce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkFramebuffer</ref></type>
@@ -672,7 +672,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="45" column="20" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="157" bodyend="163"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="50" column="16" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="177" bodyend="183"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -704,7 +704,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="71" column="10" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="168" bodyend="176"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="76" column="6" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="188" bodyend="196"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a240e1dfa302a7f598e1c2df2b10f50d6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
@@ -741,7 +741,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="73" column="10" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="183" bodyend="233"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="78" column="6" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="203" bodyend="254"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a44f00432ac1404eacf18ac0f0eec8947" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
@@ -764,7 +764,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="74" column="10" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="238" bodyend="261"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="79" column="6" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="259" bodyend="280"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1acc9c5d6eaaafe91608f837076ea6b7e6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
@@ -787,7 +787,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="75" column="10" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="266" bodyend="329"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="80" column="6" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="285" bodyend="341"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a9159966ae281d0cbe7cf8f217ce3420e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
@@ -810,7 +810,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="76" column="10" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="334" bodyend="383"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="81" column="6" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="346" bodyend="391"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a32404744d5753cf9c5de6824c2285df6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
@@ -833,7 +833,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="77" column="10" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="388" bodyend="410"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="82" column="6" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="396" bodyend="419"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1ad3c6e1d32eda82ee5e714f646dd05186" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
@@ -856,7 +856,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="78" column="10" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="415" bodyend="443"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="83" column="6" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="424" bodyend="454"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a0ee85e6fb01401a6d65bf342fee0e1dd" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkExtent2D</ref></type>
@@ -887,7 +887,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="80" column="17" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="450" bodyend="460"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="85" column="13" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="461" bodyend="474"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1aeec60588bc98ea321d943aebc95846b2" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkFormat</ref></type>
@@ -905,7 +905,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="81" column="15" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="465" bodyend="471"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="86" column="11" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="479" bodyend="485"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-func">
@@ -938,7 +938,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="83" column="31" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="478" bodyend="487"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="88" column="27" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="492" bodyend="503"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanSwapchain_1a70a38b34a096589fab627dd3811289d7" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPresentModeKHR</ref></type>
@@ -969,7 +969,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanSwapchain.hpp" line="84" column="29" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="494" bodyend="507"/>
+        <location file="src/engine/core/VulkanSwapchain.hpp" line="90" column="25" bodyfile="src/engine/core/VulkanSwapchain.cpp" bodystart="510" bodyend="524"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -983,7 +983,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
 </simplesect>
 </para>
     </detaileddescription>
-    <location file="src/engine/core/VulkanSwapchain.hpp" line="23" column="1" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="24" bodyend="85"/>
+    <location file="src/engine/core/VulkanSwapchain.hpp" line="23" column="1" bodyfile="src/engine/core/VulkanSwapchain.hpp" bodystart="24" bodyend="91"/>
     <listofallmembers>
       <member refid="classrr_1_1VulkanSwapchain_1aa1d92675909218fef6c5629252016623" prot="public" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>acquireNextImage</name></member>
       <member refid="classrr_1_1VulkanSwapchain_1a0ee85e6fb01401a6d65bf342fee0e1dd" prot="private" virt="non-virtual"><scope>rr::VulkanSwapchain</scope><name>chooseSwapExtent</name></member>

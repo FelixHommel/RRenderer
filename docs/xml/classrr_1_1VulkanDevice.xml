@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="104" column="16" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="104" bodyend="-1"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="127" column="12" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="127" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanDevice_1a92e31126bf9f180ec5cc3eaa6d7b22a7" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSurfaceKHR</ref></type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="105" column="18" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="105" bodyend="-1"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="128" column="14" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="128" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanDevice_1a32395d156f9bfa8844770d30d1ffb904" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPhysicalDevice</ref></type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="107" column="22" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="107" bodyend="107"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="130" column="18" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="130" bodyend="130"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanDevice_1a7e6990e568fd55c199e493d0b094e3fd" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPhysicalDeviceProperties</ref></type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="108" column="32" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="108" bodyend="108"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="131" column="28" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="131" bodyend="131"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanDevice_1a3193a0b0db637b42102a5ee8d4554d02" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDevice</ref></type>
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="109" column="14" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="109" bodyend="109"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="132" column="10" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="132" bodyend="132"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanDevice_1ab8e23b9e88a060eb203f9ffb2ac626f0" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkQueue</ref></type>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="110" column="13" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="110" bodyend="110"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="133" column="9" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="133" bodyend="133"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanDevice_1ac55f2f102235b80b8acd2f0f8705c823" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkQueue</ref></type>
@@ -105,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="111" column="13" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="111" bodyend="111"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="134" column="9" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="134" bodyend="134"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1VulkanDevice_1a7394e83f8eaa36c1047f3ee82778e2c4" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">char</ref> * &gt;</type>
@@ -113,7 +113,9 @@
         <argsstring></argsstring>
         <name>deviceExtensions</name>
         <qualifiedname>rr::VulkanDevice::deviceExtensions</qualifiedname>
-        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_KHR_SWAPCHAIN_EXTENSION_NAME</ref> }</initializer>
+        <initializer>{
+		<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_KHR_SWAPCHAIN_EXTENSION_NAME</ref>
+	}</initializer>
         <briefdescription>
 <para>List of extensions that the device must support. </para>
         </briefdescription>
@@ -121,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="113" column="23" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="113" bodyend="113"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="136" column="19" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="136" bodyend="138"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -164,7 +166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="74" column="5" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="25" bodyend="31"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="81" column="1" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="25" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDevice_1a0402e13052955657d0acaa80a67c28f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -178,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="75" column="5" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="33" bodyend="36"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="82" column="1" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="33" bodyend="36"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDevice_1a259d39cb248287d755222c9d39c42182" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -195,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="77" column="5"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="84" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDevice_1aaa707f045938516aa05e365ff0baa5cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -212,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="78" column="5"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="85" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDevice_1ad7d93b626e55a2dc675da6edc4985612" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classrr_1_1VulkanDevice" kindref="compound">VulkanDevice</ref> &amp;</type>
@@ -229,7 +231,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="79" column="18"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="86" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDevice_1a070d0796e041b2fea587d7f67eb58a82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classrr_1_1VulkanDevice" kindref="compound">VulkanDevice</ref> &amp;</type>
@@ -246,7 +248,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="80" column="18"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="87" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDevice_1acf48c71ceb51f3b78ed0fa3179f566df" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDevice</ref></type>
@@ -260,7 +262,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="82" column="15" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="82" bodyend="82"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="89" column="11" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="89" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDevice_1a907f8747379cb41be2c699e6ab579508" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkQueue</ref></type>
@@ -274,7 +276,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="83" column="14" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="83" bodyend="83"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="90" column="10" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="90" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDevice_1a672143df72ac32e02298d22f7342e4f0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkQueue</ref></type>
@@ -288,7 +290,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="84" column="14" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="84" bodyend="84"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="91" column="10" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="91" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDevice_1a410e47201a88cb2a7edb2fb64eb8f323" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structrr_1_1SwapchainSupportDetails" kindref="compound">SwapchainSupportDetails</ref></type>
@@ -308,7 +310,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="90" column="30" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="90" bodyend="90"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="97" column="26" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="97" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDevice_1a21b0e35783d139f07f7b2576171fc553" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structrr_1_1QueueFamilyIndices" kindref="compound">QueueFamilyIndices</ref></type>
@@ -328,7 +330,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="96" column="25" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="96" bodyend="96"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="106" column="21" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="106" bodyend="109"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDevice_1a18518c22666a9ddfee12ed570d1b8520" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkFormat</ref></type>
@@ -358,7 +360,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="98" column="15" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="42" bodyend="57"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="111" column="11" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="42" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDevice_1a704c0992e4d3d35b3817c6c8c27ee20c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
@@ -424,7 +426,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="100" column="10" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="69" bodyend="88"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="114" column="6" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="71" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDevice_1a7b91e0766522d591035cb2bc7f9ea2db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
@@ -502,7 +504,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="101" column="10" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="101" bodyend="126"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="119" column="6" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="107" bodyend="134"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -527,7 +529,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="115" column="10" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="131" bodyend="162"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="140" column="6" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="139" bodyend="173"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDevice_1ae562e4ca2b07190e2f94691b1a525f41" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
@@ -550,7 +552,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="116" column="10" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="167" bodyend="220"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="141" column="6" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="178" bodyend="228"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDevice_1ac1527b38af65451bf8d1edcbf742f3c8" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bool</ref></type>
@@ -582,7 +584,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="118" column="10" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="230" bodyend="246"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="143" column="6" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="238" bodyend="255"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDevice_1a1731d3d82a4d93a85c2251b457423c92" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structrr_1_1QueueFamilyIndices" kindref="compound">QueueFamilyIndices</ref></type>
@@ -615,7 +617,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="119" column="24" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="254" bodyend="282"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="144" column="20" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="263" bodyend="291"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDevice_1a4ca4488ee41f459ea7a75f217e5f1ac6" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bool</ref></type>
@@ -646,7 +648,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="120" column="10" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="289" bodyend="303"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="145" column="6" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="298" bodyend="312"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDevice_1abc28ba2841a7f3fe7df2fb5f44cc95d0" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structrr_1_1SwapchainSupportDetails" kindref="compound">SwapchainSupportDetails</ref></type>
@@ -679,7 +681,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="121" column="29" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="311" bodyend="335"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="146" column="25" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="320" bodyend="345"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1VulkanDevice_1a66b66e6298ba42090889688131b4a18d" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::uint32_t</type>
@@ -730,7 +732,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanDevice.hpp" line="122" column="19" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="346" bodyend="358"/>
+        <location file="src/engine/core/VulkanDevice.hpp" line="147" column="15" bodyfile="src/engine/core/VulkanDevice.cpp" bodystart="356" bodyend="370"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -744,7 +746,7 @@ ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</
 </simplesect>
 </para>
     </detaileddescription>
-    <location file="src/engine/core/VulkanDevice.hpp" line="71" column="1" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="72" bodyend="123"/>
+    <location file="src/engine/core/VulkanDevice.hpp" line="78" column="1" bodyfile="src/engine/core/VulkanDevice.hpp" bodystart="79" bodyend="148"/>
     <listofallmembers>
       <member refid="classrr_1_1VulkanDevice_1a4ca4488ee41f459ea7a75f217e5f1ac6" prot="private" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>checkDeviceExtensionsSupported</name></member>
       <member refid="classrr_1_1VulkanDevice_1a7b91e0766522d591035cb2bc7f9ea2db" prot="public" virt="non-virtual"><scope>rr::VulkanDevice</scope><name>createBuffer</name></member>

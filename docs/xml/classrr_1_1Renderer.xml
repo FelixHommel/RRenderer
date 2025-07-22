@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/Renderer.hpp" line="27" column="5"/>
+        <location file="src/engine/Renderer.hpp" line="27" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1Renderer_1acbde91675e409c0840b8387e6c4e08d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/Renderer.hpp" line="28" column="13"/>
+        <location file="src/engine/Renderer.hpp" line="28" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1Renderer_1a4f0e7d611a08788ce54ce39820982e83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/Renderer.hpp" line="30" column="5"/>
+        <location file="src/engine/Renderer.hpp" line="30" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1Renderer_1ae31ddb831141cfba38a2cb4a49767a8a" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type></type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/Renderer.hpp" line="31" column="5"/>
+        <location file="src/engine/Renderer.hpp" line="31" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1Renderer_1a97d5b67e737ea23129d9f7c199a16610" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classrr_1_1Renderer" kindref="compound">Renderer</ref> &amp;</type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/Renderer.hpp" line="32" column="14"/>
+        <location file="src/engine/Renderer.hpp" line="32" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1Renderer_1af91f2e8ab8de28bcb1c3279d5bfef2db" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classrr_1_1Renderer" kindref="compound">Renderer</ref> &amp;</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/Renderer.hpp" line="33" column="14"/>
+        <location file="src/engine/Renderer.hpp" line="33" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1Renderer_1a84e149938d154bd8d067b1be2e94a2fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
@@ -115,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/Renderer.hpp" line="36" column="18"/>
+        <location file="src/engine/Renderer.hpp" line="36" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1Renderer_1add7edc93f23223e70b770a36e0e804c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
@@ -132,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/Renderer.hpp" line="41" column="18"/>
+        <location file="src/engine/Renderer.hpp" line="41" column="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

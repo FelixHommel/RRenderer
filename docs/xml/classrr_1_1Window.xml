@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/window/Window.hpp" line="43" column="16" bodyfile="src/engine/window/Window.hpp" bodystart="43" bodyend="-1"/>
+        <location file="src/engine/window/Window.hpp" line="46" column="12" bodyfile="src/engine/window/Window.hpp" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1Window_1a59e1a7b2574783007aef0bbfdb95dbdc" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">int</ref></type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/window/Window.hpp" line="45" column="9" bodyfile="src/engine/window/Window.hpp" bodystart="45" bodyend="-1"/>
+        <location file="src/engine/window/Window.hpp" line="48" column="5" bodyfile="src/engine/window/Window.hpp" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1Window_1ae8a13bd0a53254025a9356a679458cb3" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">int</ref></type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/window/Window.hpp" line="46" column="9" bodyfile="src/engine/window/Window.hpp" bodystart="46" bodyend="-1"/>
+        <location file="src/engine/window/Window.hpp" line="49" column="5" bodyfile="src/engine/window/Window.hpp" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1Window_1a24ac96b9c00886c05955e9b09cdd3861" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/window/Window.hpp" line="47" column="17" bodyfile="src/engine/window/Window.hpp" bodystart="47" bodyend="-1"/>
+        <location file="src/engine/window/Window.hpp" line="50" column="13" bodyfile="src/engine/window/Window.hpp" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classrr_1_1Window_1ae6e9088839712abbb1e742d215d3d5bf" prot="private" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bool</ref></type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/window/Window.hpp" line="48" column="10" bodyfile="src/engine/window/Window.hpp" bodystart="48" bodyend="48"/>
+        <location file="src/engine/window/Window.hpp" line="51" column="6" bodyfile="src/engine/window/Window.hpp" bodystart="51" bodyend="51"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -135,7 +135,7 @@ ref <ref refid="classrr_1_1GLFWException" kindref="compound">GLFWException</ref>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/window/Window.hpp" line="24" column="5" bodyfile="src/engine/window/Window.cpp" bodystart="23" bodyend="45"/>
+        <location file="src/engine/window/Window.hpp" line="24" column="1" bodyfile="src/engine/window/Window.cpp" bodystart="23" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1Window_1a0e6abfc5b6055b21b43a1e4d6a2e0aa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -149,7 +149,7 @@ ref <ref refid="classrr_1_1GLFWException" kindref="compound">GLFWException</ref>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/window/Window.hpp" line="25" column="5" bodyfile="src/engine/window/Window.cpp" bodystart="47" bodyend="50"/>
+        <location file="src/engine/window/Window.hpp" line="25" column="1" bodyfile="src/engine/window/Window.cpp" bodystart="48" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1Window_1a8b9707541b35c11a8552036acce56b7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -166,7 +166,7 @@ ref <ref refid="classrr_1_1GLFWException" kindref="compound">GLFWException</ref>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/window/Window.hpp" line="27" column="5"/>
+        <location file="src/engine/window/Window.hpp" line="27" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1Window_1a2b48cd5ecc41974ac28a5c6760c2425d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classrr_1_1Window" kindref="compound">Window</ref> &amp;</type>
@@ -183,7 +183,7 @@ ref <ref refid="classrr_1_1GLFWException" kindref="compound">GLFWException</ref>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/window/Window.hpp" line="28" column="12"/>
+        <location file="src/engine/window/Window.hpp" line="28" column="8"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1Window_1a6ac080e9932daec628d41445498de42e" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type></type>
@@ -200,7 +200,7 @@ ref <ref refid="classrr_1_1GLFWException" kindref="compound">GLFWException</ref>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/window/Window.hpp" line="29" column="5"/>
+        <location file="src/engine/window/Window.hpp" line="29" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1Window_1a40e61ef3df001e499e70459367b4f0f4" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classrr_1_1Window" kindref="compound">Window</ref> &amp;</type>
@@ -217,7 +217,7 @@ ref <ref refid="classrr_1_1GLFWException" kindref="compound">GLFWException</ref>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/window/Window.hpp" line="30" column="12"/>
+        <location file="src/engine/window/Window.hpp" line="30" column="8"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1Window_1ac4b8c93bd90bd3ccc48b14cf81334627" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">GLFWwindow</ref> *</type>
@@ -231,7 +231,7 @@ ref <ref refid="classrr_1_1GLFWException" kindref="compound">GLFWException</ref>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/window/Window.hpp" line="32" column="17" bodyfile="src/engine/window/Window.hpp" bodystart="32" bodyend="32"/>
+        <location file="src/engine/window/Window.hpp" line="32" column="13" bodyfile="src/engine/window/Window.hpp" bodystart="32" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1Window_1a7e2e2c8a0ea45d3546dd72571db29e36" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">int</ref></type>
@@ -245,7 +245,7 @@ ref <ref refid="classrr_1_1GLFWException" kindref="compound">GLFWException</ref>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/window/Window.hpp" line="33" column="10" bodyfile="src/engine/window/Window.hpp" bodystart="33" bodyend="33"/>
+        <location file="src/engine/window/Window.hpp" line="33" column="6" bodyfile="src/engine/window/Window.hpp" bodystart="33" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1Window_1afff4d6cbe64ce548adb84d83d042d76b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkExtent2D</ref></type>
@@ -259,7 +259,7 @@ ref <ref refid="classrr_1_1GLFWException" kindref="compound">GLFWException</ref>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/window/Window.hpp" line="34" column="17" bodyfile="src/engine/window/Window.hpp" bodystart="34" bodyend="34"/>
+        <location file="src/engine/window/Window.hpp" line="34" column="13" bodyfile="src/engine/window/Window.hpp" bodystart="34" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1Window_1ad2090b64dc2fcd0b3abe8576c9cbeb43" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bool</ref></type>
@@ -273,7 +273,7 @@ ref <ref refid="classrr_1_1GLFWException" kindref="compound">GLFWException</ref>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/window/Window.hpp" line="35" column="11" bodyfile="src/engine/window/Window.hpp" bodystart="35" bodyend="35"/>
+        <location file="src/engine/window/Window.hpp" line="38" column="7" bodyfile="src/engine/window/Window.hpp" bodystart="38" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1Window_1aa07b985c56776ef99fe362353a844b85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
@@ -287,7 +287,7 @@ ref <ref refid="classrr_1_1GLFWException" kindref="compound">GLFWException</ref>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/window/Window.hpp" line="37" column="10" bodyfile="src/engine/window/Window.hpp" bodystart="37" bodyend="37"/>
+        <location file="src/engine/window/Window.hpp" line="40" column="6" bodyfile="src/engine/window/Window.hpp" bodystart="40" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1Window_1ace8723045e9c0e757894c679bc607688" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
@@ -335,7 +335,7 @@ ref <ref refid="classrr_1_1GLFWException" kindref="compound">GLFWException</ref>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/window/Window.hpp" line="39" column="10" bodyfile="src/engine/window/Window.cpp" bodystart="58" bodyend="62"/>
+        <location file="src/engine/window/Window.hpp" line="42" column="6" bodyfile="src/engine/window/Window.cpp" bodystart="59" bodyend="64"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-func">
@@ -364,7 +364,7 @@ ref <ref refid="classrr_1_1GLFWException" kindref="compound">GLFWException</ref>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/window/Window.hpp" line="50" column="17" bodyfile="src/engine/window/Window.cpp" bodystart="65" bodyend="72"/>
+        <location file="src/engine/window/Window.hpp" line="53" column="13" bodyfile="src/engine/window/Window.cpp" bodystart="67" bodyend="74"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -378,7 +378,7 @@ ref <ref refid="classrr_1_1GLFWException" kindref="compound">GLFWException</ref>
 </simplesect>
 </para>
     </detaileddescription>
-    <location file="src/engine/window/Window.hpp" line="21" column="1" bodyfile="src/engine/window/Window.hpp" bodystart="22" bodyend="51"/>
+    <location file="src/engine/window/Window.hpp" line="21" column="1" bodyfile="src/engine/window/Window.hpp" bodystart="22" bodyend="54"/>
     <listofallmembers>
       <member refid="classrr_1_1Window_1ace8723045e9c0e757894c679bc607688" prot="public" virt="non-virtual"><scope>rr::Window</scope><name>createWindowSurface</name></member>
       <member refid="classrr_1_1Window_1a9e527bb9b107d6f83803e9316d56640c" prot="private" virt="non-virtual"><scope>rr::Window</scope><name>framebufferResizeCallback</name></member>

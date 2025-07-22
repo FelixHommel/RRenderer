@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="29" column="39" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="29" bodyend="29"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="29" column="35" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="29" bodyend="29"/>
       </memberdef>
       <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1a0cfaf39043a86b53fc34412d78c7fd70" prot="public" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineInputAssemblyStateCreateInfo</ref></type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="30" column="44" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="30" bodyend="30"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="30" column="40" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="30" bodyend="30"/>
       </memberdef>
       <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1aa8b9020ce566f8040ac61bc66849bede" prot="public" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineRasterizationStateCreateInfo</ref></type>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="31" column="44" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="31" bodyend="31"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="31" column="40" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="31" bodyend="31"/>
       </memberdef>
       <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1a937ef03e03849c4712d0a05019f4733d" prot="public" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineMultisampleStateCreateInfo</ref></type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="32" column="42" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="32" bodyend="32"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="32" column="38" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="32" bodyend="32"/>
       </memberdef>
       <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1a28af641bae33ad50f5d247ea6a4b561c" prot="public" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineColorBlendAttachmentState</ref></type>
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="33" column="41" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="33" bodyend="33"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="33" column="37" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="33" bodyend="33"/>
       </memberdef>
       <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1aa795ec91994f876223135cf4e5e56cae" prot="public" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineColorBlendStateCreateInfo</ref></type>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="34" column="41" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="34" bodyend="34"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="34" column="37" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="34" bodyend="34"/>
       </memberdef>
       <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1aa73e91c31f86996cf821409c9e650327" prot="public" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineDepthStencilStateCreateInfo</ref></type>
@@ -107,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="35" column="43" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="35" bodyend="35"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="35" column="39" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="35" bodyend="35"/>
       </memberdef>
       <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1a813b218dbcbdbf3be5e55e424e9fe210" prot="public" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDynamicState</ref> &gt;</type>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="36" column="17" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="36" bodyend="-1"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="36" column="13" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1a474b053fb98712a6be288e9c2472942e" prot="public" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineDynamicStateCreateInfo</ref></type>
@@ -136,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="37" column="38" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="37" bodyend="37"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="37" column="34" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="37" bodyend="37"/>
       </memberdef>
       <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1ada9b2da065ff5be22b02b004183bfbfe" prot="public" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkPipelineLayout</ref></type>
@@ -151,7 +151,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="38" column="22" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="38" bodyend="38"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="38" column="18" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="38" bodyend="38"/>
       </memberdef>
       <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1a99cd16fc80a9466832916011aa93f0df" prot="public" static="no" mutable="no">
         <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkRenderPass</ref></type>
@@ -166,7 +166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="39" column="18" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="39" bodyend="39"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="39" column="14" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="39" bodyend="39"/>
       </memberdef>
       <memberdef kind="variable" id="structrr_1_1PipelineConfigInfo_1ab7e3ff95268b43c0abda670ce48cbc92" prot="public" static="no" mutable="no">
         <type>std::uint32_t</type>
@@ -181,7 +181,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="40" column="19" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="40" bodyend="40"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="40" column="15" bodyfile="src/engine/core/VulkanPipeline.hpp" bodystart="40" bodyend="40"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -197,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="21" column="5"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="21" column="1"/>
       </memberdef>
       <memberdef kind="function" id="structrr_1_1PipelineConfigInfo_1a6e5b87c2d5bfd86c338d560b3c649cf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -211,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="22" column="5"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="22" column="1"/>
       </memberdef>
       <memberdef kind="function" id="structrr_1_1PipelineConfigInfo_1aa9ad79fb1bed6ae3100852045e4e57a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -228,7 +228,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="24" column="5"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="24" column="1"/>
       </memberdef>
       <memberdef kind="function" id="structrr_1_1PipelineConfigInfo_1aec4d83ad2ebcce795dbd78a607705638" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structrr_1_1PipelineConfigInfo" kindref="compound">PipelineConfigInfo</ref> &amp;</type>
@@ -245,7 +245,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="25" column="24"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="25" column="20"/>
       </memberdef>
       <memberdef kind="function" id="structrr_1_1PipelineConfigInfo_1aedaf59485a173ea7fc611b53ec64254d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -262,7 +262,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="26" column="5"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="26" column="1"/>
       </memberdef>
       <memberdef kind="function" id="structrr_1_1PipelineConfigInfo_1ae3f914ce126bdbb9e10f952662023cd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structrr_1_1PipelineConfigInfo" kindref="compound">PipelineConfigInfo</ref> &amp;</type>
@@ -279,7 +279,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/core/VulkanPipeline.hpp" line="27" column="24"/>
+        <location file="src/engine/core/VulkanPipeline.hpp" line="27" column="20"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

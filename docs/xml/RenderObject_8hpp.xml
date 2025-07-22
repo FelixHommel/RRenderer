@@ -18,7 +18,7 @@
         <link refid="VulkanDevice_8hpp"/>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
@@ -28,7 +28,7 @@
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
@@ -49,9 +49,11 @@
         <childnode refid="18" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="4">
         <label>exception/EngineException.hpp</label>
         <link refid="EngineException_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
         <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
@@ -60,13 +62,11 @@
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
       </node>
-      <node id="4">
+      <node id="10">
         <label>exception/VulkanException.hpp</label>
         <link refid="VulkanException_8hpp"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -74,7 +74,7 @@
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -104,7 +104,7 @@
       <node id="12">
         <label>cstdint</label>
       </node>
-      <node id="7">
+      <node id="6">
         <label>exception</label>
       </node>
       <node id="13">
@@ -131,16 +131,16 @@
       <node id="17">
         <label>set</label>
       </node>
-      <node id="8">
+      <node id="7">
         <label>source_location</label>
       </node>
-      <node id="6">
+      <node id="5">
         <label>spdlog/spdlog.h</label>
       </node>
-      <node id="9">
+      <node id="8">
         <label>string</label>
       </node>
-      <node id="10">
+      <node id="9">
         <label>utility</label>
       </node>
       <node id="18">
@@ -220,49 +220,54 @@
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="49" refid="classrr_1_1RenderObject" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref></highlight></codeline>
 <codeline lineno="50"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="52" refid="classrr_1_1RenderObject_1a87eead88a4d96f40ac52e1e0dc47e236" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classrr_1_1RenderObject_1a87eead88a4d96f40ac52e1e0dc47e236" kindref="member">id_t</ref><sp/>=<sp/>std::uint32_t;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="52" refid="classrr_1_1RenderObject_1a87eead88a4d96f40ac52e1e0dc47e236" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classrr_1_1RenderObject_1a87eead88a4d96f40ac52e1e0dc47e236" kindref="member">id_t</ref><sp/>=<sp/>std::uint32_t;</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref>(std::shared_ptr&lt;VulkanMesh&gt;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">mesh</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>glm::vec3&amp;<sp/>color,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structrr_1_1Transform2DComponent" kindref="compound">Transform2DComponent</ref>&amp;<sp/>transform);</highlight></codeline>
-<codeline lineno="55" refid="classrr_1_1RenderObject_1a09ca7ddd99e17a67ea42129e3531f9df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrr_1_1RenderObject_1a09ca7ddd99e17a67ea42129e3531f9df" kindref="member">~RenderObject</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57" refid="classrr_1_1RenderObject_1aa40fbbe16e4780df815ef713557580d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrr_1_1RenderObject_1aa40fbbe16e4780df815ef713557580d4" kindref="member">RenderObject</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="58" refid="classrr_1_1RenderObject_1a0367e16ef2888332091b0f7ccafbd106" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref>&amp;<sp/><ref refid="classrr_1_1RenderObject_1a0367e16ef2888332091b0f7ccafbd106" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="59" refid="classrr_1_1RenderObject_1afa39e6b74a5b4a929a047553cc4cbb59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrr_1_1RenderObject_1afa39e6b74a5b4a929a047553cc4cbb59" kindref="member">RenderObject</ref>(<ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="60" refid="classrr_1_1RenderObject_1a50323ed960f352158a50959a31585737" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref>&amp;<sp/><ref refid="classrr_1_1RenderObject_1a50323ed960f352158a50959a31585737" kindref="member">operator=</ref>(<ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62" refid="classrr_1_1RenderObject_1afe2005a41fb89f385dc5da44bf180178" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/><ref refid="classrr_1_1RenderObject_1a87eead88a4d96f40ac52e1e0dc47e236" kindref="member">id_t</ref><sp/><ref refid="classrr_1_1RenderObject_1afe2005a41fb89f385dc5da44bf180178" kindref="member">getId</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_id;<sp/>}</highlight></codeline>
-<codeline lineno="63" refid="classrr_1_1RenderObject_1ab7cb53ee2c2cfa92e5782b802daf3226" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/>glm::vec2<sp/><ref refid="classrr_1_1RenderObject_1ab7cb53ee2c2cfa92e5782b802daf3226" kindref="member">getTranslation</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_transform2D.<ref refid="structrr_1_1Transform2DComponent_1afa0203f34ceb12ff5f953fa518d9a6d1" kindref="member">translation</ref>;<sp/>}</highlight></codeline>
-<codeline lineno="64" refid="classrr_1_1RenderObject_1a4150c1cc087d728bda5002365bd3f9c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/>glm::vec3<sp/><ref refid="classrr_1_1RenderObject_1a4150c1cc087d728bda5002365bd3f9c6" kindref="member">getColor</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_color;<sp/>}</highlight></codeline>
-<codeline lineno="65" refid="classrr_1_1RenderObject_1a9f0a65b2e4884aeffb55c072e27fbeaf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1RenderObject_1a9f0a65b2e4884aeffb55c072e27fbeaf" kindref="member">getRotation</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_transform2D.<ref refid="structrr_1_1Transform2DComponent_1afcadc56bfd0f43ace214097c34a998c0" kindref="member">rotation</ref>;<sp/>}</highlight></codeline>
-<codeline lineno="66" refid="classrr_1_1RenderObject_1a0b115402b35fa93ade4d2a3c59b82716" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/>glm::mat2<sp/><ref refid="classrr_1_1RenderObject_1a0b115402b35fa93ade4d2a3c59b82716" kindref="member">getTransformMatrix</ref>()</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>updateTransformMatrix();</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_transformMatrixCache;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72" refid="classrr_1_1RenderObject_1abf7bc91e1b23d0abcdf8bb58efce6750" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1RenderObject_1abf7bc91e1b23d0abcdf8bb58efce6750" kindref="member">setRotation</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">rot</ref>)<sp/>{<sp/>m_transform2D.<ref refid="structrr_1_1Transform2DComponent_1afcadc56bfd0f43ace214097c34a998c0" kindref="member">rotation</ref><sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">rot</ref>;<sp/>m_transformIsDirty<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1RenderObject_1aad6b13493302dc777cc435cfb9cc7c96" kindref="member">render</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBuffer</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">commandBuffer</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1RenderObject_1a87eead88a4d96f40ac52e1e0dc47e236" kindref="member">id_t</ref><sp/>idGenerator;<sp/></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrr_1_1RenderObject_1a87eead88a4d96f40ac52e1e0dc47e236" kindref="member">id_t</ref><sp/>m_id;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;VulkanMesh&gt;<sp/>m_mesh;</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::vec3<sp/>m_color;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>as<sp/>Transform2DComponent<sp/>grows<sp/>in<sp/>size,<sp/>this<sp/>should<sp/>become<sp/>a<sp/>std::unique_ptr<sp/>eventually</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrr_1_1Transform2DComponent" kindref="compound">Transform2DComponent</ref><sp/>m_transform2D;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref>(</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;VulkanMesh&gt;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">mesh</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>glm::vec3&amp;<sp/>color,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structrr_1_1Transform2DComponent" kindref="compound">Transform2DComponent</ref>&amp;<sp/>transform);</highlight></codeline>
+<codeline lineno="56" refid="classrr_1_1RenderObject_1a09ca7ddd99e17a67ea42129e3531f9df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1RenderObject_1a09ca7ddd99e17a67ea42129e3531f9df" kindref="member">~RenderObject</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classrr_1_1RenderObject_1aa40fbbe16e4780df815ef713557580d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1RenderObject_1aa40fbbe16e4780df815ef713557580d4" kindref="member">RenderObject</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59" refid="classrr_1_1RenderObject_1a0367e16ef2888332091b0f7ccafbd106" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref>&amp;<sp/><ref refid="classrr_1_1RenderObject_1a0367e16ef2888332091b0f7ccafbd106" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60" refid="classrr_1_1RenderObject_1afa39e6b74a5b4a929a047553cc4cbb59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1RenderObject_1afa39e6b74a5b4a929a047553cc4cbb59" kindref="member">RenderObject</ref>(<ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61" refid="classrr_1_1RenderObject_1a50323ed960f352158a50959a31585737" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref>&amp;<sp/><ref refid="classrr_1_1RenderObject_1a50323ed960f352158a50959a31585737" kindref="member">operator=</ref>(<ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classrr_1_1RenderObject_1afe2005a41fb89f385dc5da44bf180178" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/><ref refid="classrr_1_1RenderObject_1a87eead88a4d96f40ac52e1e0dc47e236" kindref="member">id_t</ref><sp/><ref refid="classrr_1_1RenderObject_1afe2005a41fb89f385dc5da44bf180178" kindref="member">getId</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_id;<sp/>}</highlight></codeline>
+<codeline lineno="64" refid="classrr_1_1RenderObject_1ab7cb53ee2c2cfa92e5782b802daf3226" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/>glm::vec2<sp/><ref refid="classrr_1_1RenderObject_1ab7cb53ee2c2cfa92e5782b802daf3226" kindref="member">getTranslation</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_transform2D.<ref refid="structrr_1_1Transform2DComponent_1afa0203f34ceb12ff5f953fa518d9a6d1" kindref="member">translation</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="65" refid="classrr_1_1RenderObject_1a4150c1cc087d728bda5002365bd3f9c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/>glm::vec3<sp/><ref refid="classrr_1_1RenderObject_1a4150c1cc087d728bda5002365bd3f9c6" kindref="member">getColor</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_color;<sp/>}</highlight></codeline>
+<codeline lineno="66" refid="classrr_1_1RenderObject_1a9f0a65b2e4884aeffb55c072e27fbeaf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1RenderObject_1a9f0a65b2e4884aeffb55c072e27fbeaf" kindref="member">getRotation</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_transform2D.<ref refid="structrr_1_1Transform2DComponent_1afcadc56bfd0f43ace214097c34a998c0" kindref="member">rotation</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="67" refid="classrr_1_1RenderObject_1a0b115402b35fa93ade4d2a3c59b82716" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/>glm::mat2<sp/><ref refid="classrr_1_1RenderObject_1a0b115402b35fa93ade4d2a3c59b82716" kindref="member">getTransformMatrix</ref>()</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>updateTransformMatrix();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_transformMatrixCache;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classrr_1_1RenderObject_1abf7bc91e1b23d0abcdf8bb58efce6750" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1RenderObject_1abf7bc91e1b23d0abcdf8bb58efce6750" kindref="member">setRotation</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">rot</ref>)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_transform2D.<ref refid="structrr_1_1Transform2DComponent_1afcadc56bfd0f43ace214097c34a998c0" kindref="member">rotation</ref><sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">rot</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_transformIsDirty<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1RenderObject_1aad6b13493302dc777cc435cfb9cc7c96" kindref="member">render</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBuffer</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">commandBuffer</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1RenderObject_1a87eead88a4d96f40ac52e1e0dc47e236" kindref="member">id_t</ref><sp/>idGenerator;<sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1RenderObject_1a87eead88a4d96f40ac52e1e0dc47e236" kindref="member">id_t</ref><sp/>m_id;</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::mat2<sp/>m_transformMatrixCache{};</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_transformIsDirty{<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>};</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>updateTransformMatrix();</highlight></codeline>
-<codeline lineno="89"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>!rr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;VulkanMesh&gt;<sp/>m_mesh;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>glm::vec3<sp/>m_color;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>as<sp/>Transform2DComponent<sp/>grows<sp/>in<sp/>size,<sp/>this<sp/>should<sp/>become<sp/>a<sp/>std::unique_ptr<sp/>eventually</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrr_1_1Transform2DComponent" kindref="compound">Transform2DComponent</ref><sp/>m_transform2D;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>glm::mat2<sp/>m_transformMatrixCache{};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_transformIsDirty{<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>};</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>updateTransformMatrix();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>rr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight></codeline>
     </programlisting>
     <location file="src/engine/utility/RenderObject.hpp"/>
   </compounddef>

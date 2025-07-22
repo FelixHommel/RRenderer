@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/exception/FileIOException.hpp" line="26" column="17" bodyfile="src/engine/exception/FileIOException.hpp" bodystart="26" bodyend="-1"/>
+        <location file="src/engine/exception/FileIOException.hpp" line="26" column="13" bodyfile="src/engine/exception/FileIOException.hpp" bodystart="26" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/exception/FileIOException.hpp" line="18" column="14" bodyfile="src/engine/exception/FileIOException.hpp" bodystart="18" bodyend="21"/>
+        <location file="src/engine/exception/FileIOException.hpp" line="18" column="10" bodyfile="src/engine/exception/FileIOException.hpp" bodystart="18" bodyend="21"/>
       </memberdef>
       <memberdef kind="function" id="classrr_1_1FileIOException_1a68e570b248b3c8703f1410b783c841bc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string</type>
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/engine/exception/FileIOException.hpp" line="23" column="18" bodyfile="src/engine/exception/FileIOException.hpp" bodystart="23" bodyend="23"/>
+        <location file="src/engine/exception/FileIOException.hpp" line="23" column="14" bodyfile="src/engine/exception/FileIOException.hpp" bodystart="23" bodyend="23"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
