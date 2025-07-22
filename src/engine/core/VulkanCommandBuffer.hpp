@@ -20,26 +20,33 @@ namespace rr
 class VulkanCommandBuffer
 {
 public:
-    VulkanCommandBuffer(VkDevice device, VkCommandPool commandPool, VkCommandBufferLevel level = VK_COMMAND_BUFFER_LEVEL_PRIMARY);
-    explicit VulkanCommandBuffer(VkDevice device, VkCommandPool commandPool, VkCommandBuffer commandBuffer);
-    ~VulkanCommandBuffer();
+	VulkanCommandBuffer(
+		VkDevice device,
+		VkCommandPool commandPool,
+		VkCommandBufferLevel level = VK_COMMAND_BUFFER_LEVEL_PRIMARY);
+	explicit VulkanCommandBuffer(VkDevice device, VkCommandPool commandPool, VkCommandBuffer commandBuffer);
+	~VulkanCommandBuffer();
 
-    VulkanCommandBuffer(const VulkanCommandBuffer&) = delete;
-    VulkanCommandBuffer& operator=(const VulkanCommandBuffer&) = delete;
-    VulkanCommandBuffer(VulkanCommandBuffer&&) = delete;
-    VulkanCommandBuffer& operator=(VulkanCommandBuffer&&) = delete;
+	VulkanCommandBuffer(const VulkanCommandBuffer&) = delete;
+	VulkanCommandBuffer& operator=(const VulkanCommandBuffer&) = delete;
+	VulkanCommandBuffer(VulkanCommandBuffer&&) = delete;
+	VulkanCommandBuffer& operator=(VulkanCommandBuffer&&) = delete;
 
-    static std::vector<std::unique_ptr<VulkanCommandBuffer>> create(VkDevice device, VkCommandPool commandPool, std::uint32_t count, VkCommandBufferLevel level = VK_COMMAND_BUFFER_LEVEL_PRIMARY);
+	static std::vector<std::unique_ptr<VulkanCommandBuffer>> create(
+		VkDevice device,
+		VkCommandPool commandPool,
+		std::uint32_t count,
+		VkCommandBufferLevel level = VK_COMMAND_BUFFER_LEVEL_PRIMARY);
 
-    [[nodiscard]] VkCommandBuffer& getHandleRef() { return m_commandBuffer; }
+	[[nodiscard]] VkCommandBuffer& getHandleRef() { return m_commandBuffer; }
 
 private:
-    VkDevice device;
-    VkCommandPool commandPool;
+	VkDevice device;
+	VkCommandPool commandPool;
 
-    VkCommandBuffer m_commandBuffer;
+	VkCommandBuffer m_commandBuffer;
 };
 
-} // !rr
+} // namespace rr
 
 #endif // !RRENDERER_ENGINE_CORE_VULKAN_COMMAND_BUFFER_HPP

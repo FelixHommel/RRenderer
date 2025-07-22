@@ -17,15 +17,15 @@ namespace rr
 /// \date 7/18/2025
 struct StringHash
 {
-    using is_transparent = void; // NOTE: needed for heterogeneous operations
+	using is_transparent = void; // NOTE: needed for heterogeneous operations
 
-    std::size_t operator()(std::string_view sv) const
-    {
-        std::hash<std::string_view> hasher;
-        return hasher(sv);
-    }
+	std::size_t operator()(std::string_view sv) const
+	{
+		std::hash<std::string_view> hasher;
+		return hasher(sv);
+	}
 };
 
-} // !rr
+} // namespace rr
 
 #endif // !RRENDERER_ENGINE_UTILITY_STRING_HASH_HPP

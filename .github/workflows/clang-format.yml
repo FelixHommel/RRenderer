@@ -1,8 +1,7 @@
-name: Formatting
+name: Check format
 on:
-  push:
-    branches:
-      - dev
+  pull_request:
+    branches: ["**"]
 
 jobs:
   clang-format:
@@ -14,25 +13,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install dependencies
-        run: sudo apt install -y clang-format-19 && alias clang-format="clang-format-19"
+        run: sudo apt install -y clang-format-19 && clang-format-19 --version
 
-      - name: Set up git
+      - name: Check formatting
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          FILES=$(find ./src -regex ".*\.\(cpp\|hpp\)")
+          echo "$FILES" | xargs clang-format-19 --dry-run --Werror
 
-      - name: Run clang-format
-        run: |
-          find ./src \
-            -regex '.*\.\(cpp\|hpp\)' \
-            -exec clang-format -i {} +
-
-      - name: Commit and Push
-        run: |
-          git add .
-          if git diff --cached --quiet; then
-            echo "Everything is already formatted"
-          else
-            git commit -m "chore: fix formatting with clang-format [skip ci]"
-            git push
-          fi

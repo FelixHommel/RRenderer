@@ -6,15 +6,13 @@ namespace rr
 {
 
 #ifdef RRDEBUG
-    static constexpr bool useValidationLayers{true};
+static constexpr bool useValidationLayers{ true };
 #else
-    static constexpr bool useValidationLayers{false};
+static constexpr bool useValidationLayers{ false };
 #endif
 
-const std::vector<const char*> validationLayers{
-    "VK_LAYER_KHRONOS_validation"
-};
+const std::vector<const char*> validationLayers{ "VK_LAYER_KHRONOS_validation" };
 
-}
+} // namespace rr
 
 #endif // !RRENDERER_ENGINE_CONSTANTS_HPP

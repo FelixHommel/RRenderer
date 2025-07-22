@@ -11,7 +11,7 @@ namespace rr
 /// \brief Enum listing all available Renderer implementations
 enum class RendererType : std::uint8_t
 {
-    RRENDERER_VULKAN
+	RRENDERER_VULKAN
 };
 
 /// \brief An abstract base class for specific renderer implementations
@@ -24,23 +24,23 @@ enum class RendererType : std::uint8_t
 class Renderer
 {
 public:
-    Renderer() = default;
-    virtual ~Renderer() = default;
+	Renderer() = default;
+	virtual ~Renderer() = default;
 
-    Renderer(const Renderer&) = delete;
-    Renderer(Renderer&&) noexcept = delete;
-    Renderer& operator=(const Renderer&) = delete;
-    Renderer& operator=(Renderer&&) noexcept = delete;
+	Renderer(const Renderer&) = delete;
+	Renderer(Renderer&&) noexcept = delete;
+	Renderer& operator=(const Renderer&) = delete;
+	Renderer& operator=(Renderer&&) noexcept = delete;
 
-    /// \brief Draw an image to the screen
-    virtual void render() = 0;
+	/// \brief Draw an image to the screen
+	virtual void render() = 0;
 
-    /// \brief Shutdown the Renderer
-    ///
-    /// This method can be used to exit the Renderer before the App using it closes
-    virtual void shutdown() = 0;
+	/// \brief Shutdown the Renderer
+	///
+	/// This method can be used to exit the Renderer before the App using it closes
+	virtual void shutdown() = 0;
 };
 
-} // !rr
+} // namespace rr
 
 #endif // !RRENDERER_ENGINE_RENDERER_HPP

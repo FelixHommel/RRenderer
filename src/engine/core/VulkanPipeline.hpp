@@ -18,26 +18,26 @@ namespace rr
 /// \date 7/20/2025
 struct PipelineConfigInfo
 {
-    PipelineConfigInfo() = default;
-    ~PipelineConfigInfo() = default;
+	PipelineConfigInfo() = default;
+	~PipelineConfigInfo() = default;
 
-    PipelineConfigInfo(PipelineConfigInfo&&) = delete;
-    PipelineConfigInfo& operator=(PipelineConfigInfo&&) = delete;
-    PipelineConfigInfo(const PipelineConfigInfo&) = delete;
-    PipelineConfigInfo& operator=(const PipelineConfigInfo&) = delete;
+	PipelineConfigInfo(PipelineConfigInfo&&) = delete;
+	PipelineConfigInfo& operator=(PipelineConfigInfo&&) = delete;
+	PipelineConfigInfo(const PipelineConfigInfo&) = delete;
+	PipelineConfigInfo& operator=(const PipelineConfigInfo&) = delete;
 
-    VkPipelineViewportStateCreateInfo viewportInfo{};
-    VkPipelineInputAssemblyStateCreateInfo inputAssemblyInfo{};
-    VkPipelineRasterizationStateCreateInfo rasterizationInfo{};
-    VkPipelineMultisampleStateCreateInfo multisampleInfo{};
-    VkPipelineColorBlendAttachmentState colorBlendAttachment{};
-    VkPipelineColorBlendStateCreateInfo colorBlendInfo{};
-    VkPipelineDepthStencilStateCreateInfo depthStencilInfo{};
-    std::vector<VkDynamicState> dynamicStateEnables;
-    VkPipelineDynamicStateCreateInfo dynamicStateInfo{};
-    VkPipelineLayout pipelineLayout{ nullptr };
-    VkRenderPass renderPass{ nullptr };
-    std::uint32_t subpass{ 0 };
+	VkPipelineViewportStateCreateInfo viewportInfo{};
+	VkPipelineInputAssemblyStateCreateInfo inputAssemblyInfo{};
+	VkPipelineRasterizationStateCreateInfo rasterizationInfo{};
+	VkPipelineMultisampleStateCreateInfo multisampleInfo{};
+	VkPipelineColorBlendAttachmentState colorBlendAttachment{};
+	VkPipelineColorBlendStateCreateInfo colorBlendInfo{};
+	VkPipelineDepthStencilStateCreateInfo depthStencilInfo{};
+	std::vector<VkDynamicState> dynamicStateEnables;
+	VkPipelineDynamicStateCreateInfo dynamicStateInfo{};
+	VkPipelineLayout pipelineLayout{ nullptr };
+	VkRenderPass renderPass{ nullptr };
+	std::uint32_t subpass{ 0 };
 };
 
 /// \brief \ref VulkanPipeline is a wrapper around `VkPipeline`
@@ -49,31 +49,35 @@ struct PipelineConfigInfo
 class VulkanPipeline
 {
 public:
-    VulkanPipeline(VkDevice device, const PipelineConfigInfo& configInfo, const std::filesystem::path& vertFilepath, const std::filesystem::path& fragFilepath);
-    ~VulkanPipeline();
+	VulkanPipeline(
+		VkDevice device,
+		const PipelineConfigInfo& configInfo,
+		const std::filesystem::path& vertFilepath,
+		const std::filesystem::path& fragFilepath);
+	~VulkanPipeline();
 
-    VulkanPipeline(const VulkanPipeline&) = delete;
-    VulkanPipeline& operator=(const VulkanPipeline&) = delete;
-    VulkanPipeline(VulkanPipeline&&) = delete;
-    VulkanPipeline& operator=(VulkanPipeline&&) = delete;
+	VulkanPipeline(const VulkanPipeline&) = delete;
+	VulkanPipeline& operator=(const VulkanPipeline&) = delete;
+	VulkanPipeline(VulkanPipeline&&) = delete;
+	VulkanPipeline& operator=(VulkanPipeline&&) = delete;
 
-    static void defaultPipelineConfigInfo(PipelineConfigInfo& configInfo);
+	static void defaultPipelineConfigInfo(PipelineConfigInfo& configInfo);
 
-    void bind(VkCommandBuffer cmdBuffer) const;
+	void bind(VkCommandBuffer cmdBuffer) const;
 
 private:
-    VkDevice device;
+	VkDevice device;
 
-    VkPipeline m_pipeline{ VK_NULL_HANDLE };
-    VkShaderModule m_vertShaderModule{ VK_NULL_HANDLE };
-    VkShaderModule m_fragShaderModule{ VK_NULL_HANDLE };
+	VkPipeline m_pipeline{ VK_NULL_HANDLE };
+	VkShaderModule m_vertShaderModule{ VK_NULL_HANDLE };
+	VkShaderModule m_fragShaderModule{ VK_NULL_HANDLE };
 
-    void createShaderModule(const std::vector<char>& code, VkShaderModule* shaderModule) const;
+	void createShaderModule(const std::vector<char>& code, VkShaderModule* shaderModule) const;
 
-    // TODO: move to dedicated File-IO related class
-    static std::vector<char> readFile(const std::filesystem::path& filepath);
+	// TODO: move to dedicated File-IO related class
+	static std::vector<char> readFile(const std::filesystem::path& filepath);
 };
 
-} // !rr
+} // namespace rr
 
 #endif // !RRENDERER_ENGINE_CORE_VULKAN_PIPELINE_HPP

@@ -21,35 +21,38 @@ namespace rr
 class Window
 {
 public:
-    Window(int width, int height, const std::string& title);
-    ~Window();
+	Window(int width, int height, const std::string& title);
+	~Window();
 
-    Window(const Window&) = delete;
-    Window& operator=(const Window&) = delete;
-    Window(Window&&) noexcept = delete;
-    Window& operator=(Window&&) noexcept = delete;
+	Window(const Window&) = delete;
+	Window& operator=(const Window&) = delete;
+	Window(Window&&) noexcept = delete;
+	Window& operator=(Window&&) noexcept = delete;
 
-    [[nodiscard]] GLFWwindow* getWindowHandle() const { return m_window; }
-    [[nodiscard]] int shouldClose() const { return glfwWindowShouldClose(m_window); }
-    [[nodiscard]] VkExtent2D getExtent() const { return { static_cast<std::uint32_t>(m_width), static_cast<std::uint32_t>(m_height) }; }
-    [[nodiscard]] bool wasWindowResized() const { return m_framebufferResized; }
+	[[nodiscard]] GLFWwindow* getWindowHandle() const { return m_window; }
+	[[nodiscard]] int shouldClose() const { return glfwWindowShouldClose(m_window); }
+	[[nodiscard]] VkExtent2D getExtent() const
+	{
+		return { static_cast<std::uint32_t>(m_width), static_cast<std::uint32_t>(m_height) };
+	}
+	[[nodiscard]] bool wasWindowResized() const { return m_framebufferResized; }
 
-    void resetWindowResized() { m_framebufferResized = false; }
+	void resetWindowResized() { m_framebufferResized = false; }
 
-    void createWindowSurface(VkInstance& instance, VkSurfaceKHR* surface) const;
+	void createWindowSurface(VkInstance& instance, VkSurfaceKHR* surface) const;
 
 private:
-    // TODO: Convert to a std::unique_ptr<GLFWwindow>
-    GLFWwindow* m_window;
+	// TODO: Convert to a std::unique_ptr<GLFWwindow>
+	GLFWwindow* m_window;
 
-    int m_width;
-    int m_height;
-    std::string m_title;
-    bool m_framebufferResized{ false };
+	int m_width;
+	int m_height;
+	std::string m_title;
+	bool m_framebufferResized{ false };
 
-    static void framebufferResizeCallback(GLFWwindow* window, int width, int height);
+	static void framebufferResizeCallback(GLFWwindow* window, int width, int height);
 };
 
-} // !rr
+} // namespace rr
 
 #endif // !RRENDERER_ENGINE_WINDOW_WINDOW_HPP
