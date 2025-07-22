@@ -26,7 +26,7 @@ jobs:
         run: cmake --build --preset release
 
       - name: clang-tidy
-        run: clang-tidy-19 -p ./ --warnings-as-errors=\* $(find ./src -regex ".*\.\(cpp\|hpp\)")
+        run: clang-tidy -p ./ --warnings-as-errors=\* $(find ./src -regex ".*\.\(cpp\|hpp\)")
 
   build-and-test:
     name: Build and Test
