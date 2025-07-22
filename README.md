@@ -25,7 +25,7 @@ cd RRenderer
 #### Configure CMake and Build
 
 > If you want to use debug builds instead replace ```release``` with ```debug```.
-> You also can choose to use clang with ```release-clang``` or ```debug-clang```.
+> You also can also force use clang or gcc with ```release-clang```, ```debug-clang```, ```release-gcc``` or ```debug-gcc```.
 
 ```bash
 cmake --preset release
