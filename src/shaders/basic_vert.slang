@@ -14,6 +14,7 @@ struct VSInput {
 
 struct VSOutput {
     float4 position : SV_Position;
+    [[vk::location(0)]] float3 color;
 };
 
 [shader("vertex")]
@@ -22,6 +23,7 @@ VSOutput main(VSInput input)
     VSOutput output;
     float2 transformed = mul(push.transform, input.position) + push.offset;
     output.position = float4(transformed, 0.0, 1.0);
+    output.color = input.inColor;
 
     return output;
 }

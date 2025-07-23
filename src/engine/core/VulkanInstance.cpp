@@ -68,7 +68,7 @@ VulkanInstance::VulkanInstance()
 									 .pApplicationName = "RRenderer Application",
 									 .pEngineName = "RRenderer",
 									 .engineVersion = VK_MAKE_VERSION(0, 0, 1),
-									 .apiVersion = VK_API_VERSION_1_0 };
+									 .apiVersion = VK_API_VERSION_1_3 };
 
 	const auto extensions{ getRequiredExtensions() };
 	VkInstanceCreateInfo createInfo{ .sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO,
