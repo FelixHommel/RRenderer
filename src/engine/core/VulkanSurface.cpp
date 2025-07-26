@@ -8,16 +8,20 @@
 namespace rr
 {
 
+/// \brief Create a new \ref VulkanSurface
+///
+/// \param instance a `VkInstance`
+/// \param window `Window&` needed to interface with the surface
 VulkanSurface::VulkanSurface(VkInstance instance, Window& window)
-    : instance(instance)
+	: instance(instance)
 {
-    window.createWindowSurface(instance, &m_surface);
-    spdlog::info("Surface created successfully...");
+	window.createWindowSurface(instance, &m_surface);
+	spdlog::info("Surface created successfully...");
 }
 
 VulkanSurface::~VulkanSurface()
 {
-    vkDestroySurfaceKHR(instance, m_surface, nullptr);
+	vkDestroySurfaceKHR(instance, m_surface, nullptr);
 }
 
-} // !rr
+} // namespace rr

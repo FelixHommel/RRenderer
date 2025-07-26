@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="Window_8hpp" kind="file" language="C++">
+    <compoundname>Window.hpp</compoundname>
+    <includes local="yes">GLFW/glfw3.h</includes>
+    <includes local="no">vulkan/vulkan_core.h</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">string</includes>
+    <includedby refid="VulkanRenderer_8cpp" local="yes">VulkanRenderer.cpp</includedby>
+    <includedby refid="VulkanRenderer_8hpp" local="yes">VulkanRenderer.hpp</includedby>
+    <includedby refid="VulkanSurface_8cpp" local="yes">VulkanSurface.cpp</includedby>
+    <includedby refid="VulkanSurface_8hpp" local="yes">VulkanSurface.hpp</includedby>
+    <includedby refid="Window_8cpp" local="yes">Window.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Window.hpp</label>
+        <link refid="Window_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>vulkan/vulkan_core.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>VulkanRenderer.cpp</label>
+        <link refid="VulkanRenderer_8cpp"/>
+      </node>
+      <node id="3">
+        <label>VulkanRenderer.hpp</label>
+        <link refid="VulkanRenderer_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>VulkanSurface.cpp</label>
+        <link refid="VulkanSurface_8cpp"/>
+      </node>
+      <node id="5">
+        <label>VulkanSurface.hpp</label>
+        <link refid="VulkanSurface_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Window.cpp</label>
+        <link refid="Window_8cpp"/>
+      </node>
+      <node id="1">
+        <label>Window.hpp</label>
+        <link refid="Window_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classrr_1_1Window" prot="public">rr::Window</innerclass>
+    <innernamespace refid="namespacerr">rr</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="Window_8hpp_1ab91f325a54d3e35fe831a86d6382c2a9" prot="public" static="no">
+        <name>GLFW_INCLUDE_VULKAN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/window/Window.hpp" line="4" column="9" bodyfile="src/engine/window/Window.hpp" bodystart="4" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RRENDERER_ENGINE_WINDOW_WINDOW_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RRENDERER_ENGINE_WINDOW_WINDOW_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="Window_8hpp_1ab91f325a54d3e35fe831a86d6382c2a9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GLFW_INCLUDE_VULKAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GLFW/glfw3.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vulkan/vulkan_core.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerr" kindref="compound">rr</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classrr_1_1Window" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrr_1_1Window" kindref="compound">Window</ref></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1Window" kindref="compound">Window</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">width</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">height</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">title</ref>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1Window_1a0e6abfc5b6055b21b43a1e4d6a2e0aa0" kindref="member">~Window</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classrr_1_1Window_1a8b9707541b35c11a8552036acce56b7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1Window_1a8b9707541b35c11a8552036acce56b7b" kindref="member">Window</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1Window" kindref="compound">Window</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28" refid="classrr_1_1Window_1a2b48cd5ecc41974ac28a5c6760c2425d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1Window" kindref="compound">Window</ref>&amp;<sp/><ref refid="classrr_1_1Window_1a2b48cd5ecc41974ac28a5c6760c2425d" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1Window" kindref="compound">Window</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29" refid="classrr_1_1Window_1a6ac080e9932daec628d41445498de42e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1Window_1a6ac080e9932daec628d41445498de42e" kindref="member">Window</ref>(<ref refid="classrr_1_1Window" kindref="compound">Window</ref>&amp;&amp;)<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">noexcept</ref><sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">delete</ref>;</highlight></codeline>
+<codeline lineno="30" refid="classrr_1_1Window_1a40e61ef3df001e499e70459367b4f0f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1Window" kindref="compound">Window</ref>&amp;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">operator</ref>=(<ref refid="classrr_1_1Window" kindref="compound">Window</ref>&amp;&amp;)<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">noexcept</ref><sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">delete</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classrr_1_1Window_1ac4b8c93bd90bd3ccc48b14cf81334627" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">GLFWwindow</ref>*<sp/><ref refid="classrr_1_1Window_1ac4b8c93bd90bd3ccc48b14cf81334627" kindref="member">getWindowHandle</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_window;<sp/>}</highlight></codeline>
+<codeline lineno="33" refid="classrr_1_1Window_1a7e2e2c8a0ea45d3546dd72571db29e36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1Window_1a7e2e2c8a0ea45d3546dd72571db29e36" kindref="member">shouldClose</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">glfwWindowShouldClose</ref>(m_window);<sp/>}</highlight></codeline>
+<codeline lineno="34" refid="classrr_1_1Window_1afff4d6cbe64ce548adb84d83d042d76b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkExtent2D</ref><sp/><ref refid="classrr_1_1Window_1afff4d6cbe64ce548adb84d83d042d76b" kindref="member">getExtent</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="35"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(m_width),<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(m_height)<sp/>};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38" refid="classrr_1_1Window_1ad2090b64dc2fcd0b3abe8576c9cbeb43" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1Window_1ad2090b64dc2fcd0b3abe8576c9cbeb43" kindref="member">wasWindowResized</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_framebufferResized;<sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classrr_1_1Window_1aa07b985c56776ef99fe362353a844b85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1Window_1aa07b985c56776ef99fe362353a844b85" kindref="member">resetWindowResized</ref>()<sp/>{<sp/>m_framebufferResized<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1Window_1ace8723045e9c0e757894c679bc607688" kindref="member">createWindowSurface</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkInstance</ref>&amp;<sp/>instance,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSurfaceKHR</ref>*<sp/>surface)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Convert<sp/>to<sp/>a<sp/>std::unique_ptr&lt;GLFWwindow&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">GLFWwindow</ref>*<sp/>m_window;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_width;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_height;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>m_title;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_framebufferResized{<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>framebufferResizeCallback(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">GLFWwindow</ref>*<sp/>window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">width</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">height</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>rr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!RRENDERER_ENGINE_WINDOW_WINDOW_HPP</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/engine/window/Window.hpp"/>
+  </compounddef>
+</doxygen>

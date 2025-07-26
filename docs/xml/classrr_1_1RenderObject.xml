@@ -1,0 +1,436 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classrr_1_1RenderObject" kind="class" language="C++" prot="public">
+    <compoundname>rr::RenderObject</compoundname>
+    <includes refid="RenderObject_8hpp" local="no">RenderObject.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classrr_1_1RenderObject_1a87eead88a4d96f40ac52e1e0dc47e236" prot="public" static="no">
+        <type>std::uint32_t</type>
+        <definition>using rr::RenderObject::id_t =  std::uint32_t</definition>
+        <argsstring></argsstring>
+        <name>id_t</name>
+        <qualifiedname>rr::RenderObject::id_t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="52" column="1" bodyfile="src/engine/utility/RenderObject.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classrr_1_1RenderObject_1ae47f4faabe25be94bdaedb2f876c28a2" prot="private" static="yes" mutable="no">
+        <type><ref refid="classrr_1_1RenderObject_1a87eead88a4d96f40ac52e1e0dc47e236" kindref="member">id_t</ref></type>
+        <definition>id_t rr::RenderObject::idGenerator</definition>
+        <argsstring></argsstring>
+        <name>idGenerator</name>
+        <qualifiedname>rr::RenderObject::idGenerator</qualifiedname>
+        <briefdescription>
+<para>static id_t to provide continuous IDs for all <ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="82" column="20" bodyfile="src/engine/utility/RenderObject.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrr_1_1RenderObject_1a05c7ccde19300b4aef6ffafb81f7d6bc" prot="private" static="no" mutable="no">
+        <type><ref refid="classrr_1_1RenderObject_1a87eead88a4d96f40ac52e1e0dc47e236" kindref="member">id_t</ref></type>
+        <definition>id_t rr::RenderObject::m_id</definition>
+        <argsstring></argsstring>
+        <name>m_id</name>
+        <qualifiedname>rr::RenderObject::m_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="83" column="6" bodyfile="src/engine/utility/RenderObject.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1RenderObject_1a02e90a3d5c4c08faeb1d2ea983d969ca" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classrr_1_1VulkanMesh" kindref="compound">VulkanMesh</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;VulkanMesh&gt; rr::RenderObject::m_mesh</definition>
+        <argsstring></argsstring>
+        <name>m_mesh</name>
+        <qualifiedname>rr::RenderObject::m_mesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="85" column="17" bodyfile="src/engine/utility/RenderObject.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1RenderObject_1a97358a193e01d8a374db0241c6d427a9" prot="private" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 rr::RenderObject::m_color</definition>
+        <argsstring></argsstring>
+        <name>m_color</name>
+        <qualifiedname>rr::RenderObject::m_color</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="86" column="11" bodyfile="src/engine/utility/RenderObject.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1RenderObject_1a554f9b33c752d0acd3fee511270eef86" prot="private" static="no" mutable="no">
+        <type><ref refid="structrr_1_1Transform2DComponent" kindref="compound">Transform2DComponent</ref></type>
+        <definition>Transform2DComponent rr::RenderObject::m_transform2D</definition>
+        <argsstring></argsstring>
+        <name>m_transform2D</name>
+        <qualifiedname>rr::RenderObject::m_transform2D</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="88" column="22" bodyfile="src/engine/utility/RenderObject.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1RenderObject_1ac4bf6bdbb86d38c7099cd89b2359487c" prot="private" static="no" mutable="no">
+        <type>glm::mat2</type>
+        <definition>glm::mat2 rr::RenderObject::m_transformMatrixCache</definition>
+        <argsstring></argsstring>
+        <name>m_transformMatrixCache</name>
+        <qualifiedname>rr::RenderObject::m_transformMatrixCache</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="90" column="11" bodyfile="src/engine/utility/RenderObject.hpp" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1RenderObject_1ad8359cabd56b93c4159f6f7bf080a726" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bool</ref></type>
+        <definition>bool rr::RenderObject::m_transformIsDirty</definition>
+        <argsstring></argsstring>
+        <name>m_transformIsDirty</name>
+        <qualifiedname>rr::RenderObject::m_transformIsDirty</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">true</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="91" column="6" bodyfile="src/engine/utility/RenderObject.hpp" bodystart="91" bodyend="91"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrr_1_1RenderObject_1a3635e5f9c8ce9c8963519bcae62251a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::RenderObject::RenderObject</definition>
+        <argsstring>(std::shared_ptr&lt; VulkanMesh &gt; mesh, const glm::vec3 &amp;color, const Transform2DComponent &amp;transform)</argsstring>
+        <name>RenderObject</name>
+        <qualifiedname>rr::RenderObject::RenderObject</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classrr_1_1VulkanMesh" kindref="compound">VulkanMesh</ref> &gt;</type>
+          <declname>mesh</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> glm::vec3 &amp;</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="structrr_1_1Transform2DComponent" kindref="compound">Transform2DComponent</ref> &amp;</type>
+          <declname>transform</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mesh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::shared_ptr of a <ref refid="classrr_1_1VulkanMesh" kindref="compound">VulkanMesh</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>glm::vec3&amp; to represent the color of the object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">Transform2DComponent&amp;</ref> initialized with the transform of the object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="54" column="1" bodyfile="src/engine/utility/RenderObject.cpp" bodystart="18" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1RenderObject_1a09ca7ddd99e17a67ea42129e3531f9df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::RenderObject::~RenderObject</definition>
+        <argsstring>()=default</argsstring>
+        <name>~RenderObject</name>
+        <qualifiedname>rr::RenderObject::~RenderObject</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1RenderObject_1aa40fbbe16e4780df815ef713557580d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::RenderObject::RenderObject</definition>
+        <argsstring>(const RenderObject &amp;)=delete</argsstring>
+        <name>RenderObject</name>
+        <qualifiedname>rr::RenderObject::RenderObject</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1RenderObject_1a0367e16ef2888332091b0f7ccafbd106" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref> &amp;</type>
+        <definition>RenderObject &amp; rr::RenderObject::operator=</definition>
+        <argsstring>(const RenderObject &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::RenderObject::operator=</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="59" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1RenderObject_1afa39e6b74a5b4a929a047553cc4cbb59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::RenderObject::RenderObject</definition>
+        <argsstring>(RenderObject &amp;&amp;)=default</argsstring>
+        <name>RenderObject</name>
+        <qualifiedname>rr::RenderObject::RenderObject</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1RenderObject_1a50323ed960f352158a50959a31585737" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref> &amp;</type>
+        <definition>RenderObject &amp; rr::RenderObject::operator=</definition>
+        <argsstring>(RenderObject &amp;&amp;)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::RenderObject::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="61" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1RenderObject_1afe2005a41fb89f385dc5da44bf180178" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrr_1_1RenderObject_1a87eead88a4d96f40ac52e1e0dc47e236" kindref="member">id_t</ref></type>
+        <definition>id_t rr::RenderObject::getId</definition>
+        <argsstring>() const</argsstring>
+        <name>getId</name>
+        <qualifiedname>rr::RenderObject::getId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="63" column="7" bodyfile="src/engine/utility/RenderObject.hpp" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1RenderObject_1ab7cb53ee2c2cfa92e5782b802daf3226" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>glm::vec2</type>
+        <definition>glm::vec2 rr::RenderObject::getTranslation</definition>
+        <argsstring>() const</argsstring>
+        <name>getTranslation</name>
+        <qualifiedname>rr::RenderObject::getTranslation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="64" column="12" bodyfile="src/engine/utility/RenderObject.hpp" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1RenderObject_1a4150c1cc087d728bda5002365bd3f9c6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 rr::RenderObject::getColor</definition>
+        <argsstring>() const</argsstring>
+        <name>getColor</name>
+        <qualifiedname>rr::RenderObject::getColor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="65" column="12" bodyfile="src/engine/utility/RenderObject.hpp" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1RenderObject_1a9f0a65b2e4884aeffb55c072e27fbeaf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">float</ref></type>
+        <definition>float rr::RenderObject::getRotation</definition>
+        <argsstring>() const</argsstring>
+        <name>getRotation</name>
+        <qualifiedname>rr::RenderObject::getRotation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="66" column="8" bodyfile="src/engine/utility/RenderObject.hpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1RenderObject_1a0b115402b35fa93ade4d2a3c59b82716" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>glm::mat2</type>
+        <definition>glm::mat2 rr::RenderObject::getTransformMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>getTransformMatrix</name>
+        <qualifiedname>rr::RenderObject::getTransformMatrix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="67" column="12" bodyfile="src/engine/utility/RenderObject.hpp" bodystart="67" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1RenderObject_1abf7bc91e1b23d0abcdf8bb58efce6750" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::RenderObject::setRotation</definition>
+        <argsstring>(float rot)</argsstring>
+        <name>setRotation</name>
+        <qualifiedname>rr::RenderObject::setRotation</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">float</ref></type>
+          <declname>rot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="73" column="6" bodyfile="src/engine/utility/RenderObject.hpp" bodystart="73" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1RenderObject_1aad6b13493302dc777cc435cfb9cc7c96" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::RenderObject::render</definition>
+        <argsstring>(VkCommandBuffer commandBuffer) const</argsstring>
+        <name>render</name>
+        <qualifiedname>rr::RenderObject::render</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkCommandBuffer</ref></type>
+          <declname>commandBuffer</declname>
+        </param>
+        <briefdescription>
+<para>Render the <ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>commandBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>VkCommandBuffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="79" column="6" bodyfile="src/engine/utility/RenderObject.cpp" bodystart="29" bodyend="33"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classrr_1_1RenderObject_1ad6955b25213b55d905507af5d2bebb07" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::RenderObject::updateTransformMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>updateTransformMatrix</name>
+        <qualifiedname>rr::RenderObject::updateTransformMatrix</qualifiedname>
+        <briefdescription>
+<para>Update the Transform matrix if needed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if the transform matrix is outdated because of a change in transformations and update it if needed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/utility/RenderObject.hpp" line="93" column="6" bodyfile="src/engine/utility/RenderObject.cpp" bodystart="38" bodyend="45"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A <ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref> is something that can be rendered with the <ref refid="classrr_1_1Renderer" kindref="compound">Renderer</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>A <ref refid="classrr_1_1RenderObject" kindref="compound">RenderObject</ref> is a collection of data that influence how the rendered Object will look.</para>
+<para><simplesect kind="author"><para>Felix Hommel </para>
+</simplesect>
+<simplesect kind="date"><para>7/17/2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="src/engine/utility/RenderObject.hpp" line="49" column="1" bodyfile="src/engine/utility/RenderObject.hpp" bodystart="50" bodyend="94"/>
+    <listofallmembers>
+      <member refid="classrr_1_1RenderObject_1a4150c1cc087d728bda5002365bd3f9c6" prot="public" virt="non-virtual"><scope>rr::RenderObject</scope><name>getColor</name></member>
+      <member refid="classrr_1_1RenderObject_1afe2005a41fb89f385dc5da44bf180178" prot="public" virt="non-virtual"><scope>rr::RenderObject</scope><name>getId</name></member>
+      <member refid="classrr_1_1RenderObject_1a9f0a65b2e4884aeffb55c072e27fbeaf" prot="public" virt="non-virtual"><scope>rr::RenderObject</scope><name>getRotation</name></member>
+      <member refid="classrr_1_1RenderObject_1a0b115402b35fa93ade4d2a3c59b82716" prot="public" virt="non-virtual"><scope>rr::RenderObject</scope><name>getTransformMatrix</name></member>
+      <member refid="classrr_1_1RenderObject_1ab7cb53ee2c2cfa92e5782b802daf3226" prot="public" virt="non-virtual"><scope>rr::RenderObject</scope><name>getTranslation</name></member>
+      <member refid="classrr_1_1RenderObject_1a87eead88a4d96f40ac52e1e0dc47e236" prot="public" virt="non-virtual"><scope>rr::RenderObject</scope><name>id_t</name></member>
+      <member refid="classrr_1_1RenderObject_1ae47f4faabe25be94bdaedb2f876c28a2" prot="private" virt="non-virtual"><scope>rr::RenderObject</scope><name>idGenerator</name></member>
+      <member refid="classrr_1_1RenderObject_1a97358a193e01d8a374db0241c6d427a9" prot="private" virt="non-virtual"><scope>rr::RenderObject</scope><name>m_color</name></member>
+      <member refid="classrr_1_1RenderObject_1a05c7ccde19300b4aef6ffafb81f7d6bc" prot="private" virt="non-virtual"><scope>rr::RenderObject</scope><name>m_id</name></member>
+      <member refid="classrr_1_1RenderObject_1a02e90a3d5c4c08faeb1d2ea983d969ca" prot="private" virt="non-virtual"><scope>rr::RenderObject</scope><name>m_mesh</name></member>
+      <member refid="classrr_1_1RenderObject_1a554f9b33c752d0acd3fee511270eef86" prot="private" virt="non-virtual"><scope>rr::RenderObject</scope><name>m_transform2D</name></member>
+      <member refid="classrr_1_1RenderObject_1ad8359cabd56b93c4159f6f7bf080a726" prot="private" virt="non-virtual"><scope>rr::RenderObject</scope><name>m_transformIsDirty</name></member>
+      <member refid="classrr_1_1RenderObject_1ac4bf6bdbb86d38c7099cd89b2359487c" prot="private" virt="non-virtual"><scope>rr::RenderObject</scope><name>m_transformMatrixCache</name></member>
+      <member refid="classrr_1_1RenderObject_1a0367e16ef2888332091b0f7ccafbd106" prot="public" virt="non-virtual"><scope>rr::RenderObject</scope><name>operator=</name></member>
+      <member refid="classrr_1_1RenderObject_1a50323ed960f352158a50959a31585737" prot="public" virt="non-virtual"><scope>rr::RenderObject</scope><name>operator=</name></member>
+      <member refid="classrr_1_1RenderObject_1aad6b13493302dc777cc435cfb9cc7c96" prot="public" virt="non-virtual"><scope>rr::RenderObject</scope><name>render</name></member>
+      <member refid="classrr_1_1RenderObject_1a3635e5f9c8ce9c8963519bcae62251a5" prot="public" virt="non-virtual"><scope>rr::RenderObject</scope><name>RenderObject</name></member>
+      <member refid="classrr_1_1RenderObject_1aa40fbbe16e4780df815ef713557580d4" prot="public" virt="non-virtual"><scope>rr::RenderObject</scope><name>RenderObject</name></member>
+      <member refid="classrr_1_1RenderObject_1afa39e6b74a5b4a929a047553cc4cbb59" prot="public" virt="non-virtual"><scope>rr::RenderObject</scope><name>RenderObject</name></member>
+      <member refid="classrr_1_1RenderObject_1abf7bc91e1b23d0abcdf8bb58efce6750" prot="public" virt="non-virtual"><scope>rr::RenderObject</scope><name>setRotation</name></member>
+      <member refid="classrr_1_1RenderObject_1ad6955b25213b55d905507af5d2bebb07" prot="private" virt="non-virtual"><scope>rr::RenderObject</scope><name>updateTransformMatrix</name></member>
+      <member refid="classrr_1_1RenderObject_1a09ca7ddd99e17a67ea42129e3531f9df" prot="public" virt="non-virtual"><scope>rr::RenderObject</scope><name>~RenderObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

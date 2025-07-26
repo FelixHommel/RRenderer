@@ -9,19 +9,15 @@ jobs:
     name: Linting
     runs-on: ubuntu-latest
 
-    strategy:
-      fail-fast: false
-
     steps:
       - uses: actions/checkout@v4
 
       - name: Install dependencies
         run: |
           sudo apt update
-          sudo apt install -y clang-tidy-19 cmake g++ ninja-build vulkan-tools libvulkan-dev \
+          sudo apt install -y llvm-19-tools cmake g++ ninja-build vulkan-tools libvulkan-dev \
             glslang-tools glslang-dev xorg-dev libx11-dev mesa-common-dev \
             libwayland-dev wayland-protocols libxkbcommon-dev
-          alias clang-tidy=clang-tidy-19
 
       - name: Configure CMake
         run: cmake --preset release
@@ -30,14 +26,11 @@ jobs:
         run: cmake --build --preset release
 
       - name: clang-tidy
-        run: clang-tidy -p ./ --warnings-as-errors=\* $(find src/ -name '*.cpp' -or -name '*.hpp')
+        run: clang-tidy -p ./build/release/compile_commands.json --format-style="none" --warnings-as-errors=\* $(find ./src -regex ".*\.\(cpp\|hpp\)")
 
   build-and-test:
     name: Build and Test
     runs-on: ubuntu-latest
-
-    strategy:
-      fail-fast: false
 
     steps:
       - uses: actions/checkout@v4

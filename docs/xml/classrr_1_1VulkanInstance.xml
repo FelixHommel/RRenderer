@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classrr_1_1VulkanInstance" kind="class" language="C++" prot="public">
+    <compoundname>rr::VulkanInstance</compoundname>
+    <includes refid="VulkanInstance_8hpp" local="no">VulkanInstance.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrr_1_1VulkanInstance_1af84dd9687e790eed0b95eb5744e2a179" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkInstance</ref></type>
+        <definition>VkInstance rr::VulkanInstance::m_instance</definition>
+        <argsstring></argsstring>
+        <name>m_instance</name>
+        <qualifiedname>rr::VulkanInstance::m_instance</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanInstance.hpp" line="30" column="12" bodyfile="src/engine/core/VulkanInstance.hpp" bodystart="30" bodyend="30"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrr_1_1VulkanInstance_1a787a997cb1f385b1016107bb2ac1b1dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanInstance::VulkanInstance</definition>
+        <argsstring>()</argsstring>
+        <name>VulkanInstance</name>
+        <qualifiedname>rr::VulkanInstance::VulkanInstance</qualifiedname>
+        <briefdescription>
+<para>Construct a new <ref refid="classrr_1_1VulkanInstance" kindref="compound">VulkanInstance</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+ref <ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</ref> if there was an error while creating the instance </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanInstance.hpp" line="19" column="1" bodyfile="src/engine/core/VulkanInstance.cpp" bodystart="61" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanInstance_1a05558323afc2f2e22f32803f0e7c38a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanInstance::~VulkanInstance</definition>
+        <argsstring>()</argsstring>
+        <name>~VulkanInstance</name>
+        <qualifiedname>rr::VulkanInstance::~VulkanInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanInstance.hpp" line="20" column="1" bodyfile="src/engine/core/VulkanInstance.cpp" bodystart="107" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanInstance_1adba7aea268a9584df115216a1783b2a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanInstance::VulkanInstance</definition>
+        <argsstring>(const VulkanInstance &amp;)=delete</argsstring>
+        <name>VulkanInstance</name>
+        <qualifiedname>rr::VulkanInstance::VulkanInstance</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1VulkanInstance" kindref="compound">VulkanInstance</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanInstance.hpp" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanInstance_1aedebd4c5a116ec42473ae5f001fced3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1VulkanInstance" kindref="compound">VulkanInstance</ref> &amp;</type>
+        <definition>VulkanInstance &amp; rr::VulkanInstance::operator=</definition>
+        <argsstring>(const VulkanInstance &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::VulkanInstance::operator=</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1VulkanInstance" kindref="compound">VulkanInstance</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanInstance.hpp" line="23" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanInstance_1ab0bf0b5a810229e3066d5f9f6a2fc590" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::VulkanInstance::VulkanInstance</definition>
+        <argsstring>(VulkanInstance &amp;&amp;)=delete</argsstring>
+        <name>VulkanInstance</name>
+        <qualifiedname>rr::VulkanInstance::VulkanInstance</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1VulkanInstance" kindref="compound">VulkanInstance</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanInstance.hpp" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanInstance_1a5170d89c553c7c2ff8434626b54f98f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1VulkanInstance" kindref="compound">VulkanInstance</ref> &amp;</type>
+        <definition>VulkanInstance &amp; rr::VulkanInstance::operator=</definition>
+        <argsstring>(VulkanInstance &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::VulkanInstance::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1VulkanInstance" kindref="compound">VulkanInstance</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanInstance.hpp" line="25" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanInstance_1aa066186ccd055b490457be74f4b3bbb4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkInstance</ref></type>
+        <definition>VkInstance rr::VulkanInstance::getHandle</definition>
+        <argsstring>() const</argsstring>
+        <name>getHandle</name>
+        <qualifiedname>rr::VulkanInstance::getHandle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanInstance.hpp" line="27" column="13" bodyfile="src/engine/core/VulkanInstance.hpp" bodystart="27" bodyend="27"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classrr_1_1VulkanInstance_1a82a4861f5c7b0b74ccdb8512ff07bb37" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bool</ref></type>
+        <definition>bool rr::VulkanInstance::checkValidationLayerSupport</definition>
+        <argsstring>()</argsstring>
+        <name>checkValidationLayerSupport</name>
+        <qualifiedname>rr::VulkanInstance::checkValidationLayerSupport</qualifiedname>
+        <briefdescription>
+<para>Check if all validation layers are available to use. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if all requested validation layers are available, otherwise <computeroutput>false</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanInstance.hpp" line="32" column="13" bodyfile="src/engine/core/VulkanInstance.cpp" bodystart="115" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanInstance_1a0b45f19b5d3d30703073a956cd7925f6" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">char</ref> * &gt;</type>
+        <definition>std::vector&lt; const char * &gt; rr::VulkanInstance::getRequiredExtensions</definition>
+        <argsstring>()</argsstring>
+        <name>getRequiredExtensions</name>
+        <qualifiedname>rr::VulkanInstance::getRequiredExtensions</qualifiedname>
+        <briefdescription>
+<para>Collect all required extensions by any parts of the renderer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::vector of required extension name c-strings </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanInstance.hpp" line="33" column="20" bodyfile="src/engine/core/VulkanInstance.cpp" bodystart="145" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1VulkanInstance_1a10a4e5e889a61195a18f263517c534a0" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::VulkanInstance::hasGLFWRequiredInstanceExtensions</definition>
+        <argsstring>()</argsstring>
+        <name>hasGLFWRequiredInstanceExtensions</name>
+        <qualifiedname>rr::VulkanInstance::hasGLFWRequiredInstanceExtensions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if the instance supports all the extensions that are requried by GLFW. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanInstance.hpp" line="34" column="13" bodyfile="src/engine/core/VulkanInstance.cpp" bodystart="161" bodyend="187"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classrr_1_1VulkanInstance" kindref="compound">VulkanInstance</ref> wraps <computeroutput>VkInstance</computeroutput> </para>
+    </briefdescription>
+    <detaileddescription>
+<para>It provides basic access to the underlying <computeroutput>VkInstance</computeroutput> and manages it&apos;s lifetime.</para>
+<para><simplesect kind="author"><para>Felix Hommel </para>
+</simplesect>
+<simplesect kind="date"><para>7/20/2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="src/engine/core/VulkanInstance.hpp" line="16" column="1" bodyfile="src/engine/core/VulkanInstance.hpp" bodystart="17" bodyend="35"/>
+    <listofallmembers>
+      <member refid="classrr_1_1VulkanInstance_1a82a4861f5c7b0b74ccdb8512ff07bb37" prot="private" virt="non-virtual"><scope>rr::VulkanInstance</scope><name>checkValidationLayerSupport</name></member>
+      <member refid="classrr_1_1VulkanInstance_1aa066186ccd055b490457be74f4b3bbb4" prot="public" virt="non-virtual"><scope>rr::VulkanInstance</scope><name>getHandle</name></member>
+      <member refid="classrr_1_1VulkanInstance_1a0b45f19b5d3d30703073a956cd7925f6" prot="private" virt="non-virtual"><scope>rr::VulkanInstance</scope><name>getRequiredExtensions</name></member>
+      <member refid="classrr_1_1VulkanInstance_1a10a4e5e889a61195a18f263517c534a0" prot="private" virt="non-virtual"><scope>rr::VulkanInstance</scope><name>hasGLFWRequiredInstanceExtensions</name></member>
+      <member refid="classrr_1_1VulkanInstance_1af84dd9687e790eed0b95eb5744e2a179" prot="private" virt="non-virtual"><scope>rr::VulkanInstance</scope><name>m_instance</name></member>
+      <member refid="classrr_1_1VulkanInstance_1aedebd4c5a116ec42473ae5f001fced3e" prot="public" virt="non-virtual"><scope>rr::VulkanInstance</scope><name>operator=</name></member>
+      <member refid="classrr_1_1VulkanInstance_1a5170d89c553c7c2ff8434626b54f98f3" prot="public" virt="non-virtual"><scope>rr::VulkanInstance</scope><name>operator=</name></member>
+      <member refid="classrr_1_1VulkanInstance_1a787a997cb1f385b1016107bb2ac1b1dc" prot="public" virt="non-virtual"><scope>rr::VulkanInstance</scope><name>VulkanInstance</name></member>
+      <member refid="classrr_1_1VulkanInstance_1adba7aea268a9584df115216a1783b2a8" prot="public" virt="non-virtual"><scope>rr::VulkanInstance</scope><name>VulkanInstance</name></member>
+      <member refid="classrr_1_1VulkanInstance_1ab0bf0b5a810229e3066d5f9f6a2fc590" prot="public" virt="non-virtual"><scope>rr::VulkanInstance</scope><name>VulkanInstance</name></member>
+      <member refid="classrr_1_1VulkanInstance_1a05558323afc2f2e22f32803f0e7c38a1" prot="public" virt="non-virtual"><scope>rr::VulkanInstance</scope><name>~VulkanInstance</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

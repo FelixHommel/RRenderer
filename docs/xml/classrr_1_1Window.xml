@@ -1,0 +1,403 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classrr_1_1Window" kind="class" language="C++" prot="public">
+    <compoundname>rr::Window</compoundname>
+    <includes refid="Window_8hpp" local="no">Window.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrr_1_1Window_1a8c7ad74a479238bff745288cfe55dba3" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">GLFWwindow</ref> *</type>
+        <definition>GLFWwindow* rr::Window::m_window</definition>
+        <argsstring></argsstring>
+        <name>m_window</name>
+        <qualifiedname>rr::Window::m_window</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/window/Window.hpp" line="46" column="12" bodyfile="src/engine/window/Window.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1Window_1a59e1a7b2574783007aef0bbfdb95dbdc" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">int</ref></type>
+        <definition>int rr::Window::m_width</definition>
+        <argsstring></argsstring>
+        <name>m_width</name>
+        <qualifiedname>rr::Window::m_width</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/window/Window.hpp" line="48" column="5" bodyfile="src/engine/window/Window.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1Window_1ae8a13bd0a53254025a9356a679458cb3" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">int</ref></type>
+        <definition>int rr::Window::m_height</definition>
+        <argsstring></argsstring>
+        <name>m_height</name>
+        <qualifiedname>rr::Window::m_height</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/window/Window.hpp" line="49" column="5" bodyfile="src/engine/window/Window.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1Window_1a24ac96b9c00886c05955e9b09cdd3861" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string rr::Window::m_title</definition>
+        <argsstring></argsstring>
+        <name>m_title</name>
+        <qualifiedname>rr::Window::m_title</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/window/Window.hpp" line="50" column="13" bodyfile="src/engine/window/Window.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrr_1_1Window_1ae6e9088839712abbb1e742d215d3d5bf" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bool</ref></type>
+        <definition>bool rr::Window::m_framebufferResized</definition>
+        <argsstring></argsstring>
+        <name>m_framebufferResized</name>
+        <qualifiedname>rr::Window::m_framebufferResized</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">false</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/window/Window.hpp" line="51" column="6" bodyfile="src/engine/window/Window.hpp" bodystart="51" bodyend="51"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrr_1_1Window_1ab9a8b13e34dcfc7c61669a428f8eeff7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::Window::Window</definition>
+        <argsstring>(int width, int height, const std::string &amp;title)</argsstring>
+        <name>Window</name>
+        <qualifiedname>rr::Window::Window</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">int</ref></type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">int</ref></type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> std::string &amp;</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+<para>Create a new <ref refid="classrr_1_1Window" kindref="compound">Window</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>width of the window </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>height of the window </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>title of the window</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+ref <ref refid="classrr_1_1GLFWException" kindref="compound">GLFWException</ref> if anything goes wrong while creating the <ref refid="classrr_1_1Window" kindref="compound">Window</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/window/Window.hpp" line="24" column="1" bodyfile="src/engine/window/Window.cpp" bodystart="23" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1Window_1a0e6abfc5b6055b21b43a1e4d6a2e0aa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::Window::~Window</definition>
+        <argsstring>()</argsstring>
+        <name>~Window</name>
+        <qualifiedname>rr::Window::~Window</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/window/Window.hpp" line="25" column="1" bodyfile="src/engine/window/Window.cpp" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1Window_1a8b9707541b35c11a8552036acce56b7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::Window::Window</definition>
+        <argsstring>(const Window &amp;)=delete</argsstring>
+        <name>Window</name>
+        <qualifiedname>rr::Window::Window</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1Window" kindref="compound">Window</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/window/Window.hpp" line="27" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1Window_1a2b48cd5ecc41974ac28a5c6760c2425d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1Window" kindref="compound">Window</ref> &amp;</type>
+        <definition>Window &amp; rr::Window::operator=</definition>
+        <argsstring>(const Window &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::Window::operator=</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1Window" kindref="compound">Window</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/window/Window.hpp" line="28" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1Window_1a6ac080e9932daec628d41445498de42e" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>rr::Window::Window</definition>
+        <argsstring>(Window &amp;&amp;) noexcept=delete</argsstring>
+        <name>Window</name>
+        <qualifiedname>rr::Window::Window</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1Window" kindref="compound">Window</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/window/Window.hpp" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1Window_1a40e61ef3df001e499e70459367b4f0f4" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classrr_1_1Window" kindref="compound">Window</ref> &amp;</type>
+        <definition>Window &amp; rr::Window::operator=</definition>
+        <argsstring>(Window &amp;&amp;) noexcept=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::Window::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1Window" kindref="compound">Window</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/window/Window.hpp" line="30" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1Window_1ac4b8c93bd90bd3ccc48b14cf81334627" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">GLFWwindow</ref> *</type>
+        <definition>GLFWwindow * rr::Window::getWindowHandle</definition>
+        <argsstring>() const</argsstring>
+        <name>getWindowHandle</name>
+        <qualifiedname>rr::Window::getWindowHandle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/window/Window.hpp" line="32" column="13" bodyfile="src/engine/window/Window.hpp" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1Window_1a7e2e2c8a0ea45d3546dd72571db29e36" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">int</ref></type>
+        <definition>int rr::Window::shouldClose</definition>
+        <argsstring>() const</argsstring>
+        <name>shouldClose</name>
+        <qualifiedname>rr::Window::shouldClose</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/window/Window.hpp" line="33" column="6" bodyfile="src/engine/window/Window.hpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1Window_1afff4d6cbe64ce548adb84d83d042d76b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkExtent2D</ref></type>
+        <definition>VkExtent2D rr::Window::getExtent</definition>
+        <argsstring>() const</argsstring>
+        <name>getExtent</name>
+        <qualifiedname>rr::Window::getExtent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/window/Window.hpp" line="34" column="13" bodyfile="src/engine/window/Window.hpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1Window_1ad2090b64dc2fcd0b3abe8576c9cbeb43" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bool</ref></type>
+        <definition>bool rr::Window::wasWindowResized</definition>
+        <argsstring>() const</argsstring>
+        <name>wasWindowResized</name>
+        <qualifiedname>rr::Window::wasWindowResized</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/window/Window.hpp" line="38" column="7" bodyfile="src/engine/window/Window.hpp" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1Window_1aa07b985c56776ef99fe362353a844b85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::Window::resetWindowResized</definition>
+        <argsstring>()</argsstring>
+        <name>resetWindowResized</name>
+        <qualifiedname>rr::Window::resetWindowResized</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/window/Window.hpp" line="40" column="6" bodyfile="src/engine/window/Window.hpp" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1Window_1ace8723045e9c0e757894c679bc607688" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::Window::createWindowSurface</definition>
+        <argsstring>(VkInstance &amp;instance, VkSurfaceKHR *surface) const</argsstring>
+        <name>createWindowSurface</name>
+        <qualifiedname>rr::Window::createWindowSurface</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkInstance</ref> &amp;</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSurfaceKHR</ref> *</type>
+          <declname>surface</declname>
+        </param>
+        <briefdescription>
+<para>Create a surface to which Vulkan can draw to. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>&amp;instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>VkInstance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>*surface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>VkSurfaceKHR</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+ref <ref refid="classrr_1_1GLFWException" kindref="compound">GLFWException</ref> if GLFW couldn&apos;t create a valid surface </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/window/Window.hpp" line="42" column="6" bodyfile="src/engine/window/Window.cpp" bodystart="59" bodyend="64"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classrr_1_1Window_1a9e527bb9b107d6f83803e9316d56640c" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::Window::framebufferResizeCallback</definition>
+        <argsstring>(GLFWwindow *window, int width, int height)</argsstring>
+        <name>framebufferResizeCallback</name>
+        <qualifiedname>rr::Window::framebufferResizeCallback</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">GLFWwindow</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">int</ref></type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">int</ref></type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>GLFW callback function for resizing the framebuffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/window/Window.hpp" line="53" column="13" bodyfile="src/engine/window/Window.cpp" bodystart="67" bodyend="74"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classrr_1_1Window" kindref="compound">Window</ref> to which can be drawn. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classrr_1_1Window" kindref="compound">Window</ref> class opens a GLFW window. The <ref refid="classrr_1_1Window" kindref="compound">Window</ref> is bound to GLFW meaning if the window is created, GLFW is initialized and if the window is destroyed GLFW is terminated.</para>
+<para><simplesect kind="author"><para>Felix Hommel </para>
+</simplesect>
+<simplesect kind="date"><para>7/18/2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="src/engine/window/Window.hpp" line="21" column="1" bodyfile="src/engine/window/Window.hpp" bodystart="22" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classrr_1_1Window_1ace8723045e9c0e757894c679bc607688" prot="public" virt="non-virtual"><scope>rr::Window</scope><name>createWindowSurface</name></member>
+      <member refid="classrr_1_1Window_1a9e527bb9b107d6f83803e9316d56640c" prot="private" virt="non-virtual"><scope>rr::Window</scope><name>framebufferResizeCallback</name></member>
+      <member refid="classrr_1_1Window_1afff4d6cbe64ce548adb84d83d042d76b" prot="public" virt="non-virtual"><scope>rr::Window</scope><name>getExtent</name></member>
+      <member refid="classrr_1_1Window_1ac4b8c93bd90bd3ccc48b14cf81334627" prot="public" virt="non-virtual"><scope>rr::Window</scope><name>getWindowHandle</name></member>
+      <member refid="classrr_1_1Window_1ae6e9088839712abbb1e742d215d3d5bf" prot="private" virt="non-virtual"><scope>rr::Window</scope><name>m_framebufferResized</name></member>
+      <member refid="classrr_1_1Window_1ae8a13bd0a53254025a9356a679458cb3" prot="private" virt="non-virtual"><scope>rr::Window</scope><name>m_height</name></member>
+      <member refid="classrr_1_1Window_1a24ac96b9c00886c05955e9b09cdd3861" prot="private" virt="non-virtual"><scope>rr::Window</scope><name>m_title</name></member>
+      <member refid="classrr_1_1Window_1a59e1a7b2574783007aef0bbfdb95dbdc" prot="private" virt="non-virtual"><scope>rr::Window</scope><name>m_width</name></member>
+      <member refid="classrr_1_1Window_1a8c7ad74a479238bff745288cfe55dba3" prot="private" virt="non-virtual"><scope>rr::Window</scope><name>m_window</name></member>
+      <member refid="classrr_1_1Window_1a2b48cd5ecc41974ac28a5c6760c2425d" prot="public" virt="non-virtual"><scope>rr::Window</scope><name>operator=</name></member>
+      <member refid="classrr_1_1Window_1a40e61ef3df001e499e70459367b4f0f4" prot="public" virt="non-virtual"><scope>rr::Window</scope><name>operator=</name></member>
+      <member refid="classrr_1_1Window_1aa07b985c56776ef99fe362353a844b85" prot="public" virt="non-virtual"><scope>rr::Window</scope><name>resetWindowResized</name></member>
+      <member refid="classrr_1_1Window_1a7e2e2c8a0ea45d3546dd72571db29e36" prot="public" virt="non-virtual"><scope>rr::Window</scope><name>shouldClose</name></member>
+      <member refid="classrr_1_1Window_1ad2090b64dc2fcd0b3abe8576c9cbeb43" prot="public" virt="non-virtual"><scope>rr::Window</scope><name>wasWindowResized</name></member>
+      <member refid="classrr_1_1Window_1ab9a8b13e34dcfc7c61669a428f8eeff7" prot="public" virt="non-virtual"><scope>rr::Window</scope><name>Window</name></member>
+      <member refid="classrr_1_1Window_1a8b9707541b35c11a8552036acce56b7b" prot="public" virt="non-virtual"><scope>rr::Window</scope><name>Window</name></member>
+      <member refid="classrr_1_1Window_1a6ac080e9932daec628d41445498de42e" prot="public" virt="non-virtual"><scope>rr::Window</scope><name>Window</name></member>
+      <member refid="classrr_1_1Window_1a0e6abfc5b6055b21b43a1e4d6a2e0aa0" prot="public" virt="non-virtual"><scope>rr::Window</scope><name>~Window</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

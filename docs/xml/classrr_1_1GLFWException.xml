@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classrr_1_1GLFWException" kind="class" language="C++" prot="public">
+    <compoundname>rr::GLFWException</compoundname>
+    <basecompoundref refid="classrr_1_1EngineException" prot="public" virt="non-virtual">rr::EngineException</basecompoundref>
+    <includes refid="GLFWException_8hpp" local="no">GLFWException.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrr_1_1GLFWException_1a8bbab7f269490fec248cd723fb1b352a" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerr_1aa820520e8b4cccadfd441961b24b4a7d" kindref="member">GLFWExceptionCause</ref></type>
+        <definition>GLFWExceptionCause rr::GLFWException::m_cause</definition>
+        <argsstring></argsstring>
+        <name>m_cause</name>
+        <qualifiedname>rr::GLFWException::m_cause</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/exception/GLFWException.hpp" line="38" column="20" bodyfile="src/engine/exception/GLFWException.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrr_1_1GLFWException_1a9cffdb8f68338795f16f350599594040" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rr::GLFWException::GLFWException</definition>
+        <argsstring>(GLFWExceptionCause cause)</argsstring>
+        <name>GLFWException</name>
+        <qualifiedname>rr::GLFWException::GLFWException</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1aa820520e8b4cccadfd441961b24b4a7d" kindref="member">GLFWExceptionCause</ref></type>
+          <declname>cause</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/exception/GLFWException.hpp" line="30" column="10" bodyfile="src/engine/exception/GLFWException.hpp" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1GLFWException_1a1b3725d53b06bdd4c5c860447464500c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerr_1aa820520e8b4cccadfd441961b24b4a7d" kindref="member">GLFWExceptionCause</ref></type>
+        <definition>GLFWExceptionCause rr::GLFWException::cause</definition>
+        <argsstring>() const</argsstring>
+        <name>cause</name>
+        <qualifiedname>rr::GLFWException::cause</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/exception/GLFWException.hpp" line="35" column="21" bodyfile="src/engine/exception/GLFWException.hpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classrr_1_1GLFWException_1ae0f680ee0ad3bed5bee809902d291e13" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string rr::GLFWException::causeToString</definition>
+        <argsstring>(GLFWExceptionCause cause)</argsstring>
+        <name>causeToString</name>
+        <qualifiedname>rr::GLFWException::causeToString</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1aa820520e8b4cccadfd441961b24b4a7d" kindref="member">GLFWExceptionCause</ref></type>
+          <declname>cause</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/exception/GLFWException.hpp" line="40" column="20" bodyfile="src/engine/exception/GLFWException.hpp" bodystart="40" bodyend="55"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>If a GLFW operation fails or doesn&apos;t behave as expected a <ref refid="classrr_1_1GLFWException" kindref="compound">GLFWException</ref> can be thrown. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Felix Hommel </para>
+</simplesect>
+<simplesect kind="date"><para>7/19/2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>rr::EngineException</label>
+        <link refid="classrr_1_1EngineException"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>rr::GLFWException</label>
+        <link refid="classrr_1_1GLFWException"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::exception</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>rr::EngineException</label>
+        <link refid="classrr_1_1EngineException"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>rr::GLFWException</label>
+        <link refid="classrr_1_1GLFWException"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/engine/exception/GLFWException.hpp" line="27" column="1" bodyfile="src/engine/exception/GLFWException.hpp" bodystart="28" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classrr_1_1GLFWException_1a1b3725d53b06bdd4c5c860447464500c" prot="public" virt="non-virtual"><scope>rr::GLFWException</scope><name>cause</name></member>
+      <member refid="classrr_1_1GLFWException_1ae0f680ee0ad3bed5bee809902d291e13" prot="private" virt="non-virtual"><scope>rr::GLFWException</scope><name>causeToString</name></member>
+      <member refid="classrr_1_1EngineException_1afc765524baf587c8ecc7e6164ed27afb" prot="public" virt="non-virtual"><scope>rr::GLFWException</scope><name>EngineException</name></member>
+      <member refid="classrr_1_1GLFWException_1a9cffdb8f68338795f16f350599594040" prot="public" virt="non-virtual"><scope>rr::GLFWException</scope><name>GLFWException</name></member>
+      <member refid="classrr_1_1GLFWException_1a8bbab7f269490fec248cd723fb1b352a" prot="private" virt="non-virtual"><scope>rr::GLFWException</scope><name>m_cause</name></member>
+      <member refid="classrr_1_1EngineException_1a6deb90a977fde221a852fd0f2ba085fe" prot="public" virt="non-virtual"><scope>rr::GLFWException</scope><name>what</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

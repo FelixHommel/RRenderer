@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_9f13a80b6380190ef66302060c03936b" kind="dir">
+    <compoundname>exception</compoundname>
+    <innerfile refid="EngineException_8hpp">EngineException.hpp</innerfile>
+    <innerfile refid="FileIOException_8hpp">FileIOException.hpp</innerfile>
+    <innerfile refid="GLFWException_8hpp">GLFWException.hpp</innerfile>
+    <innerfile refid="VulkanException_8hpp">VulkanException.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/engine/exception/"/>
+  </compounddef>
+</doxygen>

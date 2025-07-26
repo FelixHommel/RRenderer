@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="StringHash_8hpp" kind="file" language="C++">
+    <compoundname>StringHash.hpp</compoundname>
+    <includes local="no">cstddef</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">string_view</includes>
+    <includedby refid="VulkanInstance_8cpp" local="yes">VulkanInstance.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>StringHash.hpp</label>
+        <link refid="StringHash_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cstddef</label>
+      </node>
+      <node id="3">
+        <label>functional</label>
+      </node>
+      <node id="4">
+        <label>string_view</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>VulkanInstance.cpp</label>
+        <link refid="VulkanInstance_8cpp"/>
+      </node>
+      <node id="1">
+        <label>StringHash.hpp</label>
+        <link refid="StringHash_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structrr_1_1StringHash" prot="public">rr::StringHash</innerclass>
+    <innernamespace refid="namespacerr">rr</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RRENDERER_ENGINE_UTILITY_STRING_HASH_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RRENDERER_ENGINE_UTILITY_STRING_HASH_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string_view&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerr" kindref="compound">rr</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="structrr_1_1StringHash" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrr_1_1StringHash" kindref="compound">StringHash</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20" refid="structrr_1_1StringHash_1a9e988d40fa86adde8483451fc482b575" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structrr_1_1StringHash_1a9e988d40fa86adde8483451fc482b575" kindref="member">is_transparent</ref><sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref>;<sp/></highlight><highlight class="comment">//<sp/>NOTE:<sp/>needed<sp/>for<sp/>heterogeneous<sp/>operations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="structrr_1_1StringHash_1a87bb1c3fe8fb69b2cb0f8f72ba1fa4cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="structrr_1_1StringHash_1a87bb1c3fe8fb69b2cb0f8f72ba1fa4cb" kindref="member">operator()</ref>(std::string_view<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">sv</ref>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="23"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::hash&lt;std::string_view&gt;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">hasher</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">hasher</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">sv</ref>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>rr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!RRENDERER_ENGINE_UTILITY_STRING_HASH_HPP</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/engine/utility/StringHash.hpp"/>
+  </compounddef>
+</doxygen>

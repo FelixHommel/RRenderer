@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classrr_1_1Renderer" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>rr::Renderer</compoundname>
+    <derivedcompoundref refid="classrr_1_1VulkanRenderer" prot="public" virt="non-virtual">rr::VulkanRenderer</derivedcompoundref>
+    <includes refid="Renderer_8hpp" local="no">Renderer.hpp</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrr_1_1Renderer_1a40758a1ac2264dbcb62fb2b0c85bf981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::Renderer::Renderer</definition>
+        <argsstring>()=default</argsstring>
+        <name>Renderer</name>
+        <qualifiedname>rr::Renderer::Renderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/Renderer.hpp" line="27" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1Renderer_1acbde91675e409c0840b8387e6c4e08d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual rr::Renderer::~Renderer</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Renderer</name>
+        <qualifiedname>rr::Renderer::~Renderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/Renderer.hpp" line="28" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1Renderer_1a4f0e7d611a08788ce54ce39820982e83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rr::Renderer::Renderer</definition>
+        <argsstring>(const Renderer &amp;)=delete</argsstring>
+        <name>Renderer</name>
+        <qualifiedname>rr::Renderer::Renderer</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1Renderer" kindref="compound">Renderer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/Renderer.hpp" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1Renderer_1ae31ddb831141cfba38a2cb4a49767a8a" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>rr::Renderer::Renderer</definition>
+        <argsstring>(Renderer &amp;&amp;) noexcept=delete</argsstring>
+        <name>Renderer</name>
+        <qualifiedname>rr::Renderer::Renderer</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1Renderer" kindref="compound">Renderer</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/Renderer.hpp" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1Renderer_1a97d5b67e737ea23129d9f7c199a16610" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrr_1_1Renderer" kindref="compound">Renderer</ref> &amp;</type>
+        <definition>Renderer &amp; rr::Renderer::operator=</definition>
+        <argsstring>(const Renderer &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::Renderer::operator=</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="classrr_1_1Renderer" kindref="compound">Renderer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/Renderer.hpp" line="32" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1Renderer_1af91f2e8ab8de28bcb1c3279d5bfef2db" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classrr_1_1Renderer" kindref="compound">Renderer</ref> &amp;</type>
+        <definition>Renderer &amp; rr::Renderer::operator=</definition>
+        <argsstring>(Renderer &amp;&amp;) noexcept=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>rr::Renderer::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classrr_1_1Renderer" kindref="compound">Renderer</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/Renderer.hpp" line="33" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1Renderer_1a84e149938d154bd8d067b1be2e94a2fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>virtual void rr::Renderer::render</definition>
+        <argsstring>()=0</argsstring>
+        <name>render</name>
+        <qualifiedname>rr::Renderer::render</qualifiedname>
+        <reimplementedby refid="classrr_1_1VulkanRenderer_1a01f2527977e7f7ca4cd0d393a9f5af85">render</reimplementedby>
+        <briefdescription>
+<para>Draw an image to the screen. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/Renderer.hpp" line="36" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classrr_1_1Renderer_1add7edc93f23223e70b770a36e0e804c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>virtual void rr::Renderer::shutdown</definition>
+        <argsstring>()=0</argsstring>
+        <name>shutdown</name>
+        <qualifiedname>rr::Renderer::shutdown</qualifiedname>
+        <reimplementedby refid="classrr_1_1VulkanRenderer_1a3e5a5b49686f304be39194b4aa0ffb2b">shutdown</reimplementedby>
+        <briefdescription>
+<para>Shutdown the <ref refid="classrr_1_1Renderer" kindref="compound">Renderer</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method can be used to exit the <ref refid="classrr_1_1Renderer" kindref="compound">Renderer</ref> before the App using it closes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/Renderer.hpp" line="41" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>An abstract base class for specific renderer implementations. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classrr_1_1Renderer" kindref="compound">Renderer</ref> interface consists of <ref refid="classrr_1_1Renderer_1a84e149938d154bd8d067b1be2e94a2fb" kindref="member">Renderer::render()</ref> to draw images to the screen and <ref refid="classrr_1_1Renderer_1add7edc93f23223e70b770a36e0e804c4" kindref="member">Renderer::shutdown()</ref> to cleanly exit the <ref refid="classrr_1_1Renderer" kindref="compound">Renderer</ref> early</para>
+<para><simplesect kind="author"><para>Felix Hommel </para>
+</simplesect>
+<simplesect kind="date"><para>7/18/2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>rr::Renderer</label>
+        <link refid="classrr_1_1Renderer"/>
+      </node>
+      <node id="2">
+        <label>rr::VulkanRenderer</label>
+        <link refid="classrr_1_1VulkanRenderer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="src/engine/Renderer.hpp" line="24" column="1" bodyfile="src/engine/Renderer.hpp" bodystart="25" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classrr_1_1Renderer_1a97d5b67e737ea23129d9f7c199a16610" prot="public" virt="non-virtual"><scope>rr::Renderer</scope><name>operator=</name></member>
+      <member refid="classrr_1_1Renderer_1af91f2e8ab8de28bcb1c3279d5bfef2db" prot="public" virt="non-virtual"><scope>rr::Renderer</scope><name>operator=</name></member>
+      <member refid="classrr_1_1Renderer_1a84e149938d154bd8d067b1be2e94a2fb" prot="public" virt="pure-virtual"><scope>rr::Renderer</scope><name>render</name></member>
+      <member refid="classrr_1_1Renderer_1a40758a1ac2264dbcb62fb2b0c85bf981" prot="public" virt="non-virtual"><scope>rr::Renderer</scope><name>Renderer</name></member>
+      <member refid="classrr_1_1Renderer_1a4f0e7d611a08788ce54ce39820982e83" prot="public" virt="non-virtual"><scope>rr::Renderer</scope><name>Renderer</name></member>
+      <member refid="classrr_1_1Renderer_1ae31ddb831141cfba38a2cb4a49767a8a" prot="public" virt="non-virtual"><scope>rr::Renderer</scope><name>Renderer</name></member>
+      <member refid="classrr_1_1Renderer_1add7edc93f23223e70b770a36e0e804c4" prot="public" virt="pure-virtual"><scope>rr::Renderer</scope><name>shutdown</name></member>
+      <member refid="classrr_1_1Renderer_1acbde91675e409c0840b8387e6c4e08d5" prot="public" virt="virtual"><scope>rr::Renderer</scope><name>~Renderer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

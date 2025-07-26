@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structrr_1_1Vertex" kind="struct" language="C++" prot="public">
+    <compoundname>rr::Vertex</compoundname>
+    <includes refid="VulkanMesh_8hpp" local="no">VulkanMesh.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structrr_1_1Vertex_1a1b554f1053b0823d437557da80af9b5c" prot="public" static="no" mutable="no">
+        <type>glm::vec2</type>
+        <definition>glm::vec2 rr::Vertex::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <qualifiedname>rr::Vertex::position</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanMesh.hpp" line="27" column="11" bodyfile="src/engine/core/VulkanMesh.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrr_1_1Vertex_1aef6e4e83a38fdd5c710f288caa5dcf18" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 rr::Vertex::color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <qualifiedname>rr::Vertex::color</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanMesh.hpp" line="28" column="11" bodyfile="src/engine/core/VulkanMesh.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structrr_1_1Vertex_1ad04eb859222f92a31d1bb35b2f5e27d9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkVertexInputBindingDescription</ref> &gt;</type>
+        <definition>std::vector&lt; VkVertexInputBindingDescription &gt; rr::Vertex::getBindingDescriptions</definition>
+        <argsstring>()</argsstring>
+        <name>getBindingDescriptions</name>
+        <qualifiedname>rr::Vertex::getBindingDescriptions</qualifiedname>
+        <briefdescription>
+<para>Provide the Binding description for a <ref refid="structrr_1_1Vertex" kindref="compound">Vertex</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::vector of <computeroutput>VkVertexInputBindingDescription</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanMesh.hpp" line="30" column="20" bodyfile="src/engine/core/VulkanMesh.cpp" bodystart="20" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="structrr_1_1Vertex_1a3c7371e4b8d9a6d4159aede70005a5bf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkVertexInputAttributeDescription</ref> &gt;</type>
+        <definition>std::vector&lt; VkVertexInputAttributeDescription &gt; rr::Vertex::getAttributeDescriptions</definition>
+        <argsstring>()</argsstring>
+        <name>getAttributeDescriptions</name>
+        <qualifiedname>rr::Vertex::getAttributeDescriptions</qualifiedname>
+        <briefdescription>
+<para>Provide the Attribute descriptions of a <ref refid="structrr_1_1Vertex" kindref="compound">Vertex</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::vector of <computeroutput>VkVertexInputAttributeDescription</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanMesh.hpp" line="31" column="20" bodyfile="src/engine/core/VulkanMesh.cpp" bodystart="32" bodyend="47"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A <ref refid="structrr_1_1Vertex" kindref="compound">Vertex</ref> is a simple point. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>It consists of a position and color.</para>
+<para><simplesect kind="author"><para>Felix Hommel </para>
+</simplesect>
+<simplesect kind="date"><para>7/20/2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="src/engine/core/VulkanMesh.hpp" line="25" column="1" bodyfile="src/engine/core/VulkanMesh.hpp" bodystart="26" bodyend="32"/>
+    <listofallmembers>
+      <member refid="structrr_1_1Vertex_1aef6e4e83a38fdd5c710f288caa5dcf18" prot="public" virt="non-virtual"><scope>rr::Vertex</scope><name>color</name></member>
+      <member refid="structrr_1_1Vertex_1a3c7371e4b8d9a6d4159aede70005a5bf" prot="public" virt="non-virtual"><scope>rr::Vertex</scope><name>getAttributeDescriptions</name></member>
+      <member refid="structrr_1_1Vertex_1ad04eb859222f92a31d1bb35b2f5e27d9" prot="public" virt="non-virtual"><scope>rr::Vertex</scope><name>getBindingDescriptions</name></member>
+      <member refid="structrr_1_1Vertex_1a1b554f1053b0823d437557da80af9b5c" prot="public" virt="non-virtual"><scope>rr::Vertex</scope><name>position</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

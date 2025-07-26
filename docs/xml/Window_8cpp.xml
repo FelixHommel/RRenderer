@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="Window_8cpp" kind="file" language="C++">
+    <compoundname>Window.cpp</compoundname>
+    <includes refid="Window_8hpp" local="yes">Window.hpp</includes>
+    <includes refid="EngineException_8hpp" local="yes">exception/EngineException.hpp</includes>
+    <includes refid="GLFWException_8hpp" local="yes">exception/GLFWException.hpp</includes>
+    <includes local="yes">GLFW/glfw3.h</includes>
+    <includes local="no">spdlog/spdlog.h</includes>
+    <includes local="no">vulkan/vulkan_core.h</includes>
+    <includes local="no">source_location</includes>
+    <includes local="no">string</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>exception/EngineException.hpp</label>
+        <link refid="EngineException_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>exception/GLFWException.hpp</label>
+        <link refid="GLFWException_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Window.cpp</label>
+        <link refid="Window_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Window.hpp</label>
+        <link refid="Window_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="9">
+        <label>exception</label>
+      </node>
+      <node id="10">
+        <label>source_location</label>
+      </node>
+      <node id="8">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>utility</label>
+      </node>
+      <node id="4">
+        <label>vulkan/vulkan_core.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacerr">rr</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Window_8hpp" kindref="compound">Window.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="EngineException_8hpp" kindref="compound">exception/EngineException.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="GLFWException_8hpp" kindref="compound">exception/GLFWException.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GLFW/glfw3.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;spdlog/spdlog.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vulkan/vulkan_core.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;source_location&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerr" kindref="compound">rr</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classrr_1_1Window_1ab9a8b13e34dcfc7c61669a428f8eeff7" refkind="member"><highlight class="normal"><ref refid="classrr_1_1Window_1ab9a8b13e34dcfc7c61669a428f8eeff7" kindref="member">Window::Window</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">width</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">height</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">title</ref>)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>m_window(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nullptr</ref>)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>m_width(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">width</ref>)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>m_height(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">height</ref>)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>m_title(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">title</ref>)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">glfwInit</ref>()<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">throwWithLog&lt;GLFWException&gt;</ref>(std::source_location::current(),<sp/><ref refid="namespacerr_1aa820520e8b4cccadfd441961b24b4a7dafe81900759bffb021f9d7d0c3dd61853" kindref="member">GLFWExceptionCause::GLFW_INIT_FAILED</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;GLFW<sp/>initialized<sp/>successfully...&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">glfwWindowHint</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">GLFW_CLIENT_API</ref>,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">GLFW_NO_API</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">glfwWindowHint</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">GLFW_RESIZABLE</ref>,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">GLFW_TRUE</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>m_window<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">glfwCreateWindow</ref>(m_width,<sp/>m_height,<sp/>m_title.c_str(),<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_window<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">throwWithLog&lt;GLFWException&gt;</ref>(</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::source_location::current(),<sp/><ref refid="namespacerr_1aa820520e8b4cccadfd441961b24b4a7da3955f528221c538bc8351b649f31ffd2" kindref="member">GLFWExceptionCause::WINDOW_CREATION_FAILED</ref>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">glfwSetWindowUserPointer</ref>(m_window,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">glfwSetFramebufferSizeCallback</ref>(m_window,<sp/>Window::framebufferResizeCallback);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;Window({},<sp/>{})<sp/>created<sp/>successfully...&quot;</highlight><highlight class="normal">,<sp/>m_width,<sp/>m_height);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classrr_1_1Window_1a0e6abfc5b6055b21b43a1e4d6a2e0aa0" refkind="member"><highlight class="normal"><ref refid="classrr_1_1Window_1a0e6abfc5b6055b21b43a1e4d6a2e0aa0" kindref="member">Window::~Window</ref>()</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">glfwDestroyWindow</ref>(m_window);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classrr_1_1Window_1ace8723045e9c0e757894c679bc607688" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1Window_1ace8723045e9c0e757894c679bc607688" kindref="member">Window::createWindowSurface</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkInstance</ref>&amp;<sp/>instance,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkSurfaceKHR</ref>*<sp/>surface)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="60"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">glfwCreateWindowSurface</ref>(instance,<sp/>m_window,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>surface)<sp/>!=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_SUCCESS</ref>)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">throwWithLog&lt;GLFWException&gt;</ref>(</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::source_location::current(),<sp/><ref refid="namespacerr_1aa820520e8b4cccadfd441961b24b4a7da854dfe075b840a6abc404bd60b32bc88" kindref="member">GLFWExceptionCause::SURFACE_CREATION_FAILED</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Window::framebufferResizeCallback(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">GLFWwindow</ref>*<sp/>window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">width</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">height</ref>)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pWindow</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classrr_1_1Window" kindref="compound">Window</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">glfwGetWindowUserPointer</ref>(window));</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pWindow</ref>-&gt;m_framebufferResized<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pWindow</ref>-&gt;m_width<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">width</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">pWindow</ref>-&gt;m_height<sp/>=<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>rr</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/engine/window/Window.cpp"/>
+  </compounddef>
+</doxygen>

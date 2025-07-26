@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="EngineException_8hpp" kind="file" language="C++">
+    <compoundname>EngineException.hpp</compoundname>
+    <includes local="yes">spdlog/spdlog.h</includes>
+    <includes local="no">exception</includes>
+    <includes local="no">source_location</includes>
+    <includes local="no">string</includes>
+    <includes local="no">utility</includes>
+    <includedby refid="FileIOException_8hpp" local="yes">FileIOException.hpp</includedby>
+    <includedby refid="GLFWException_8hpp" local="yes">GLFWException.hpp</includedby>
+    <includedby refid="VulkanCommandBuffer_8cpp" local="yes">VulkanCommandBuffer.cpp</includedby>
+    <includedby refid="VulkanCommandPool_8cpp" local="yes">VulkanCommandPool.cpp</includedby>
+    <includedby refid="VulkanDebugMessenger_8cpp" local="yes">VulkanDebugMessenger.cpp</includedby>
+    <includedby refid="VulkanDevice_8cpp" local="yes">VulkanDevice.cpp</includedby>
+    <includedby refid="VulkanDevice_8hpp" local="yes">VulkanDevice.hpp</includedby>
+    <includedby refid="VulkanException_8hpp" local="yes">VulkanException.hpp</includedby>
+    <includedby refid="VulkanInstance_8cpp" local="yes">VulkanInstance.cpp</includedby>
+    <includedby refid="VulkanPipeline_8cpp" local="yes">VulkanPipeline.cpp</includedby>
+    <includedby refid="VulkanPipelineLayout_8cpp" local="yes">VulkanPipelineLayout.cpp</includedby>
+    <includedby refid="VulkanRenderer_8cpp" local="yes">VulkanRenderer.cpp</includedby>
+    <includedby refid="VulkanSwapchain_8cpp" local="yes">VulkanSwapchain.cpp</includedby>
+    <includedby refid="Window_8cpp" local="yes">Window.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>EngineException.hpp</label>
+        <link refid="EngineException_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>exception</label>
+      </node>
+      <node id="4">
+        <label>source_location</label>
+      </node>
+      <node id="2">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="12">
+        <label>VulkanRenderer.cpp</label>
+        <link refid="VulkanRenderer_8cpp"/>
+      </node>
+      <node id="13">
+        <label>VulkanRenderer.hpp</label>
+        <link refid="VulkanRenderer_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>VulkanCommandBuffer.cpp</label>
+        <link refid="VulkanCommandBuffer_8cpp"/>
+      </node>
+      <node id="7">
+        <label>VulkanCommandPool.cpp</label>
+        <link refid="VulkanCommandPool_8cpp"/>
+      </node>
+      <node id="11">
+        <label>VulkanCommandPool.hpp</label>
+        <link refid="VulkanCommandPool_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>VulkanDebugMessenger.cpp</label>
+        <link refid="VulkanDebugMessenger_8cpp"/>
+      </node>
+      <node id="9">
+        <label>VulkanDevice.cpp</label>
+        <link refid="VulkanDevice_8cpp"/>
+      </node>
+      <node id="10">
+        <label>VulkanDevice.hpp</label>
+        <link refid="VulkanDevice_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>VulkanInstance.cpp</label>
+        <link refid="VulkanInstance_8cpp"/>
+      </node>
+      <node id="14">
+        <label>VulkanMesh.cpp</label>
+        <link refid="VulkanMesh_8cpp"/>
+      </node>
+      <node id="15">
+        <label>VulkanMesh.hpp</label>
+        <link refid="VulkanMesh_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>VulkanPipeline.cpp</label>
+        <link refid="VulkanPipeline_8cpp"/>
+      </node>
+      <node id="22">
+        <label>VulkanPipelineLayout.cpp</label>
+        <link refid="VulkanPipelineLayout_8cpp"/>
+      </node>
+      <node id="18">
+        <label>VulkanSwapchain.cpp</label>
+        <link refid="VulkanSwapchain_8cpp"/>
+      </node>
+      <node id="19">
+        <label>VulkanSwapchain.hpp</label>
+        <link refid="VulkanSwapchain_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EngineException.hpp</label>
+        <link refid="EngineException_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>FileIOException.hpp</label>
+        <link refid="FileIOException_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>GLFWException.hpp</label>
+        <link refid="GLFWException_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>VulkanException.hpp</label>
+        <link refid="VulkanException_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>RenderObject.cpp</label>
+        <link refid="RenderObject_8cpp"/>
+      </node>
+      <node id="17">
+        <label>RenderObject.hpp</label>
+        <link refid="RenderObject_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Window.cpp</label>
+        <link refid="Window_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classrr_1_1EngineException" prot="public">rr::EngineException</innerclass>
+    <innernamespace refid="namespacerr">rr</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RRENDERER_ENGINE_EXCEPTION_ENGINE_EXCEPTION_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RRENDERER_ENGINE_EXCEPTION_ENGINE_EXCEPTION_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;spdlog/spdlog.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;exception&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;source_location&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerr" kindref="compound">rr</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classrr_1_1EngineException" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrr_1_1EngineException" kindref="compound">EngineException</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::exception</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21" refid="classrr_1_1EngineException_1afc765524baf587c8ecc7e6164ed27afb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1EngineException_1afc765524baf587c8ecc7e6164ed27afb" kindref="member">EngineException</ref>(std::string<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">msg</ref>)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>message(std::<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">move</ref>(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">msg</ref>))</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classrr_1_1EngineException_1a6deb90a977fde221a852fd0f2ba085fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classrr_1_1EngineException_1a6deb90a977fde221a852fd0f2ba085fe" kindref="member">what</ref>()<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">noexcept</ref></highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>message.c_str();<sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>message;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">ExceptionType</ref>,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">Args</ref>&gt;</highlight></codeline>
+<codeline lineno="32" refid="namespacerr_1a207864460d243d147d44225c3895cc10" refkind="member"><highlight class="normal">[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">noreturn</ref>]]<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">throwWithLog</ref>(std::source_location<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">loc</ref>,<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">Args</ref>&amp;&amp;...<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">args</ref>)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::error(</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;[{}:{}:{}]<sp/>throwing<sp/>{}\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">loc</ref>.file_name(),</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">loc</ref>.function_name(),</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">loc</ref>.line(),</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">ExceptionType</ref>).name());</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">ExceptionType</ref>(std::forward&lt;Args&gt;(<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">args</ref>)...);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>rr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!RRENDERER_ENGINE_EXCEPTION_ENGINE_EXCEPTION_HPP</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/engine/exception/EngineException.hpp"/>
+  </compounddef>
+</doxygen>

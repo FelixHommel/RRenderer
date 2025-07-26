@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="VulkanInstance_8hpp" kind="file" language="C++">
+    <compoundname>VulkanInstance.hpp</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">vulkan/vulkan_core.h</includes>
+    <includedby refid="VulkanInstance_8cpp" local="yes">VulkanInstance.cpp</includedby>
+    <includedby refid="VulkanRenderer_8cpp" local="yes">VulkanRenderer.cpp</includedby>
+    <includedby refid="VulkanRenderer_8hpp" local="yes">VulkanRenderer.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>VulkanInstance.hpp</label>
+        <link refid="VulkanInstance_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+      <node id="3">
+        <label>vulkan/vulkan_core.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>VulkanRenderer.cpp</label>
+        <link refid="VulkanRenderer_8cpp"/>
+      </node>
+      <node id="4">
+        <label>VulkanRenderer.hpp</label>
+        <link refid="VulkanRenderer_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>VulkanInstance.cpp</label>
+        <link refid="VulkanInstance_8cpp"/>
+      </node>
+      <node id="1">
+        <label>VulkanInstance.hpp</label>
+        <link refid="VulkanInstance_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classrr_1_1VulkanInstance" prot="public">rr::VulkanInstance</innerclass>
+    <innernamespace refid="namespacerr">rr</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RRENDERER_ENGINE_CORE_VULKAN_INSTANCE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RRENDERER_ENGINE_CORE_VULKAN_INSTANCE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vulkan/vulkan_core.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerr" kindref="compound">rr</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classrr_1_1VulkanInstance" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrr_1_1VulkanInstance" kindref="compound">VulkanInstance</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1VulkanInstance_1a787a997cb1f385b1016107bb2ac1b1dc" kindref="member">VulkanInstance</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1VulkanInstance_1a05558323afc2f2e22f32803f0e7c38a1" kindref="member">~VulkanInstance</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classrr_1_1VulkanInstance_1adba7aea268a9584df115216a1783b2a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1VulkanInstance_1adba7aea268a9584df115216a1783b2a8" kindref="member">VulkanInstance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1VulkanInstance" kindref="compound">VulkanInstance</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23" refid="classrr_1_1VulkanInstance_1aedebd4c5a116ec42473ae5f001fced3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1VulkanInstance" kindref="compound">VulkanInstance</ref>&amp;<sp/><ref refid="classrr_1_1VulkanInstance_1aedebd4c5a116ec42473ae5f001fced3e" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1VulkanInstance" kindref="compound">VulkanInstance</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24" refid="classrr_1_1VulkanInstance_1ab0bf0b5a810229e3066d5f9f6a2fc590" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1VulkanInstance_1ab0bf0b5a810229e3066d5f9f6a2fc590" kindref="member">VulkanInstance</ref>(<ref refid="classrr_1_1VulkanInstance" kindref="compound">VulkanInstance</ref>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25" refid="classrr_1_1VulkanInstance_1a5170d89c553c7c2ff8434626b54f98f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1VulkanInstance" kindref="compound">VulkanInstance</ref>&amp;<sp/><ref refid="classrr_1_1VulkanInstance_1a5170d89c553c7c2ff8434626b54f98f3" kindref="member">operator=</ref>(<ref refid="classrr_1_1VulkanInstance" kindref="compound">VulkanInstance</ref>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classrr_1_1VulkanInstance_1aa066186ccd055b490457be74f4b3bbb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkInstance</ref><sp/><ref refid="classrr_1_1VulkanInstance_1aa066186ccd055b490457be74f4b3bbb4" kindref="member">getHandle</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_instance;<sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkInstance</ref><sp/>m_instance{<sp/><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VK_NULL_HANDLE</ref><sp/>};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>checkValidationLayerSupport();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;const<sp/>char*&gt;<sp/>getRequiredExtensions();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hasGLFWRequiredInstanceExtensions();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>rr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!RRENDERER_ENGINE_CORE_VULKAN_INSTANCE_HPP</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/engine/core/VulkanInstance.hpp"/>
+  </compounddef>
+</doxygen>

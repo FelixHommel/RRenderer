@@ -1,0 +1,22 @@
+name: Check format
+on:
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  clang-format:
+    name: Format with clang-format
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: sudo apt install -y clang-format-19 && clang-format-19 --version
+
+      - name: Check formatting
+        run: |
+          FILES=$(find ./src -regex ".*\.\(cpp\|hpp\)")
+          echo "$FILES" | xargs clang-format-19 --dry-run --Werror
+

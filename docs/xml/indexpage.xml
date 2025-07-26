@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>RRenderer</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_README"/> Is a lightweight and modular Renderer built from scratch. It&apos;s designed as a learning project, focusing on clear abstractions over explicit Graphics APIs. The only implementation is Vulkan for now.</para>
+<sect1 id="index_1autotoc_md1">
+<title>Building</title>
+<sect2 id="index_1autotoc_md2">
+<title>Prerequisites</title>
+<para><itemizedlist>
+<listitem><para>C++23 compatible compiler</para>
+</listitem><listitem><para>CMake $\geq$ 3.30</para>
+</listitem><listitem><para>VulkanSDK $\geq$ 1.3</para>
+</listitem><listitem><para>git</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md3">
+<title>Build instructions</title>
+<sect3 id="index_1autotoc_md4">
+<title>Clone the Repository</title>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/FelixHommel/RRenderer.git</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>RRenderer</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="index_1autotoc_md5">
+<title>Configure CMake and Build the Program</title>
+<para><blockquote><para><zwj/>If you want to use debug builds instead replace <computeroutput>release</computeroutput> with <computeroutput>debug</computeroutput>. You also can also force use clang or gcc with <computeroutput>release-clang</computeroutput>, <computeroutput>debug-clang</computeroutput>, <computeroutput>release-gcc</computeroutput> or <computeroutput>debug-gcc</computeroutput>. </para>
+</blockquote><programlisting filename=".bash"><codeline><highlight class="normal">cmake<sp/>--preset<sp/>release</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>--build<sp/>--preset<sp/>release</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="index_1autotoc_md6">
+<title>Run the executable</title>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">./build/release/src/app/App</highlight></codeline>
+</programlisting></para>
+</sect3>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md7">
+<title>Dependencies</title>
+<para><blockquote><para><zwj/>All dependencies (except VulkanSDK) are pulled in from CMake, so there is no need to install them manually on the system. </para>
+</blockquote><itemizedlist>
+<listitem><para><ulink url="https://github.com/glfw/glfw">GLFW</ulink></para>
+</listitem><listitem><para><ulink url="https://github.com/g-truc/glm">GLM</ulink></para>
+</listitem><listitem><para><ulink url="https://github.com/gabime/spdlog">spdlog</ulink></para>
+</listitem><listitem><para><ulink url="https://github.com/google/googletest">googletest</ulink></para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md8">
+<title>Acknowledgements / Credits</title>
+<para><itemizedlist>
+<listitem><para><ulink url="https://www.youtube.com/c/BrendanGalea">Brendan Galea&apos;s</ulink> Vulkan (c++) Game Engine Tutorials </para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

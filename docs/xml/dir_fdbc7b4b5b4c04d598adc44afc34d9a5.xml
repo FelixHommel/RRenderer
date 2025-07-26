@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_fdbc7b4b5b4c04d598adc44afc34d9a5" kind="dir">
+    <compoundname>core</compoundname>
+    <innerfile refid="VulkanCommandBuffer_8cpp">VulkanCommandBuffer.cpp</innerfile>
+    <innerfile refid="VulkanCommandBuffer_8hpp">VulkanCommandBuffer.hpp</innerfile>
+    <innerfile refid="VulkanCommandPool_8cpp">VulkanCommandPool.cpp</innerfile>
+    <innerfile refid="VulkanCommandPool_8hpp">VulkanCommandPool.hpp</innerfile>
+    <innerfile refid="VulkanDebugMessenger_8cpp">VulkanDebugMessenger.cpp</innerfile>
+    <innerfile refid="VulkanDebugMessenger_8hpp">VulkanDebugMessenger.hpp</innerfile>
+    <innerfile refid="VulkanDevice_8cpp">VulkanDevice.cpp</innerfile>
+    <innerfile refid="VulkanDevice_8hpp">VulkanDevice.hpp</innerfile>
+    <innerfile refid="VulkanInstance_8cpp">VulkanInstance.cpp</innerfile>
+    <innerfile refid="VulkanInstance_8hpp">VulkanInstance.hpp</innerfile>
+    <innerfile refid="VulkanMesh_8cpp">VulkanMesh.cpp</innerfile>
+    <innerfile refid="VulkanMesh_8hpp">VulkanMesh.hpp</innerfile>
+    <innerfile refid="VulkanPipeline_8cpp">VulkanPipeline.cpp</innerfile>
+    <innerfile refid="VulkanPipeline_8hpp">VulkanPipeline.hpp</innerfile>
+    <innerfile refid="VulkanPipelineLayout_8cpp">VulkanPipelineLayout.cpp</innerfile>
+    <innerfile refid="VulkanPipelineLayout_8hpp">VulkanPipelineLayout.hpp</innerfile>
+    <innerfile refid="VulkanSurface_8cpp">VulkanSurface.cpp</innerfile>
+    <innerfile refid="VulkanSurface_8hpp">VulkanSurface.hpp</innerfile>
+    <innerfile refid="VulkanSwapchain_8cpp">VulkanSwapchain.cpp</innerfile>
+    <innerfile refid="VulkanSwapchain_8hpp">VulkanSwapchain.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/engine/core/"/>
+  </compounddef>
+</doxygen>

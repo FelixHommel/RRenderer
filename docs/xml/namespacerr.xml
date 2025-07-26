@@ -1,0 +1,463 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacerr" kind="namespace" language="C++">
+    <compoundname>rr</compoundname>
+    <innerclass refid="classrr_1_1EngineException" prot="public">rr::EngineException</innerclass>
+    <innerclass refid="classrr_1_1FileIOException" prot="public">rr::FileIOException</innerclass>
+    <innerclass refid="classrr_1_1GLFWException" prot="public">rr::GLFWException</innerclass>
+    <innerclass refid="structrr_1_1PipelineConfigInfo" prot="public">rr::PipelineConfigInfo</innerclass>
+    <innerclass refid="structrr_1_1QueueFamilyIndices" prot="public">rr::QueueFamilyIndices</innerclass>
+    <innerclass refid="classrr_1_1Renderer" prot="public">rr::Renderer</innerclass>
+    <innerclass refid="classrr_1_1RenderObject" prot="public">rr::RenderObject</innerclass>
+    <innerclass refid="structrr_1_1SimplePushConstantData" prot="public">rr::SimplePushConstantData</innerclass>
+    <innerclass refid="structrr_1_1StringHash" prot="public">rr::StringHash</innerclass>
+    <innerclass refid="structrr_1_1SwapchainSupportDetails" prot="public">rr::SwapchainSupportDetails</innerclass>
+    <innerclass refid="structrr_1_1Transform2DComponent" prot="public">rr::Transform2DComponent</innerclass>
+    <innerclass refid="structrr_1_1Vertex" prot="public">rr::Vertex</innerclass>
+    <innerclass refid="classrr_1_1VulkanCommandBuffer" prot="public">rr::VulkanCommandBuffer</innerclass>
+    <innerclass refid="classrr_1_1VulkanCommandPool" prot="public">rr::VulkanCommandPool</innerclass>
+    <innerclass refid="classrr_1_1VulkanDebugMessenger" prot="public">rr::VulkanDebugMessenger</innerclass>
+    <innerclass refid="classrr_1_1VulkanDevice" prot="public">rr::VulkanDevice</innerclass>
+    <innerclass refid="classrr_1_1VulkanException" prot="public">rr::VulkanException</innerclass>
+    <innerclass refid="classrr_1_1VulkanInstance" prot="public">rr::VulkanInstance</innerclass>
+    <innerclass refid="classrr_1_1VulkanMesh" prot="public">rr::VulkanMesh</innerclass>
+    <innerclass refid="classrr_1_1VulkanPipeline" prot="public">rr::VulkanPipeline</innerclass>
+    <innerclass refid="classrr_1_1VulkanPipelineLayout" prot="public">rr::VulkanPipelineLayout</innerclass>
+    <innerclass refid="classrr_1_1VulkanRenderer" prot="public">rr::VulkanRenderer</innerclass>
+    <innerclass refid="classrr_1_1VulkanSurface" prot="public">rr::VulkanSurface</innerclass>
+    <innerclass refid="classrr_1_1VulkanSwapchain" prot="public">rr::VulkanSwapchain</innerclass>
+    <innerclass refid="classrr_1_1Window" prot="public">rr::Window</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacerr_1aa820520e8b4cccadfd441961b24b4a7d" prot="public" static="no" strong="yes">
+        <type>std::uint8_t</type>
+        <name>GLFWExceptionCause</name>
+        <qualifiedname>rr::GLFWExceptionCause</qualifiedname>
+        <enumvalue id="namespacerr_1aa820520e8b4cccadfd441961b24b4a7dafe81900759bffb021f9d7d0c3dd61853" prot="public">
+          <name>GLFW_INIT_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1aa820520e8b4cccadfd441961b24b4a7da3955f528221c538bc8351b649f31ffd2" prot="public">
+          <name>WINDOW_CREATION_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1aa820520e8b4cccadfd441961b24b4a7da854dfe075b840a6abc404bd60b32bc88" prot="public">
+          <name>SURFACE_CREATION_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum which contains various reasons why GLFW may throw an exception. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Felix Hommel </para>
+</simplesect>
+<simplesect kind="date"><para>7/19/2025 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/exception/GLFWException.hpp" line="16" column="1" bodyfile="src/engine/exception/GLFWException.hpp" bodystart="17" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01e" prot="public" static="no" strong="yes">
+        <type>std::uint8_t</type>
+        <name>VulkanExceptionCause</name>
+        <qualifiedname>rr::VulkanExceptionCause</qualifiedname>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea84b2a1b23379e6b5f8f3efeb12beb989" prot="public">
+          <name>CREATE_INSTANCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eaf176359e8f9432b3beaa4c78ba7721a3" prot="public">
+          <name>IMAGE_ACQUISITION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea6631fe4082085b6224eeb2e92b83b902" prot="public">
+          <name>SUBMIT_COMMAND_BUFFER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eae4711e0023e6af0ca8aa3855c36fc62f" prot="public">
+          <name>BEGIN_RECORD_COMMAND_BUFFER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea3fb1230504dfd4e733a3fba790f2e38f" prot="public">
+          <name>END_RECORD_COMMAND_BUFFER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea2130fef77965ebd15b4d9df3b9379697" prot="public">
+          <name>ALLOCATE_COMMAND_BUFFERS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea98832f0887b8f39ee80ffa87ee28a370" prot="public">
+          <name>QUEUE_FAMILY_INDEX_IS_EMPTY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea068681d8f4e4d3a083531f825b701dd0" prot="public">
+          <name>CREATE_COMMAND_POOL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eac54fb03f9b99aa18a777217bde527f1e" prot="public">
+          <name>CREATE_DEBUG_MESSENGER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea98f77caa8de8cbecc5afa9c58a777fdc" prot="public">
+          <name>FIND_SUPPORTED_FORMAT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eab791c8e1d9b12af9c02cfaa01fe5cb3c" prot="public">
+          <name>CREATE_IMAGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea366474e8403689673f0cb92147dcf440" prot="public">
+          <name>ALLOCATE_MEMORY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea30cf9871933c00e53f6cbbbd0ce7ec37" prot="public">
+          <name>BIND_IMAGE_MEMORY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eaf7d0b6cd945e0f045272510c76302e00" prot="public">
+          <name>NO_PHYSICAL_DEVICE_FOUND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea1331dbf3dee01c4af88292fb8abeb8a0" prot="public">
+          <name>NO_SUITABLE_DEVICE_FOUND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea2d10e665f5257839e390b655c3c042c8" prot="public">
+          <name>CREATE_DEVICE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea4fc96fca1098d3cbc8305a28eac851b2" prot="public">
+          <name>NO_SUITABLE_MEMORY_TYPE_FOUND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea92d06b0fb10ac69baff543d0d9724378" prot="public">
+          <name>GLFW_EXTENSIONS_MISSING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea3cb314759a31e8700f65c14a3799b857" prot="public">
+          <name>CREATE_GRAPHICS_PIPELINE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea09a099c9bc6af953bae959de8aaf12d3" prot="public">
+          <name>CREATE_SHADER_MODULE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea15589c019d3b30895e251cbb6efa8464" prot="public">
+          <name>CREATE_PIPELINE_LAYOUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea45b73d306b7518541ac649a5279b34d5" prot="public">
+          <name>QUEUE_SUBMIT_GRAPHICS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea85caf283434d7d68b9eb8a7a6dc22f5c" prot="public">
+          <name>CREATE_SWAPCHAIN_KHR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea9cdfcc6fac385aca663a5a851a63ba3b" prot="public">
+          <name>CREATE_IMAGE_VIEW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eaaa19775d39c08663007aaa3578188184" prot="public">
+          <name>CREATE_RENDER_PASS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea5d3fe581ff37074aa6e93ced467f5341" prot="public">
+          <name>CREATE_FRAMEBUFFER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea7a14dec3212e192d889c33941519751b" prot="public">
+          <name>CREATE_SEMAPHORE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea4d5f131718409d45efc1fcd183ef7a13" prot="public">
+          <name>CREATE_IN_FLIGHT_SYNC_OBJECT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eafb3e32789cd673519fe2b9122ed279e6" prot="public">
+          <name>VALIDATION_LAYERS_UNAVAILABLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea4f0b55ea4bfa924ad57b54792e4ff3a9" prot="public">
+          <name>CREATE_BUFFER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum which contains various reasons why Vulkan may throw an exception. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Felix Hommel </para>
+</simplesect>
+<simplesect kind="date"><para>7/19/2025 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/exception/VulkanException.hpp" line="18" column="1" bodyfile="src/engine/exception/VulkanException.hpp" bodystart="19" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacerr_1a21cc34bd8aceca696b7581ae596e3a04" prot="public" static="no" strong="yes">
+        <type>std::uint8_t</type>
+        <name>RendererType</name>
+        <qualifiedname>rr::RendererType</qualifiedname>
+        <enumvalue id="namespacerr_1a21cc34bd8aceca696b7581ae596e3a04a04f6a7842c7710d5539cb9650f8e949d" prot="public">
+          <name>RRENDERER_VULKAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum listing all available <ref refid="classrr_1_1Renderer" kindref="compound">Renderer</ref> implementations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/Renderer.hpp" line="12" column="1" bodyfile="src/engine/Renderer.hpp" bodystart="13" bodyend="15"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacerr_1ac1cbc0d85292b014626bd26873cc0354" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">constexpr</ref> <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">bool</ref></type>
+        <definition>constexpr bool rr::useValidationLayers</definition>
+        <argsstring></argsstring>
+        <name>useValidationLayers</name>
+        <qualifiedname>rr::useValidationLayers</qualifiedname>
+        <initializer>{ <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">false</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/constants.hpp" line="11" column="23" bodyfile="src/engine/constants.hpp" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacerr_1a5b7ac2476abfdaebdbd4585457325099" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> std::vector&lt; <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">char</ref> * &gt;</type>
+        <definition>const std::vector&lt;const char*&gt; rr::validationLayers</definition>
+        <argsstring></argsstring>
+        <name>validationLayers</name>
+        <qualifiedname>rr::validationLayers</qualifiedname>
+        <initializer>{ &quot;VK_LAYER_KHRONOS_validation&quot; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/constants.hpp" line="14" column="19" bodyfile="src/engine/constants.hpp" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacerr_1a161e261e156ebc427a43973d660935fc" prot="public" static="no" constexpr="yes" mutable="no">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">constexpr</ref> std::size_t</type>
+        <definition>constexpr std::size_t rr::ALIGNMENT_OF_GLM_VEC3</definition>
+        <argsstring></argsstring>
+        <name>ALIGNMENT_OF_GLM_VEC3</name>
+        <qualifiedname>rr::ALIGNMENT_OF_GLM_VEC3</qualifiedname>
+        <initializer>{ 16 }</initializer>
+        <briefdescription>
+<para>Alignment of a glm::vec3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanPipelineLayout.hpp" line="15" column="23" bodyfile="src/engine/core/VulkanPipelineLayout.hpp" bodystart="15" bodyend="15"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacerr_1adc931f1a560ba309782f5a2fd009654e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkResult</ref></type>
+        <definition>VkResult rr::CreateDebugUtilsMessengerEXT</definition>
+        <argsstring>(VkInstance instance, const VkDebugUtilsMessengerCreateInfoEXT *pCreateInfo, const VkAllocationCallbacks *pAllocator, VkDebugUtilsMessengerEXT *pDebugMessenger)</argsstring>
+        <name>CreateDebugUtilsMessengerEXT</name>
+        <qualifiedname>rr::CreateDebugUtilsMessengerEXT</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkInstance</ref></type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDebugUtilsMessengerCreateInfoEXT</ref> *</type>
+          <declname>pCreateInfo</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkAllocationCallbacks</ref> *</type>
+          <declname>pAllocator</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDebugUtilsMessengerEXT</ref> *</type>
+          <declname>pDebugMessenger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDebugMessenger.cpp" line="49" column="10" bodyfile="src/engine/core/VulkanDebugMessenger.cpp" bodystart="49" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacerr_1a31fa27895ecf3cd2e0e1b0256ba4d821" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">void</ref></type>
+        <definition>void rr::DestroyDebugUtilsMessengerEXT</definition>
+        <argsstring>(VkInstance instance, VkDebugUtilsMessengerEXT debugMessenger, const VkAllocationCallbacks *pAllocator)</argsstring>
+        <name>DestroyDebugUtilsMessengerEXT</name>
+        <qualifiedname>rr::DestroyDebugUtilsMessengerEXT</qualifiedname>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkInstance</ref></type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkDebugUtilsMessengerEXT</ref></type>
+          <declname>debugMessenger</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">const</ref> <ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">VkAllocationCallbacks</ref> *</type>
+          <declname>pAllocator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/core/VulkanDebugMessenger.cpp" line="64" column="6" bodyfile="src/engine/core/VulkanDebugMessenger.cpp" bodystart="64" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacerr_1a207864460d243d147d44225c3895cc10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExceptionType</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void rr::throwWithLog</definition>
+        <argsstring>(std::source_location loc, Args &amp;&amp;... args)</argsstring>
+        <name>throwWithLog</name>
+        <qualifiedname>rr::throwWithLog</qualifiedname>
+        <param>
+          <type>std::source_location</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/engine/exception/EngineException.hpp" line="32" column="7" bodyfile="src/engine/exception/EngineException.hpp" bodystart="32" bodyend="41"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/engine/constants.hpp" line="5" column="1"/>
+  </compounddef>
+</doxygen>

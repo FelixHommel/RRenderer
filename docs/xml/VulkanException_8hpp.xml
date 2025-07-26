@@ -1,0 +1,371 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="VulkanException_8hpp" kind="file" language="C++">
+    <compoundname>VulkanException.hpp</compoundname>
+    <includes refid="EngineException_8hpp" local="yes">exception/EngineException.hpp</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">format</includes>
+    <includes local="no">string</includes>
+    <includedby refid="VulkanCommandBuffer_8cpp" local="yes">VulkanCommandBuffer.cpp</includedby>
+    <includedby refid="VulkanCommandPool_8cpp" local="yes">VulkanCommandPool.cpp</includedby>
+    <includedby refid="VulkanDebugMessenger_8cpp" local="yes">VulkanDebugMessenger.cpp</includedby>
+    <includedby refid="VulkanDevice_8cpp" local="yes">VulkanDevice.cpp</includedby>
+    <includedby refid="VulkanDevice_8hpp" local="yes">VulkanDevice.hpp</includedby>
+    <includedby refid="VulkanInstance_8cpp" local="yes">VulkanInstance.cpp</includedby>
+    <includedby refid="VulkanPipeline_8cpp" local="yes">VulkanPipeline.cpp</includedby>
+    <includedby refid="VulkanPipelineLayout_8cpp" local="yes">VulkanPipelineLayout.cpp</includedby>
+    <includedby refid="VulkanRenderer_8cpp" local="yes">VulkanRenderer.cpp</includedby>
+    <includedby refid="VulkanSwapchain_8cpp" local="yes">VulkanSwapchain.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>exception/EngineException.hpp</label>
+        <link refid="EngineException_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>VulkanException.hpp</label>
+        <link refid="VulkanException_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>cstddef</label>
+      </node>
+      <node id="9">
+        <label>cstdint</label>
+      </node>
+      <node id="4">
+        <label>exception</label>
+      </node>
+      <node id="10">
+        <label>format</label>
+      </node>
+      <node id="5">
+        <label>source_location</label>
+      </node>
+      <node id="3">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8">
+        <label>VulkanRenderer.cpp</label>
+        <link refid="VulkanRenderer_8cpp"/>
+      </node>
+      <node id="9">
+        <label>VulkanRenderer.hpp</label>
+        <link refid="VulkanRenderer_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>VulkanCommandBuffer.cpp</label>
+        <link refid="VulkanCommandBuffer_8cpp"/>
+      </node>
+      <node id="3">
+        <label>VulkanCommandPool.cpp</label>
+        <link refid="VulkanCommandPool_8cpp"/>
+      </node>
+      <node id="7">
+        <label>VulkanCommandPool.hpp</label>
+        <link refid="VulkanCommandPool_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>VulkanDebugMessenger.cpp</label>
+        <link refid="VulkanDebugMessenger_8cpp"/>
+      </node>
+      <node id="5">
+        <label>VulkanDevice.cpp</label>
+        <link refid="VulkanDevice_8cpp"/>
+      </node>
+      <node id="6">
+        <label>VulkanDevice.hpp</label>
+        <link refid="VulkanDevice_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>VulkanInstance.cpp</label>
+        <link refid="VulkanInstance_8cpp"/>
+      </node>
+      <node id="10">
+        <label>VulkanMesh.cpp</label>
+        <link refid="VulkanMesh_8cpp"/>
+      </node>
+      <node id="11">
+        <label>VulkanMesh.hpp</label>
+        <link refid="VulkanMesh_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>VulkanPipeline.cpp</label>
+        <link refid="VulkanPipeline_8cpp"/>
+      </node>
+      <node id="18">
+        <label>VulkanPipelineLayout.cpp</label>
+        <link refid="VulkanPipelineLayout_8cpp"/>
+      </node>
+      <node id="15">
+        <label>VulkanSwapchain.cpp</label>
+        <link refid="VulkanSwapchain_8cpp"/>
+      </node>
+      <node id="16">
+        <label>VulkanSwapchain.hpp</label>
+        <link refid="VulkanSwapchain_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>VulkanException.hpp</label>
+        <link refid="VulkanException_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>RenderObject.cpp</label>
+        <link refid="RenderObject_8cpp"/>
+      </node>
+      <node id="13">
+        <label>RenderObject.hpp</label>
+        <link refid="RenderObject_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classrr_1_1VulkanException" prot="public">rr::VulkanException</innerclass>
+    <innernamespace refid="namespacerr">rr</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RRENDERER_ENGINE_EXCEPTION_VULKAN_EXCEPTION_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RRENDERER_ENGINE_EXCEPTION_VULKAN_EXCEPTION_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="EngineException_8hpp" kindref="compound">exception/EngineException.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;format&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerr" kindref="compound">rr</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01e" refkind="member"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01e" kindref="member">VulkanExceptionCause</ref><sp/>:<sp/>std::uint8_t</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea84b2a1b23379e6b5f8f3efeb12beb989" kindref="member">CREATE_INSTANCE</ref>,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eaf176359e8f9432b3beaa4c78ba7721a3" kindref="member">IMAGE_ACQUISITION</ref>,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea6631fe4082085b6224eeb2e92b83b902" kindref="member">SUBMIT_COMMAND_BUFFER</ref>,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eae4711e0023e6af0ca8aa3855c36fc62f" kindref="member">BEGIN_RECORD_COMMAND_BUFFER</ref>,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea3fb1230504dfd4e733a3fba790f2e38f" kindref="member">END_RECORD_COMMAND_BUFFER</ref>,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea2130fef77965ebd15b4d9df3b9379697" kindref="member">ALLOCATE_COMMAND_BUFFERS</ref>,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea98832f0887b8f39ee80ffa87ee28a370" kindref="member">QUEUE_FAMILY_INDEX_IS_EMPTY</ref>,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea068681d8f4e4d3a083531f825b701dd0" kindref="member">CREATE_COMMAND_POOL</ref>,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eac54fb03f9b99aa18a777217bde527f1e" kindref="member">CREATE_DEBUG_MESSENGER</ref>,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea98f77caa8de8cbecc5afa9c58a777fdc" kindref="member">FIND_SUPPORTED_FORMAT</ref>,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eab791c8e1d9b12af9c02cfaa01fe5cb3c" kindref="member">CREATE_IMAGE</ref>,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea366474e8403689673f0cb92147dcf440" kindref="member">ALLOCATE_MEMORY</ref>,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea30cf9871933c00e53f6cbbbd0ce7ec37" kindref="member">BIND_IMAGE_MEMORY</ref>,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eaf7d0b6cd945e0f045272510c76302e00" kindref="member">NO_PHYSICAL_DEVICE_FOUND</ref>,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea1331dbf3dee01c4af88292fb8abeb8a0" kindref="member">NO_SUITABLE_DEVICE_FOUND</ref>,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea2d10e665f5257839e390b655c3c042c8" kindref="member">CREATE_DEVICE</ref>,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea4fc96fca1098d3cbc8305a28eac851b2" kindref="member">NO_SUITABLE_MEMORY_TYPE_FOUND</ref>,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea92d06b0fb10ac69baff543d0d9724378" kindref="member">GLFW_EXTENSIONS_MISSING</ref>,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea3cb314759a31e8700f65c14a3799b857" kindref="member">CREATE_GRAPHICS_PIPELINE</ref>,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea09a099c9bc6af953bae959de8aaf12d3" kindref="member">CREATE_SHADER_MODULE</ref>,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea15589c019d3b30895e251cbb6efa8464" kindref="member">CREATE_PIPELINE_LAYOUT</ref>,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea45b73d306b7518541ac649a5279b34d5" kindref="member">QUEUE_SUBMIT_GRAPHICS</ref>,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea85caf283434d7d68b9eb8a7a6dc22f5c" kindref="member">CREATE_SWAPCHAIN_KHR</ref>,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea9cdfcc6fac385aca663a5a851a63ba3b" kindref="member">CREATE_IMAGE_VIEW</ref>,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eaaa19775d39c08663007aaa3578188184" kindref="member">CREATE_RENDER_PASS</ref>,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea5d3fe581ff37074aa6e93ced467f5341" kindref="member">CREATE_FRAMEBUFFER</ref>,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea7a14dec3212e192d889c33941519751b" kindref="member">CREATE_SEMAPHORE</ref>,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea4d5f131718409d45efc1fcd183ef7a13" kindref="member">CREATE_IN_FLIGHT_SYNC_OBJECT</ref>,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eafb3e32789cd673519fe2b9122ed279e6" kindref="member">VALIDATION_LAYERS_UNAVAILABLE</ref>,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea4f0b55ea4bfa924ad57b54792e4ff3a9" kindref="member">CREATE_BUFFER</ref></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classrr_1_1VulkanException" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrr_1_1VulkanException" kindref="compound">VulkanException</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1EngineException" kindref="compound">EngineException</ref></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="59" refid="classrr_1_1VulkanException_1afda7cfa737f2913174dfda57985bd2a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classrr_1_1VulkanException_1afda7cfa737f2913174dfda57985bd2a5" kindref="member">VulkanException</ref>(<ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01e" kindref="member">VulkanExceptionCause</ref><sp/><ref refid="classrr_1_1VulkanException_1a0879ae8439e3ffbbde768b718132e998" kindref="member">cause</ref>)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classrr_1_1EngineException" kindref="compound">EngineException</ref>(</highlight><highlight class="stringliteral">&quot;Vulkan<sp/>error<sp/>occurd<sp/>during<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>causeToString(<ref refid="classrr_1_1VulkanException_1a0879ae8439e3ffbbde768b718132e998" kindref="member">cause</ref>))</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>m_cause(<ref refid="classrr_1_1VulkanException_1a0879ae8439e3ffbbde768b718132e998" kindref="member">cause</ref>)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classrr_1_1VulkanException_1a6aaf19509619b99f57353ae22f9b533a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrr_1_1VulkanException_1a6aaf19509619b99f57353ae22f9b533a" kindref="member">VulkanException</ref>(<ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01e" kindref="member">VulkanExceptionCause</ref><sp/><ref refid="classrr_1_1VulkanException_1a0879ae8439e3ffbbde768b718132e998" kindref="member">cause</ref>,<sp/>std::size_t<sp/>index)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classrr_1_1EngineException" kindref="compound">EngineException</ref>(</highlight><highlight class="stringliteral">&quot;Vulkan<sp/>error<sp/>occurd<sp/>during<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>causeToString(<ref refid="classrr_1_1VulkanException_1a0879ae8439e3ffbbde768b718132e998" kindref="member">cause</ref>,<sp/>index))</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>m_cause(<ref refid="classrr_1_1VulkanException_1a0879ae8439e3ffbbde768b718132e998" kindref="member">cause</ref>)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classrr_1_1VulkanException_1a0879ae8439e3ffbbde768b718132e998" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[<ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">nodiscard</ref>]]<sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01e" kindref="member">VulkanExceptionCause</ref><sp/><ref refid="classrr_1_1VulkanException_1a0879ae8439e3ffbbde768b718132e998" kindref="member">cause</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_cause;<sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01e" kindref="member">VulkanExceptionCause</ref><sp/>m_cause;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/>causeToString(<ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01e" kindref="member">VulkanExceptionCause</ref><sp/><ref refid="classrr_1_1VulkanException_1a0879ae8439e3ffbbde768b718132e998" kindref="member">cause</ref>)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="classrr_1_1VulkanException_1a0879ae8439e3ffbbde768b718132e998" kindref="member">cause</ref>)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespacerr_1a207864460d243d147d44225c3895cc10" kindref="member">enum</ref><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01e" kindref="member">VulkanExceptionCause</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea84b2a1b23379e6b5f8f3efeb12beb989" kindref="member">CREATE_INSTANCE</ref>:</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;creation<sp/>of<sp/>a<sp/>VkInstance&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea6631fe4082085b6224eeb2e92b83b902" kindref="member">SUBMIT_COMMAND_BUFFER</ref>:</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;submission<sp/>of<sp/>a<sp/>VkCommandBuffer&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eaf176359e8f9432b3beaa4c78ba7721a3" kindref="member">IMAGE_ACQUISITION</ref>:</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;the<sp/>acquisition<sp/>of<sp/>the<sp/>next<sp/>swapchain<sp/>image&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eae4711e0023e6af0ca8aa3855c36fc62f" kindref="member">BEGIN_RECORD_COMMAND_BUFFER</ref>:</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;begin<sp/>recording<sp/>of<sp/>VkCommandBuffer<sp/>#&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea3fb1230504dfd4e733a3fba790f2e38f" kindref="member">END_RECORD_COMMAND_BUFFER</ref>:</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;ending<sp/>recording<sp/>of<sp/>VkCommandBuffer<sp/>#&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea2130fef77965ebd15b4d9df3b9379697" kindref="member">ALLOCATE_COMMAND_BUFFERS</ref>:</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;allocating<sp/>VkCommandBuffers&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea98832f0887b8f39ee80ffa87ee28a370" kindref="member">QUEUE_FAMILY_INDEX_IS_EMPTY</ref>:</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;trying<sp/>to<sp/>get<sp/>the<sp/>index<sp/>of<sp/>a<sp/>non-existing<sp/>VkQueue&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea068681d8f4e4d3a083531f825b701dd0" kindref="member">CREATE_COMMAND_POOL</ref>:</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;creation<sp/>of<sp/>a<sp/>VkCommandPool&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eac54fb03f9b99aa18a777217bde527f1e" kindref="member">CREATE_DEBUG_MESSENGER</ref>:</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;creation<sp/>of<sp/>the<sp/>VkDebugMessenger&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea98f77caa8de8cbecc5afa9c58a777fdc" kindref="member">FIND_SUPPORTED_FORMAT</ref>:</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;search<sp/>for<sp/>a<sp/>supported<sp/>VkFormat&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eab791c8e1d9b12af9c02cfaa01fe5cb3c" kindref="member">CREATE_IMAGE</ref>:</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;creation<sp/>of<sp/>an<sp/>VkImage&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea366474e8403689673f0cb92147dcf440" kindref="member">ALLOCATE_MEMORY</ref>:</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;allocating<sp/>memory&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea30cf9871933c00e53f6cbbbd0ce7ec37" kindref="member">BIND_IMAGE_MEMORY</ref>:</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;binding<sp/>image<sp/>memory&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eaf7d0b6cd945e0f045272510c76302e00" kindref="member">NO_PHYSICAL_DEVICE_FOUND</ref>:</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;search<sp/>for<sp/>vulkan<sp/>compatible<sp/>VkPhysicalDevice&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea1331dbf3dee01c4af88292fb8abeb8a0" kindref="member">NO_SUITABLE_DEVICE_FOUND</ref>:</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;search<sp/>for<sp/>suitable<sp/>VkPhysicalDevice&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea2d10e665f5257839e390b655c3c042c8" kindref="member">CREATE_DEVICE</ref>:</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;creation<sp/>of<sp/>a<sp/>VkDevice&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea4fc96fca1098d3cbc8305a28eac851b2" kindref="member">NO_SUITABLE_MEMORY_TYPE_FOUND</ref>:</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;search<sp/>for<sp/>a<sp/>suitable<sp/>memory<sp/>type&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea92d06b0fb10ac69baff543d0d9724378" kindref="member">GLFW_EXTENSIONS_MISSING</ref>:</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;verifying<sp/>availability<sp/>of<sp/>extensions<sp/>required<sp/>by<sp/>GLFW&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea3cb314759a31e8700f65c14a3799b857" kindref="member">CREATE_GRAPHICS_PIPELINE</ref>:</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;creation<sp/>of<sp/>VkPipeline&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea09a099c9bc6af953bae959de8aaf12d3" kindref="member">CREATE_SHADER_MODULE</ref>:</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;creation<sp/>of<sp/>VkShaderModule&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea15589c019d3b30895e251cbb6efa8464" kindref="member">CREATE_PIPELINE_LAYOUT</ref>:</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;creation<sp/>of<sp/>VkPipelineLayout&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea45b73d306b7518541ac649a5279b34d5" kindref="member">QUEUE_SUBMIT_GRAPHICS</ref>:</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;submiting<sp/>graphics<sp/>queue&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea85caf283434d7d68b9eb8a7a6dc22f5c" kindref="member">CREATE_SWAPCHAIN_KHR</ref>:</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;creation<sp/>of<sp/>VkSwapchain&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea9cdfcc6fac385aca663a5a851a63ba3b" kindref="member">CREATE_IMAGE_VIEW</ref>:</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;creation<sp/>of<sp/>VkImageView<sp/>#&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eaaa19775d39c08663007aaa3578188184" kindref="member">CREATE_RENDER_PASS</ref>:</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;creation<sp/>of<sp/>VkRenderPass&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea5d3fe581ff37074aa6e93ced467f5341" kindref="member">CREATE_FRAMEBUFFER</ref>:</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;creation<sp/>of<sp/>framebuffer<sp/>#&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea7a14dec3212e192d889c33941519751b" kindref="member">CREATE_SEMAPHORE</ref>:</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;creation<sp/>of<sp/>VkSemaphore<sp/>#&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea4d5f131718409d45efc1fcd183ef7a13" kindref="member">CREATE_IN_FLIGHT_SYNC_OBJECT</ref>:</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;creation<sp/>of<sp/>in<sp/>flight<sp/>VkFence<sp/>or<sp/>VkSemaphore<sp/>#&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01eafb3e32789cd673519fe2b9122ed279e6" kindref="member">VALIDATION_LAYERS_UNAVAILABLE</ref>:</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;checking<sp/>for<sp/>validation<sp/>layer<sp/>availability&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01ea4f0b55ea4bfa924ad57b54792e4ff3a9" kindref="member">CREATE_BUFFER</ref>:</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;creation<sp/>of<sp/>a<sp/>buffer&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;unknown<sp/>events&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/>causeToString(<ref refid="namespacerr_1a0b6505a3b6bc1498e27e03af9e93d01e" kindref="member">VulkanExceptionCause</ref><sp/><ref refid="classrr_1_1VulkanException_1a0879ae8439e3ffbbde768b718132e998" kindref="member">cause</ref>,<sp/>std::size_t<sp/>index)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::format(</highlight><highlight class="stringliteral">&quot;{}{}&quot;</highlight><highlight class="normal">,<sp/>causeToString(<ref refid="classrr_1_1VulkanException_1a0879ae8439e3ffbbde768b718132e998" kindref="member">cause</ref>),<sp/>index);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>rr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!RRENDERER_ENGINE_EXCEPTION_VULKAN_EXCEPTION_HPP</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/engine/exception/VulkanException.hpp"/>
+  </compounddef>
+</doxygen>

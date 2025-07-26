@@ -11,49 +11,48 @@
 namespace rr
 {
 
-/**
- *  The Window class opens a GLFW window. The Window is bound to GLFW meaning if the window is created, GLFW
- *  is initialized and if the window is destroyed GLFW is terminated.
-*/
+/// \brief Window to which can be drawn
+///
+/// The Window class opens a GLFW window. The Window is bound to GLFW meaning if the window is created, GLFW
+/// is initialized and if the window is destroyed GLFW is terminated.
+///
+/// \author Felix Hommel
+/// \date 7/18/2025
 class Window
 {
 public:
-    /**
-     *  minimal window constructor
-     *
-     *  @param width - width of the window
-     *  @param height - height of the window
-     *  @param title - title of the window
-     *  @throws std::runtime_error if anything goes wrong while creation
-    */
-    Window(int width, int height, const std::string& title);
-    ~Window();
+	Window(int width, int height, const std::string& title);
+	~Window();
 
-    Window(const Window&) = delete;
-    Window(Window&&) noexcept = delete;
-    Window& operator=(const Window&) = delete;
-    Window& operator=(Window&&) noexcept = delete;
+	Window(const Window&) = delete;
+	Window& operator=(const Window&) = delete;
+	Window(Window&&) noexcept = delete;
+	Window& operator=(Window&&) noexcept = delete;
 
-    [[nodiscard]] int shouldClose() const { return glfwWindowShouldClose(m_window); }
-    [[nodiscard]] VkExtent2D getExtent() const { return { static_cast<std::uint32_t>(m_width), static_cast<std::uint32_t>(m_height) }; }
-    [[nodiscard]] bool wasWindowResized() const { return m_framebufferResized; }
-    void resetWindowResized() { m_framebufferResized = false; }
+	[[nodiscard]] GLFWwindow* getWindowHandle() const { return m_window; }
+	[[nodiscard]] int shouldClose() const { return glfwWindowShouldClose(m_window); }
+	[[nodiscard]] VkExtent2D getExtent() const
+	{
+		return { static_cast<std::uint32_t>(m_width), static_cast<std::uint32_t>(m_height) };
+	}
+	[[nodiscard]] bool wasWindowResized() const { return m_framebufferResized; }
 
-    [[nodiscard]] GLFWwindow* getWindowHandle() const { return m_window; }
+	void resetWindowResized() { m_framebufferResized = false; }
 
-    void createWindowSurface(VkInstance& instance, VkSurfaceKHR* surface);
+	void createWindowSurface(VkInstance& instance, VkSurfaceKHR* surface) const;
 
 private:
-    GLFWwindow* m_window;
+	// TODO: Convert to a std::unique_ptr<GLFWwindow>
+	GLFWwindow* m_window;
 
-    int m_width;
-    int m_height;
-    std::string m_title;
-    bool m_framebufferResized{ false };
+	int m_width;
+	int m_height;
+	std::string m_title;
+	bool m_framebufferResized{ false };
 
-    static void framebufferResizeCallback(GLFWwindow* window, int width, int height);
+	static void framebufferResizeCallback(GLFWwindow* window, int width, int height);
 };
 
-} // !rr
+} // namespace rr
 
 #endif // !RRENDERER_ENGINE_WINDOW_WINDOW_HPP

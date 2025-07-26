@@ -8,31 +8,29 @@
 namespace rr
 {
 
-/**
- *  <code>VulkanSurface<\code> is a wrapper of <code>VkSurfaceKHR<\code>
- *
- *  @author Felix Hommel
- *  @date 5/26/2025
-*/
+/// \brief VulkanSurface is a wrapper of VkSurfaceKHR
+///
+/// \author Felix Hommel
+/// \date 5/26/2025
 class VulkanSurface
 {
 public:
-    VulkanSurface(VkInstance instance, Window& window);
-    ~VulkanSurface();
+	VulkanSurface(VkInstance instance, Window& window);
+	~VulkanSurface();
 
-    VulkanSurface(const VulkanSurface&) = delete;
-    VulkanSurface(VulkanSurface&&) = delete;
-    VulkanSurface& operator=(const VulkanSurface&) = delete;
-    VulkanSurface& operator=(VulkanSurface&&) = delete;
+	VulkanSurface(const VulkanSurface&) = delete;
+	VulkanSurface& operator=(const VulkanSurface&) = delete;
+	VulkanSurface(VulkanSurface&&) = delete;
+	VulkanSurface& operator=(VulkanSurface&&) = delete;
 
-    [[nodiscard]] VkSurfaceKHR getHandle() const { return m_surface; }
+	[[nodiscard]] VkSurfaceKHR getHandle() const { return m_surface; }
 
 private:
-    VkInstance instance;
+	VkInstance instance;
 
-    VkSurfaceKHR m_surface{ VK_NULL_HANDLE };
+	VkSurfaceKHR m_surface{ VK_NULL_HANDLE };
 };
 
-} // !rr
+} // namespace rr
 
 #endif // !RRENDERER_ENGINE_CORE_VULKAN_SURFACE_HPP
